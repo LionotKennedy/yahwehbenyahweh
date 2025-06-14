@@ -10,18 +10,10 @@
   letter-spacing: -1px;
 }
 
-.pg-text-ltr-sp-6 {
-  letter-spacing: -1px;
-}
-
-#pg-banner-about {
+#pg-banner-fol {
   background-image: url("../image/page-banner.jpg");
   width: 1216px;
   height: 535px;
-}
-
-#title-img {
-  width: 341px;
 }
 
 .pg-link-text {
@@ -36,7 +28,7 @@
 }
 
 .pg-btm-pd-mod {
-  padding-bottom: 40px !important;
+  padding-bottom: 2px !important;
 }
 
 .pg-top-pd-mod {
@@ -71,54 +63,39 @@
   width: 100%;
 }
 
-.yahweh-txt-img {
-  position: relative;
-  top: 0px;
-  width: 86px;
-}
-
-.yahweh-ben-yahweh-txt-img {
-  position: relative;
-  top: 10px;
-  width: 249px;
-}
-
 /* PERSONNALIZE */
 
-#Yahweh_Ben_Yahweh {
+#top-bar-gold-fol {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 100%;
+  height: 44px;
+}
+
+#The_Followers_of_Yahweh_Ben_Yahweh {
   display: block;
   position: relative;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   padding-top: 60px;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
-#top-bar-gold-about {
-  background-image: url("../image/Gold_Bar_1216.jpg");
-  width: 100%;
-  height: 44px;
-}
-
-.sec-bar-about {
+.sec-bar-fol {
   background-color: transparent;
   background-image: url("../image/Bar.png");
   background-repeat: no-repeat;
-  background-size: contain;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 85%;
+  width: 1100px;
   height: 12px;
-  margin-top: 24px;
-  margin-bottom: -9px;
 }
 
 /* RESPONSIVE */
 
 @media screen and (max-width: 1024px) {
-  #pg-banner-about {
+  #pg-banner-fol {
     background-image: url("../image/page-banner.jpg");
     background-size: contain;
     background-repeat: repeat-y;
@@ -127,10 +104,20 @@
     padding-top: 43.99%;
   }
 
-  #top-bar-gold-about {
+  #top-bar-gold-fol {
     background-image: url("../image/Gold_Bar_1216.jpg");
     width: 100%;
     height: 44px;
+  }
+  .sec-bar-fol {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
   }
 }
 
@@ -144,14 +131,21 @@
     padding-top: 43.99%;
   }
 
-  #top-bar-gold-about {
+  #top-bar-gold-fol {
     width: 100%;
     height: 22px;
+  }
+
+  .pg-text-fmt {
+    font-size: 30px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  #pg-banner-about {
+  #pg-banner-fol {
     background-image: url("../image/page-banner.jpg");
     background-size: contain;
     background-repeat: repeat-y;
@@ -160,7 +154,7 @@
     padding-top: 43.99%;
   }
 
-  #top-bar-gold-about {
+  #top-bar-gold-fol {
     width: 100%;
     height: 11px;
   }

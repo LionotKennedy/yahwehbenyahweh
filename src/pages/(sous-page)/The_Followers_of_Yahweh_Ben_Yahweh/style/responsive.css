@@ -1,0 +1,161 @@
+@media screen and (max-width: 1024px) {
+
+    #pg-banner-fol {
+        background-image: url("../image/page-banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #The_Followers_of_Yahweh_Ben_Yahweh {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../../images/Bar.png");
+        background-repeat: no-repeat;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+    }
+
+    #pg-btm-media {
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .David {
+        font-family: 'David Libre', serif;
+        font-size: 32px;
+    }
+
+    .pg-text-fmt {
+        font-size: 30px;
+        text-align: justify;
+        line-height: 1;
+        letter-spacing: .1px;
+    }
+
+    #pg-banner-fol {
+        background-image: url("../image/page-banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #The_Followers_of_Yahweh_Ben_Yahweh {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .img-size {
+        width: 75%;
+    }
+
+    #pg-btm-media {
+        left: 0px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .David {
+        font-family: 'David Libre', serif;
+        font-size: 24px;
+    }
+
+    .pg-text-fmt {
+        font-size: 22px;
+        text-align: justify;
+        line-height: 1;
+        letter-spacing: .1px;
+    }
+
+    #pg-banner-fol {
+        background-image: url("../image/page-banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #The_Followers_of_Yahweh_Ben_Yahweh {
+        padding-top: 40px;
+        padding-bottom: 0px;
+    }
+
+    .img-size {
+        width: 80%;
+    }
+
+    .pg-text-fmt-cnt {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../../images/Bar.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+        margin-top: 24px;
+        margin-bottom: -9px;
+    }
+
+    #pg-btm-media {
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+
+    .pg-text-ltr-sp-9 {
+        letter-spacing: .0px;
+    }
+
+}
+
+@media screen and (max-width: 321px) {
+
+    .pg-text-ltr-sp-2 {
+        letter-spacing: .6px;
+    }
+
+    .pg-text-ltr-sp-8 {
+        letter-spacing: .6px;
+    }
+
+    .pg-text-ltr-sp-9 {
+        letter-spacing: 1.2px;
+    }
+
+    .David {
+        font-family: 'David Libre', serif;
+        font-size: 20px;
+    }
+
+    .pg-text-fmt {
+        font-size: 17px;
+        text-align: justify;
+        line-height: 1;
+        letter-spacing: .1px;
+    }
+
+}
