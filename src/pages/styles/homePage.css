@@ -1,11 +1,11 @@
-.clear-both {
-  /* padding-bottom: 51%; */
-  /* padding-bottom: 20rem; */
+.py_8 {
+  padding-top: 2rem /* 32px */;
+  padding-bottom: 2rem /* 32px */;
 }
 
 .textCenter {
   text-align: center;
-  padding-top: 0.8rem;
+  /* padding-top: 0.8rem; */
 }
 
 .vidPos {
@@ -54,20 +54,113 @@
   margin-left: auto;
 }
 
+.bn-div-fmt {
+  display: block;
+  position: relative;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.bn-div-fmt-p-sz {
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .bn-div-fmt-p-sz-sp-bl {
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
-.te{
-    text-align: center;
+.te {
+  text-align: center;
 }
 
-.textCenterPt{text-align: center; padding-top: .8em;}
+.textCenterPt {
+  text-align: center;
+  padding-top: 0.8em;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.mxAuto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb_4 {
+  margin-bottom: 1rem /* 16px */;
+}
+
+.breakingnews-img {
+  width: 330px;
+}
+
+.py_4 {
+  padding-top: 1rem /* 16px */;
+  padding-bottom: 1rem /* 16px */;
+}
+
+.max_w_full {
+  max-width: 100%;
+}
+
+.h_auto {
+  height: auto;
+}
+
+.pt_3 {
+  padding-top: 0.75rem /* 12px */;
+}
+
+.space_y_8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem /* 32px */ * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem /* 32px */ * var(--tw-space-y-reverse));
+}
+
+.w_4\/5 {
+  width: 80%;
+}
+
+.mx_auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.px_4 {
+  padding-left: 1rem /* 16px */;
+  padding-right: 1rem /* 16px */;
+}
+
+.text_xl {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+}
+
+.font_bold {
+    font-weight: 700;
+}
+
+.mb_4 {
+    margin-bottom: 1rem /* 16px */;
+}
+
 @media screen and (max-width: 1024px) {
   .center-buttons {
     width: 100%;

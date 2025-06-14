@@ -51,15 +51,6 @@
         display: block;
     }
 
-    /* .topnav button:not(:first-child), .dropdown .dropbtn {
-        display: none;
-    }
-
-    .topnav button.icon {
-        float: left;
-        display: block;
-    } */
-
     .topnav.responsive {
         position: relative;
         padding-left: 0%;
@@ -77,12 +68,6 @@
         display: block;
         text-align: left;
     }
-
-    /* .topnav.responsive button {
-        float: none;
-        display: block;
-        text-align: left;
-    } */
 
     .topnav.responsive .dropdown {
         float: none;
@@ -142,16 +127,4 @@
 
 
 
-}
-
-
-
-
-
-/* PRESONNALIZE */
-
-@media (min-width: 768px) {
-    ._md:hidden {
-        display: none;
-    }
 }

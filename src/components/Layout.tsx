@@ -3,7 +3,8 @@ import { Header } from "./Header"
 import { Navigation } from "./Navigation"
 import "./styles/layout.css"
 import "./styles/responsive.css"
-// import "./styles/index.css"
+import "./styles/index.css"
+
 
 interface LayoutProps {
   children: ReactNode

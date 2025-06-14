@@ -1,0 +1,157 @@
+/*** page.css ***/
+
+#The_Cultural_Attire_of {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.pg-text-fmt {
+  font-size: 38px;
+  text-align: justify;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.pg-text-ltr-sp {
+  letter-spacing: -1px;
+}
+
+#pg-banner {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 535px;
+}
+
+#title-img {
+  width: 341px;
+}
+
+.pg-link-text {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 42px;
+}
+
+.pg-btm-pd-mod {
+  padding-bottom: 40px !important;
+}
+
+.pg-top-pd-mod {
+  padding-top: 2px !important;
+}
+
+.pg-top-mrgn-mod {
+  margin-top: 2px !important;
+}
+
+.pg-link-text-ul {
+  text-decoration: underline;
+}
+
+.pg-title-break {
+  display: block;
+  position: relative;
+  margin-left: 9%;
+  padding-top: 10px;
+  padding-bottom: 1px;
+}
+
+#pg-btm-media {
+  /* background-image: url("../image/bottom-media.jpg");
+    background-repeat: no-repeat; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-media-img {
+  width: 100%;
+}
+
+/* PERSONNALIZE */
+
+.w_8 {
+  width: 80%;
+}
+
+.pg-text-fmt {
+  font-size: 38px;
+  text-align: justify;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+._italic {
+  font-style: italic;
+}
+
+.font_bold {
+  font-weight: 700;
+}
+
+/* .fory {
+    padding-top: 4rem;
+} */
+
+/* .py_8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+} */
+/* 
+.text_2xl {
+    font-size: 1.5rem;
+    line-height: 2rem ;
+}
+
+.text_lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.leading_relaxed {
+    line-height: 1.625;
+}  */
+
+/* default */
+.sec-bar {
+  background-color: transparent;
+  background-image: url("../image/Bar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: 12px;
+}
+
+.sec-text {
+  width: 82%;
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* @media screen and (max-width: 1024px) {
+    .fory {
+        left: 0px;
+        width: 100%;
+    }
+}
+
+.fory {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */

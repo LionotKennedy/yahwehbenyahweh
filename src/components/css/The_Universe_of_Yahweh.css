@@ -1,0 +1,28 @@
+/*** The_Universe_of_Yahweh ***/
+
+#The_Universe_of_Yahweh {
+    background-image: url("../images/The_Universe_of_Yahweh_1216.jpg");
+    width: 1216px;
+    height: 534px;
+}
+
+.Universe_Video {
+    width: 85%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 38px;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Bottom_Media {
+    background-image: url("../images/Universe_Bottom_Media.jpg");
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1186px;
+    height: 366px;
+}

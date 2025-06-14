@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Menu, X } from "lucide-react"
+// import "../components/styles/responsive.css"
+import "../components/styles/navigation.css"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,14 +21,13 @@ export function Navigation() {
   return (
     <div id="gold-top-menu" className="gold-top-menu">
       <div className={`topnav ${isOpen ? "responsive" : ""}`} id="myTopnav">
-        <button className="icon md:hidden" onClick={toggleMenu} aria-label="Toggle menu">
+        <button className="icon _md" onClick={toggleMenu} aria-label="Toggle menu">
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
 
         <div className="dropdown">
           <button className="dropbtn" onClick={() => toggleDropdown("about")}>
             <strong>ABOUT</strong>
-            {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
           </button>
           <div className={`dropdown-content ${activeDropdown === "about" ? "show" : ""}`}>
             <Link to="/About_Yahweh">Yahweh</Link>

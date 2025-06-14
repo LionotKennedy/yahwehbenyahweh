@@ -38,7 +38,7 @@ const centerButtons: CenterButton[] = [
 
 export function CenterButtons() {
   return (
-    <div className="center-buttons grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+    <div className="center-buttons _grid grid_cols_2 md:grid-cols-3 lg:grid-cols-4 gap_4 p_4">
       {centerButtons.map((button, index) => (
         <div key={index} className="center-button">
           {button.external ? (

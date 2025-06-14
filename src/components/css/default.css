@@ -1,0 +1,188 @@
+body {
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url("../images/cGIFX.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px;
+}
+
+.Alef {
+    /* font-family: 'Alef', sans-serif; */
+    font-family: 'David Libre', serif;
+    font-size: 48px;
+}
+
+.David {
+    font-family: 'David Libre', serif;
+    font-size: 48px;
+}
+
+/*
+#Backdrop {
+    background-image: url("/images/Background_Color_1216_lg.jpg") ;
+    background-repeat: no-repeat;
+    display: block;
+    width: 1216px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    min-height: 100%;
+    z-index: -99;
+}
+*/
+
+#backdrop {
+    background-image: url("../images/Background_Color_1216_lg.jpg") ;
+    background-repeat: no-repeat;
+    display: block;
+    width: 1216px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    min-height: 100%;
+    z-index: -99;
+}
+
+/*** Menu ***/
+
+#Gold_Top {
+    background-image: url("../images/Gold_Top_1216.jpg");
+    width: 1216px;
+    height: 91px;
+}
+
+#top-bar-gold {
+    background-image: url("../images/Gold_Bar_1216.jpg");
+    width: 1216px;
+    height: 44px;
+}
+
+#Site_Logo {
+    display: block;
+    float: left;
+    padding: 4px 0px 2px 12px;
+    position: relative;
+    top: 0px;
+}
+
+#Gold_Top_Menu {
+    background-image: url("../images/Gold_Top_Menu_1216.jpg");
+    width: 1216px;
+    height: 45px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 25%;
+    overflow: hidden;
+    background: rgba(252, 246, 228, 0.7);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    width: 912px;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #fefef8;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(254, 254, 248, 0.95);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 99;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #e3e3dd
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*** Content pages commons ***/
+
+.Body_Text {
+    width: 82%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 38px;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-text {
+    width: 82%;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Gold_Bar {
+    background-image: url("../images/Gold_Bar_1216.jpg");
+    width: 1216px;
+    height: 44px;
+}
+
+#Yahweh_Ben_Yahweh {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#Section_Bar {
+    background-color: transparent;
+    background-image: url("../images/Bar.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    height: 12px;
+}
+
+.sec-bar {
+    background-color: transparent;
+    background-image: url("../images/Bar.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    height: 12px;
+}

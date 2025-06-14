@@ -3,7 +3,7 @@ import "./App.css";
 import { Layout } from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import UniverseOfYahweh from "./pages/UniverseOfYahweh";
-import CulturalAttire from "./pages/CulturalAttire";
+import CulturalAttire from "./pages/(sous-page)/CulturalAttire/CulturalAttire";
 
 function App() {
   return (
