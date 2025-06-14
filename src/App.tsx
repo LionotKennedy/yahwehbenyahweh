@@ -4,6 +4,7 @@ import { Layout } from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import UniverseOfYahweh from "./pages/(sous-page)/UniverseOfYahweh/UniverseOfYahweh";
 import CulturalAttire from "./pages/(sous-page)/CulturalAttire/CulturalAttire";
+import About_Yahweh from "./pages/(sous-page)/About_Yahweh/About_Yahweh";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             />
             <Route path="/Cultural_Attire" element={<CulturalAttire />} />
             {/* Ajoutez d'autres routes selon vos besoins */}
+            <Route path="/About_Yahweh" element={<About_Yahweh />} />
           </Routes>
         </Layout>
       </Router>
