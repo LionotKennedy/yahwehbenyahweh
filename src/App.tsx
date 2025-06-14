@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
 import HomePage from "./pages/HomePage";
-import UniverseOfYahweh from "./pages/UniverseOfYahweh";
+import UniverseOfYahweh from "./pages/(sous-page)/UniverseOfYahweh/UniverseOfYahweh";
 import CulturalAttire from "./pages/(sous-page)/CulturalAttire/CulturalAttire";
 
 function App() {

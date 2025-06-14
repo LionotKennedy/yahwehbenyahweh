@@ -1,0 +1,113 @@
+/*** page.css ***/
+
+#pg-banner-u {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 534px;
+}
+
+.Universe_Video {
+  width: 85%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 38px;
+  text-align: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pg-txt-fmt {
+  font-size: 40px;
+  text-align: justify;
+  line-height: 1;
+}
+
+.pg-txt-ltr-sp {
+  letter-spacing: -1px;
+}
+
+.video-player {
+  width: 80%;
+}
+
+
+/* PERSONNALIZE */
+
+.Body_Text {
+    width: 82%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 38px;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1024px) {
+  #pg-banner-u {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+
+  #top-bar-gold-u {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 100%;
+    height: 44px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #pg-banner-u {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+
+  #top-bar-gold-u {
+    width: 100%;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #pg-banner-u {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+
+  #top-bar-gold-u {
+    width: 100%;
+    height: 11px;
+  }
+
+  .Body_Text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .Body_Text {
+    font-size: 22px;
+    letter-spacing: 0.6px;
+  }
+}

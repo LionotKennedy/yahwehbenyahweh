@@ -1,0 +1,266 @@
+@media screen and (max-width: 1024px) {
+
+    #backdrop {
+        background-image: url("../../image/Background_Color.jpg") ;
+        background-repeat: repeat-y;
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        min-height: 100%;
+        z-index: -99;
+    }
+
+    #pg-banner-u {
+        background-image: url("../image/page-banner.jpg");
+        background-size: contain;
+        background-repeat: repeat-y;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #title-img {
+        width: 341px;
+    }
+
+    .img-size {
+        width: 200px;
+    }
+
+    .pg-text-ltr-sp-1 {
+        letter-spacing: 1.9px;
+    }
+
+    .pg-text-ltr-sp-2 {
+        letter-spacing: 1.9px;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../image/Bar.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+    }
+
+    #pg-btm-media {
+        background-image: url("../image/bottom-media.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 0px;
+        width: 100%;
+    }
+
+    .pg-text-ttl-fmt-ctr {
+        font-size: 42px;
+    }
+
+    .video-player {
+        width: 75%;
+    }
+
+    .bottom-media-img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .David {
+        font-family: 'David Libre', serif;
+        font-size: 38px;
+    }
+
+    #pg-banner-u {
+        background-image: url("../image/page-banner.jpg");
+        background-size: contain;
+        background-repeat: repeat-y;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #title-img {
+        width: 241px;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../image/Bar.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+    }
+
+    .img-size {
+        width: 180px;
+    }
+
+    .pg-text-ttl-fmt {
+        font-size: 34px;
+    }
+
+    .pg-text-ttl-fmt-sm {
+        font-size: 28px;
+        text-align: left;
+        line-height: 1.1;
+    }
+
+    .pg-text-ttl-fmt-ctr {
+        font-size: 34px;
+    }
+
+    #pg-btm-media {
+        background-image: url("../image/bottom-media.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .video-player {
+        width: 75%;
+    }
+
+    .bottom-media-img {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .David {
+        font-family: 'David Libre', serif;
+        font-size: 28px;
+    }
+
+    #pg-banner-u {
+        background-image: url("../image/page-banner.jpg");
+        background-size: contain;
+        background-repeat: repeat-y;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #title-img {
+        width: 201px;
+    }
+
+    .pg-text-ttl-fmt {
+        font-size: 24px;
+    }
+
+    .pg-text-ttl-fmt-sm {
+        font-size: 20px;
+        text-align: left;
+        line-height: 1.1;
+    }
+
+    .pg-text-ttl-fmt-ctr {
+        font-size: 20px;
+    }
+
+    .pg-text-fmt-ctr {
+        font-size: 32px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .pg-text-fmt {
+        font-size: 20px;
+
+    }
+
+    .Body_Text {
+        font-size: 24px;
+    }
+
+    .Alef {
+        /* font-family: 'Alef', sans-serif; */
+        font-family: 'David Libre', serif;
+        font-size: 28px;
+    }
+
+    .img-size {
+        width: 140px;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../image/Bar.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+    }
+
+    .video-player {
+        width: 75%;
+    }
+
+    #pg-btm-media {
+        left: 0px;
+    }
+
+    .bottom-media-img {
+        width: 100%;
+    }
+
+    .Universe_Video {
+        width: 85%;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 24px;
+        text-align: center;
+        justify-content: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 412px) {
+
+    .Alef {
+        font-size: 26px;
+    }
+
+    .Body_Text {
+        font-size: 22px;
+        letter-spacing: .6px;
+    }
+
+    .pg-text-ltr-sp-2 {
+        letter-spacing: 1.9px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 376px) {
+
+
+}
+
+@media screen and (max-width: 321px) {
+
+    .pg-text-ltr-sp-1 {
+        letter-spacing: .6px;
+    }
+
+}
