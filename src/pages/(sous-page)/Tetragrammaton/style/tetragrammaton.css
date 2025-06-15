@@ -1,0 +1,356 @@
+/*** page.css ***/
+
+.pg-text-fmt {
+  font-size: 40px;
+  text-align: justify;
+  line-height: 1;
+}
+
+.pg-text-ltr-sp {
+  letter-spacing: -1px;
+}
+
+#pg-banner-tetra {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 535px;
+}
+
+#Tetragrammaton {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 0px;
+}
+
+#Yahweh {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 0px;
+}
+
+.div-width-tetra {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.pg-text-fmt-lrg-itl-tetra {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pg-text-fmt-lrg-tetra {
+  font-size: 52px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.pg-text-fmt-sm {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.pg-link-text {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+}
+
+.pg-link-text-ul {
+  text-decoration: underline;
+}
+
+.Yahweh-img {
+  width: 134px;
+}
+
+.YAHWEH-CAP-img {
+  width: 204px;
+}
+
+.YHWH-img {
+  width: 130px;
+}
+
+#pg-btm-media {
+  /*background-image: url("../images/bottom-media.jpg");
+    background-repeat: no-repeat;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-media-img {
+  width: 100%;
+}
+
+/* PERSONNALIZE */
+#top-bar-gold-tetra {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
+}
+
+.width-pers1-tetra {
+  width: 75%;
+}
+
+.width-pers2-tetra {
+  width: 25%;
+}
+
+.width-pers3-tetra {
+  width: 60%;
+}
+
+.sec-bar-tetra {
+  background-color: transparent;
+  background-image: url("../image/Bar.png");
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+  height: 12px;
+}
+.Yahweh-img-tetra {
+  width: 134px;
+}
+.YAHWEH-CAP-img-tetra {
+  width: 204px;
+}
+.YHWH-img-tetra {
+  width: 130px;
+}
+
+.pg-text-fmt-sm-tetra {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+#pg-btm-media-tetra {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bottom-media-img-tetra {
+  width: 100%;
+}
+/* RESPONSIVE */
+
+@media screen and (max-width: 1024px) {
+  #pg-banner-tetra {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-tetra {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 100%;
+    height: 44px;
+  }
+  .pg-text-fmt-lrg-itl-tetra {
+    font-size: 48px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .sec-bar-tetra {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+  }
+  .pg-text-fmt-lrg-tetra {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    line-height: 1;
+  }
+  .Yahweh-img-tetra {
+    width: 90px;
+  }
+  .YAHWEH-CAP-img-tetra {
+    width: 140px;
+  }
+  .YHWH-img-tetra {
+    width: 90px;
+  }
+  .pg-text-fmt-sm-tetra {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  #pg-btm-media-tetra {
+    left: 0px;
+    width: 100%;
+  }
+  .bottom-media-img-tetra {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #pg-banner-tetra {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+
+  #top-bar-gold-tetra {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 100%;
+    height: 22px;
+  }
+  .pg-text-fmt-lrg-itl-tetra {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .sec-bar-tetra {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+  }
+  .pg-text-fmt-lrg-tetra {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  .Yahweh-img-tetra {
+    width: 93px;
+  }
+  .YAHWEH-CAP-img-tetra {
+    position: relative;
+    top: 1px;
+  }
+  .YHWH-img-tetra {
+    width: 90px;
+  }
+  .pg-text-fmt-sm-tetra {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  #pg-btm-media-tetra {
+    left: 0px;
+    width: 100%;
+  }
+  .bottom-media-img-tetra {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #pg-banner-tetra {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+
+  #top-bar-gold-tetra {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 100%;
+    height: 11px;
+  }
+  .pg-text-fmt-lrg-itl-tetra {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .sec-bar-tetra {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+  }
+  .pg-text-fmt-lrg-tetra {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  .Yahweh-img-tetra {
+    width: 54px;
+  }
+  .YAHWEH-CAP-img-tetra {
+    position: relative;
+    top: 1px;
+    width: 85px;
+  }
+  .YHWH-img-tetra {
+    width: 50px;
+  }
+  .pg-text-fmt-sm-tetra {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  #pg-btm-media-tetra {
+    left: 0px;
+  }
+  .bottom-media-img-tetra {
+    width: 100%;
+  }
+}

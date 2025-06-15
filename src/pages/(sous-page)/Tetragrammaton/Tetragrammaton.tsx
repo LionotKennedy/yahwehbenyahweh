@@ -1,0 +1,188 @@
+import "./style/tetragrammaton.css";
+export function Tetragrammaton() {
+  return (
+    <div className="tetragrammaton-page">
+      <div id="pg-banner-tetra" className=""></div>
+      <div id="top-bar-gold-tetra" className=""></div>
+      <div className="div-width-tetra">
+        <div id="Tetragrammaton">
+          <img
+            src="/src/pages/(sous-page)/Tetragrammaton/image/Tetragrammaton.png"
+            alt="Tetragrammaton"
+            className="width-pers1-tetra"
+          />
+        </div>
+        <div id="Yahweh">
+          <img
+            src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
+            alt="Yahweh"
+            className="width-pers2-tetra"
+          />
+        </div>
+        <div>
+          <p className="pg-text-fmt-lrg-itl-tetra">
+            <i>HEBREW FOR YAHWEH</i>
+          </p>
+        </div>
+        <div className="sec-bar-tetra"></div>
+        <div id="Yahweh">
+          <img
+            src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh_Ben_Yahweh.png"
+            alt="Yahweh Ben Yahweh"
+            className="width-pers3-tetra"
+          />
+        </div>
+        <div>
+          <p className="pg-text-fmt-lrg-itl-tetra">
+            <i>HEBREW FOR YAHWEH BEN YAHWEH</i>
+          </p>
+        </div>
+        <div className="sec-bar-tetra"></div>
+        <div>
+          <p className="pg-text-fmt-lrg-tetra">
+            <img
+              className="Yahweh-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
+              alt="Yahweh"
+            />{" "}
+            IS GOD’S NAME AS IT IS
+            <br />
+            WRITTEN IN THE HEBREW LANGUAGE.
+          </p>
+          <p className="pg-text-fmt-lrg-tetra">
+            <img
+              className="YAHWEH-CAP-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/YAHWEH-.png"
+              alt="YAHWEH"
+            />{" "}
+            (
+            <img
+              className="Yahweh-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
+              alt="Yahweh"
+            />
+            ) THE COVENANT GOD OF
+            <br />
+            ISRAEL,{" "}
+            <img
+              className="YHWH-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/YHWH.png"
+              alt="Yahweh"
+            />
+            , IN THE ORIGINAL HEBREW.
+          </p>
+        </div>
+        <div className="sec-bar-tetra"></div>
+        <div>
+          <p className="pg-text-fmt-lrg-tetra">
+            ACCORDING TO JEWISH CUSTOM, BECAUSE OF
+            <br />
+            REVERENCE, THE DIVINE NAME WAS NOT TO BE
+            <br />
+            SPOKEN, SO THE HEBREW WORDS FOR
+            <br />
+            Lord AND God WERE SUBSTITUTED.
+            <br />
+            WHENEVER THE WORDS Lord AND God
+            <br />
+            APPEAR IN LARGE AND SMALL CAPITAL
+            <br />
+            LETTERS, THE ORIGINAL HEBREW READS
+            <br />
+            <img
+              className="YHWH-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/YHWH.png"
+              alt="Yahweh"
+            />
+            .
+          </p>
+          <p className="pg-text-fmt-lrg-tetra">
+            <img
+              className="YAHWEH-CAP-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/YAHWEH-.png"
+              alt="YAHWEH"
+            />{" "}
+            (
+            <img
+              className="Yahweh-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
+              alt="Yahweh"
+            />
+            ) THE COVENANT GOD OF
+            <br />
+            ISRAEL,{" "}
+            <img
+              className="YHWH-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/YHWH.png"
+              alt="Yahweh"
+            />
+            , IN THE ORIGINAL HEBREW.
+          </p>
+          <p className="pg-text-fmt-sm-tetra">
+            REFERENCE: THE HOLY BIBLE IN THE KING JAMES VERSION,
+            <br />
+            COPYRIGHT 1984, THOMAS NELSON PUBLISHERS, NASHVILLE, TN P. 763.
+            <br />
+            (FOUND IN THE DICTIONARY CONCORDANCE IN THE BACK OF THIS BIBLE.)
+            <br />
+          </p>
+          <p className="pg-text-fmt-lrg-tetra">
+            IN MANY CASES “LORD” IS A TITLE OF HONOR
+            <br />
+            AND MAJESTY USED IN ADDRESSING GOD, OR A<br />
+            SUBSTITUTE FOR THE SPECIAL NAME
+            <br />
+            <img
+              className="YAHWEH-CAP-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/YAHWEH-.png"
+              alt="YAHWEH"
+            />{" "}
+            (KJV-RSV “THE LORD”).
+          </p>
+          <p className="pg-text-fmt-sm-tetra">
+            REFERENCE: THE INTERPRETER’S DICTIONARY OF THE BIBLE, COPYRIGHT
+            1962,
+            <br />
+            VOLUME III, P.150, ABINGDON PRESS.
+          </p>
+          <p className="pg-text-fmt-lrg-tetra">
+            IN THE EARLIEST HEBREW THE SACRED NAME
+            <br />
+            APPEARED AS A FOUR LETTER WORD OR
+          </p>
+          <p className="pg-text-fmt-lrg-tetra">
+            TETRAGRAMMATON:{" "}
+            <img
+              className="YHWH-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/YHWH.png"
+              alt="Yahweh"
+            />{" "}
+            (
+            <img
+              className="Yahweh-img-tetra"
+              src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
+              alt="Yahweh"
+            />
+            ) WITHOUT
+            <br />
+            ANY VOWEL SIGNS.
+          </p>
+          <p className="pg-text-fmt-sm-tetra">
+            REFERENCE: THE INTERPRETER’S DICTIONARY OF THE BIBLE, COPYRIGHT
+            1962,
+            <br />
+            VOLUME II, P. 409, ABINGDON PRESS.
+          </p>
+        </div>
+      </div>
+      <div id="pg-btm-media-tetra">
+        <img
+          className="bottom-media-img-tetra"
+          src="/src/pages/(sous-page)/Tetragrammaton/image/bottom-media.png"
+        />
+      </div>
+      {/* Coucou 8 */}
+    </div>
+  );
+}
+export default Tetragrammaton;

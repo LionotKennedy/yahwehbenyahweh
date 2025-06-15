@@ -1,0 +1,304 @@
+@media screen and (max-width: 1024px) {
+
+    #pg-banner {
+        background-image: url("../images/page-banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #Yahweh {
+        padding-top: 40px;
+        padding-bottom: 0px;
+    }
+
+    .pg-text-fmt-lrg-itl{
+        font-size: 48px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .pg-text-fmt-lrg{
+        font-size: 32px;
+        text-align: center;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        line-height: 1;
+    }
+
+    .pg-text-fmt-sm{
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+
+    #title-img {
+        width: 341px;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../../images/Bar.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+    }
+
+    #pg-btm-media {
+        left: 0px;
+        width: 100%;
+    }
+
+    .Yahweh-img {
+        width:90px;
+    }
+
+    .YAHWEH-CAP-img {
+        width: 140px;
+    }
+
+    .YHWH-img {
+        width: 90px;
+    }
+
+    .bottom-media-img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .David {
+        font-family: 'David Libre', serif;
+        font-size: 32px;
+    }
+
+    .pg-text-fmt {
+        font-size: 30px;
+        text-align: justify;
+        line-height: 1;
+        letter-spacing: .1px;
+    }
+
+    #pg-banner {
+        background-image: url("../images/page-banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #Yahweh {
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .pg-text-fmt-lrg-itl{
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .pg-text-fmt-lrg{
+        font-size: 34px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+
+    .pg-text-fmt-sm{
+        font-size: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+
+    #title-img {
+        width: 241px;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../../images/Bar.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+    }
+
+    .img-size {
+        width: 63%;
+    }
+
+    .Yahweh-img {
+        width: 93px;
+    }
+
+    .YAHWEH-CAP-img {
+        position: relative;
+        top: 1px;
+        width: 140px;
+    }
+
+    .YHWH-img {
+        width: 90px;
+    }
+
+    #pg-btm-media {
+        left: 0px;
+        width: 100%;
+    }
+
+    .bottom-media-img {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .David {
+        font-family: 'David Libre', serif;
+        font-size: 24px;
+    }
+
+    .pg-text-fmt {
+        font-size: 20px;
+        text-align: justify;
+        line-height: 1;
+        letter-spacing: .1px;
+    }
+
+    #pg-banner {
+        background-image: url("../images/page-banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+
+    #Yahweh {
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .pg-text-fmt-lrg-itl{
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .pg-text-fmt-lrg{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+
+    .pg-text-fmt-sm{
+        font-size: 10px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+
+    #title-img {
+        width: 201px;
+    }
+
+    .sec-bar {
+        background-color: transparent;
+        background-image: url("../../images/Bar.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        height: 12px;
+    }
+
+    .img-size {
+        width: 63%;
+    }
+
+
+    #pg-btm-media {
+        left: 0px;
+    }
+
+    .bottom-media-img {
+        width: 100%;
+    }
+
+    .Yahweh-img {
+        width: 54px;
+    }
+
+    .YAHWEH-CAP-img {
+        position: relative;
+        top: 1px;
+        width: 85px;
+    }
+
+    .YHWH-img {
+        width: 50px;
+    }
+
+    /*#pg-btm-media {
+        display: block;
+        position: absolute;
+        top: 52px;
+        left: 0px;
+        background-image: url("../images/bottom-media.jpg");
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }*/
+}
+
+@media screen and (max-width: 321px) {
+
+    .pg-text-ttl-fmt {
+        font-size: 22px;
+        letter-spacing: .6px;
+    }
+
+    .pg-text-fmt-lrg{
+        font-size: 17px;
+    }
+
+    .Yahweh-img {
+        width: 46px;
+    }
+
+    .YAHWEH-CAP-img {
+        position: relative;
+        top: 1px;
+        width: 73px;
+    }
+
+    .YHWH-img {
+        width: 43px;
+    }
+
+}
