@@ -1,155 +1,272 @@
 /*** page.css ***/
 
-#backdrop {
-    background-image: url("../images/Background_Metal_1216.jpg") ;
-    background-repeat: no-repeat;
-    display: block;
-    width: 1216px;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    min-height: 100%;
-    z-index: -1;
+#backdrop-contact {
+  background-image: url("../image/bgMetal1.jpg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  min-height: 100%;
+  z-index: -1;
 }
 
 .pg-text-fmt {
-    font-size: 38px;
-    text-align: justify;
-    line-height: 1.1;
-    padding-left: 25%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  font-size: 38px;
+  text-align: justify;
+  line-height: 1.1;
+  padding-left: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .pg-text-ltr-sp {
-    letter-spacing: -1px;
+  letter-spacing: -1px;
 }
 
-#pg-banner {
-    background-image: url("../images/page-banner.jpg");
-    width: 1216px;
-    height: 535px;
+#pg-banner-contact {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 535px;
 }
 
 .pg-link-text {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    justify-content: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 42px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 42px;
 }
 
 .pg-btm-pd-mod {
-    padding-bottom: 40px !important;
+  padding-bottom: 40px !important;
 }
 
 .pg-top-pd-mod {
-    padding-top: 20px !important;
+  padding-top: 20px !important;
 }
 
 .pg-top-mrgn-mod {
-    margin-top: 2px !important;
+  margin-top: 2px !important;
 }
 
 .pg-link-text-ul {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .pg-ctr {
-    text-align: center;
+  text-align: center;
 }
 
 .pg-title-break {
-    display: block;
-    position: relative;
-    margin-left: 9%;
-    padding-top: 10px;
-    padding-bottom: 1px;
+  display: block;
+  position: relative;
+  margin-left: 9%;
+  padding-top: 10px;
+  padding-bottom: 1px;
 }
 
 .side-image {
-    display: inline-block;
-    float: left;
-    position: relative;
-    top: 10px;
-    height: 200px;
-    padding-right: 24px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  top: 10px;
+  height: 200px;
+  padding-right: 24px;
 }
 
 .side-padding {
-     padding-left: 40%;
- }
+  padding-left: 40%;
+}
 
 .side-padding-ls {
-    padding-left: 5%;
+  padding-left: 5%;
 }
 
 .side-phone {
-    display: inline-block;
-    float: left;
-    position: relative;
-    height: 120px;
-    top: -10px;
-    padding-left: 10px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  height: 120px;
+  top: -10px;
+  padding-left: 10px;
 }
 
 .side-text {
-    display: inline-block;
-    float: left;
-
+  display: inline-block;
+  float: left;
 }
 
 .side-text {
-    display: inline-block;
-    float: left;
-
+  display: inline-block;
+  float: left;
 }
 
 .side-clear {
-   clear: both;
+  clear: both;
 }
 
 .img-size-mail {
-    width: 121px;
+  width: 121px;
 }
 
 .img-size-phone {
-    width: 86px;
+  width: 86px;
 }
 
-.wrapper {
-    display: block;
-    position: relative;
-    /*height: 420px;*/
-    width: 100%;
+.wrapper-contact {
+  display: block;
+  position: relative;
+  /*height: 420px;*/
+  width: 100%;
 }
 
 #Email_Us {
-    display: block;
-    position: absolute;
-    top: 80px;
-    padding-left: 25%;
-    padding-right: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 42px;
-    line-height: 1.5;
-    z-index: 99;
+  display: block;
+  position: absolute;
+  top: 80px;
+  padding-left: 25%;
+  padding-right: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 42px;
+  line-height: 1.5;
+  z-index: 99;
 }
 
-#pg-btm-media {
-    /*background-image: url("../images/bottom-media.jpg");
+#pg-btm-media-contact {
+  /*background-image: url("../images/bottom-media.jpg");
     background-repeat: no-repeat;*/
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.bottom-media-img {
-    width: 100%;
+.bottom-media-img-contact {
+      width: 100%;
+    position: relative;
+    top: 7px;
+}
 
+/* PERSONNALIZE */
+
+#top-bar-gold-contact {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 100%;
+  height: 44px;
+}
+
+#Yahweh_Ben_Yahweh_contact {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.Yahweh_Ben_Yahweh_width {
+  width: 75%;
+}
+
+.img-size-mail {
+  width: 121px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+  /* #backdrop-contact {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+  } */
+
+  #pg-banner-contact {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+
+  #top-bar-gold-contact {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 100%;
+    height: 44px;
+  }
+  .width_text {
+    font-size: 30px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+  .img-size-mail {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* #backdrop-contact {
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100%;
+    } */
+  .width_text {
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+  #pg-banner-contact {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-contact {
+    width: 100%;
+    height: 22px;
+  }
+  .img-size-mail {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* #backdrop-contact {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+  } */
+
+  #pg-banner-contact {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-contact {
+    width: 100%;
+    height: 11px;
+  }
+
+  .width_text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+  .img-size-mail {
+    width: 40%;
+  }
 }
