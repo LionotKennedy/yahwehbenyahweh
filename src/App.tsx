@@ -9,6 +9,7 @@ import AboutYahwehBenYahweh from "./pages/(sous-page)/About_Yahweh_Ben_Yahweh/Ab
 import The_Followers_of_Yahweh_Ben_Yahweh from "./pages/(sous-page)/The_Followers_of_Yahweh_Ben_Yahweh/The_Followers_of_Yahweh_Ben_Yahweh";
 import Contact_Us from "./pages/(sous-page)/Contact_Us/Contact_Us";
 import Tetragrammaton from "./pages/(sous-page)/Tetragrammaton/Tetragrammaton";
+import The_Nation_of_Yahweh from "./pages/(sous-page)/The_Nation_of_Yahweh/The_Nation_of_Yahweh";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/The_Followers_of_Yahweh_Ben_Yahweh" element={<The_Followers_of_Yahweh_Ben_Yahweh />} />
             <Route path="/Contact_Us" element={<Contact_Us />} />
             <Route path="/Tetragrammaton" element={<Tetragrammaton />} />
+            <Route path="/The_Nation_of_Yahweh" element={<The_Nation_of_Yahweh />} />
           </Routes>
         </Layout>
       </Router>

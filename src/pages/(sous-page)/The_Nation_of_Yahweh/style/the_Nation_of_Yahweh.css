@@ -1,0 +1,125 @@
+#pg-banner-nation {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 535px;
+}
+
+#top-bar-gold-nation {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
+}
+
+#The_Nation_of_Yahweh-nation {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.width-nation {
+  width: 75%;
+}
+
+.sec-bar-nation {
+  background-color: transparent;
+  background-image: url("../image/Bar.png");
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+  height: 12px;
+}
+
+.pg-top-pd-mod-nation {
+  padding-top: 2px !important;
+}
+
+.sec-text-nation {
+  width: 82%;
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pg-text-fmt-nation {
+  font-size: 40px;
+  text-align: justify;
+  line-height: 1;
+}
+.pg-text-ltr-sp-nation {
+  letter-spacing: -1px;
+}
+.David-nation {
+  font-family: "David Libre", serif;
+  font-size: 48px;
+}
+
+#Our_Motto_is-nation {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.Motto_img-nation {
+  width: 30%;
+}
+.pg-link-text-nation {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+}
+.pg-link-text-ul-nation {
+  border-bottom: 3px solid;
+}
+.David-lg-nation {
+  font-family: "David Libre", serif;
+  font-size: 40px;
+}
+#pg-guides-nation {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  width: 80%;
+  text-align: center;
+}
+.pg-guide-nation {
+  display: inline-block;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+.width-guide-nation {
+  width: 75%;
+}
+.clear-nation {
+  clear: both;
+}
+#Nation-info-nation {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+#top-bar-gold-nation {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 1216px;
+    height: 44px;
+}
