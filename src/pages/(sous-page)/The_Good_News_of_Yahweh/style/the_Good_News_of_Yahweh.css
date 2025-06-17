@@ -1,0 +1,35 @@
+#backdrop-news {
+  background-image: url("../image/Background_Metal_1024.jpg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  min-height: 100%;
+  z-index: -1;
+}
+#pg-banner-news {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 535px;
+}
+#top-bar-gold-news {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
+}
+.pg-title-text-news {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 48px;
+}
+.p-title-text-news {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
