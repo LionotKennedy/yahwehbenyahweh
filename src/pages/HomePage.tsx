@@ -2,7 +2,7 @@ import { CenterButtons } from "../components/CenterButtons";
 import { ImageSlider } from "../components/ImageSlider";
 import { Link } from "react-router-dom";
 import "./styles/homePage.css";
-import { VideoPlayer } from "../components/VideoPlayer";
+import { VideoPlayer } from "../components/VideoPlayer"; 
 
 const slides = [
   { id: 1, image: "/src/assets/images/index-banner-3.jpg", alt: "Banner 3" },

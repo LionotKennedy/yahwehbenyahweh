@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Menu, X } from "lucide-react"
 // import "../components/styles/responsive.css"
-import "../components/styles/navigation.css"
+import "../components/styles/navigation.css" 
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
