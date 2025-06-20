@@ -1,12 +1,26 @@
 .ml_1 {
-    margin-left: 0.25rem;
+  margin-left: 0.25rem;
 }
 
 .h_4 {
-    height: 1rem;
+  height: 1rem;
 }
 
 .w_4 {
-    width: 1rem;
+  width: 1rem;
 }
 
+/*
+@media screen and (max-width: 1024px) {
+  #gold-top-menu-nav {
+    background-image: url("../images/Gold_Top_Menu_1216.jpg");
+    width: 100%;
+    height: 45px;
+  }
+}
+#gold-top-menu-nav {
+  background-image: url("../images/Gold_Top_Menu_1216.jpg");
+  width: 100%;
+  height: 45px;
+} 
+ */

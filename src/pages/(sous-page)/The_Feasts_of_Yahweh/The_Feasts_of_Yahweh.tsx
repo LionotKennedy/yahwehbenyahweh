@@ -2,6 +2,8 @@ import "./style/the_Feasts_of_Yahweh.css";
 import "./style/responsive.css";
 
 export function The_Feasts_of_Yahweh() {
+
+
   return (
     <div className="feasts-of-yahweh-page">
       <div id="pg-banner-feast"></div>

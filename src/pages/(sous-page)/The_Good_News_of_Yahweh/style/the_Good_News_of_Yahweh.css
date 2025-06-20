@@ -1,6 +1,6 @@
 #backdrop-news {
   background-image: url("../image/Background_Metal_1024.jpg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   display: block;
   width: 1216px;
   margin-left: auto;
@@ -32,4 +32,75 @@
 .p-title-text-news {
   margin-top: 20px;
   margin-bottom: 0px;
+}
+
+.book-line-news {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 90%;
+}
+.book-cnt-news {
+  display: inline-flex;
+  width: 319px;
+  padding-right: 20px;
+  padding-left: 21px;
+}
+.book-guide-news {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.img-size-news {
+  width: 100%;
+}
+.lnk-info-text-news {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.sec-bar-news {
+  background-image: url("../image/Bar.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+  height: 12px;
+}
+.pg-info-text-news {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 28px;
+}
+.p-info-text-news {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#top-bar-gold-news {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
 }

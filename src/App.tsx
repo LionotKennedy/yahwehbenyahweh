@@ -12,6 +12,8 @@ import Tetragrammaton from "./pages/(sous-page)/Tetragrammaton/Tetragrammaton";
 import The_Nation_of_Yahweh from "./pages/(sous-page)/The_Nation_of_Yahweh/The_Nation_of_Yahweh";
 import The_Feasts_of_Yahweh from "./pages/(sous-page)/The_Feasts_of_Yahweh/The_Feasts_of_Yahweh";
 import The_Good_News_of_Yahweh from "./pages/(sous-page)/The_Good_News_of_Yahweh/The_Good_News_of_Yahweh";
+import Back_issues from "./pages/(sous-page)/The_Good_News_of_Yahweh/(sous page)/back_issues";
+import Back_issues_p2 from "./pages/(sous-page)/The_Good_News_of_Yahweh/(sous page)/back_issues_p2";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
             <Route path="/The_Nation_of_Yahweh" element={<The_Nation_of_Yahweh />} />
             <Route path="/The_Feasts_of_Yahweh" element={<The_Feasts_of_Yahweh />} />
             <Route path="/The_Good_News_of_Yahweh" element={<The_Good_News_of_Yahweh />} />
+            <Route path="/The_Good_News_of_Yahweh/back_issues" element={<Back_issues />} />
+            <Route path="/The_Good_News_of_Yahweh/back_issues/2" element={<Back_issues_p2 />} />
           </Routes>
         </Layout>
       </Router>
