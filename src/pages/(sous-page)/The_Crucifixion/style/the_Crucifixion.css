@@ -1,0 +1,78 @@
+#backdrop-cruc {
+  background-image: url("../image/Background_Color_1216_lg.jpg");
+  /* background-repeat: no-repeat; */
+  display: block;
+  width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  min-height: 100%;
+  z-index: -1;
+}
+#pg-banner-cru {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 535px;
+}
+#top-bar-gold-cru {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
+}
+#No-cru {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 0px;
+}
+.width-cru {
+  width: 85%;
+}
+.sec-text-cru {
+  width: 82%;
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pg-text-fmt-cru {
+  font-size: 40px;
+  text-align: justify;
+  line-height: 1;
+  letter-spacing: 0.7px;
+}
+.David-cru {
+  font-family: "David Libre", serif;
+  font-size: 48px;
+}
+.sec-bar-cru {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    height: 12px;
+}
+.pg-text-fmt-ctr-cru {
+    font-size: 40px;
+    text-align: center;
+    line-height: 1;
+}
+#Bird {
+    display: block;
+    position: relative;
+    left: -100px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0px;
+    padding-bottom: 60px;
+}
+.width-cru2 {
+    width: 80%;
+}

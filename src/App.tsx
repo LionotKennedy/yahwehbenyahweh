@@ -14,6 +14,7 @@ import The_Feasts_of_Yahweh from "./pages/(sous-page)/The_Feasts_of_Yahweh/The_F
 import The_Good_News_of_Yahweh from "./pages/(sous-page)/The_Good_News_of_Yahweh/The_Good_News_of_Yahweh";
 import Back_issues from "./pages/(sous-page)/The_Good_News_of_Yahweh/(sous page)/back_issues";
 import Back_issues_p2 from "./pages/(sous-page)/The_Good_News_of_Yahweh/(sous page)/back_issues_p2";
+import The_Crucifixion from "./pages/(sous-page)/The_Crucifixion/The_Crucifixion";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/The_Good_News_of_Yahweh" element={<The_Good_News_of_Yahweh />} />
             <Route path="/The_Good_News_of_Yahweh/back_issues" element={<Back_issues />} />
             <Route path="/The_Good_News_of_Yahweh/back_issues/2" element={<Back_issues_p2 />} />
+            <Route path="/The_Crucifixion" element={<The_Crucifixion />} />
           </Routes>
         </Layout>
       </Router>
