@@ -1,0 +1,61 @@
+#pg-banner-ope {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 535px;
+}
+#top-bar-gold-ope {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
+}
+.sec-text-ope {
+  width: 82%;
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pg-text-ttl-fmt-ope {
+  font-size: 48px;
+  text-align: justify;
+  line-height: 1.1;
+  text-decoration: underline;
+}
+
+.pg-title-break-ope {
+  display: block;
+  position: relative;
+  margin-left: 9%;
+  padding-top: 10px;
+  padding-bottom: 1px;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.p-mrg-fmt-ope {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#Authentic {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.pg-text-fmt-ope {
+    font-size: 38px;
+    text-align: justify;
+    line-height: 1;
+}
