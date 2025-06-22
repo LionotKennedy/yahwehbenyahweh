@@ -17,6 +17,7 @@ import Back_issues_p2 from "./pages/(sous-page)/The_Good_News_of_Yahweh/(sous pa
 import The_Crucifixion from "./pages/(sous-page)/The_Crucifixion/The_Crucifixion";
 import Shocking_Revelations from "./pages/(sous-page)/Shocking_Revelations/Shocking_Revelations";
 import The_Sabbath from "./pages/(sous-page)/The_Sabbath/The_Sabbath";
+import Erosion_of_The_Constitution from "./pages/(sous-page)/Erosion_of_The_Constitution/Erosion_of_The_Constitution";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route path="/The_Crucifixion" element={<The_Crucifixion />} />
             <Route path="/Shocking_Revelations" element={<Shocking_Revelations />} />
             <Route path="/The_Sabbath" element={<The_Sabbath />} />
+            <Route path="/Erosion_of_The_Constitution" element={<Erosion_of_The_Constitution />} />
           </Routes>
         </Layout>
       </Router>
