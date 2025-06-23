@@ -20,6 +20,8 @@ import The_Sabbath from "./pages/(sous-page)/The_Sabbath/The_Sabbath";
 import Erosion_of_The_Constitution from "./pages/(sous-page)/Erosion_of_The_Constitution/Erosion_of_The_Constitution";
 import Operation_Word_War from "./pages/(sous-page)/Operation_Word_War/Operation_Word_War";
 import Balance_Justice from "./pages/(sous-page)/Balance_Justice/Balance_Justice";
+import Book_of_the_Month from "./pages/(sous-page)/Book_of_the_Month/Book_of_the_Month";
+import Books_for_the_Year from "./pages/(sous-page)/Books_for_the_Year/Books_for_the_Year";
 
 
 function App() {
@@ -51,6 +53,8 @@ function App() {
             <Route path="/Erosion_of_The_Constitution" element={<Erosion_of_The_Constitution />} />
             <Route path="/Operation_Word_War" element={<Operation_Word_War />} />
             <Route path="/Balance_Justice" element={<Balance_Justice />} />
+            <Route path="/Book_of_the_Month" element={<Book_of_the_Month />} />
+            <Route path="/Books_for_the_Year" element={<Books_for_the_Year />} />
           </Routes>
         </Layout>
       </Router>

@@ -1,0 +1,107 @@
+#pg-banner-year {
+  background-image: url("../image/page-banner.jpg");
+  width: 1216px;
+  height: 534px;
+}
+#top-bar-gold-year {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
+}
+.sec-bar-year {
+  background-color: transparent;
+  background-image: url("../image/Bar.png");
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+  height: 12px;
+}
+#MONTH_BOOK_READING_SCHEDULE {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+.img-size-12-year {
+  width: 90%;
+}
+#printer_offine-year {
+  display: block;
+  position: relative;
+  text-align: right;
+  /* margin-left: auto; */
+  margin-right: 5%;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.img-size-po-year {
+  width: 20%;
+}
+.book-line-year {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 90%;
+}
+.book-cnt-year {
+  display: inline-flex;
+  width: 319px;
+  padding-right: 20px;
+  padding-left: 21px;
+}
+.book-guide-year {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0px;
+  /* text-align: center; */
+  width: fit-content;
+}
+.book-size-contain-year {
+  width: 95%;
+  text-align: center;
+  margin: auto;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.img-size-year {
+  width: 100%;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.lnk-info-text-year {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.pg-line-break-year {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.pg-line-break-end-year {
+  display: none;
+}

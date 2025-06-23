@@ -2,7 +2,9 @@ import { CenterButtons } from "../components/CenterButtons";
 import { ImageSlider } from "../components/ImageSlider";
 import { Link } from "react-router-dom";
 import "./styles/homePage.css";
-import { VideoPlayer } from "../components/VideoPlayer"; 
+import "./styles/home.css";
+import "./styles/responsive.css";
+import { VideoPlayer } from "../components/VideoPlayer";
 
 const slides = [
   { id: 1, image: "/src/assets/images/index-banner-3.jpg", alt: "Banner 3" },
@@ -16,40 +18,43 @@ const HomePage = () => {
       {/* Image Slider */}
       <ImageSlider slides={slides} />
       {/* Gold Bar */}
-      <div id="top-bar-gold" className="top-bar-gold"></div>
+      <div id="top-bar-gold-home" className=""></div>
       {/* Center Buttons */}
       <CenterButtons />
-      <div className="clear-both"></div>
-      <div className="py_4"></div>
+      <div className="clear-both-home"></div>
+      <div>
+        <br />
+      </div>
       {/* Book of the Month */}
-      <div className="botm-image-contain textCenter">
+      <div className="botm-image-contain-home">
         <Link to="/Book_of_the_Month">
           <img
-            className="botm-image mxAuto max_w_full h_auto"
+            className="botm-image-home"
             src="/src/pages/images/botm-img-0.jpg"
             alt="Book of the month"
           />
         </Link>
       </div>
-      <div className="textCenter pt_3">
+      <div className="style-home">
         <Link to="/Book_of_the_Month">
           <img
-            className="sp-button-img mxAuto"
+            className="sp-button-img-home"
             src="/src/pages/images/read-more-button.png"
             alt="Read More . . ."
           />
         </Link>
-        <div className="clear-both"></div>
       </div>
+      <div className="clear-both-home"></div>
       {/* Videos Section */}
-      <div className="videos-section space_y_8 py_8">
-        <div className="vidPos">
+      {/* <div className="videos-section space_y_8 py_8"> */}
+      <div>
+        <div className="vidPos-home">
           <VideoPlayer
             src="https://ms.yahwehbenyahweh.com/video/720/2025_FeastThemeVideo_New.mp4"
             poster="/src/pages/images/page-banner_.jpg"
           />
         </div>
-        <div className="vidPos">
+        <div className="vidPos-home">
           <VideoPlayer
             src="https://ms.yahwehbenyahweh.com/video/720/Good_News_Commercial.mp4"
             poster="/src/pages/images/Good_News_of_Yahweh.jpg"
@@ -63,7 +68,7 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="vidPos">
+        <div className="vidPos-home">
           <VideoPlayer
             src="https://ms.yahwehbenyahweh.com/video/720/Home_Page_Promo.mp4"
             poster="/src/pages/images/Eternal_Life.jpg"
@@ -101,27 +106,29 @@ const HomePage = () => {
           </a>
         </div>
         <div className="clear-both"></div>
-        <div className="div-pad py_8"></div>
+        <div className="div-pad-home">
+          <br />
+          <br />
+        </div>
         {/* Breaking News */}
-        <div className="bn-div-fmt textCenter py_8">
+        <div className="bn-div-fmt-home">
           <img
-            className="breakingnews-img mx_auto mb_4"
+            className="breakingnews-img-home"
             src="/src/pages/images/Breaking_News.png"
             alt="Breaking News"
           />
-          <p className="bn-div-fmt-p-sz">
+          <p className="bn-div-fmt-p-sz-home">
             A flashing button indicates that some
             <br />
             important information has been posted
           </p>
         </div>
       </div>
-      <div className="py_8"></div>
-      <div
-        id="top-bar-gold"
-        className="top-bar-gold"
-      ></div>
-      Coucou 1
+      <div className="">
+        <br />
+        <br />
+      </div>
+      <div id="top-bar-gold-home" className=""></div>
     </div>
   );
 };

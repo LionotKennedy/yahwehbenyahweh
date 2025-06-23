@@ -1,0 +1,122 @@
+@media screen and (max-width: 1024px) {
+  #pg-banner-month {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-month {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 100%;
+    height: 44px;
+  }
+  .sec-bar-month {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #pg-banner-month {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-month {
+    width: 100%;
+    height: 34px;
+  }
+  .sec-bar-month {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+  }
+  .botm-title-text-itl-month {
+    font-size: 0.7em;
+  }
+  .botm-container-month {
+    display: flex;
+    width: 84%;
+  }
+  .botm-book-size-container-month {
+    width: 330%;
+  }
+  .botm-book-exerpt-month {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 480px) {
+  #pg-banner-month {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-month {
+    width: 100%;
+    height: 22px;
+  }
+  .sec-bar-month {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+  }
+  .botm-title-text-month {
+    font-size: 0.8em;
+  }
+  .botm-title-text-itl-month {
+    font-size: 0.6em;
+  }
+  .view-12-months {
+    margin-right: 0%;
+    text-align: center;
+    margin-top: 11px;
+    font-size: 0.9em;
+  }
+  .botm-title-text-sm-month {
+    padding-top: 25px;
+    font-size: 1em;
+  }
+  .botm-container-month {
+    display: block;
+    width: 75%;
+  }
+  .botm-book-size-container-month {
+    width: 100%;
+  }
+  .botm-book-exerpt-container-month {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .botm-book-exerpt-month {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    text-align: justify;
+    font-size: 0.7em;
+  }
+}

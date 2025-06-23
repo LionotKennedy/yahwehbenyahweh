@@ -1,0 +1,76 @@
+#top-bar-gold-home {
+  background-image: url("../images/Gold_Bar_1216.jpg");
+  width: 1216px;
+  height: 44px;
+}
+.clear-both-home {
+  clear: both;
+}
+.botm-image-contain-home {
+  width: 1186px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.botm-image-home {
+  width: 100%;
+}
+.style-home {
+  text-align: center;
+  padding-top: 0.8em;
+}
+.sp-button-img-home {
+  width: 418px;
+}
+.vidPos-home {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+video {
+  object-fit: contain;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.vid-width-home {
+  width: 811px;
+}
+.vid-width-home {
+  width: 811px;
+}
+.div-pad-home {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.bn-div-fmt-home {
+    display: block;
+    position: relative;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.breakingnews-img-home {
+    width: 330px;
+}
+.bn-div-fmt-p-sz-home {
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
