@@ -512,39 +512,39 @@ export function Navigation() {
         </a>
         <div className="dropdown">
           <button className="dropbtn">
-            <strong>ABOUT</strong>
+            <strong>Momba ny</strong>
             <i className="fa fa-caret-down"></i>
           </button>
           <div className="dropdown-content">
             <a href="/About_Yahweh/">Yahweh</a>
             <a href="/About_Yahweh_Ben_Yahweh/">Yahweh Ben Yahweh</a>
-            <a href="/The_Followers_of_Yahweh_Ben_Yahweh/">The Followers of Yahweh Ben Yahweh</a>
-            <a href="/Cultural_Attire/">Cultural Attire</a>
+            <a href="/The_Followers_of_Yahweh_Ben_Yahweh/">Ny Mpanaraka an'i Yahweh Ben Yahweh</a>
+            <a href="/Cultural_Attire/">Fitafiana Nentim-paharazana</a>
           </div>
         </div>
         <a href="/Contact_Us/">
-          <strong>CONTACT US</strong>
+          <strong>Hifandraisa aminay</strong>
         </a>
         <a href="https://shop.yahwehbenyahweh.com/">
-          <strong>ONLINE BOOKSTORE</strong>
+          <strong>Fivarotam-boky an-Internet</strong>
         </a>
         <div className="dropdown">
           <button className="dropbtn">
-            <strong>MENU</strong>
+            <strong>Safidy</strong>
             <i className="fa fa-caret-down"></i>
           </button>
           <div className="dropdown-content">
-            <a href="/Tetragrammaton/">Tetragrammaton</a>
-            <a href="/The_Nation_of_Yahweh/">The Nation of Yahweh</a>
-            <a href="/The_Universe_of_Yahweh/">The Universe of Yahweh</a>
-            <a href="/The_Feasts_of_Yahweh/">The Feasts of Yahweh</a>
-            <a href="/The_Good_News_of_Yahweh/">The Good News of Yahweh</a>
-            <a href="/The_Crucifixion/">The Crucifixion</a>
-            <a href="/Shocking_Revelations/">Shocking Revelations</a>
-            <a href="/The_Sabbath/">The Sabbath</a>
-            <a href="/Erosion_of_The_Constitution/">Erosion of The Constitution</a>
-            <a href="/Operation_Word_War/">Operation Word War</a>
-            <a href="/Balance_Justice/">Balance Justice</a>
+            <a href="/Tetragrammaton/">Tetragrama</a>
+            <a href="/The_Nation_of_Yahweh/">Firenen'i Yahweh</a>
+            <a href="/The_Universe_of_Yahweh/">Ny Tontolon'i Yahweh</a>
+            <a href="/The_Feasts_of_Yahweh/">Ny Fetin'i Yahweh</a>
+            <a href="/The_Good_News_of_Yahweh/">Ny Vaovao Mahafalin’i Yahweh</a>
+            <a href="/The_Crucifixion/">Ny Fanomboana tamin’ny hazofijaliana</a>
+            <a href="/Shocking_Revelations/">Famahaliana mampihorohoro</a>
+            <a href="/The_Sabbath/">Ny Sabata</a>
+            <a href="/Erosion_of_The_Constitution/">Ny Fahasimban’ny Lalàmpanorenana</a>
+            <a href="/Operation_Word_War/">Operation Ady Teny</a>
+            <a href="/Balance_Justice/">Fitsarana milamina</a>
           </div>
         </div>
       </div>
