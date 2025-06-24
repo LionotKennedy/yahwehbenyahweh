@@ -22,6 +22,8 @@ import Operation_Word_War from "./pages/(sous-page)/Operation_Word_War/Operation
 import Balance_Justice from "./pages/(sous-page)/Balance_Justice/Balance_Justice";
 import Book_of_the_Month from "./pages/(sous-page)/Book_of_the_Month/Book_of_the_Month";
 import Books_for_the_Year from "./pages/(sous-page)/Books_for_the_Year/Books_for_the_Year";
+import Page_2 from "./pages/(sous-page)/Shocking_Revelations/(page)/Page_2";
+import Page_3 from "./pages/(sous-page)/Shocking_Revelations/(page)/Page_3";
 
 
 function App() {
@@ -49,6 +51,8 @@ function App() {
             <Route path="/The_Good_News_of_Yahweh/back_issues/2" element={<Back_issues_p2 />} />
             <Route path="/The_Crucifixion" element={<The_Crucifixion />} />
             <Route path="/Shocking_Revelations" element={<Shocking_Revelations />} />
+            <Route path="/Shocking_Revelations/2" element={<Page_2 />} />
+            <Route path="/Shocking_Revelations/3" element={<Page_3 />} />
             <Route path="/The_Sabbath" element={<The_Sabbath />} />
             <Route path="/Erosion_of_The_Constitution" element={<Erosion_of_The_Constitution />} />
             <Route path="/Operation_Word_War" element={<Operation_Word_War />} />

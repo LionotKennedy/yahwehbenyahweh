@@ -1,7 +1,8 @@
-import "./style/shocking_Revelations.css";
-import "./style/responsive.css";
+import "../style/shocking_Revelations.css";
+import "../style/responsive.css";
 import { Link } from "react-router-dom";
-export function Shocking_Revelations() {
+
+export function Page_3() {
   return (
     <>
       <div id="pg-banner-shock"></div>
@@ -16,8 +17,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Stirring_Up_of_Grecia.jpg"
-                  alt="The Stirring Up of Grecia"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Chronicles_of_The_Two_Witnesses.jpg"
+                  alt="The Chronicles of The “Two  Witnesses”"
                 />
               </a>
             </div>
@@ -29,8 +30,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/An_Uprising_In_The_Camp.jpg"
-                  alt="An Uprising In The Camp"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Missionary_Spirit.jpg"
+                  alt="The Missionary Spirit"
                 />
               </a>
             </div>
@@ -42,50 +43,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Behold_A_White_Cloud.jpg"
-                  alt="Behold A White Cloud"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="pg-line-break-shock"></div>
-      <div className="book-line-shock">
-        <div className="book-cnt-shock">
-          <div className="book-guide-shock">
-            <div>
-              <a href="#">
-                <img
-                  className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Let_Him_That_Readeth_Understand.jpg"
-                  alt="Let Him That “Readeth” Understand"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="book-cnt-shock">
-          <div className="book-guide-shock">
-            <div>
-              <a href="#">
-                <img
-                  className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Many_False_Prophets_Shall_Rise.jpg"
-                  alt="And Many “False” Prophets Shall Rise, And Shall . . ."
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="book-cnt-shock">
-          <div className="book-guide-shock">
-            <div>
-              <a href="#">
-                <img
-                  className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Abomination_of_Desolation.jpg"
-                  alt="The Abomination of Desolation"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Overcome_Blood_of_the_Lamb_and_Word_of_Testimony.jpg"
+                  alt="Overcome: Blood of the Lamb and Word of Testimony"
                 />
               </a>
             </div>
@@ -100,8 +59,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Seven_Seals_of_The_Apocalypse.jpg"
-                  alt="The Seven Seals of The Apocalypse"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/First_Resurrection_First_Come_First_Served.jpg"
+                  alt="First Resurrection:  First Come, First Served"
                 />
               </a>
             </div>
@@ -113,8 +72,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Rising_of_The%20Beast_Out_of_The_Sea.jpg"
-                  alt="The Rising of The Beast Out of The Sea"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Redeemed_of_Israel.jpg"
+                  alt="The Redeemed of Israel"
                 />
               </a>
             </div>
@@ -126,8 +85,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Another_Beast_Coming_Up_Out_of_The_Earth.jpg"
-                  alt="Another Beast Coming Up Out of The Earth"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Submitting_To_The_Will_of_Yahweh_Ben_Yahweh.jpg"
+                  alt="Submitting To The  Will of Yahweh Ben Yahweh"
                 />
               </a>
             </div>
@@ -142,8 +101,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Beast_Like_Unto_A_Leopard.jpg"
-                  alt="The Beast Like Unto A Leopard"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Healing_Light.jpg"
+                  alt="The Healing Light"
                 />
               </a>
             </div>
@@ -155,8 +114,8 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Seven_Last_Plagues.jpg"
-                  alt="The Seven Last Plagues"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Sign_Of_The_Times.jpg"
+                  alt="The Sign Of The Times"
                 />
               </a>
             </div>
@@ -168,8 +127,92 @@ export function Shocking_Revelations() {
               <a href="#">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Sign_of_The_Times_The_Seven_Trumpets.jpg"
-                  alt="The Sign of The Times: The Seven Trumpets"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Who_Is_Worthy_To_Open_The_Book_And_Loose.jpg"
+                  alt="Who Is Worthy To Open The Book And Loose . . ."
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pg-line-break-shock"></div>
+      <div className="book-line-shock">
+        <div className="book-cnt-shock">
+          <div className="book-guide-shock">
+            <div>
+              <a href="#">
+                <img
+                  className="img-size-shock"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/YBY_Coming_In_The_Clouds_of_Heaven.jpg"
+                  alt="Yahweh Ben Yahweh Coming In The Clouds of Heaven . . ."
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="book-cnt-shock">
+          <div className="book-guide-shock">
+            <div>
+              <a href="#">
+                <img
+                  className="img-size-shock"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Behold_A_Throne_Was_Set_In_Heaven.jpg"
+                  alt="Behold, A Throne Was Set In Heaven"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="book-cnt-shock">
+          <div className="book-guide-shock">
+            <div>
+              <a href="#">
+                <img
+                  className="img-size-shock"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/A_Message_For_Law_Keepers.jpg"
+                  alt="A Message For Law Keepers . . . The Blood of The Lamb . ."
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pg-line-break-shock"></div>
+      <div className="book-line-shock">
+        <div className="book-cnt-shock">
+          <div className="book-guide-shock">
+            <div>
+              <a href="#">
+                <img
+                  className="img-size-shock"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Go_To_The_Ant.jpg"
+                  alt="Go To The Ant"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="book-cnt-shock">
+          <div className="book-guide-shock">
+            <div>
+              <a href="#">
+                <img
+                  className="img-size-shock"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/YBY_The_Only_Door_To_The_Sheepfold.jpg"
+                  alt="Yahweh Ben Yahweh The Only Door To The Sheepfold"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="book-cnt-shock">
+          <div className="book-guide-shock">
+            <div>
+              <a href="#">
+                <img
+                  className="img-size-shock"
+                  src="/src/pages/(sous-page)/Shocking_Revelations/image/When_The_Sun_Stood_Still.jpg"
+                  alt="When The Sun Stood Still"
                 />
               </a>
             </div>
@@ -179,17 +222,17 @@ export function Shocking_Revelations() {
       <div className="pg-info-text-shock">
         <p className="p-info-text-shock">
           <br />
-          <span className="lnk-info-text-no-ln-shock"> 1 </span>
+          <Link to="/Shocking_Revelations">
+            <span className="lnk-info-text-shock"> 1 </span>
+          </Link>
           <Link to="/Shocking_Revelations/2">
             <span className="lnk-info-text-shock"> 2 </span>
           </Link>
-          <Link to="/Shocking_Revelations/3">
-            <span className="lnk-info-text-shock"> 3 </span>
-          </Link>
+          <span className="lnk-info-text-no-ln-shock"> 3 </span>
         </p>
       </div>
       <div id="top-bar-gold-shock"></div>
     </>
   );
 }
-export default Shocking_Revelations;
+export default Page_3;
