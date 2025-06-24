@@ -23,7 +23,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Volume 3</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/Volume_3/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/Volume_3/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/Volume_3/index.html"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -51,7 +52,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Volume 2</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/Volume_2/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/Volume_2/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/Volume_2/index.html"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -79,7 +81,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Volume 1</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/Volume_1/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/Volume_1/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/Volume_1/index.html"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -110,7 +113,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Jun/Jul/Aug 2017 Issue</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2017_Jun-Aug/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2017_Jun-Aug/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/2017_Jun-Aug/index.html"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -138,7 +142,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Mar/Apr/May 2017 Issue</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2017_Mar-May/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2017_Mar-May/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/2017_Mar-May/index.html"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -166,7 +171,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Jan/Feb/Mar 2016 Issue</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2016_Jan-Mar/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2016_Jan-Mar/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/2016_Oct-Dec/index.html#p=1"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -253,7 +259,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Jan/Feb/Mar 2016 Issue</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2016_Jan-Mar/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2016_Jan-Mar/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/2016_Jan-Mar/index.html#p=1"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -284,7 +291,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Nov/Dec 2015 Issue</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2015_Nov-Dec/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2015_Nov-Dec/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/2015_Nov-Dec/index.html#p=1"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -312,7 +320,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Sep/Oct 2015 Issue</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2015_Sept-Oct/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2015_Sept-Oct/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/2015_Sept-Oct/index.html#p=1"
                 target="_blank"
               >
                 Flipbook Magazine
@@ -340,7 +349,8 @@ export function The_Good_News_of_Yahweh() {
             <p className="lnk-info-text-news">Nov/Dec 2014 Issue</p>
             <p className="lnk-info-text-news">
               <a
-                href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2014_Nov-Dec/index.html"
+                // href="/src/pages/(sous-page)/The_Good_News_of_Yahweh/goodnews/2014_Nov-Dec/index.html"
+                href="https://www.yahwehbenyahweh.com/The_Good_News_of_Yahweh/goodnews/2014_Nov-Dec/index.html#p=1"
                 target="_blank"
               >
                 Flipbook Magazine
