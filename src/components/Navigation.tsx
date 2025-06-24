@@ -166,78 +166,80 @@
 //   )
 // }
 
-"use client"
 
-import { useState } from "react"
-import { Link } from "react-router-dom"
-import { Menu, X } from "lucide-react"
-import "../components/styles/navigation.css"
 
-export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+// "use client"
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+// import { useState } from "react"
+// import { Link } from "react-router-dom"
+// import { Menu, X } from "lucide-react"
+// import "../components/styles/navigation.css"
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
+// export function Navigation() {
+//   const [isOpen, setIsOpen] = useState(false)
+//   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
-  return (
-    <nav className="gold-top-menu" id="gold-top-menu-pers">
-      <div className={`topnav ${isOpen ? "responsive" : ""}`} id="myTopnav">
-        {/* Menu button for mobile */}
-        <button className="icon style-nav mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+//   const toggleMenu = () => {
+//     setIsOpen(!isOpen)
+//   }
 
-        {/* Navigation links */}
-        <div className="nav-links-container">
-          <div className="dropdown">
-            <button className="dropbtn" onClick={() => toggleDropdown("about")}>
-              <strong>ABOUT</strong>
-            </button>
-            <div className={`dropdown-content ${activeDropdown === "about" ? "show" : ""}`}>
-              <Link to="/About_Yahweh" onClick={() => setIsOpen(false)}>Yahweh</Link>
-              <Link to="/About_Yahweh_Ben_Yahweh" onClick={() => setIsOpen(false)}>Yahweh Ben Yahweh</Link>
-              <Link to="/The_Followers_of_Yahweh_Ben_Yahweh" onClick={() => setIsOpen(false)}>The Followers of Yahweh Ben Yahweh</Link>
-              <Link to="/Cultural_Attire" onClick={() => setIsOpen(false)}>Cultural Attire</Link>
-            </div>
-          </div>
+//   const toggleDropdown = (dropdown: string) => {
+//     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+//   }
 
-          <Link to="/Contact_Us" className="nav-link" onClick={() => setIsOpen(false)}>
-            <strong>CONTACT US</strong>
-          </Link>
+//   return (
+//     <nav className="gold-top-menu" id="gold-top-menu-pers">
+//       <div className={`topnav ${isOpen ? "responsive" : ""}`} id="myTopnav">
+//         {/* Menu button for mobile */}
+//         <button className="icon style-nav mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
+//           {isOpen ? <X size={20} /> : <Menu size={20} />}
+//         </button>
 
-          <a href="https://shop.yahwehbenyahweh.com/" target="_blank" rel="noopener noreferrer" className="nav-link">
-            <strong>ONLINE BOOKSTORE</strong>
-          </a>
+//         {/* Navigation links */}
+//         <div className="nav-links-container">
+//           <div className="dropdown">
+//             <button className="dropbtn" onClick={() => toggleDropdown("about")}>
+//               <strong>ABOUT</strong>
+//             </button>
+//             <div className={`dropdown-content ${activeDropdown === "about" ? "show" : ""}`}>
+//               <Link to="/About_Yahweh" onClick={() => setIsOpen(false)}>Yahweh</Link>
+//               <Link to="/About_Yahweh_Ben_Yahweh" onClick={() => setIsOpen(false)}>Yahweh Ben Yahweh</Link>
+//               <Link to="/The_Followers_of_Yahweh_Ben_Yahweh" onClick={() => setIsOpen(false)}>The Followers of Yahweh Ben Yahweh</Link>
+//               <Link to="/Cultural_Attire" onClick={() => setIsOpen(false)}>Cultural Attire</Link>
+//             </div>
+//           </div>
 
-          <div className="dropdown">
-            <button className="dropbtn" onClick={() => toggleDropdown("menu")}>
-              <strong>MENU</strong>
-            </button>
-            <div className={`dropdown-content ${activeDropdown === "menu" ? "show" : ""}`}>
-              <Link to="/Tetragrammaton" onClick={() => setIsOpen(false)}>Tetragrammaton</Link>
-              <Link to="/The_Nation_of_Yahweh" onClick={() => setIsOpen(false)}>The Nation of Yahweh</Link>
-              <Link to="/The_Universe_of_Yahweh" onClick={() => setIsOpen(false)}>The Universe of Yahweh</Link>
-              <Link to="/The_Feasts_of_Yahweh" onClick={() => setIsOpen(false)}>The Feasts of Yahweh</Link>
-              <Link to="/The_Good_News_of_Yahweh" onClick={() => setIsOpen(false)}>The Good News of Yahweh</Link>
-              <Link to="/The_Crucifixion" onClick={() => setIsOpen(false)}>The Crucifixion</Link>
-              <Link to="/Shocking_Revelations" onClick={() => setIsOpen(false)}>Shocking Revelations</Link>
-              <Link to="/The_Sabbath" onClick={() => setIsOpen(false)}>The Sabbath</Link>
-              <Link to="/Erosion_of_The_Constitution" onClick={() => setIsOpen(false)}>Erosion of The Constitution</Link>
-              <Link to="/Operation_Word_War" onClick={() => setIsOpen(false)}>Operation Word War</Link>
-              <Link to="/Balance_Justice" onClick={() => setIsOpen(false)}>Balance Justice</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  )
-}
+//           <Link to="/Contact_Us" className="nav-link" onClick={() => setIsOpen(false)}>
+//             <strong>CONTACT US</strong>
+//           </Link>
+
+//           <a href="https://shop.yahwehbenyahweh.com/" target="_blank" rel="noopener noreferrer" className="nav-link">
+//             <strong>ONLINE BOOKSTORE</strong>
+//           </a>
+
+//           <div className="dropdown">
+//             <button className="dropbtn" onClick={() => toggleDropdown("menu")}>
+//               <strong>MENU</strong>
+//             </button>
+//             <div className={`dropdown-content ${activeDropdown === "menu" ? "show" : ""}`}>
+//               <Link to="/Tetragrammaton" onClick={() => setIsOpen(false)}>Tetragrammaton</Link>
+//               <Link to="/The_Nation_of_Yahweh" onClick={() => setIsOpen(false)}>The Nation of Yahweh</Link>
+//               <Link to="/The_Universe_of_Yahweh" onClick={() => setIsOpen(false)}>The Universe of Yahweh</Link>
+//               <Link to="/The_Feasts_of_Yahweh" onClick={() => setIsOpen(false)}>The Feasts of Yahweh</Link>
+//               <Link to="/The_Good_News_of_Yahweh" onClick={() => setIsOpen(false)}>The Good News of Yahweh</Link>
+//               <Link to="/The_Crucifixion" onClick={() => setIsOpen(false)}>The Crucifixion</Link>
+//               <Link to="/Shocking_Revelations" onClick={() => setIsOpen(false)}>Shocking Revelations</Link>
+//               <Link to="/The_Sabbath" onClick={() => setIsOpen(false)}>The Sabbath</Link>
+//               <Link to="/Erosion_of_The_Constitution" onClick={() => setIsOpen(false)}>Erosion of The Constitution</Link>
+//               <Link to="/Operation_Word_War" onClick={() => setIsOpen(false)}>Operation Word War</Link>
+//               <Link to="/Balance_Justice" onClick={() => setIsOpen(false)}>Balance Justice</Link>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   )
+// }
 
 
 
@@ -449,3 +451,103 @@ export function Navigation() {
 //     </div>
 //   )
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"use client"
+
+import { useState } from "react"
+
+export function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  return (
+    <div id="gold-top-menu">
+      <div className={`topnav ${isMenuOpen ? "responsive" : ""}`} id="myTopnav">
+        <a
+          href="javascript:void(0);"
+          style={{ fontSize: "20px", height: "20px" }}
+          className="icon"
+          onClick={toggleMenu}
+        >
+          &#9776;
+        </a>
+        <div className="dropdown">
+          <button className="dropbtn">
+            <strong>ABOUT</strong>
+            <i className="fa fa-caret-down"></i>
+          </button>
+          <div className="dropdown-content">
+            <a href="/About_Yahweh/">Yahweh</a>
+            <a href="/About_Yahweh_Ben_Yahweh/">Yahweh Ben Yahweh</a>
+            <a href="/The_Followers_of_Yahweh_Ben_Yahweh/">The Followers of Yahweh Ben Yahweh</a>
+            <a href="/Cultural_Attire/">Cultural Attire</a>
+          </div>
+        </div>
+        <a href="/Contact_Us/">
+          <strong>CONTACT US</strong>
+        </a>
+        <a href="https://shop.yahwehbenyahweh.com/">
+          <strong>ONLINE BOOKSTORE</strong>
+        </a>
+        <div className="dropdown">
+          <button className="dropbtn">
+            <strong>MENU</strong>
+            <i className="fa fa-caret-down"></i>
+          </button>
+          <div className="dropdown-content">
+            <a href="/Tetragrammaton/">Tetragrammaton</a>
+            <a href="/The_Nation_of_Yahweh/">The Nation of Yahweh</a>
+            <a href="/The_Universe_of_Yahweh/">The Universe of Yahweh</a>
+            <a href="/The_Feasts_of_Yahweh/">The Feasts of Yahweh</a>
+            <a href="/The_Good_News_of_Yahweh/">The Good News of Yahweh</a>
+            <a href="/The_Crucifixion/">The Crucifixion</a>
+            <a href="/Shocking_Revelations/">Shocking Revelations</a>
+            <a href="/The_Sabbath/">The Sabbath</a>
+            <a href="/Erosion_of_The_Constitution/">Erosion of The Constitution</a>
+            <a href="/Operation_Word_War/">Operation Word War</a>
+            <a href="/Balance_Justice/">Balance Justice</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
