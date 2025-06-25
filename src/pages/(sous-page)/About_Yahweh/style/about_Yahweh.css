@@ -1,14 +1,14 @@
 /*** page.css ***/
 
-    #pg-banner-about {
-        background-image: url("../image/page-banner.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 0;
-        padding-top: 43.99%;
-    }
-    
+#pg-banner-about {
+  background-image: url("../image/page-banner.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 43.99%;
+}
+
 #top-bar-gold-about {
   background-image: url("../image/Gold_Bar_1216.jpg");
   width: 1216px;

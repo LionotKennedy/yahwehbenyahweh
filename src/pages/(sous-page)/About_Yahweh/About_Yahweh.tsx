@@ -21,8 +21,8 @@ export function AboutYahweh() {
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
           The power behind the universe is not a mysterious force, but a real
-          person by the name of <span className="David-about">יהוה</span>. Trips to
-          the international space station, and scientific observations,
+          person by the name of <span className="David-about">יהוה</span>. Trips
+          to the international space station, and scientific observations,
           including photographs of other planets prove that the awe-inspiring
           vastness of the heavens and space is fashioned in an orderly
           arrangement. To conclude such a vast universe as ours is organized
@@ -35,9 +35,10 @@ export function AboutYahweh() {
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          For thus saith <span className="David-about">יהוה</span>, that created the
-          Heavens; <span className="David-about">יהוה</span> formed the Earth and made
-          it; He established it, and He created it not in vain (Isaiah 45:18).
+          For thus saith <span className="David-about">יהוה</span>, that created
+          the Heavens; <span className="David-about">יהוה</span> formed the
+          Earth and made it; He established it, and He created it not in vain
+          (Isaiah 45:18).
         </p>
       </div>
       <div className="sec-bar-about"></div>
@@ -66,11 +67,11 @@ export function AboutYahweh() {
           Moses, before the fall of Egypt, could tell that calling God by His
           personal name was important (Exodus 3:13), and this same scenario
           exists today. Before the fall of Babylon, the great city,{" "}
-          <span className="David-about">יהוה&nbsp;בּן&nbsp;יהוה</span>, the Son of{" "}
-          <span className="David-about">יהוה</span>, recognized the importance of you
-          being able to call Him by His personal name; For there is none other
-          name under Heaven given among men, whereby you can be saved (John
-          5:43; 1 Timothy 2:5-6; Acts 4:12).
+          <span className="David-about">יהוה&nbsp;בּן&nbsp;יהוה</span>, the Son
+          of <span className="David-about">יהוה</span>, recognized the
+          importance of you being able to call Him by His personal name; For
+          there is none other name under Heaven given among men, whereby you can
+          be saved (John 5:43; 1 Timothy 2:5-6; Acts 4:12).
         </p>
       </div>
       <div className="sec-bar-about"></div>
@@ -78,11 +79,12 @@ export function AboutYahweh() {
         <p>
           In essence, it is absolutely impossible to enter into a relationship
           with <span className="David-about">יהוה</span>, without acknowledging{" "}
-          <span className="David-about">יהוה&nbsp;בּן&nbsp;יהוה</span>, His Beloved Son
-          (John 10:9, 30; John 14:6; John 17:11). Thus, to know{" "}
-          <span className="David-about">יהוה</span>, is to experience the reality of
-          assured confidence and deliverance. The disclosure of His name, as
-          well as His Son’s name, is the index to understanding Biblical faith.
+          <span className="David-about">יהוה&nbsp;בּן&nbsp;יהוה</span>, His
+          Beloved Son (John 10:9, 30; John 14:6; John 17:11). Thus, to know{" "}
+          <span className="David-about">יהוה</span>, is to experience the
+          reality of assured confidence and deliverance. The disclosure of His
+          name, as well as His Son’s name, is the index to understanding
+          Biblical faith.
         </p>
       </div>
       <div id="pg-btm-media-about" className="">
