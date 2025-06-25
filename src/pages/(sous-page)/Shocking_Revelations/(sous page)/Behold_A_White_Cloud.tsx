@@ -15,7 +15,7 @@ export function Behold_A_White_Cloud() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/beholdawhitecould.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/beholdawhitecould.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

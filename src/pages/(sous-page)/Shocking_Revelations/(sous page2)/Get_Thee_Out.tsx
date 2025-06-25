@@ -16,7 +16,7 @@ export function Mystery_Babylon() {
             <div className="book-guide-shock">
               Part 1 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_1.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_1.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -24,7 +24,7 @@ export function Mystery_Babylon() {
               <br />
               Part 2 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_2.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_2.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -32,7 +32,7 @@ export function Mystery_Babylon() {
               <br />
               Part 3 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_3.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_3.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -40,7 +40,7 @@ export function Mystery_Babylon() {
               <br />
               Part 4 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_4.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_4.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -48,7 +48,7 @@ export function Mystery_Babylon() {
               <br />
               Part 5 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_5.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_5.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -56,7 +56,7 @@ export function Mystery_Babylon() {
               <br />
               Part 6 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_6.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_6.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -64,7 +64,7 @@ export function Mystery_Babylon() {
               <br />
               Part 7 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_7.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_7.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -72,7 +72,7 @@ export function Mystery_Babylon() {
               <br />
               Part 8 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_8.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_8.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -80,7 +80,7 @@ export function Mystery_Babylon() {
               <br />
               Part 9 -{" "}
               <a
-                href="pdf/Get_Thee_Out_of_Thy_Country_Part_9.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Get_Thee_Out_of_Thy_Country_Part_9.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

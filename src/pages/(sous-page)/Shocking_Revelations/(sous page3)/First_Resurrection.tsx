@@ -17,7 +17,7 @@ export function First_Resurrection() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/first_resurrection_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/first_resurrection_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

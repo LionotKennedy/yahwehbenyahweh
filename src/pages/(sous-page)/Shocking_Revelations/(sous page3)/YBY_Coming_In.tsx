@@ -18,52 +18,52 @@ export function YBY_Coming_In() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt1-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt1-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt2-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt2-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt3-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt3-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt4.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt4.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 5 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt5-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt5-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 6 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt6-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt6-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 7 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt7-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt7-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 8 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt8-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt8-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 9 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt9-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt9-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 10 -{" "}
-              <a href="pdf/coming_in_the_clouds_pt10-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/coming_in_the_clouds_pt10-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

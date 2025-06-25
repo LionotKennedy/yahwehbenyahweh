@@ -17,32 +17,32 @@ export function The_Rising_of_The() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/rising_of_beast_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/rising_of_beast_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/rising_of_beast_pt2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/rising_of_beast_pt2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/rising_of_beast_pt3.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/rising_of_beast_pt3.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/rising_of_beast_pt4.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/rising_of_beast_pt4.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 5 -{" "}
-              <a href="pdf/rising_of_beast_pt5.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/rising_of_beast_pt5.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Summary{" "}
-              <a href="pdf/the_beast.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_beast.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

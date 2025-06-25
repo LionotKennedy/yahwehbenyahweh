@@ -24,6 +24,49 @@ import Book_of_the_Month from "./pages/(sous-page)/Book_of_the_Month/Book_of_the
 import Books_for_the_Year from "./pages/(sous-page)/Books_for_the_Year/Books_for_the_Year";
 import Page_2 from "./pages/(sous-page)/Shocking_Revelations/(page)/Page_2";
 import Page_3 from "./pages/(sous-page)/Shocking_Revelations/(page)/Page_3";
+// Page 1
+import The_Stirring_Up_of_Grecia from "./pages/(sous-page)/Shocking_Revelations/(sous page)/The_Stirring_Up_of_Grecia";
+import An_Uprising_In_The_Camp from "./pages/(sous-page)/Shocking_Revelations/(sous page)/An_Uprising_In_The_Camp";
+import Let_Him_That_Readeth_Understand from "./pages/(sous-page)/Shocking_Revelations/(sous page)/Let_Him_That_Readeth_Understand";
+import Many_False_Prophets_Shall_Rise from "./pages/(sous-page)/Shocking_Revelations/(sous page)/Many_False_Prophets_Shall_Rise";
+import The_Abomination_of_Desolation from "./pages/(sous-page)/Shocking_Revelations/(sous page)/The_Abomination_of_Desolation";
+import The_Seven_Seals_of_The_Apocalypse from "./pages/(sous-page)/Shocking_Revelations/(sous page)/The_Seven_Seals_of_The_Apocalypse";
+import The_Rising_of_The from "./pages/(sous-page)/Shocking_Revelations/(sous page)/The_Rising_of_The";
+import Another_Beast_Coming from "./pages/(sous-page)/Shocking_Revelations/(sous page)/Another_Beast_Coming";
+import The_Beast_Like from "./pages/(sous-page)/Shocking_Revelations/(sous page)/The_Beast_Like";
+import The_Seven_Last_Plagues from "./pages/(sous-page)/Shocking_Revelations/(sous page)/The_Seven_Last_Plagues";
+import The_Sign_of_The_Times from "./pages/(sous-page)/Shocking_Revelations/(sous page)/The_Sign_of_The_Times";
+import Behold_A_White_Cloud from "./pages/(sous-page)/Shocking_Revelations/(sous page)/Behold_A_White_Cloud";
+// Page 2
+import YBY_The_Appointed from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/YBY_The_Appointed";
+import The_Day_of_The_Lord from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/The_Day_of_The_Lord";
+import Nebuchadnezzar from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/Nebuchadnezzar";
+import Judgment_Shall_Sit from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/Judgment_Shall_Sit";
+import The_Sheep_of_YBY from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/The_Sheep_of_YBY";
+import The_Decryption_of_Shadrach from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/The_Decryption_of_Shadrach";
+import The_Mysteries from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/The_Mysteries";
+import Mystery_Babylon from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/Mystery_Babylon";
+import The_Bottomless_Pit from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/The_Bottomless_Pit";
+import The_Final_Judgment from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/The_Final_Judgment";
+import Get_Thee_Out from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/Get_Thee_Out";
+import The_Wall_of_Jericho from "./pages/(sous-page)/Shocking_Revelations/(sous page2)/The_Wall_of_Jericho";
+// Page 3
+import The_Chronicles from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/The_Chronicles";
+import The_Missionary_Spirit from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/The_Missionary_Spirit";
+import Overcome_Blood from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/Overcome_Blood";
+import First_Resurrection from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/First_Resurrection";
+import The_Redeemed from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/The_Redeemed";
+import Submitting_To_The_Will from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/Submitting_To_The_Will";
+import The_Healing_Light from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/The_Healing_Light";
+import The_Sign_Of_The_Times from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/The_Sign_Of_The_Times";
+import Who_Is_Worthy from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/Who_Is_Worthy";
+import YBY_Coming_In from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/YBY_Coming_In";
+import Behold_A_Throne from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/Behold_A_Throne";
+import A_Message_For from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/A_Message_For";
+import Go_To_The_Ant from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/Go_To_The_Ant";
+import YBY_The_Only_Door from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/YBY_The_Only_Door";
+import When_The_Sun from "./pages/(sous-page)/Shocking_Revelations/(sous page3)/When_The_Sun";
+
 
 
 function App() {
@@ -59,6 +102,49 @@ function App() {
             <Route path="/Balance_Justice" element={<Balance_Justice />} />
             <Route path="/Book_of_the_Month" element={<Book_of_the_Month />} />
             <Route path="/Books_for_the_Year" element={<Books_for_the_Year />} />
+            {/* ROUTE FPR SUBPAGE */}
+            {/* page 1 */}
+            <Route path="/Shocking_Revelations/The_Stirring_Up_of_Grecia" element={<The_Stirring_Up_of_Grecia />} />
+            <Route path="/Shocking_Revelations/An_Uprising_In_The_Camp" element={<An_Uprising_In_The_Camp />} />
+            <Route path="/Shocking_Revelations/Behold_A_White_Cloud" element={<Behold_A_White_Cloud />} />
+            <Route path="/Shocking_Revelations/Let_Him_That_Readeth_Understand" element={<Let_Him_That_Readeth_Understand />} />
+            <Route path="/Shocking_Revelations/Many_False_Prophets_Shall_Rise" element={<Many_False_Prophets_Shall_Rise />} />
+            <Route path="/Shocking_Revelations/The_Abomination_of_Desolation" element={<The_Abomination_of_Desolation />} />
+            <Route path="/Shocking_Revelations/The_Seven_Seals_of_The_Apocalypse" element={<The_Seven_Seals_of_The_Apocalypse />} />
+            <Route path="/Shocking_Revelations/The_Rising_of_The" element={<The_Rising_of_The />} />
+            <Route path="/Shocking_Revelations/Another_Beast_Coming" element={<Another_Beast_Coming />} />
+            <Route path="/Shocking_Revelations/The_Beast_Like" element={<The_Beast_Like />} />
+            <Route path="/Shocking_Revelations/The_Seven_Last_Plagues" element={<The_Seven_Last_Plagues />} />
+            <Route path="/Shocking_Revelations/The_Sign_of_The_Times" element={<The_Sign_of_The_Times />} />
+            {/* page 2 */}
+            <Route path="/Shocking_Revelations/2/YBY_The_Appointed" element={<YBY_The_Appointed />} />
+            <Route path="/Shocking_Revelations/2/The_Day_of_The_Lord" element={<The_Day_of_The_Lord />} />
+            <Route path="/Shocking_Revelations/2/Nebuchadnezzar" element={<Nebuchadnezzar />} />
+            <Route path="/Shocking_Revelations/2/Judgment_Shall_Sit" element={<Judgment_Shall_Sit />} />
+            <Route path="/Shocking_Revelations/2/The_Sheep_of_YBY" element={<The_Sheep_of_YBY />} />
+            <Route path="/Shocking_Revelations/2/The_Decryption_of_Shadrach" element={<The_Decryption_of_Shadrach />} />
+            <Route path="/Shocking_Revelations/2/The_Mysteries" element={<The_Mysteries />} />
+            <Route path="/Shocking_Revelations/2/Mystery_Babylon" element={<Mystery_Babylon />} />
+            <Route path="/Shocking_Revelations/2/The_Bottomless_Pit" element={<The_Bottomless_Pit />} />
+            <Route path="/Shocking_Revelations/2/The_Final_Judgment" element={<The_Final_Judgment />} />
+            <Route path="/Shocking_Revelations/2/Get_Thee_Out" element={<Get_Thee_Out />} />
+            <Route path="/Shocking_Revelations/2/The_Wall_of_Jericho" element={<The_Wall_of_Jericho />} />
+            {/* page 3 */}
+            <Route path="/Shocking_Revelations/3/The_Chronicles" element={<The_Chronicles />} />
+            <Route path="/Shocking_Revelations/3/The_Missionary_Spirit" element={<The_Missionary_Spirit />} />
+            <Route path="/Shocking_Revelations/3/Overcome_Blood" element={<Overcome_Blood />} />
+            <Route path="/Shocking_Revelations/3/First_Resurrection" element={<First_Resurrection />} />
+            <Route path="/Shocking_Revelations/3/The_Redeemed" element={<The_Redeemed />} />
+            <Route path="/Shocking_Revelations/3/Submitting_To_The_Will" element={<Submitting_To_The_Will />} />
+            <Route path="/Shocking_Revelations/3/The_Healing_Light" element={<The_Healing_Light />} />
+            <Route path="/Shocking_Revelations/3/The_Sign_Of_The_Times" element={<The_Sign_Of_The_Times />} />
+            <Route path="/Shocking_Revelations/3/Who_Is_Worthy" element={<Who_Is_Worthy />} />
+            <Route path="/Shocking_Revelations/3/YBY_Coming_In" element={<YBY_Coming_In />} />
+            <Route path="/Shocking_Revelations/3/Behold_A_Throne" element={<Behold_A_Throne />} />
+            <Route path="/Shocking_Revelations/3/A_Message_For" element={<A_Message_For />} />
+            <Route path="/Shocking_Revelations/3/Go_To_The_Ant" element={<Go_To_The_Ant />} />
+            <Route path="/Shocking_Revelations/3/YBY_The_Only_Door" element={<YBY_The_Only_Door />} />
+            <Route path="/Shocking_Revelations/3/When_The_Sun" element={<When_The_Sun />} />
           </Routes>
         </Layout>
       </Router>

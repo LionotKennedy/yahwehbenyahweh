@@ -17,37 +17,37 @@ export function Another_Beast_Coming() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/out_of_the_earth_pt1-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/out_of_the_earth_pt1-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/out_of_the_earth_pt2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/out_of_the_earth_pt2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/out_of_the_earth_pt3.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/out_of_the_earth_pt3.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/out_of_the-earth_pt4-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/out_of_the-earth_pt4-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 5 -{" "}
-              <a href="pdf/out_of_the_earth_pt5.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/out_of_the_earth_pt5.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 6 -{" "}
-              <a href="pdf/out_of_the_earth_pt6.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/out_of_the_earth_pt6.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 7 -{" "}
-              <a href="pdf/out_of_the_earth_pt7.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/out_of_the_earth_pt7.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

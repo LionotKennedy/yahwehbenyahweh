@@ -17,7 +17,7 @@ export function Mystery_Babylon() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/mystery_babylon_p1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/mystery_babylon_p1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

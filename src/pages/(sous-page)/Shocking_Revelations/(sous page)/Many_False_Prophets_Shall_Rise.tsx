@@ -17,27 +17,27 @@ export function Many_False_Prophets_Shall_Rise() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/FalseProphets-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/FalseProphets-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/false_prophets_p2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/false_prophets_p2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/false_prophets_p31-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/false_prophets_p31-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/False_Prophets_Part4.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/False_Prophets_Part4.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 5 -{" "}
-              <a href="pdf/False_Prophets_Part5.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/False_Prophets_Part5.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

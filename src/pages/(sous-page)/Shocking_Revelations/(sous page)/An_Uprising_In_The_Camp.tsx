@@ -15,27 +15,27 @@ export function An_Uprising_In_The_Camp() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/an_uprising_camp_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/an_uprising_camp_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/an_uprising_camp_pt2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/an_uprising_camp_pt2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/an_uprising_camp_pt3.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/an_uprising_camp_pt3.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/an_uprising_camp_pt4.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/an_uprising_camp_pt4.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 5 -{" "}
-              <a href="pdf/an_uprising_camp_pt5.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/an_uprising_camp_pt5.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />

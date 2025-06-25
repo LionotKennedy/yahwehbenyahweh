@@ -15,12 +15,18 @@ export function YBY_The_Appointed() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/appointed_watchman_pI.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/appointed_watchman_pI.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/appointed_watchman_pII.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/appointed_watchman_pII.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
             </div>

@@ -17,12 +17,12 @@ export function Who_Is_Worthy() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/who_is_worthy_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/who_is_worthy_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/who_is_worthy_pt2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/who_is_worthy_pt2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

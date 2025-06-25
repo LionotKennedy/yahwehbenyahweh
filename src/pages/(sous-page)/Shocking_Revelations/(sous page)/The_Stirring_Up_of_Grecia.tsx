@@ -16,7 +16,7 @@ export function The_Stirring_Up_of_Grecia() {
             <div className="book-guide-shock">
               Part 1 -{" "}
               <a
-                href="pdf/The_Stirring_Up_of_Grecia_Part_1.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Stirring_Up_of_Grecia_Part_1.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

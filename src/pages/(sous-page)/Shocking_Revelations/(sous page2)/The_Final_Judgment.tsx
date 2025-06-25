@@ -15,22 +15,22 @@ export function The_Final_Judgment() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/final_judgment_p1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/final_judgment_p1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/final_judgment_p2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/final_judgment_p2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/final_judgment_p3.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/final_judgment_p3.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/The_Final_Judge_P4.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Final_Judge_P4.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

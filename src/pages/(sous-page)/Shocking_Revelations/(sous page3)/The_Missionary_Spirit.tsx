@@ -17,7 +17,7 @@ export function The_Missionary_Spirit() {
           <div>
             <div className="book-guide-shock">
               Part 18 -{" "}
-              <a href="pdf/missionary_spirit_pt18.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/missionary_spirit_pt18.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

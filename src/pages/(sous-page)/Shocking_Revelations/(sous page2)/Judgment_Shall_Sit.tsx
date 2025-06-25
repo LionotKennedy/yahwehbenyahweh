@@ -15,27 +15,27 @@ export function Judgment_Shall_Sit() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/judgment_shall_sit_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/judgment_shall_sit_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/judgment_shall_sit_pt2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/judgment_shall_sit_pt2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/judgment_shall_sit_pt3.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/judgment_shall_sit_pt3.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/judgment_shall_sit_pt4.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/judgment_shall_sit_pt4.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Summary -{" "}
-              <a href="pdf/judgment_shall_sit_pt5.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/judgment_shall_sit_pt5.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

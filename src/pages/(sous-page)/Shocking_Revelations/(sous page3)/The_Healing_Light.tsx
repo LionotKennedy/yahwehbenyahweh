@@ -15,7 +15,7 @@ export function The_Healing_Light() {
           <div>
             <div className="book-guide-shock">
               Part 11-{" "}
-              <a href="pdf/healing_light_pt11.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/healing_light_pt11.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

@@ -15,47 +15,47 @@ export function Go_To_The_Ant() {
           <div>
             <div className="book-guide-shock">
               Part 13 -{" "}
-              <a href="pdf/go_to_the_ant_pt13.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt13.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 14 -{" "}
-              <a href="pdf/go_to_the_ant_pt14.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt14.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 15 -{" "}
-              <a href="pdf/go_to_the_ant_pt15.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt15.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 16 -{" "}
-              <a href="pdf/go_to_the_ant_pt16.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt16.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 17 -{" "}
-              <a href="pdf/go_to_the_ant_pt17.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt17.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 18 -{" "}
-              <a href="pdf/go_to_the_ant_pt18.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt18.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 19 -{" "}
-              <a href="pdf/go_to_the_ant_pt19.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt19.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 20 -{" "}
-              <a href="pdf/go_to_the_ant_pt20-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt20-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 21 -{" "}
-              <a href="pdf/go_to_the_ant_pt21-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/go_to_the_ant_pt21-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

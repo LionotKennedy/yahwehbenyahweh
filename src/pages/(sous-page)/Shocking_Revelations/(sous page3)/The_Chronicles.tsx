@@ -17,58 +17,88 @@ export function The_Chronicles() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/the_chronicles_pt1-rev.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt1-rev.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/the_chronicles_pt2.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt2.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/the_chronicles_pt3.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt3.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 4 -{" "}
-              <a href="pdf/the_chronicles_pt4.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt4.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 5 -{" "}
-              <a href="pdf/the_chronicles_pt5.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt5.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 6 -{" "}
-              <a href="pdf/the_chronicles_pt6.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt6.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 7 -{" "}
-              <a href="pdf/the_chronicles_pt7.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt7.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 8 -{" "}
-              <a href="pdf/the_chronicles_pt8.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt8.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 9 -{" "}
-              <a href="pdf/the_chronicles_pt9.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt9.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 10 -{" "}
-              <a href="pdf/the_chronicles_pt10.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_chronicles_pt10.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 11 -{" "}
               <a
-                href="pdf/The_Chronicles_of_The_Two_Witnesses_P11.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Chronicles_of_The_Two_Witnesses_P11.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -76,7 +106,7 @@ export function The_Chronicles() {
               <br />
               Part 12 -{" "}
               <a
-                href="pdf/The_Chronicles_of_The_Two_Witnesses_P12.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Chronicles_of_The_Two_Witnesses_P12.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

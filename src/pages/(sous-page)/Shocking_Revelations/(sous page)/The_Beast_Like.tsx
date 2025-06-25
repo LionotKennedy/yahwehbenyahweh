@@ -16,7 +16,7 @@ export function The_Beast_Like() {
             <div className="book-guide-shock">
               Part 1 -{" "}
               <a
-                href="pdf/The_Beast_Like_Unto_A_Leopard_P1.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Beast_Like_Unto_A_Leopard_P1.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -24,7 +24,7 @@ export function The_Beast_Like() {
               <br />
               Part 2 -{" "}
               <a
-                href="pdf/The_Beast_Like_Unto_A_Leopard_P2.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Beast_Like_Unto_A_Leopard_P2.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -32,7 +32,7 @@ export function The_Beast_Like() {
               <br />
               Part 3 -{" "}
               <a
-                href="pdf/The_Beast_Like_Unto_A_Leopard_P3.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Beast_Like_Unto_A_Leopard_P3.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -41,7 +41,7 @@ export function The_Beast_Like() {
               <br />
               Part 4 -{" "}
               <a
-                href="pdf/The_Beast_Like_Unto_A_Leopard_P4.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Beast_Like_Unto_A_Leopard_P4.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

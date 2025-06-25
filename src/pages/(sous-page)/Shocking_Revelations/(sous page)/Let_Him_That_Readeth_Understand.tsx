@@ -15,7 +15,7 @@ export function Let_Him_That_Readeth_Understand() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/Let_Him_That_Readth_Understand.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Let_Him_That_Readth_Understand.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

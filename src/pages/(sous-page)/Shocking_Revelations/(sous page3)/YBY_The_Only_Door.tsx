@@ -17,13 +17,16 @@ export function YBY_The_Only_Door() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/The_Only_Door_to_The_Sheepfold.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Only_Door_to_The_Sheepfold.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
               <a
-                href="pdf/The_Only_Door_to_The_Sheepfold_part2.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Only_Door_to_The_Sheepfold_part2.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

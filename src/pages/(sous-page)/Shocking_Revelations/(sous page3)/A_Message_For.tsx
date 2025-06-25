@@ -17,7 +17,7 @@ export function A_Message_For() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/message_for_law_keepers_pt8.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/message_for_law_keepers_pt8.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>
@@ -34,22 +34,22 @@ export function A_Message_For() {
           <div>
             <div className="book-guide-shock">
               Part 4 -{" "}
-              <a href="pdf/message_for_law_keepers_pt4.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/message_for_law_keepers_pt4.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 5 -{" "}
-              <a href="pdf/message_for_law_keepers_pt5.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/message_for_law_keepers_pt5.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 6 -{" "}
-              <a href="pdf/message_for_law_keepers_pt6.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/message_for_law_keepers_pt6.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 7 -{" "}
-              <a href="pdf/message_for_law_keepers_pt7.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/message_for_law_keepers_pt7.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

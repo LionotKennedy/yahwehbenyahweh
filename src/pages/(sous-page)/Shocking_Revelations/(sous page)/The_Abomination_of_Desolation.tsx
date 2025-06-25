@@ -15,12 +15,12 @@ export function The_Abomination_of_Desolation() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/abomination_of_desolation_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/abomination_of_desolation_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/abomination_of_desolation_pt2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/abomination_of_desolation_pt2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

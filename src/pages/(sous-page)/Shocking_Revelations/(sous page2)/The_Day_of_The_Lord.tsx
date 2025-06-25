@@ -18,7 +18,7 @@ export function The_Day_of_The_Lord() {
             <div className="book-guide-shock">
               Part 1 -{" "}
               <a
-                href="pdf/The_Day_of_The_Lord_YBY_Is_At_Hand.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Day_of_The_Lord_YBY_Is_At_Hand.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -26,7 +26,7 @@ export function The_Day_of_The_Lord() {
               <br />
               Part 2 -{" "}
               <a
-                href="pdf/The_Day_of_The_Lord_YBY_Is_At_Hand_P2.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Day_of_The_Lord_YBY_Is_At_Hand_P2.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -34,7 +34,7 @@ export function The_Day_of_The_Lord() {
               <br />
               Part 3 -{" "}
               <a
-                href="pdf/The_Day_of_The_Lord_YBY_Is_At_Hand_P3.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Day_of_The_Lord_YBY_Is_At_Hand_P3.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

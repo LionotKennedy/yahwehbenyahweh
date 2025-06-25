@@ -17,7 +17,7 @@ export function Submitting_To_The_Will() {
           <div>
             <div className="book-guide-shock">
               Part 16-{" "}
-              <a href="pdf/submitting_to_the_will_pt16.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/submitting_to_the_will_pt16.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

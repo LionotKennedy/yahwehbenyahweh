@@ -14,7 +14,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/The_Chronicles">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Chronicles_of_The_Two_Witnesses.jpg"
@@ -27,7 +27,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/The_Missionary_Spirit">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Missionary_Spirit.jpg"
@@ -40,7 +40,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/Overcome_Blood">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/Overcome_Blood_of_the_Lamb_and_Word_of_Testimony.jpg"
@@ -56,7 +56,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/First_Resurrection">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/First_Resurrection_First_Come_First_Served.jpg"
@@ -69,7 +69,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/The_Redeemed">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Redeemed_of_Israel.jpg"
@@ -82,7 +82,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/Submitting_To_The_Will">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/Submitting_To_The_Will_of_Yahweh_Ben_Yahweh.jpg"
@@ -98,7 +98,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/The_Healing_Light">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Healing_Light.jpg"
@@ -111,7 +111,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/The_Sign_Of_The_Times">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Sign_Of_The_Times.jpg"
@@ -124,7 +124,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/Who_Is_Worthy">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/Who_Is_Worthy_To_Open_The_Book_And_Loose.jpg"
@@ -140,7 +140,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/YBY_Coming_In">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/YBY_Coming_In_The_Clouds_of_Heaven.jpg"
@@ -153,7 +153,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/Behold_A_Throne">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/Behold_A_Throne_Was_Set_In_Heaven.jpg"
@@ -166,7 +166,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/A_Message_For">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/A_Message_For_Law_Keepers.jpg"
@@ -182,7 +182,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/Go_To_The_Ant">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/Go_To_The_Ant.jpg"
@@ -195,7 +195,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/YBY_The_Only_Door">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/YBY_The_Only_Door_To_The_Sheepfold.jpg"
@@ -208,7 +208,7 @@ export function Page_3() {
         <div className="book-cnt-shock">
           <div className="book-guide-shock">
             <div>
-              <a href="#">
+              <a href="/Shocking_Revelations/3/When_The_Sun">
                 <img
                   className="img-size-shock"
                   src="/src/pages/(sous-page)/Shocking_Revelations/image/When_The_Sun_Stood_Still.jpg"

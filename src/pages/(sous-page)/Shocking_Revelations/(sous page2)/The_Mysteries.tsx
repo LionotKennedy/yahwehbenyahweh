@@ -13,10 +13,10 @@ export function The_Mysteries() {
       <div className="book-line-shock">
         <div>
           <div>
-            <div className="book-guide">
+            <div className="book-guide-shock">
               Part 1 -{" "}
               <a
-                href="pdf/mysteries_of_the_great_image_pt1.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/mysteries_of_the_great_image_pt1.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -24,7 +24,7 @@ export function The_Mysteries() {
               <br />
               Part 2 -{" "}
               <a
-                href="pdf/mysteries_of_the_great_image_pt2.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/mysteries_of_the_great_image_pt2.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -32,7 +32,7 @@ export function The_Mysteries() {
               <br />
               Part 3 -{" "}
               <a
-                href="pdf/mysteries_of_the_great_image_pt3.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/mysteries_of_the_great_image_pt3.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -40,7 +40,7 @@ export function The_Mysteries() {
               <br />
               Part 4 -{" "}
               <a
-                href="pdf/mysteries_of_the_great_image_pt4.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/mysteries_of_the_great_image_pt4.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

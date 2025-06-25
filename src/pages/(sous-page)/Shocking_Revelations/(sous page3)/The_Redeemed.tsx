@@ -15,7 +15,7 @@ export function The_Redeemed() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/redeemed_of_israel_pt1-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/redeemed_of_israel_pt1-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

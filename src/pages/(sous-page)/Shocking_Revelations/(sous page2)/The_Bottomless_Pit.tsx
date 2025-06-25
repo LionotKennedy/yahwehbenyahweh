@@ -15,17 +15,17 @@ export function The_Bottomless_Pit() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/The_Bottomless_Pit_Part1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Bottomless_Pit_Part1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/The_Bottomless_Pit_Part2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Bottomless_Pit_Part2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/The_Bottomless_Pit_Part3.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Bottomless_Pit_Part3.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

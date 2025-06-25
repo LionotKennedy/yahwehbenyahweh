@@ -17,7 +17,7 @@ export function Overcome_Blood() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/overcome_blood_p1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/overcome_blood_p1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

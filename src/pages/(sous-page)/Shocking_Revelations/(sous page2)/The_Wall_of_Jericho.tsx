@@ -17,18 +17,24 @@ export function The_Wall_of_Jericho() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/wall_of_jericho_fall.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/wall_of_jericho_fall.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/wall_of_jericho_fall_p2.pdf" target="_blank">
+              <a
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/wall_of_jericho_fall_p2.pdf"
+                target="_blank"
+              >
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt3.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt3.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -36,7 +42,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 4 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt4.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt4.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -44,7 +50,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 5 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt5.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt5.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -52,7 +58,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 6 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt6.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt6.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -60,7 +66,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 7 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt7.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt7.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -68,7 +74,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 8 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt8.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt8.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -76,7 +82,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 9 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt9.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt9.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -84,7 +90,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 10 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt10.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt10.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -92,7 +98,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 11 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt11.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt11.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -100,7 +106,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 12 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt12.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt12.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -108,7 +114,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 13 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt13.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt13.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -116,7 +122,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 14 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt14.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt14.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -124,7 +130,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 15 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Pt15.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Pt15.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -132,7 +138,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 16 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P16.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P16.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -140,7 +146,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 17 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P17.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P17.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -148,7 +154,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 18 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P18.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P18.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -156,7 +162,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 19 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P19.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P19.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -164,7 +170,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 20 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P20.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P20.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -172,7 +178,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 21 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P21.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P21.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -180,7 +186,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 22 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P22.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P22.pdf"
                 target="_blank"
               >
                 Adobe PDF Format
@@ -189,7 +195,7 @@ export function The_Wall_of_Jericho() {
               <br />
               Part 23 -{" "}
               <a
-                href="pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P23.pdf"
+                href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Wall_of_Jericho_Shall_Fall_Down_Flat_P23.pdf"
                 target="_blank"
               >
                 Adobe PDF Format

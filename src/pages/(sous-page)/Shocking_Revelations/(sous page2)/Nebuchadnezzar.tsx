@@ -39,17 +39,17 @@ export function Nebuchadnezzar() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/belshazzar_pt1-rev.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/belshazzar_pt1-rev.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 2 -{" "}
-              <a href="pdf/belshazzar_pt2.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/belshazzar_pt2.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               <br />
               Part 3 -{" "}
-              <a href="pdf/belshazzar_pt3.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/belshazzar_pt3.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

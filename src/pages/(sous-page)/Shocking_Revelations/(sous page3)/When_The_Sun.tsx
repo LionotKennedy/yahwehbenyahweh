@@ -15,7 +15,7 @@ export function When_The_Sun() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/When_The_Sun_Stood_Still_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/When_The_Sun_Stood_Still_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
               &nbsp;<span className="shock-title-shock">***NEW!***</span>

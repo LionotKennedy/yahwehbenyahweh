@@ -18,7 +18,7 @@ export function The_Sheep_of_YBY() {
           <div>
             <div className="book-guide-shock">
               Part 7 -{" "}
-              <a href="pdf/the_sheep_of_yby_pt7.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_sheep_of_yby_pt7.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>

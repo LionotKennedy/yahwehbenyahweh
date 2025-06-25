@@ -17,7 +17,7 @@ export function The_Sign_of_The_Times() {
           <div>
             <div className="book-guide-shock">
               Part 1 -{" "}
-              <a href="pdf/signs_of_the_times_pt1.pdf" target="_blank">
+              <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/signs_of_the_times_pt1.pdf" target="_blank">
                 Adobe PDF Format
               </a>
             </div>
