@@ -4,7 +4,7 @@
 // import { Link } from "react-router-dom"
 // import { Menu, X } from "lucide-react"
 // // import "../components/styles/responsive.css"
-// import "../components/styles/navigation.css" 
+// import "../components/styles/navigation.css"
 
 // export function Navigation() {
 //   const [isOpen, setIsOpen] = useState(false)
@@ -68,30 +68,6 @@
 //    </div>
 //   )
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // "use client"
 
@@ -166,8 +142,6 @@
 //   )
 // }
 
-
-
 // "use client"
 
 // import { useState } from "react"
@@ -240,27 +214,6 @@
 //     </nav>
 //   )
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // "use client"
 
@@ -377,11 +330,6 @@
 //   )
 // }
 
-
-
-
-
-
 // "use client"
 
 // import { useState } from "react"
@@ -452,52 +400,16 @@
 //   )
 // }
 
+"use client";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"use client"
-
-import { useState } from "react"
+import { useState } from "react";
 
 export function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div id="gold-top-menu">
@@ -512,25 +424,27 @@ export function Navigation() {
         </a>
         <div className="dropdown">
           <button className="dropbtn">
-            <strong>Momba ny</strong>
+            <strong>MOMBA NY</strong>
             <i className="fa fa-caret-down"></i>
           </button>
           <div className="dropdown-content">
             <a href="/About_Yahweh/">Yahweh</a>
             <a href="/About_Yahweh_Ben_Yahweh/">Yahweh Ben Yahweh</a>
-            <a href="/The_Followers_of_Yahweh_Ben_Yahweh/">Ny Mpanaraka an'i Yahweh Ben Yahweh</a>
+            <a href="/The_Followers_of_Yahweh_Ben_Yahweh/">
+              Ny Mpanaraka an'i Yahweh Ben Yahweh
+            </a>
             <a href="/Cultural_Attire/">Fitafiana Nentim-paharazana</a>
           </div>
         </div>
         <a href="/Contact_Us/">
-          <strong>Hifandraisa aminay</strong>
+          <strong>HIFANDRAISA AMINAY</strong>
         </a>
         <a href="https://shop.yahwehbenyahweh.com/">
-          <strong>Fivarotam-boky an-Internet</strong>
+          <strong>FIVAROTAM-BOBY AN-INTERNET</strong>
         </a>
         <div className="dropdown">
           <button className="dropbtn">
-            <strong>Safidy</strong>
+            <strong>SAFIDY</strong>
             <i className="fa fa-caret-down"></i>
           </button>
           <div className="dropdown-content">
@@ -542,12 +456,14 @@ export function Navigation() {
             <a href="/The_Crucifixion/">Ny Fanomboana tamin’ny hazofijaliana</a>
             <a href="/Shocking_Revelations/">Famahaliana mampihorohoro</a>
             <a href="/The_Sabbath/">Ny Sabata</a>
-            <a href="/Erosion_of_The_Constitution/">Ny Fahasimban’ny Lalàmpanorenana</a>
+            <a href="/Erosion_of_The_Constitution/">
+              Ny Fahasimban’ny Lalàmpanorenana
+            </a>
             <a href="/Operation_Word_War/">Operation Ady Teny</a>
             <a href="/Balance_Justice/">Fitsarana milamina</a>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,90 +1,22 @@
 /*** page.css ***/
 
-.pg-text-fmt {
-  font-size: 38px;
-  text-align: justify;
-  line-height: 1;
-}
-
-.pg-text-ltr-sp {
-  letter-spacing: -1px;
-}
-
-.pg-text-ltr-sp-6 {
-  letter-spacing: -1px;
-}
-
-#pg-banner-about {
-  background-image: url("../image/page-banner.jpg");
+    #pg-banner-about {
+        background-image: url("../image/page-banner.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 43.99%;
+    }
+    
+#top-bar-gold-about {
+  background-image: url("../image/Gold_Bar_1216.jpg");
   width: 1216px;
-  height: 535px;
+  height: 44px;
 }
-
-#title-img {
-  width: 341px;
-}
-
-.pg-link-text {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  justify-content: center;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 42px;
-}
-
-.pg-btm-pd-mod {
+.pg-btm-pd-mod-about {
   padding-bottom: 40px !important;
 }
-
-.pg-top-pd-mod {
-  padding-top: 2px !important;
-}
-
-.pg-top-mrgn-mod {
-  margin-top: 2px !important;
-}
-
-.pg-link-text-ul {
-  text-decoration: underline;
-}
-
-.pg-title-break {
-  display: block;
-  position: relative;
-  margin-left: 9%;
-  padding-top: 10px;
-  padding-bottom: 1px;
-}
-
-#pg-btm-media {
-  /*background-image: url("../images/bottom-media.jpg");
-    background-repeat: no-repeat;*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bottom-media-img {
-  width: 100%;
-}
-
-.yahweh-txt-img {
-  position: relative;
-  top: 0px;
-  width: 86px;
-}
-
-.yahweh-ben-yahweh-txt-img {
-  position: relative;
-  top: 10px;
-  width: 249px;
-}
-
-/* PERSONNALIZE */
-
 #Yahweh_Ben_Yahweh {
   display: block;
   position: relative;
@@ -94,74 +26,71 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-#top-bar-gold-about {
-  background-image: url("../image/Gold_Bar_1216.jpg");
-  width: 100%;
-  height: 44px;
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
-
+#title-img-about {
+  width: 341px;
+}
 .sec-bar-about {
   background-color: transparent;
   background-image: url("../image/Bar.png");
   background-repeat: no-repeat;
-  background-size: contain;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 85%;
+  width: 1100px;
   height: 12px;
-  margin-top: 24px;
-  margin-bottom: -9px;
 }
-
-/* RESPONSIVE */
-
-@media screen and (max-width: 1024px) {
-  #pg-banner-about {
-    background-image: url("../image/page-banner.jpg");
-    background-size: contain;
-    background-repeat: repeat-y;
-    width: 100%;
-    height: 0;
-    padding-top: 43.99%;
-  }
-
-  #top-bar-gold-about {
-    background-image: url("../image/Gold_Bar_1216.jpg");
-    width: 100%;
-    height: 44px;
-  }
+.pg-top-pd-mod-about {
+  padding-top: 2px !important;
 }
-
-@media screen and (max-width: 768px) {
-  #pg-banner-about {
-    background-image: url("../image/page-banner.jpg");
-    background-size: contain;
-    background-repeat: repeat-y;
-    width: 100%;
-    height: 0;
-    padding-top: 43.99%;
-  }
-
-  #top-bar-gold-about {
-    width: 100%;
-    height: 22px;
-  }
+.pg-link-text-about {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 42px;
 }
-
-@media screen and (max-width: 480px) {
-  #pg-banner-about {
-    background-image: url("../image/page-banner.jpg");
-    background-size: contain;
-    background-repeat: repeat-y;
-    width: 100%;
-    height: 0;
-    padding-top: 43.99%;
-  }
-
-  #top-bar-gold-about {
-    width: 100%;
-    height: 11px;
-  }
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.pg-top-mrgn-mod-about {
+  margin-top: 2px !important;
+}
+.sec-text-about {
+  width: 82%;
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pg-text-fmt-about {
+  font-size: 38px;
+  text-align: justify;
+  line-height: 1;
+}
+.David-about {
+  font-family: "David Libre", serif;
+  font-size: 48px;
+}
+.pg-text-ltr-sp-6-about {
+  letter-spacing: -1px;
+}
+#pg-btm-media-about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bottom-media-img-about {
+  width: 100%;
 }
