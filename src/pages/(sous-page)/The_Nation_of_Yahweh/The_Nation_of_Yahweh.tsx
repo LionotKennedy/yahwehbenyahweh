@@ -14,7 +14,7 @@ export function The_Nation_of_Yahweh() {
         />
       </div>
       <div className="sec-bar-nation pg-top-pd-mod-nation"></div>
-      <div className="sec-text pg-text-fmt-nation">
+      <div className="sec-text-nation pg-text-fmt-nation">
         <p>
           <span className="pg-text-ltr-sp-nation">
             The Nation of <span className="David-nation">יהוה</span>
