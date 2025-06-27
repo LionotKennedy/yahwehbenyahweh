@@ -1,4 +1,13 @@
- .tailImage {
+ /* .tailImage {
     width: 160px;
-} 
+}  */
 
+.tailImage {
+    width: 160px;
+    height: 80px;
+    /* background-image: url("/src/assets/images/Site_Logo.png"); */
+    background-image: url("../../assets/images/Site_Logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

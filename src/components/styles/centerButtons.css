@@ -5,7 +5,6 @@
 .center-button-home {
   display: block;
   float: left;
-  /* width: 303px; */
 }
 img {
   overflow-clip-margin: content-box;
@@ -45,3 +44,194 @@ img {
     width: 100%;
   }
 }
+
+
+.tetragrammaton-img {
+  background-image: url("/src/components/images/center-buttons/Tetragrammaton.jpg");
+}
+
+.nation-yahweh-img {
+  background-image: url("/src/components/images/center-buttons/The_Nation_of_Yahweh.jpg");
+}
+
+.universe-yahweh-img {
+  background-image: url("/src/components/images/center-buttons/Universe_of.jpg");
+}
+
+.feasts-img {
+  background-image: url("/src/components/images/center-buttons/Feasts.jpg");
+}
+
+.good-news-img {
+  background-image: url("/src/components/images/center-buttons/Good_News.jpg");
+}
+
+.crucifixion-img {
+  background-image: url("/src/components/images/center-buttons/Crucifixion.jpg");
+}
+
+.shock-img {
+  background-image: url("/src/components/images/center-buttons/Shock.jpg");
+}
+
+.sabbath-img {
+  background-image: url("/src/components/images/center-buttons/Sab.jpg");
+}
+
+.erosion-img {
+  background-image: url("/src/components/images/center-buttons/Erosion.jpg");
+}
+
+.operation-img {
+  background-image: url("/src/components/images/center-buttons/Op_WW.jpg");
+}
+
+.balance-justice-img {
+  background-image: url("/src/components/images/center-buttons/Balance_Justice.jpg");
+}
+
+.bookstore-img {
+  background-image: url("/src/components/images/center-buttons/ON-Line_Bookstore.jpg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.center-buttons-home {
+  width: 1216px;
+  text-align: center;
+}
+
+.center-button-home {
+  display: block;
+  float: left;
+}
+
+.center-button-img-home {
+  width: 100%;
+  height: 200px; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+@media screen and (max-width: 1024px) {
+  .center-buttons-home {
+    width: 100%;
+  }
+  .center-button-home {
+    width: 25%;
+  }
+  .center-button-img-home {
+    width: 100%;
+    height: 150px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .center-buttons-home {
+    width: 100%;
+  }
+  .center-button-home {
+    width: 25%;
+  }
+  .center-button-img-home {
+    width: 100%;
+    height: 120px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .center-buttons-home {
+    width: 100%;
+  }
+  .center-button-home {
+    width: 33.33%;
+  }
+  .center-button-img-home {
+    width: 100%;
+    height: 100px; 
+  }
+}
+
+.tetragrammaton-img {
+  background-image: url("/images/center-buttons/Tetragrammaton.jpg");
+}
+
+.nation-yahweh-img {
+  background-image: url("/images/center-buttons/The_Nation_of_Yahweh.jpg");
+}
+
+.universe-yahweh-img {
+  background-image: url("/images/center-buttons/Universe_of.jpg");
+}
+
+.feasts-img {
+  background-image: url("/images/center-buttons/Feasts.jpg");
+}
+
+.good-news-img {
+  background-image: url("/images/center-buttons/Good_News.jpg");
+}
+
+.crucifixion-img {
+  background-image: url("/images/center-buttons/Crucifixion.jpg");
+}
+
+.shock-img {
+  background-image: url("/images/center-buttons/Shock.jpg");
+}
+
+.sabbath-img {
+  background-image: url("/images/center-buttons/Sab.jpg");
+}
+
+.erosion-img {
+  background-image: url("/images/center-buttons/Erosion.jpg");
+}
+
+.operation-img {
+  background-image: url("/images/center-buttons/Op_WW.jpg");
+}
+
+.balance-justice-img {
+  background-image: url("/images/center-buttons/Balance_Justice.jpg");
+}
+
+.bookstore-img {
+  background-image: url("/images/center-buttons/ON-Line_Bookstore.jpg");
+}
+
+.center-button-img-home:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+} */

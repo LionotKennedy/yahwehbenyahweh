@@ -6,7 +6,8 @@ export function Header() {
     <div id="gold-top" className="gold-top">
       <div id="site-logo" className="site-logo">
         <Link to="/">
-          <img src="/src/assets/images/Site_Logo.png" alt="Site Logo" className="tailImage" />
+          {/* <img src="/src/assets/images/Site_Logo.png" alt="Site Logo" className="tailImage" /> */}
+           <div className="tailImage" aria-label="Site Logo"></div>
         </Link>
       </div>
     </div>

@@ -103,3 +103,115 @@ export function CenterButtons() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Link } from "react-router-dom"
+// import "./styles/centerButtons.css"
+
+// interface CenterButton {
+//   href: string
+//   className: string
+//   alt: string
+//   external?: boolean
+// }
+
+// const centerButtons: CenterButton[] = [
+//   {
+//     href: "/Tetragrammaton",
+//     className: "tetragrammaton-img",
+//     alt: "Tetragrammaton",
+//   },
+//   {
+//     href: "/The_Nation_of_Yahweh",
+//     className: "nation-yahweh-img",
+//     alt: "The Nation of Yahweh",
+//   },
+//   {
+//     href: "/The_Universe_of_Yahweh",
+//     className: "universe-yahweh-img",
+//     alt: "The Universe of Yahweh",
+//   },
+//   {
+//     href: "/The_Feasts_of_Yahweh",
+//     className: "feasts-img",
+//     alt: "The Feasts of Yahweh",
+//   },
+//   {
+//     href: "/The_Good_News_of_Yahweh",
+//     className: "good-news-img",
+//     alt: "The Good News of Yahweh",
+//   },
+//   {
+//     href: "/The_Crucifixion",
+//     className: "crucifixion-img",
+//     alt: "The Crucifixion",
+//   },
+//   {
+//     href: "/Shocking_Revelations",
+//     className: "shock-img",
+//     alt: "Shocking Revelations",
+//   },
+//   {
+//     href: "/The_Sabbath",
+//     className: "sabbath-img",
+//     alt: "The Sabbath",
+//   },
+//   {
+//     href: "/Erosion_of_The_Constitution",
+//     className: "erosion-img",
+//     alt: "Erosion of The Constitution",
+//   },
+//   {
+//     href: "/Operation_Word_War",
+//     className: "operation-img",
+//     alt: "Operation Word War",
+//   },
+//   {
+//     href: "/Balance_Justice",
+//     className: "balance-justice-img",
+//     alt: "Balance Justice",
+//   },
+//   {
+//     href: "https://shop.yahwehbenyahweh.com/",
+//     className: "bookstore-img",
+//     alt: "On-line Book Store",
+//     external: true,
+//   },
+// ]
+
+// export function CenterButtons() {
+//   return (
+//     <div className="center-buttons-home">
+//       {centerButtons.map((button, index) => (
+//         <div key={index} className="center-button-home">
+//           {button.external ? (
+//             <a href={button.href} target="_blank" rel="noopener noreferrer">
+//               <div className={`center-button-img-home ${button.className}`} aria-label={button.alt} role="img"></div>
+//             </a>
+//           ) : (
+//             <Link to={button.href}>
+//               <div className={`center-button-img-home ${button.className}`} aria-label={button.alt} role="img"></div>
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
+
