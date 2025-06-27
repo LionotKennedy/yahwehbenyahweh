@@ -61,4 +61,19 @@
   #Bird {
     left: 0px;
   }
+  .pg-text-fmt-cru {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .David-cru {
+    font-family: "David Libre", serif;
+    font-size: 28px;
+  }
+  .pg-text-fmt-ctr-cru {
+    font-size: 32px;
+    text-align: center;
+    line-height: 1;
+  }
 }

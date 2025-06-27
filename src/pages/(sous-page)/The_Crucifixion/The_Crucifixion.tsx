@@ -152,7 +152,6 @@ export function The_Crucifixion() {
           <div id="top-bar-gold-cru"></div>
         </strong>
       </strong>
-      Coucou 12
     </div>
   );
 }
