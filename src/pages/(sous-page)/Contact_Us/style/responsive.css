@@ -1,5 +1,23 @@
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) {
+  #backdrop-contactss {
+    background-image: url("../image/bgMetal1.jpg");
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    min-height: 100%;
+    z-index: -99;
+  }
+  #backdrop-contact {
+    background-image: url("/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Background_Metal_1024.jpg");
+    background-repeat: repeat-y;
+    width: 100%;
+  }
+
   #pg-banner-contact {
     background-image: url("../image/page-banner.jpg");
     background-size: contain;
@@ -46,6 +64,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #backdrop-contact {
+    width: 100%;
+  }
   .width_text {
     font-size: 25px;
     text-align: justify;
@@ -102,6 +123,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  #backdrop-contact {
+    width: 100%;
+  }
   #pg-banner-contact {
     background-image: url("../image/page-banner.jpg");
     background-size: contain;

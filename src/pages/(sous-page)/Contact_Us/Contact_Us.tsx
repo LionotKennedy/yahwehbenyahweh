@@ -2,7 +2,7 @@ import "./style/contact_Us.css";
 import "./style/responsive.css";
 export function Contact_Us() {
   return (
-    <div id="backdrop-contactx" className="">
+    <div id="backdrop-contact" className="">
       <div id="pg-banner-contact" className=""></div>
       <div id="top-bar-gold-contact" className=""></div>
       <div id="Yahweh_Ben_Yahweh-contact" className="pg-btm-pd-mod-contact">

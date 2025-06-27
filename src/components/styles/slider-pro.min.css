@@ -1,9 +1,4 @@
-/*!
-*  - v1.5.0
-* Homepage: http://bqworks.com/slider-pro/
-* Author: bqworks
-* Author URL: http://bqworks.com/
-*/
+
 .slider-pro {
   position: relative;
   margin: 0 auto;
@@ -249,10 +244,10 @@
   padding: 10px;
 }
 .sp-grab {
-  cursor: url(images/openhand.html), move;
+  cursor: url("images/openhand.html"), move;
 }
 .sp-grabbing {
-  cursor: url(images/closedhand.html), move;
+  cursor: url("images/closedhand.html"), move;
 }
 .sp-selectable {
   cursor: default;
