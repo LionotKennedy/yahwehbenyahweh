@@ -1,3 +1,4 @@
+
 import "./style/tetragrammaton.css";
 export function Tetragrammaton() {
   return (
@@ -21,7 +22,7 @@ export function Tetragrammaton() {
         </div>
         <div>
           <p className="pg-text-fmt-lrg-itl-tetra">
-            <i>HEBREW FOR YAHWEH</i>
+            <i>HEBREO HO AN'ILAY YAHWEH</i>
           </p>
         </div>
         <div className="sec-bar-tetra"></div>
@@ -34,7 +35,7 @@ export function Tetragrammaton() {
         </div>
         <div>
           <p className="pg-text-fmt-lrg-itl-tetra">
-            <i>HEBREW FOR YAHWEH BEN YAHWEH</i>
+            <i>HEBREO HO AN'ILAY YAHWEH BEN YAHWEH</i>
           </p>
         </div>
         <div className="sec-bar-tetra"></div>
@@ -45,9 +46,9 @@ export function Tetragrammaton() {
               src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
               alt="Yahweh"
             />{" "}
-            IS GOD’S NAME AS IT IS
+            IZANY NO ANARAN'ANDRIAMANITRA ARAKA NY
             <br />
-            WRITTEN IN THE HEBREW LANGUAGE.
+            FANORATANA AO AMIN'NY FITENY HEBREO.
           </p>
           <p className="pg-text-fmt-lrg-tetra">
             <img
@@ -61,33 +62,33 @@ export function Tetragrammaton() {
               src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
               alt="Yahweh"
             />
-            ) THE COVENANT GOD OF
+            ) ANDRIAMANITRA NY FANEKENA
             <br />
-            ISRAEL,{" "}
+            ISRAELY,{" "}
             <img
               className="YHWH-img-tetra"
               src="/src/pages/(sous-page)/Tetragrammaton/image/YHWH.png"
               alt="Yahweh"
             />
-            , IN THE ORIGINAL HEBREW.
+            , AO AMIN'NY HEBREO TALOHA.
           </p>
         </div>
         <div className="sec-bar-tetra"></div>
         <div>
           <p className="pg-text-fmt-lrg-tetra">
-            ACCORDING TO JEWISH CUSTOM, BECAUSE OF
+            ARAKA NY FOMBA JIOSY, NOHO NY FANAJANA,
             <br />
-            REVERENCE, THE DIVINE NAME WAS NOT TO BE
+            TSY NATAO HANTSUININA NY ANARAN'ANDRIAMANITRA,
             <br />
-            SPOKEN, SO THE HEBREW WORDS FOR
+            KA NOSOLOINA NY TENY HEBREO HO AN'ILAY
             <br />
-            Lord AND God WERE SUBSTITUTED.
+            Tompo SY Andriamanitra.
             <br />
-            WHENEVER THE WORDS Lord AND God
+            REHEFA MISEO NY TENY Tompo SY Andriamanitra
             <br />
-            APPEAR IN LARGE AND SMALL CAPITAL
+            AMIN'NY SORATRA LEHIBE SY KELY,
             <br />
-            LETTERS, THE ORIGINAL HEBREW READS
+            NY HEBREO TALOHA DIA MAMAKY
             <br />
             <img
               className="YHWH-img-tetra"
@@ -108,47 +109,47 @@ export function Tetragrammaton() {
               src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
               alt="Yahweh"
             />
-            ) THE COVENANT GOD OF
+            ) ANDRIAMANITRA NY FANEKENA
             <br />
-            ISRAEL,{" "}
+            ISRAELY,{" "}
             <img
               className="YHWH-img-tetra"
               src="/src/pages/(sous-page)/Tetragrammaton/image/YHWH.png"
               alt="Yahweh"
             />
-            , IN THE ORIGINAL HEBREW.
+            , AO AMIN'NY HEBREO TALOHA.
           </p>
           <p className="pg-text-fmt-sm-tetra">
-            REFERENCE: THE HOLY BIBLE IN THE KING JAMES VERSION,
+            REFERENCE: NY BAIBLY MASINA AMIN'NY DIKAN'NY MPAJAKA JAMES,
             <br />
-            COPYRIGHT 1984, THOMAS NELSON PUBLISHERS, NASHVILLE, TN P. 763.
+            COPYRIGHT 1984, THOMAS NELSON PUBLISHERS, NASHVILLE, TN PEJY 763.
             <br />
-            (FOUND IN THE DICTIONARY CONCORDANCE IN THE BACK OF THIS BIBLE.)
+            (HITA AO AMIN'NY RAKIPAHALALANA AO AMIN'NY FARAN'ITY BAIBLY ITY.)
             <br />
           </p>
           <p className="pg-text-fmt-lrg-tetra">
-            IN MANY CASES “LORD” IS A TITLE OF HONOR
+            AMIN'NY TRANGAM-BOARY MARO DIA "TOMPO" NO ANARAM-BOSOTRA
             <br />
-            AND MAJESTY USED IN ADDRESSING GOD, OR A<br />
-            SUBSTITUTE FOR THE SPECIAL NAME
+            MANJAKA AMIN'NY FANAJANA ANDRIAMANITRA, NA
+            <br />
+            SOLON'NY ANARANA MANOKANA
             <br />
             <img
               className="YAHWEH-CAP-img-tetra"
               src="/src/pages/(sous-page)/Tetragrammaton/image/YAHWEH-.png"
               alt="YAHWEH"
             />{" "}
-            (KJV-RSV “THE LORD”).
+            (KJV-RSV "ILAY TOMPO").
           </p>
           <p className="pg-text-fmt-sm-tetra">
-            REFERENCE: THE INTERPRETER’S DICTIONARY OF THE BIBLE, COPYRIGHT
-            1962,
+            REFERENCE: NY RAKIPAHALALAN'ILAY MPANDIKA BAIBLY, COPYRIGHT 1962,
             <br />
-            VOLUME III, P.150, ABINGDON PRESS.
+            TAHINY III, PEJY 150, ABINGDON PRESS.
           </p>
           <p className="pg-text-fmt-lrg-tetra">
-            IN THE EARLIEST HEBREW THE SACRED NAME
+            TAMIN'NY HEBREO TALOHA INDRIKA DIA NY ANARANA MASINA
             <br />
-            APPEARED AS A FOUR LETTER WORD OR
+            NISEHO TAHINY NY TENY EFATRA NA
           </p>
           <p className="pg-text-fmt-lrg-tetra">
             TETRAGRAMMATON:{" "}
@@ -163,15 +164,14 @@ export function Tetragrammaton() {
               src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
               alt="Yahweh"
             />
-            ) WITHOUT
+            ) TSIKY
             <br />
-            ANY VOWEL SIGNS.
+            MISY MARIKA NY ZANAPEONINA.
           </p>
           <p className="pg-text-fmt-sm-tetra">
-            REFERENCE: THE INTERPRETER’S DICTIONARY OF THE BIBLE, COPYRIGHT
-            1962,
+            REFERENCE: NY RAKIPAHALALAN'ILAY MPANDIKA BAIBLY, COPYRIGHT 1962,
             <br />
-            VOLUME II, P. 409, ABINGDON PRESS.
+            TAHINY II, PEJY 409, ABINGDON PRESS.
           </p>
         </div>
       </div>

@@ -1,3 +1,157 @@
+// import "../style/shocking_Revelations.css";
+// import "../style/responsive.css";
+// import { Link } from "react-router-dom";
+
+// export function The_Seven_Last_Plagues() {
+//   return (
+//     <>
+//       <div id="pg-banner-shock"></div>
+//       <div id="top-bar-gold-shock"></div>
+//       <div className="pg-title-text-shock">
+//         <p className="p-title-text-shock">THE SEVEN LAST PLAGUES</p>
+//       </div>
+//       <div className="book-line-shock">
+//         <div>
+//           <div>
+//             <div className="book-guide-shock">
+//               Part 1 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt1.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 2 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt2.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 3 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_seven_last_plagues_pt3-rev.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 4 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt4.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 5 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt5.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 6 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_seven_last_plagues_pt6-rev.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 7 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_seven_last_plagues_p7.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 8 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/seven_last_plagues_p8.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 9 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/seven_last_plagues_p9.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 10 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part10.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 11 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part11.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 12 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part12.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 13 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part13.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 14 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part14.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 15 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part15.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 16 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part16.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 17 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part17.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 18 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part18.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="pg-info-text-shock">
+//         <p className="p-info-text-shock">
+//           <br />
+//           <Link to="/Shocking_Revelations">
+//             <span className="lnk-info-text-shock">&lt; Back</span>
+//           </Link>
+//         </p>
+//       </div>
+//       <div id="top-bar-gold-shock"></div>
+//     </>
+//   );
+// }
+// export default The_Seven_Last_Plagues;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import "../style/shocking_Revelations.css";
 import "../style/responsive.css";
 import { Link } from "react-router-dom";
@@ -8,100 +162,100 @@ export function The_Seven_Last_Plagues() {
       <div id="pg-banner-shock"></div>
       <div id="top-bar-gold-shock"></div>
       <div className="pg-title-text-shock">
-        <p className="p-title-text-shock">THE SEVEN LAST PLAGUES</p>
+        <p className="p-title-text-shock">NY FAHORIAN'NY FARANY FITO</p>
       </div>
       <div className="book-line-shock">
         <div>
           <div>
             <div className="book-guide-shock">
-              Part 1 -{" "}
+              Fizarana 1 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt1.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 2 -{" "}
+              Fizarana 2 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt2.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 3 -{" "}
+              Fizarana 3 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_seven_last_plagues_pt3-rev.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 4 -{" "}
+              Fizarana 4 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt4.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 5 -{" "}
+              Fizarana 5 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_pt5.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 6 -{" "}
+              Fizarana 6 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_seven_last_plagues_pt6-rev.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 7 -{" "}
+              Fizarana 7 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_seven_last_plagues_p7.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 8 -{" "}
+              Fizarana 8 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/seven_last_plagues_p8.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 9 -{" "}
+              Fizarana 9 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/seven_last_plagues_p9.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 10 -{" "}
+              Fizarana 10 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part10.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 11 -{" "}
+              Fizarana 11 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part11.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 12 -{" "}
+              Fizarana 12 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part12.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 13 -{" "}
+              Fizarana 13 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part13.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 14 -{" "}
+              Fizarana 14 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part14.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 15 -{" "}
+              Fizarana 15 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part15.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 16 -{" "}
+              Fizarana 16 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part16.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 17 -{" "}
+              Fizarana 17 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part17.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
               <br />
-              Part 18 -{" "}
+              Fizarana 18 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Seven_Last_Plagues_Part18.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika PDF Adobe
               </a>
             </div>
           </div>
@@ -111,7 +265,7 @@ export function The_Seven_Last_Plagues() {
         <p className="p-info-text-shock">
           <br />
           <Link to="/Shocking_Revelations">
-            <span className="lnk-info-text-shock">&lt; Back</span>
+            <span className="lnk-info-text-shock">&lt; Miverina</span>
           </Link>
         </p>
       </div>

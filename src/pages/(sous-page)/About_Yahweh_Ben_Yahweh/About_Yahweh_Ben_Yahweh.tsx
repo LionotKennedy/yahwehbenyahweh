@@ -18,18 +18,18 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="sec-text-y pg-text-fmt-y">
         <p className="">
-          <span className="David-y">יהוה</span> is God of gods.{" "}
-          <span className="David-y">יהוה</span> is the covenant God of Israel. He
-          is the God of Abraham, Isaac, and Jacob.{" "}
-          <span className="David-y">יהוה בן יהוה</span> is the Son of{" "}
+          <span className="David-y">יהוה</span> no Andriamanitry ny
+          andriamanitra. <span className="David-y">יהוה</span> no Andriamanitry
+          ny fanekena amin'i Israely. Izy no Andriamanitr'i Abrahama, Isaka, ary
+          Jakoba. <span className="David-y">יהוה בן יהוה</span> no Zanak'
           <span className="David-y">יהוה</span>.
         </p>
         <p className="">
-          <span className="David-y">יהוה בן יהוה</span> is the Grand Master of the
-          Celestial Lodge, Architect of the Universe, and the Blessed and only
-          Potentate. He is here to set the captives free and to cause them that
-          are bound to stand perpendicular on the square of righteousness. For
-          behold, One greater than Solomon is here!
+          <span className="David-y">יהוה בן יהוה</span> no Tompon’ny Efiombonana
+          Any an-Danitra, Mpamorona ny Izao Tontolo Izao, ary Ilay Mpanjaka
+          Masina sy Irery. Izy eto mba hamahatra ny voafonja sy hampitsangana
+          mahitsy eo amin’ny kianja ny marina izay voafehy. Fa, indro! Misy
+          lehibe noho i Solomona eto!
         </p>
       </div>
       <div className="pg-title-break-y">
@@ -41,29 +41,30 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="sec-text-y pg-text-fmt-y">
         <p className="">
-          In 1979, <span className="David-y">יהוה בן יהוה</span> came to Miami and
-          became the Spiritual Leader and Founder of The Nation of{" "}
-          <span className="David-y">יהוה</span>. Although He took a vow of
-          poverty, in seven years He guided The Nation to amass a $250,000,000
-          empire. Under His direction, The Nation of{" "}
-          <span className="David-y">יהוה</span> has grown to encompass disciples,
-          followers, and supporters in over 1,300 cities within the U.S. and 16
-          foreign countries.
+          Tamin’ny 1979, <span className="David-y">יהוה בן יהוה</span> dia tonga
+          tany Miami ka lasa Mpitarika Ara-Panahy sy Mpanorina ny Firenen’i{" "}
+          <span className="David-y">יהוה</span>. Na dia nanao voady fahantrana
+          aza Izy, tamin’ny fito taona Izy nitarika ny Firenena hanangona
+          fanjakana sarobidy 250 tapitrisa dolara. Eo ambany fitarihany, ny
+          Firenen’i <span className="David-y">יהוה</span> dia nitombo
+          hatramin’ny nahatratra mpianatra, mpanaraka, ary mpanohana mihoatra ny
+          tanàna 1,300 any Etazonia sy firenena 16 any ivelany.
         </p>
         <p>
-          His mission is to gather first the lost sheep of the house of Israel,
-          and then the moral people of Earth.{" "}
-          <span className="David-y">יהוה&nbsp;בּן&nbsp;יהוה</span> is here to
-          establish peace and good will toward all God-loving men. He is here to
-          establish the theocratic government of{" "}
-          <span className="David-y">יהוה</span> by executing the laws, statutes,
-          judgments, and commandments of <span className="David-y">יהוה</span>.
+          Ny asany dia hanangona aloha ny ondry very ao amin’ny tranon’i
+          Israely, ary avy eo ny olona manana fitondrantena eto an-tany.{" "}
+          <span className="David-y">יהוה בּן יהוה</span> dia eto mba hametraka ny
+          fandriampahalemana sy ny sitrapo tsara ho an’ny rehetra tia
+          an’Andriamanitra. Izy eto mba hanorina ny governemanta teôkratikan’i{" "}
+          <span className="David-y">יהוה</span> amin’ny alalan’ny
+          fanatanterahana ny lalàna, ny fitsipika, ny fitsarana, ary ny didin’i{" "}
+          <span className="David-y">יהוה</span>.
         </p>
         <p>
-          <span className="David-y">יהוה&nbsp;בּן&nbsp;יהוה</span> is bringing
-          about changes in the lives of individuals, and is giving the world the
-          keys to success in life Politically - Economically - Educationally -
-          Socially - and Spiritually.
+          <span className="David-y">יהוה בּן יהוה</span> dia manova ny fiainan’ny
+          olona tsirairay, ary manome ny tany ireo lakile hahombiazana amin’ny
+          fiaina: Ara-Politika Ara-Toekarena Ara-Panabeazana Ara-Piarahamonina
+          Ary Ara-Panahy.
         </p>
       </div>
       <div className="pg-title-break-y">
@@ -75,17 +76,19 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="sec-text-y pg-text-fmt-y">
         <p>
-          <span className="David-y">יהוה&nbsp;בּן&nbsp;יהוה</span> teaches His
-          disciples and followers to practice charity and benevolence, to
-          protect chastity, to respect the ties of blood and friendship, to
-          adopt the principles and revere the laws of{" "}
-          <span className="David-y">יהוה</span>, to assist the feeble, guide and
-          open the eyes of the blind, heal the ears of the deaf, raise up the
-          oppressed and downtrodden, shelter the widow and the orphan, guard the
-          altar of <span className="David-y">יהוה</span>, support the government
-          of <span className="David-y">יהוה</span>, inculcate morality, promote
-          learning, love moral men, fear <span className="David-y">יהוה</span>,
-          implore His mercy, work for happiness, and be industrious.
+          <span className="David-y">יהוה בּן יהוה</span> mampianatra ny mpianany
+          sy ny mpanaraka azy hanao fiantrana sy hatsaram-panahy, hiaro ny
+          fahadiovam-pitondrantena, hanaja ny fifamatorana ara-pianakaviana sy
+          namana, hanaraka ny fitsipika sy hankahala ny lalàn'i{" "}
+          <span className="David-y">יהוה</span>, hanampy ny lempona,
+          hitari-dalana sy hanokatra ny mason'ny jamba, hanasitrana ny sofina'ny
+          marenina, hampitsangana ny voahosotra sy voatendry, hialoka ny
+          mpitondratena sy ny kamboty, hikarakara ny alitara ni{" "}
+          <span className="David-y">יהוה</span>, hanohana ny governemantan'i{" "}
+          <span className="David-y">יהוה</span>, hampianatra fitondrantena,
+          hampahery ny fianarana, hankafy ny olona manam-pitondrantena,
+          hatahotra an'i <span className="David-y">יהוה</span>, hiangavy ny
+          fahasoavany, hiasa ho an'ny fifaliana, ary hiomana.
         </p>
       </div>
       <div className="pg-title-break-y">
@@ -99,39 +102,45 @@ export function AboutYahwehBenYahweh() {
         <p>
           <i>
             <strong>
-              On Monday, May 7, 2007 at 7:55 p.m., our Founder and Savior,{" "}
-              <span className="David-y">יהוה&nbsp;בּן&nbsp;יהוה</span>, completed His
-              first journey on Earth and ascended to stand with His Father,{" "}
-              <span className="David-y">יהוה</span>, in the Heavens.
+              Ny alatsinainy, 7 Mey 2007 tamin’ny 7:55 hariva, ny Mpanorina sy
+              Mpanavotra antsika, <span className="David-y">יהוה בּן יהוה</span>,
+              dia nahavitra ny dia voalohany nataony teto an-tany ary niakatra
+              hijoro eo anilan’ny Rainy, <span className="David-y">יהוה</span>,
+              any an-danitra.
             </strong>
           </i>
         </p>
         <p className="pg-text-ltr-sp-8">
-          Therefore doth My Father, <span className="David-y">יהוה</span>, love Me (
-          <span className="David-y">יהוה&nbsp;בּן&nbsp;יהוה</span>), because I lay down
-          My life, that I might take it again. No man taketh it from Me, but I
-          lay it down of Myself. I have power to lay it down, and I have power
-          to take it again. This commandment have I received of My Father,{" "}
-          <span className="David-y">יהוה</span> (John 10:17-18). Greater love hath no
-          man than this, that a man lay down his life for his friends (John
-          15:13). The works that I do in My Father's name, they bear witness of
-          Me (John 10:25).
+          Izany no anton’ny Fitiavan’ny Raiko,{" "}
+          <span className="David-y">יהוה</span> tamiko (
+          <span className="David-y">יהוה בּן יהוה</span>), satria natolotro ny
+          Aiko mba hahazoako azy indray. Tsy misy olona maka izany Ahy, fa Izaho
+          no manolotra azy irery. Manana fahefana hanolotra ny Ahy aho, ary
+          manana fahefana hahazo azy indray. Io didy io no nalovako tamin’ny
+          Raiko, <span className="David-y">יהוה</span> (Jaona 10:17-18). Tsy
+          misy fitiavana lehibe noho izany: ny manolotra ny ainy ho an’ny namany
+          (Jaona 15:13). Ny asa ataoko amin’ny anaran’ny Raiko no mijoro ho
+          vavolombelona momba Ahy (Jaona 10:25).
         </p>
         <p className="pg-text-ltr-sp-9">
-          And there was given Me dominion, and glory, and a Kingdom, that all
-          people, nations, and languages, should serve Me: My dominion is an
-          everlasting dominion, which shall not pass away, and My Kingdom that
-          which shall not be destroyed (Daniel 7:14). And My Kingdom and
-          dominion, and the greatness of My Kingdom under the whole Heaven,
-          shall be given to the people of the saints of the Most High, whose
-          Kingdom is an everlasting Kingdom, and all dominions shall serve and
-          obey Me (Daniel 7:27). To{" "}
-          <span className="David-y">יהוה&nbsp;בּן&nbsp;יהוה</span>&nbsp;be glory and
-          dominion forever and ever. Amen (1 Peter 5:11).
+          Ary nalefa tamiko ny fahefana, ny voninahitra, ary ny Fanjakan’ny
+          Andriamanitra, mba hanompoan’ny firenena sy ny vahoaka rehetra, na
+          inona na inona ny fiteniny: Ny fahefaniko dia fahefana mandrakizay,
+          tsy hiova, ary ny Fanjakako dia tsy ho ringana (Daniely 7:14). Ary ny
+          Fanjakako sy ny fahefaniko, ary ny hanjakan’ny Fanjakako eran’ny tany
+          rehetra, dia homena ny olon’ny olo-masin’ny Avo Indrindra, izay manana
+          Fanjakan’ny mandrakizay, ary ny fahefana rehetra dia hanompo sy
+          hankatò Ahy (Daniely 7:27). Ho an’i{" "}
+          <span className="David-y">יהוה בּן יהוה</span> ny voninahitra sy ny
+          fahefana mandrakizay. Amena (1 Petera 5:11).
         </p>
       </div>
-            <div id="pg-btm-media-y" className="">
-        <img className="bottom-media-img mx-auto" src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/bottom-media.png" alt="Bottom Media" />
+      <div id="pg-btm-media-y" className="">
+        <img
+          className="bottom-media-img mx-auto"
+          src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/bottom-media.png"
+          alt="Bottom Media"
+        />
       </div>
     </div>
   );

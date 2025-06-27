@@ -1,8 +1,26 @@
+import { useState } from 'react';
 import { VideoPlayer } from "../../../components/VideoPlayer";
 import "../UniverseOfYahweh/style/universeOfYahweh.css";
 // import "../UniverseOfYahweh/style/responsive.css";
 
 const UniverseOfYahweh = () => {
+   // États pour gérer la vidéo courante et la résolution
+  const [currentVideo, setCurrentVideo] = useState<string>('180');
+  const [currentResolution, setCurrentResolution] = useState<string>('480');
+
+  // Fonction pour changer la résolution
+  const changeResolution = (res: string): void => {
+    setCurrentResolution(res);
+  };
+
+  // Fonction pour changer la vidéo
+  const changeVideo = (videoNumber: string): void => {
+    setCurrentVideo(videoNumber);
+  };
+
+  // Génération de la source vidéo en fonction des états
+  const videoSrc = `https://ms.yahwehbenyahweh.com/video/${currentResolution}/${currentVideo}_${currentResolution}p.mp4`;
+
   return (
     <div className="universe-of-yahweh-pages">
       <div
@@ -12,76 +30,71 @@ const UniverseOfYahweh = () => {
       <div id="top-bar-gold-u" className="sec-bar-u"></div>
       <div className="Body_Text p-6 max-w-4xl mx-auto">
         <p className="text-lg leading-relaxed mb-6">
-          And there came a time known as the <strong>Third Millennium</strong>,
-          a time when the people of the Earth were ravaged by disease,
-          pestilence, and poisons, a time when the{" "}
-          <strong>Horsemen of the Apocalypse</strong> ran the multinational
-          corporations - a time when America's citizens were waking up to a
-          future of no money and no jobs - a time when a special Man came
-          forward - a Man that your American taskmasters did not want you to see
-          or hear - a Man whom they took prisoner and hid away -{" "}
-          <strong>
-            a Man whose name is{" "}
-            <span className="David text-2xl">יהוה בן יהוה</span>
-          </strong>
+          Ary tonga ny fotoana antsoina hoe <strong>Ny Taonarivo Fahatelo</strong>,
+          fotoana izay nijalian'ny olon-tany areti-mandringana, loza, sy poizina,
+          fotoana izay ny <strong>Mpiandry ny Apokalipsy</strong> no nitantana ny orinasa
+          iraisam-pirenena - fotoana izay nifoha ny mponina any Amerika tamin'ny hoavy
+          tsy misy vola sy tsy misy asa - fotoana izay niseho ny Lehilahy Manokana -
+          Lehilahy izay tsy tian'ny mpampiasa amerikana ho hitanao na horeninao -
+          Lehilahy izay nosamborina sy nafenina - <strong>Lehilahy izay ny anarany dia{' '}
+          <span className="David text-2xl">יהוה בן יהוה</span></strong>
         </p>
       </div>
+
       <div className="sec-bar pg-top-pd-mod"></div>
+      
       <div className="Body_Text">
         <p className="_italic">
-          This is the continuing story of the past and of the future - about
-          good and about evil - about your life and what it will become. A story
-          that tells why the{" "}
-          <strong>
-            so-called Black man of America had to suffer for over 400 years.
-          </strong>
+          Ity dia ny tantaran'ny lasa sy ny hoavy mbola mitohy - momba ny tsara sy ny ratsy -
+          momba ny ainareo sy ny ho azy. Tantara izay mamaritra ny antony <strong>nijalian'ny
+          olona mainty hoditra any Amerika nandritra ny 400 taona mahery.</strong>
         </p>
       </div>
+
       <div className="sec-bar pg-top-pd-mod"></div>
+      
       <div className="Body_Text">
         <p className="_italic">
-          A story of what will happen to the so-called Black man if he returns
-          to the{" "}
-          <strong>
-            laws - statutes - judgments, and commandments of God,{" "}
-            <span className="David text-2xl">יהוה</span>.
-          </strong>
+          Tantara momba ny hitranga amin'ny olona mainty hoditra raha miverina amin'ny{' '}
+          <strong>lalàna - fitsipika - fitsarana, sy didin'Andriamanitra,{' '}
+          <span className="David text-2xl">יהוה</span>.</strong>
         </p>
       </div>
+
       <div className="sec-bar pg-top-pd-mod"></div>
+      
       <div className="Body_Text">
         <p className="">
-          <strong>
-            For telling people the truth,{" "}
-            <span className="David">יהוה בן יהוה</span>
-          </strong>{" "}
-          was taken prisoner by the minions of darkness.
+          <strong>Noho ny nilazany ny marina tamin'ny olona,{' '}
+          <span className="David">יהוה בן יהוה</span></strong>{' '}
+          dia nosamborina ny mpanompon'ny maizina.
         </p>
       </div>
+
       <div className="sec-bar pg-top-pd-mod"></div>
+      
       <div className="Universe_Video">
         <p>
           <strong>
-            <u>STREAM THE PROGRAMS TO WATCH NOW</u>
+            <u>AHOAHO NY FAMPISEHOANA HIJERENA IZAO</u>
           </strong>
           <br />
-          <span id="title">The Universe of Yahweh - Show # 180</span>
+          <span id="title">Ny Tontolon'i Yahweh - Fampisehoana #180</span>
         </p>
-        <VideoPlayer
-          src={"https://ms.yahwehbenyahweh.com/video/480/180_480p.mp4"}
-        />
-        {/* <br /> */}
-        <button id="lRes" type="button">
-          Low Res
+        
+        <VideoPlayer src={videoSrc} />
+        
+        <button id="lRes" type="button" onClick={() => changeResolution('480')}>
+          Sary Ambany
         </button>
-        <button id="lRes" type="button">
-          Low Res
+        <button id="mRes" type="button" onClick={() => changeResolution('720')}>
+          Sary Antonio
         </button>
-        <button id="lRes" type="button">
-          Low Res
+        <button id="hRes" type="button" onClick={() => changeResolution('1080')}>
+          Sary Avony
         </button>
-        <form action="#">
-          <select name="videoSelect" id="videoSelect">
+        {/* <form action="#">
+          <select name="videoSelect" id="videoSelect" onChange={(e) => changeVideo(e.target.value)}>
             <option value="180">The Universe of Yahweh - Show # 180</option>
             <option value="181">The Universe of Yahweh - Show # 181</option>
             <option value="182">The Universe of Yahweh - Show # 182</option>
@@ -175,6 +188,20 @@ const UniverseOfYahweh = () => {
             <option value="270">The Universe of Yahweh - Show # 270</option>
             <option value="271">The Universe of Yahweh - Show # 271</option>
             <option value="272">The Universe of Yahweh - Show # 272</option>
+          </select>
+        </form> */}
+        <form action="#">
+          <select 
+            name="videoSelect" 
+            id="videoSelect" 
+            value={currentVideo}
+            onChange={(e) => changeVideo(e.target.value)}
+          >
+            {Array.from({length: 93}, (_, i) => i + 180).map((num) => (
+              <option key={num} value={num}>
+                Ny Tontolon'i Yahweh - Fampisehoana #{num}
+              </option>
+            ))}
           </select>
         </form>
       </div>

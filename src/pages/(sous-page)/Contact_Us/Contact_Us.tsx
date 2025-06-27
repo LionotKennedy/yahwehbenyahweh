@@ -1,104 +1,368 @@
-import "./style/contact_Us.css";
-import "./style/responsive.css";
-export function Contact_Us() {
+// import "./style/contact_Us.css";
+// import "./style/responsive.css";
+// export function Contact_Us() {
+//   return (
+//     <div id="backdrop-contact" className="">
+//       <div id="pg-banner-contact" className=""></div>
+//       <div id="top-bar-gold-contact" className=""></div>
+//       <div id="Yahweh_Ben_Yahweh-contact" className="pg-btm-pd-mod-contact">
+//         <img
+//           src="/src/pages/(sous-page)/Contact_Us/image/To_Contact_Us.png"
+//           alt="To Contact Us"
+//           className="style-contact1"
+//         />
+//       </div>
+//       <div className="sec-text-contact pg-text-fmt-contact">
+//         <div className="side-image-contact">
+//           <img
+//             className="img-size-mail"
+//             src="/src/pages/(sous-page)/Contact_Us/image/mail.png"
+//             alt="mail icon"
+//           />
+//         </div>
+//         <div className="">
+//           <span className="pg-link-text-ul-contact">
+//             <strong>Adiresy Ofisiny:</strong>
+//           </span>
+//           <br />
+//           P.E.E.S.S. Foundation
+//           <br />
+//           1777 NE Loop 410, Suite 600
+//           <br />
+//           San Antonio, TX 78217
+//         </div>
+//         <div className="side-clear"></div>
+//       </div>
+//       <div className="sec-bar-contact pg-top-pd-mod-contact"></div>
+//       <div className="sec-text-contact pg-text-fmt-contact">
+//         <div className="side-image-contact">
+//           <img
+//             className="img-size-mail"
+//             src="/src/pages/(sous-page)/Contact_Us/image/mail.png"
+//             alt="mail icon"
+//           />
+//         </div>
+//         <div className="side-text-contact ">
+//           <span className="pg-link-text-ul-contact">
+//             <strong>Adiresy Paositra:</strong>
+//           </span>
+//           <br />
+//           P.E.E.S.S. Foundation
+//           <br />
+//           P.O. Box 884
+//           <br />
+//           Seguin, TX 78156-0884
+//         </div>
+//         <div className="side-clear"></div>
+//       </div>
+//       <div className="sec-bar-contact pg-top-pd-mod-contact"></div>
+//       <div className="sec-text-contact pg-text-fmt-contact">
+//         <div className="side-text-contact side-padding-ls-contact">
+//           NA ANTSOY (AVY any AMERIKA SY KANADA)
+//           <br />
+//         </div>
+//         <div className="side-clear"></div>
+//       </div>
+//       <div className="sec-text-contact pg-text-fmt-contact side-padding-contact div-phone-fmt-contact">
+//         <div className="side-text-contact">
+//           <span className="pg-link-text-ul-contact">1-800-967-7337</span>
+//           <br />
+//           <span className="pg-link-text-ul-contact">(210) 678-3061</span>
+//         </div>
+//         <div className="side-phone-contact">
+//           <img
+//             className="img-size-phone-contact"
+//             src="/src/pages/(sous-page)/Contact_Us/image/phone.png"
+//             alt="phone icon"
+//           />
+//         </div>
+//         <div className="side-clear"></div>
+//       </div>
+//       <div className="wrapper-contact">
+//         <div id="Email_Us">
+//           <p>
+//             <span className="pg-link-text-ul-1-contact">
+//               <strong>Ny adiresy mailakanay</strong>
+//             </span>
+//             <br />
+//             yahweh@yahwehbenyahweh.com
+//           </p>
+//         </div>
+//         <div id="pg-btm-media-contact">
+//           <img
+//             className="bottom-media-img-contact"
+//             src="/src/pages/(sous-page)/Contact_Us/image/bottom-media.jpg"
+//           />
+//         </div>
+//       </div>
+//       <div id="top-bar-gold-contact"></div>
+//     </div>
+//   );
+// }
+// export default Contact_Us;
+
+
+
+
+
+
+
+import "./style/contact-us.css"
+
+export function ContactUs() {
   return (
-    <div id="backdrop-contact" className="">
-      <div id="pg-banner-contact" className=""></div>
-      <div id="top-bar-gold-contact" className=""></div>
-      <div id="Yahweh_Ben_Yahweh-contact" className="pg-btm-pd-mod-contact">
-        <img
-          src="/src/pages/(sous-page)/Contact_Us/image/To_Contact_Us.png"
-          alt="To Contact Us"
-          className="style-contact1"
-        />
+    <div className="contact-container">
+      {/* Header Section */}
+      <div className="contact-banner"></div>
+      <div className="gold-bar"></div>
+
+      {/* Title Section */}
+      <div className="title-section">
+        <img src="/src/pages/(sous-page)/Contact_Us/image/To_Contact_Us.png?height=200&width=600" alt="To Contact Us" className="title-image" />
       </div>
-      <div className="sec-text-contact pg-text-fmt-contact">
-        <div className="side-image-contact">
-          <img
-            className="img-size-mail"
-            src="/src/pages/(sous-page)/Contact_Us/image/mail.png"
-            alt="mail icon"
-          />
+
+      {/* Contact Information Sections */}
+      <div className="contact-content">
+        {/* Office Address */}
+        <div className="contact-section">
+          <div className="contact-item">
+            <div className="icon-container">
+              <img src="/src/pages/(sous-page)/Contact_Us/image/mail.png?height=80&width=80" alt="mail icon" className="contact-icon" />
+            </div>
+            <div className="contact-text">
+              <span className="contact-label">
+                <strong>Adiresy Ofisiny:</strong>
+              </span>
+              <div className="address">
+                P.E.E.S.S. Foundation
+                <br />
+                1777 NE Loop 410, Suite 600
+                <br />
+                San Antonio, TX 78217
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="">
-          <span className="pg-link-text-ul-contact">
-            <strong>Office Address:</strong>
-          </span>
-          <br />
-          P.E.E.S.S. Foundation
-          <br />
-          1777 NE Loop 410, Suite 600
-          <br />
-          San Antonio, TX 78217
+
+        <div className="section-divider"></div>
+
+        {/* Mailing Address */}
+        <div className="contact-section">
+          <div className="contact-item">
+            <div className="icon-container">
+              <img src="/src/pages/(sous-page)/Contact_Us/image/mail.png" alt="mail icon" className="contact-icon" />
+            </div>
+            <div className="contact-text">
+              <span className="contact-label">
+                <strong>Adiresy Paositra:</strong>
+              </span>
+              <div className="address">
+                P.E.E.S.S. Foundation
+                <br />
+                P.O. Box 884
+                <br />
+                Seguin, TX 78156-0884
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="side-clear"></div>
-      </div>
-      <div className="sec-bar-contact pg-top-pd-mod-contact"></div>
-      <div className="sec-text-contact pg-text-fmt-contact">
-        <div className="side-image-contact">
-          <img
-            className="img-size-mail"
-            src="/src/pages/(sous-page)/Contact_Us/image/mail.png"
-            alt="mail icon"
-          />
+
+        <div className="section-divider"></div>
+
+        {/* Phone Section Header */}
+        <div className="contact-section">
+          <div className="phone-header">NA ANTSOY (AVY any AMERIKA SY KANADA)</div>
         </div>
-        <div className="side-text-contact ">
-          <span className="pg-link-text-ul-contact">
-            <strong>Post Office Box:</strong>
-          </span>
-          <br />
-          P.E.E.S.S. Foundation
-          <br />
-          P.O. Box 884
-          <br />
-          Seguin, TX 78156-0884
+
+        {/* Phone Numbers */}
+        <div className="contact-section">
+          <div className="contact-item phone-item">
+            <div className="contact-text">
+              <div className="phone-numbers">
+                <span className="phone-number">1-800-967-7337</span>
+                <span className="phone-number">(210) 678-3061</span>
+              </div>
+            </div>
+            <div className="icon-container">
+              <img src="/src/pages/(sous-page)/Contact_Us/image/phone.png?height=60&width=60" alt="phone icon" className="phone-icon" />
+            </div>
+          </div>
         </div>
-        <div className="side-clear"></div>
-      </div>
-      <div className="sec-bar-contact pg-top-pd-mod-contact"></div>
-      <div className="sec-text-contact pg-text-fmt-contact">
-        <div className="side-text-contact side-padding-ls-contact">
-          OR CALL (FROM USA or CANADA)
-          <br />
-        </div>
-        <div className="side-clear"></div>
-      </div>
-      <div className="sec-text-contact pg-text-fmt-contact side-padding-contact div-phone-fmt-contact">
-        <div className="side-text-contact">
-          <span className="pg-link-text-ul-contact">1-800-967-7337</span>
-          <br />
-          <span className="pg-link-text-ul-contact">(210) 678-3061</span>
-        </div>
-        <div className="side-phone-contact">
-          <img
-            className="img-size-phone-contact"
-            src="/src/pages/(sous-page)/Contact_Us/image/phone.png"
-            alt="phone icon"
-          />
-        </div>
-        <div className="side-clear"></div>
-      </div>
-      <div className="wrapper-contact">
-        <div id="Email_Us">
-          <p>
-            <span className="pg-link-text-ul-1-contact">
-              <strong>Our Email address</strong>
+
+        {/* Email Section */}
+        <div className="email-section">
+          <div className="email-content">
+            <span className="email-label">
+              <strong>Ny adiresy mailakanay</strong>
             </span>
-            <br />
-            yahweh@yahwehbenyahweh.com
-          </p>
+            <div className="email-address">yahweh@yahwehbenyahweh.com</div>
+          </div>
         </div>
-        <div id="pg-btm-media-contact">
-          <img
-            className="bottom-media-img-contact"
-            src="/src/pages/(sous-page)/Contact_Us/image/bottom-media.jpg"
-          />
+
+        {/* Bottom Media */}
+        <div className="bottom-media">
+          <img src="/src/pages/(sous-page)/Contact_Us/image/bottom-media.jpg?height=300&width=800" alt="bottom media" className="bottom-image" />
         </div>
       </div>
-      <div id="top-bar-gold-contact">
-        </div>
-      {/* Coucou 7 */}
+
+      <div className="gold-bar"></div>
     </div>
-  );
+  )
 }
-export default Contact_Us;
+
+export default ContactUs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import "./style/contact-us.css"
+
+// export function ContactUs() {
+//   return (
+//     <div className="contact-container">
+//       {/* Header Section */}
+//       <div className="contact-banner"></div>
+//       <div className="gold-bar"></div>
+
+//       {/* Title Section */}
+//       <div className="title-section">
+//         <img src="/placeholder.svg?height=200&width=600" alt="To Contact Us" className="title-image" />
+//       </div>
+
+//       {/* Contact Information Sections */}
+//       <div className="contact-content">
+//         {/* Office Address */}
+//         <div className="contact-section">
+//           <div className="contact-item">
+//             <div className="icon-container">
+//               <img src="/placeholder.svg?height=80&width=80" alt="mail icon" className="contact-icon" />
+//             </div>
+//             <div className="contact-text">
+//               <span className="contact-label">
+//                 <strong>Adiresy Ofisiny:</strong>
+//               </span>
+//               <div className="address">
+//                 P.E.E.S.S. Foundation
+//                 <br />
+//                 1777 NE Loop 410, Suite 600
+//                 <br />
+//                 San Antonio, TX 78217
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="section-divider"></div>
+
+//         {/* Mailing Address */}
+//         <div className="contact-section">
+//           <div className="contact-item">
+//             <div className="icon-container">
+//               <img src="/placeholder.svg?height=80&width=80" alt="mail icon" className="contact-icon" />
+//             </div>
+//             <div className="contact-text">
+//               <span className="contact-label">
+//                 <strong>Adiresy Paositra:</strong>
+//               </span>
+//               <div className="address">
+//                 P.E.E.S.S. Foundation
+//                 <br />
+//                 P.O. Box 884
+//                 <br />
+//                 Seguin, TX 78156-0884
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="section-divider"></div>
+
+//         {/* Phone Section Header */}
+//         <div className="contact-section">
+//           <div className="phone-header">NA ANTSOY (AVY any AMERIKA SY KANADA)</div>
+//         </div>
+
+//         {/* Phone Numbers */}
+//         <div className="contact-section">
+//           <div className="contact-item phone-item">
+//             <div className="contact-text">
+//               <div className="phone-numbers">
+//                 <span className="phone-number">1-800-967-7337</span>
+//                 <span className="phone-number">(210) 678-3061</span>
+//               </div>
+//             </div>
+//             <div className="icon-container">
+//               <img src="/placeholder.svg?height=60&width=60" alt="phone icon" className="phone-icon" />
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Email Section superposée sur Bottom Media */}
+//         <div className="bottom-section-wrapper">
+//           {/* Bottom Media */}
+//           <div className="bottom-media">
+//             <img
+//               src="/src/pages/(sous-page)/Contact_Us/image/bottom-media.jpg"
+//               alt="bottom media"
+//               className="bottom-image"
+//             />
+//           </div>
+
+//           {/* Email Section superposée */}
+//           <div className="email-section">
+//             <div className="email-content">
+//               <span className="email-label">
+//                 <strong>Ny adiresy mailakanay</strong>
+//               </span>
+//               <div className="email-address">yahweh@yahwehbenyahweh.com</div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="gold-bar"></div>
+//     </div>
+//   )
+// }
+
+// export default ContactUs

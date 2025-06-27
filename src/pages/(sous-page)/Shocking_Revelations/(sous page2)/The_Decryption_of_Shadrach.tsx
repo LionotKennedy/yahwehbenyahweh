@@ -1,3 +1,154 @@
+// import "../style/shocking_Revelations.css";
+// import "../style/responsive.css";
+// import { Link } from "react-router-dom";
+
+// export function The_Decryption_of_Shadrach() {
+//   return (
+//     <>
+//       <div id="pg-banner-shock"></div>
+//       <div id="top-bar-gold-shock"></div>
+//       <div className="pg-title-text-shock">
+//         <p className="p-title-text-shock">
+//           THE "DECRYPTION" OF SHADRACH, MESHACH, AND ABED-NEGO
+//         </p>
+//       </div>
+//       <div className="book-line-shock">
+//         <div>
+//           <div>
+//             <div className="book-guide-shock">
+//               Part 1 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt1.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 2 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt2.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 3 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt3.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 4 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/decryption_o_shad_mesh_abed_p4-rev.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 5 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt5.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 6 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Decryption_of_SHADPart6.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 7 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Decryption_of_SHADPart7.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 8 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt8.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 9 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt9.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 10 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt10.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 11 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt11.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 12 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt12.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 13 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt13.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 14 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt14.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 15 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt15.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 16 -{" "}
+//               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt16.pdf" target="_blank">
+//                 Adobe PDF Format
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="pg-info-text-shock">
+//         <p className="p-info-text-shock">
+//           <br />
+//           <Link to="/Shocking_Revelations/2">
+//             <span className="lnk-info-text-shock">&lt; Back</span>
+//           </Link>
+//         </p>
+//       </div>
+//       <div id="top-bar-gold-shock"></div>
+//     </>
+//   );
+// }
+// export default The_Decryption_of_Shadrach;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import "../style/shocking_Revelations.css";
 import "../style/responsive.css";
 import { Link } from "react-router-dom";
@@ -9,94 +160,94 @@ export function The_Decryption_of_Shadrach() {
       <div id="top-bar-gold-shock"></div>
       <div className="pg-title-text-shock">
         <p className="p-title-text-shock">
-          THE "DECRYPTION" OF SHADRACH, MESHACH, AND ABED-NEGO
+          NY "FANAZAVANA" AN'I SADRAKA, MESAKA, SY ABEDENAGO
         </p>
       </div>
       <div className="book-line-shock">
         <div>
           <div>
             <div className="book-guide-shock">
-              Part 1 -{" "}
+              Ampahany 1 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt1.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 2 -{" "}
+              Ampahany 2 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt2.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 3 -{" "}
+              Ampahany 3 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt3.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 4 -{" "}
+              Ampahany 4 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/decryption_o_shad_mesh_abed_p4-rev.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 5 -{" "}
+              Ampahany 5 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt5.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 6 -{" "}
+              Ampahany 6 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Decryption_of_SHADPart6.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 7 -{" "}
+              Ampahany 7 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Decryption_of_SHADPart7.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 8 -{" "}
+              Ampahany 8 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/the_decryption_pt8.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 9 -{" "}
+              Ampahany 9 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt9.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 10 -{" "}
+              Ampahany 10 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt10.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 11 -{" "}
+              Ampahany 11 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt11.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 12 -{" "}
+              Ampahany 12 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt12.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 13 -{" "}
+              Ampahany 13 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt13.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 14 -{" "}
+              Ampahany 14 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt14.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 15 -{" "}
+              Ampahany 15 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt15.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 16 -{" "}
+              Ampahany 16 -{" "}
               <a href="/src/pages/(sous-page)/Shocking_Revelations/pdf/The_Decryption_of_Shadrach_Pt16.pdf" target="_blank">
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
             </div>
           </div>
@@ -106,7 +257,7 @@ export function The_Decryption_of_Shadrach() {
         <p className="p-info-text-shock">
           <br />
           <Link to="/Shocking_Revelations/2">
-            <span className="lnk-info-text-shock">&lt; Back</span>
+            <span className="lnk-info-text-shock">&lt; Miverina</span>
           </Link>
         </p>
       </div>

@@ -1,3 +1,374 @@
+// import "./style/books_for_the_Year.css";
+// import "./style/responsive.css";
+
+// export function Books_for_the_Year() {
+//   return (
+//     <>
+//       <div id="pg-banner-year"></div>
+//       <div id="top-bar-gold-year"></div>
+//       <div id="MONTH_BOOK_READING_SCHEDULE">
+//         <img
+//           className="img-size-12-year"
+//           src="/src/pages/(sous-page)/Books_for_the_Year/image/12-MONTH_BOOK_READING_SCHEDULE.png"
+//           alt="12-Month book reading schedule"
+//         />
+//       </div>
+//       <div id="printer_offine-year">
+//         <a href="pdf/BOTM_6028-2025.pdf" target="_blank">
+//           <img
+//             className="img-size-po-year"
+//             src="/src/pages/(sous-page)/Books_for_the_Year/image/Printer.png"
+//             alt="Print offine"
+//           />
+//         </a>
+//       </div>
+//       <div className="book-line-year">
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/yahweh-ben-yahweh-the-messiah-of-genesis.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/132_YBY_The_Messiah_of_Genesis.png"
+//                   alt="Yahweh Ben Yahweh: The Messiah of Genesis"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/yahweh-ben-yahweh-the-messiah-of-genesis.html"
+//                 target="_blank"
+//               >
+//                 Abib March
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/judgment-shall-sit.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/167_Judgment_Shall_Sit.png"
+//                   alt="Judgment Shall Sit"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/judgment-shall-sit.html"
+//                 target="_blank"
+//               >
+//                 April
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-widow-s-son-raised.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/102_The_Widows_Son_Raisied.png"
+//                   alt="The Widow's Son Raised"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-widow-s-son-raised.html"
+//                 target="_blank"
+//               >
+//                 May
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="pg-line-break-year"></div>
+//       <div className="book-line-year">
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/building-a-strong-foundation.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/151_Building_A_Strong_Foundation.png"
+//                   alt="Building A Strong Foundation"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/building-a-strong-foundation.html"
+//                 target="_blank"
+//               >
+//                 June
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/thyatira.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/182_Thyatira.png"
+//                   alt="Thyatira"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/thyatira.html"
+//                 target="_blank"
+//               >
+//                 July
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/smyrna-370.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/179_Smyrna.png"
+//                   alt="Smyrna"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/smyrna-370.html"
+//                 target="_blank"
+//               >
+//                 August
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="pg-line-break-year"></div>
+//       <div className="book-line-year">
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/concentration-camps.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/134_Concentration_Camps.png"
+//                   alt="Concentration Camps"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/concentration-camps.html"
+//                 target="_blank"
+//               >
+//                 September
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-true-meaning-of-shalom-347.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/128_Persecution_V1.png"
+//                   alt="The Persecution of Yahweh Ben Yahweh: Volume 1"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-true-meaning-of-shalom-347.html"
+//                 target="_blank"
+//               >
+//                 October
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-true-meaning-of-shalom-347.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/128_Persecution_V2.png"
+//                   alt="The Persecution of Yahweh Ben Yahweh: Volume 2"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-true-meaning-of-shalom-347.html"
+//                 target="_blank"
+//               >
+//                 November
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="pg-line-break-year"></div>
+//       <div className="book-line-year">
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-crucifixion-of-the-messiah.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/155_The_Crucifixion_Of_The_Messiah.png"
+//                   alt="The Crucifixion Of The Messiah"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-crucifixion-of-the-messiah.html"
+//                 target="_blank"
+//               >
+//                 December
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/yahweh-ben-yahweh-the-lamb-of-yahweh.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/168_YBY_The_Lamb_of_Yahweh.png"
+//                   alt="Yahweh Ben Yahweh: The Lamb of Yahweh"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/yahweh-ben-yahweh-the-lamb-of-yahweh.html"
+//                 target="_blank"
+//               >
+//                 January
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//         <div className="book-cnt-year">
+//           <div className="book-guide-year">
+//             <div className="book-size-contain-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-signs-wonders-and-mighty-hand-of-yahweh.html"
+//                 target="_blank"
+//               >
+//                 <img
+//                   className="img-size-year"
+//                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/171_The_Signs_Wonders.png"
+//                   alt="The Signs, Wonders, and Mighty Hand Of Yahweh"
+//                 />
+//               </a>
+//             </div>
+//             <p className="lnk-info-text-year">
+//               <a
+//                 href="https://shop.yahwehbenyahweh.com/index.php/the-signs-wonders-and-mighty-hand-of-yahweh.html"
+//                 target="_blank"
+//               >
+//                 February
+//               </a>
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="pg-line-break-year"></div>
+//       <div className="pg-line-break-end-year"></div>
+//       <div>
+//         <img
+//           className="bottom-media-img-year"
+//           src="/src/pages/(sous-page)/Books_for_the_Year/image/bottom-media.jpg"
+//         />
+//       </div>
+//     </>
+//   );
+// }
+// export default Books_for_the_Year;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import "./style/books_for_the_Year.css";
 import "./style/responsive.css";
 
@@ -10,7 +381,7 @@ export function Books_for_the_Year() {
         <img
           className="img-size-12-year"
           src="/src/pages/(sous-page)/Books_for_the_Year/image/12-MONTH_BOOK_READING_SCHEDULE.png"
-          alt="12-Month book reading schedule"
+          alt="Fandaharam-pamakiana boky isam-bolana 12"
         />
       </div>
       <div id="printer_offine-year">
@@ -18,7 +389,7 @@ export function Books_for_the_Year() {
           <img
             className="img-size-po-year"
             src="/src/pages/(sous-page)/Books_for_the_Year/image/Printer.png"
-            alt="Print offine"
+            alt="Printy an-tserasera"
           />
         </a>
       </div>
@@ -33,7 +404,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/132_YBY_The_Messiah_of_Genesis.png"
-                  alt="Yahweh Ben Yahweh: The Messiah of Genesis"
+                  alt="Yahweh Ben Yahweh: Ny Mesia ao amin'ny Genesisy"
                 />
               </a>
             </div>
@@ -42,7 +413,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/yahweh-ben-yahweh-the-messiah-of-genesis.html"
                 target="_blank"
               >
-                Abib March
+                Abib Marsa
               </a>
             </p>
           </div>
@@ -57,7 +428,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/167_Judgment_Shall_Sit.png"
-                  alt="Judgment Shall Sit"
+                  alt="Hipetraka ny Fitsarana"
                 />
               </a>
             </div>
@@ -66,7 +437,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/judgment-shall-sit.html"
                 target="_blank"
               >
-                April
+                Avrily
               </a>
             </p>
           </div>
@@ -81,7 +452,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/102_The_Widows_Son_Raisied.png"
-                  alt="The Widow's Son Raised"
+                  alt="Ny Zanak'ampela Maty Natsangana"
                 />
               </a>
             </div>
@@ -90,7 +461,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/the-widow-s-son-raised.html"
                 target="_blank"
               >
-                May
+                Mey
               </a>
             </p>
           </div>
@@ -108,7 +479,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/151_Building_A_Strong_Foundation.png"
-                  alt="Building A Strong Foundation"
+                  alt="Manorina Fototra Mahery"
                 />
               </a>
             </div>
@@ -117,7 +488,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/building-a-strong-foundation.html"
                 target="_blank"
               >
-                June
+                Jona
               </a>
             </p>
           </div>
@@ -141,7 +512,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/thyatira.html"
                 target="_blank"
               >
-                July
+                Jolay
               </a>
             </p>
           </div>
@@ -165,7 +536,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/smyrna-370.html"
                 target="_blank"
               >
-                August
+                Aogositra
               </a>
             </p>
           </div>
@@ -183,7 +554,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/134_Concentration_Camps.png"
-                  alt="Concentration Camps"
+                  alt="Toeram-pamonoana olona"
                 />
               </a>
             </div>
@@ -192,7 +563,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/concentration-camps.html"
                 target="_blank"
               >
-                September
+                Septambra
               </a>
             </p>
           </div>
@@ -207,7 +578,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/128_Persecution_V1.png"
-                  alt="The Persecution of Yahweh Ben Yahweh: Volume 1"
+                  alt="Ny Fahoriana natrehin'i Yahweh Ben Yahweh: Volume 1"
                 />
               </a>
             </div>
@@ -216,7 +587,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/the-true-meaning-of-shalom-347.html"
                 target="_blank"
               >
-                October
+                Oktobra
               </a>
             </p>
           </div>
@@ -231,7 +602,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/128_Persecution_V2.png"
-                  alt="The Persecution of Yahweh Ben Yahweh: Volume 2"
+                  alt="Ny Fahoriana natrehin'i Yahweh Ben Yahweh: Volume 2"
                 />
               </a>
             </div>
@@ -240,7 +611,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/the-true-meaning-of-shalom-347.html"
                 target="_blank"
               >
-                November
+                Novambra
               </a>
             </p>
           </div>
@@ -258,7 +629,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/155_The_Crucifixion_Of_The_Messiah.png"
-                  alt="The Crucifixion Of The Messiah"
+                  alt="Ny Fanomboana ny Mesia"
                 />
               </a>
             </div>
@@ -267,7 +638,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/the-crucifixion-of-the-messiah.html"
                 target="_blank"
               >
-                December
+                Desambra
               </a>
             </p>
           </div>
@@ -282,7 +653,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/168_YBY_The_Lamb_of_Yahweh.png"
-                  alt="Yahweh Ben Yahweh: The Lamb of Yahweh"
+                  alt="Yahweh Ben Yahweh: Ny Zanak'ondrin'i Yahweh"
                 />
               </a>
             </div>
@@ -291,7 +662,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/yahweh-ben-yahweh-the-lamb-of-yahweh.html"
                 target="_blank"
               >
-                January
+                Janoary
               </a>
             </p>
           </div>
@@ -306,7 +677,7 @@ export function Books_for_the_Year() {
                 <img
                   className="img-size-year"
                   src="/src/pages/(sous-page)/Books_for_the_Year/image/2025/171_The_Signs_Wonders.png"
-                  alt="The Signs, Wonders, and Mighty Hand Of Yahweh"
+                  alt="Ny Famantarana, ny Fahagagana, sy ny Tanany Maherin'i Yahweh"
                 />
               </a>
             </div>
@@ -315,7 +686,7 @@ export function Books_for_the_Year() {
                 href="https://shop.yahwehbenyahweh.com/index.php/the-signs-wonders-and-mighty-hand-of-yahweh.html"
                 target="_blank"
               >
-                February
+                Febroary
               </a>
             </p>
           </div>

@@ -20,71 +20,74 @@ export function AboutYahweh() {
       </div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          The power behind the universe is not a mysterious force, but a real
-          person by the name of <span className="David-about">יהוה</span>. Trips
-          to the international space station, and scientific observations,
-          including photographs of other planets prove that the awe-inspiring
-          vastness of the heavens and space is fashioned in an orderly
-          arrangement. To conclude such a vast universe as ours is organized
-          without some sort of controlling power is totally illogical. Logic
-          dictates that no unintelligent force could possibly account for the
-          amazing varieties of life, or for the infinite wisdom and power
-          manifested in the universe.
+          Ny hery mandrisika ny izao rehetra izao dia tsy hery mistery, fa olona
+          tena izy mitondra ny anarana hoe{" "}
+          <span className="David-about">יהוה</span>. Ny fitsidihana ny tobin'ny
+          habakabaka iraisam-pirenena, sy ny fandinihana ara-tsiansa,
+          anisan'izany ny sary nalaina avy any amin'ny planeta hafa, dia
+          manaporofo fa ny habakabaka mahagaga sy goavana dia voarindra tsara.
+          Tsy misy dikany ny manao fehin-kevitra fa izao tontolo goavana izao
+          dia voarindra tsara nefa tsy misy hery iray mifehy. Ny lojika dia
+          milaza fa tsy misy hery tsy manan-tsaina afaka hamorona izao karazana
+          fiainana isan-karazany izao, na hanome ny fahendrena sy hery tsy
+          manam-petra hita eny amin'ny izao tontolo izao.
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          For thus saith <span className="David-about">יהוה</span>, that created
-          the Heavens; <span className="David-about">יהוה</span> formed the
-          Earth and made it; He established it, and He created it not in vain
-          (Isaiah 45:18).
+          Fa izao no lazain'i <span className="David-about">יהוה</span>, Ilay
+          nahary ny lanitra; <span className="David-about">יהוה</span> formed
+          the no namorona ny tany sy nanao izy, Nisy nanorenany izy, ary tsy ho
+          an-tsininy no naha-nahary Azy (Isaia 45:18).
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          There is a renascent axiom that has been proven by archaeologist
-          worldwide. They are affirming unanimously, one fact after another that
-          behind the vastness of the great, monumental universe, there is a
-          basic core: monotheism, THE ONE GOD, whose name, until now, is
-          purposely censored, covered-up, concealed, and hidden. This name,{" "}
-          <span className="David-about">יהוה</span>, is widely acclaimed as the
-          "World's Best Kept Secret."
+          Misy fitsipika vaovao izay efa voaporofo tamin'ny alalan'ny arkeolojia
+          manerantany. Ny mpahay arkeolojia dia miara-milaza tsy misy
+          fisalasalana, fa ao ambadiky ny habakabaka goavana sy ny izao tontolo
+          izao, misy fototra iray: ny finoana Andriamanitra tokana, ILAY
+          ANDRIAMANITRA TOKANA, izay ny anarany hatramin'izao dia noforanina,
+          nosaronina, nafenina, ary natahotra. Io anarana io,{" "}
+          <span className="David-about">יהוה</span>, dia atao hoe "Ny
+          Tsiambaratelo Lehibe Indrindra Etỳ An-Tany".
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          In Proverbs 30:4 several questions are asked concerning the Creator of
-          Heaven, but the two that stand out the most are, what is His name, and
-          what is His Son's name, if thou can tell?
+          Ao amin'ny Ohabolana 30:4 dia misy fanontaniana maromaro momba ny
+          Mpahary ny Lanitra, fa ny roa tonga lafatra indrindra dia: Iza no
+          anarany, ary Iza no anaran'ny Zanany, raha hahay ny hilaza?
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p>
-          Moses, before the fall of Egypt, could tell that calling God by His
-          personal name was important (Exodus 3:13), and this same scenario
-          exists today. Before the fall of Babylon, the great city,{" "}
-          <span className="David-about">יהוה&nbsp;בּן&nbsp;יהוה</span>, the Son
-          of <span className="David-about">יהוה</span>, recognized the
-          importance of you being able to call Him by His personal name; For
-          there is none other name under Heaven given among men, whereby you can
-          be saved (John 5:43; 1 Timothy 2:5-6; Acts 4:12).
+          I Mosesy, talohan'ny fianjeran'i Egipta, dia nahafantatra fa
+          zava-dehibe ny miantso an'Andriamanitra amin'ny anarany manokana
+          (Eksodosy 3:13), ary io toe-javatra io mbola misy hatramin'izao.
+          Talohan'ny fianjeran'i Babylona, ilay tanàna lehibe...{" "}
+          <span className="David-about">יהוה&nbsp;בּן&nbsp;יהוה</span>, tIlay
+          Zanak'i<span className="David-about">יהוה</span>, dia nahatakatra ny
+          maha-zava-dehibe ny fiantsoana Azy amin'ny anarany manokana; fa tsy
+          misy anarana hafa eo ambanin'ny lanitra omena ny olombelona, izay
+          ahafahana voavonjy (Jaona 5:43; 1 Timoty 2:5-6; Asa 4:12).
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about pg-text-ltr-sp-6-about">
         <p>
-          In essence, it is absolutely impossible to enter into a relationship
-          with <span className="David-about">יהוה</span>, without acknowledging{" "}
-          <span className="David-about">יהוה&nbsp;בּן&nbsp;יהוה</span>, His
-          Beloved Son (John 10:9, 30; John 14:6; John 17:11). Thus, to know{" "}
-          <span className="David-about">יהוה</span>, is to experience the
-          reality of assured confidence and deliverance. The disclosure of His
-          name, as well as His Son’s name, is the index to understanding
-          Biblical faith.
+          Amin'ny fototry ny zavatra rehetra, tsy azo atao ny hiditra amin'ny
+          fifandraisana amin'i <span className="David-about">יהוה</span> raha
+          tsy manaiky an'i <span className="David-about">יהוה בּן יהוה</span>,
+          Ilay Zanany Tiana (Jaona 10:9, 30; Jaona 14:6; Jaona 17:11). Noho
+          izany, ny fahafantarana an'i <span className="David-about">יהוה</span>{" "}
+          dia mitovy amin'ny fahitana ny zava-misy amin'ny fahatokiana azo
+          antoka sy ny famonjena. Ny fanambarana ny anarany sy ny anaran'ny
+          Zanany no fanalahidy hahatakarana ny finoana ara-Baiboly.
         </p>
       </div>
       <div id="pg-btm-media-about" className="">

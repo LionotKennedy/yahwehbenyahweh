@@ -8,7 +8,7 @@ export function Page_3() {
       <div id="pg-banner-shock"></div>
       <div id="top-bar-gold-shock"></div>
       <div className="pg-title-text-shock">
-        <p className="p-title-text-shock">SEMINAR TRANSCRIPTS</p>
+        <p className="p-title-text-shock">TATITRA SEMINARA</p>
       </div>
       <div className="book-line-shock">
         <div className="book-cnt-shock">

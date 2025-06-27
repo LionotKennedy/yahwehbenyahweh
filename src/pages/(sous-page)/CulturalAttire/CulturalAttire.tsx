@@ -18,62 +18,63 @@ const CulturalAttire = () => {
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="">
-          <span className="David-cul">יהוה בן יהוה</span> has prescribed how He
-          wants us to dress and why.{" "}
+          <span className="David-cul">יהוה בן יהוה</span> dia nandidy ny fomba
+          tokony hitafianay sy ny antony manosika anizany.
           <i>
             <strong>
               <span className="">
-                "He that overcometh, the same shall be clothed in white raiment;
-                and I will not blot out his name out of the Book of Life, but I
-                will confess his name before My Father,{" "}
-                <span className="David-cul">יהוה</span>, and before His angels"
-                (Revelation 3:5).
+                "Izay mandresy dia hakan-damba fotsy, ary tsy hofanako ny
+                anarany ao amin’ny Bokin’ny Fiaina, fa hanaiko ny anarany eo
+                anatrehan’ny Raiko, <span className="David-cul">יהוה</span>, sy
+                eo anatrehan’ny anjely Neny" (Apokalipsy 3:5).
               </span>{" "}
             </strong>
           </i>
-          These words are most important to salvation and eternal life. If we
-          dress like other people and fail to overcome the ways of the heathen,
-          our names will be blotted out of{" "}
+          Tenin'izany dia tena zava-dehibe ho an'ny famonjena sy ny fiainana
+          mandrakizay. Raha mitovy fitafiana amin'ny hafa isika ka tsy maharesy
+          ny fomba jentilisa, dia hofafana ny anarantsika ao amin'ny...
           <i>
             <strong>
-              <span className="">"The Book of Life."</span>
+              <span className="">"Ny Bokin’ny Fiaina."</span>
             </strong>
           </i>
-          In order to be saved from destruction, we must return to the culture
-          of <span className="David-cul">יהוה</span>.
+          Mba ho voavonjy amin'ny faharavana dia tsy maintsy miverina amin'ny
+          kolontsain'i <span className="David-cul">יהוה</span> isika.
         </p>
       </div>
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
-        <p className="">What is so important about your holy white garments?</p>
+        <p className="">
+          Inona no zava-dehibe momba ny akanjon’ny fotsy masina anao?
+        </p>
       </div>
       <div className="sec-bar-cul pg-top-pd-mod-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="pg-text-ltr-sp-3">
-          Firstly, it is the culture of God,{" "}
-          <span className="David-cul">יהוה</span>, and the Son of God,{" "}
-          <span className="David-cul">יהוה בן יהוה</span>. Daniel 7:9 describes{" "}
-          <span className="David-cul">יהוה</span>, the Ancient of Days, as
-          wearing a garment as white as snow, and it reads,{" "}
+          Voalohany, izany dia kolontsain’Andriamanitra,{" "}
+          <span className="David-cul">יהוה</span>, sy ny Zanak’Andriamanitra,{" "}
+          <span className="David-cul">יהוה בן יהוה</span>. Ny Daniely 7:9 dia
+          mamaritra an’i <span className="David-cul">יהוה</span>, Ilay Antitra
+          andro, nitafy akanjo fotsy tahaka ny lane, ary milaza hoe:{" "}
           <span className="">
             <i>
               <strong>
-                "I beheld till the thrones were cast down, and the Ancient of
-                Days did sit, whose garment was white as snow, and the hair of
-                His head like the pure wool:…"
+                ‘Nahita aho mandra-pisy ny seza fiandrianana natao, ary Ilay
+                Antitra andro nipetraka, izay nitafy akanjo fotsy tahaka ny
+                lane, ary ny volony tahaka ny volonondry madio:…’
               </strong>
             </i>
           </span>{" "}
-          Revelation 1:13-14 depicts the Son of{" "}
-          <span className="David-cul">יהוה</span> as having on a garment down to
-          the foot, and it reads in part,{" "}
+          Ny Apokalipsy 1:13-14 kosa dia mampiseho ny Zanak’i{" "}
+          <span className="David-cul">יהוה</span> nitafy akanjo nisy hatramin’ny
+          tongony, ary milaza amin’ny ampahany:{" "}
           <span className="">
             <i>
               <strong>
-                "… one like unto the Son of Man, clothed with a garment down to
-                the foot, and girt about the paps with a golden girdle. His head
-                and His hair were white like wool, as white as snow; and His
-                eyes were as a flame of fire";
+                ‘… olona mitovy amin’ny Zanak’olona, nitafy akanjo lava nisy
+                hatramin’ny tongony, fehin’ny fehikibo volamena. Ny lohany sy ny
+                volony dia fotsy tahaka ny volonondry, fotsy tahaka ny lane; ary
+                ny masony tahaka ny lelafo afo’;
               </strong>
             </i>
           </span>
@@ -82,23 +83,24 @@ const CulturalAttire = () => {
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="">
-          If one is not aware of how God dresses, one will not recognize Him at
-          His coming. Therefore, one will most likely ignore His calling and
-          miss the blessings of Heaven.
+          Raha tsy fantatra amin'ny fomba hitafian'Andriamanitra ny olona iray,
+          dia tsy hahafantatra Azy izy rehefa avy. Noho izany, mety tsy hihaino
+          ny antsoiny izy ka very ny fitahian'ny lanitra.
         </p>
       </div>
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="">
-          White is a supreme emblem associated with purity and oneness. The
-          wearing of white symbolizes that a cleansing process is taking place—a
-          purging of sin and a returning to the order of obeisance. "Though your
-          sins are as scarlet, they shall be white as snow" (Isaiah 1:18). In
-          the Kingdom of <span className="David-cul">יהוה</span>, the wearing of
-          white is eternal, both physically and spiritually (Ecclesiastes 9:8).
-          It signifies the ushering in of a new era, a new form of ethical and
-          moral standards, a morally good government; the Theocratic government
-          of <span className="David-cul">יהוה</span>.
+          Ny fotsy dia mariky ny fahadiovana sy ny fitambarana. Ny fitafiana
+          akanjo fotsy dia maneho fa misy dingana fanadiovana
+          mitranga—fanesorana ny fahotana sy fiverenana amin'ny lalàn'ny
+          fanekena. 'Na dia mena toy ny menamaso aza ny fahotanareo, dia ho
+          fotsy toy ny lane izy' (Isaia 1:18). Ao amin'ny Fanjakan'i{" "}
+          <span className="David-cul">יהוה</span>, ny fitafiana akanjo fotsy dia
+          mandrakizaya, ara-batana sy ara-panahy (Mpitoriteny 9:8). Izany dia
+          manambara ny fidiran'ny vanim-potoana vaovao, fenitra
+          ara-pitondrantena vaovao, fanjakana tsara; ny Governemanta
+          Teôkratikan'i <span className="David-cul">יהוה</span>.
         </p>
       </div>
       <div id="pg-btm-media-cul" className="">
@@ -108,7 +110,6 @@ const CulturalAttire = () => {
           alt="Bottom Media"
         />
       </div>
-      {/* Coucou 2 */}
     </div>
   );
 };

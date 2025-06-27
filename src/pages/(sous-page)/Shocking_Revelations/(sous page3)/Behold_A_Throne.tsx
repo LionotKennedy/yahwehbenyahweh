@@ -1,3 +1,172 @@
+// import "../style/shocking_Revelations.css";
+// import "../style/responsive.css";
+// import { Link } from "react-router-dom";
+
+// export function Behold_A_Throne() {
+//   return (
+//     <>
+//       <div id="pg-banner-shock"></div>
+//       <div id="top-bar-gold-shock"></div>
+//       <div className="pg-title-text-shock">
+//         <p className="p-title-text-shock">
+//           "BEHOLD, A THRONE WAS SET IN HEAVEN"
+//         </p>
+//       </div>
+//       <div className="book-line-shock">
+//         <div>
+//           <div>
+//             <div className="book-guide-shock">
+//               Part 1 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/beholdathrone-rev.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 2 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/beholdathrone_pt2-rev.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 3 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_Pt3.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 4 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/beholdathrone_pt4.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 5 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/behold_a_throne_pt5.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 6 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/behold_a_throne_pt6.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 7 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/behold_a_throne_pt7.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 8 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_Pt8.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 9 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_Pt9.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 10 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_part_10.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 11 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_part_11.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//               <br />
+//               Part 12 -{" "}
+//               <a
+//                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_part_12.pdf"
+//                 target="_blank"
+//               >
+//                 Adobe PDF Format
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//       <div className="pg-info-text-shock">
+//         <p className="p-info-text-shock">
+//           <br />
+//           <Link to="/Shocking_Revelations/3">
+//             <span className="lnk-info-text-shock">&lt; Back</span>
+//           </Link>
+//         </p>
+//       </div>
+//       <div id="top-bar-gold-shock"></div>
+//     </>
+//   );
+// }
+// export default Behold_A_Throne;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import "../style/shocking_Revelations.css";
 import "../style/responsive.css";
 import { Link } from "react-router-dom";
@@ -9,107 +178,107 @@ export function Behold_A_Throne() {
       <div id="top-bar-gold-shock"></div>
       <div className="pg-title-text-shock">
         <p className="p-title-text-shock">
-          "BEHOLD, A THRONE WAS SET IN HEAVEN"
+          "INDRINDRA, NY SEZA FIANDRIANANA NAPETRAKA TANY AN-DANITRA"
         </p>
       </div>
       <div className="book-line-shock">
         <div>
           <div>
             <div className="book-guide-shock">
-              Part 1 -{" "}
+              Ampahany 1 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/beholdathrone-rev.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 2 -{" "}
+              Ampahany 2 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/beholdathrone_pt2-rev.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 3 -{" "}
+              Ampahany 3 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_Pt3.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 4 -{" "}
+              Ampahany 4 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/beholdathrone_pt4.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 5 -{" "}
+              Ampahany 5 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/behold_a_throne_pt5.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 6 -{" "}
+              Ampahany 6 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/behold_a_throne_pt6.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 7 -{" "}
+              Ampahany 7 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/behold_a_throne_pt7.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 8 -{" "}
+              Ampahany 8 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_Pt8.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 9 -{" "}
+              Ampahany 9 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_Pt9.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 10 -{" "}
+              Ampahany 10 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_part_10.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 11 -{" "}
+              Ampahany 11 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_part_11.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
               <br />
-              Part 12 -{" "}
+              Ampahany 12 -{" "}
               <a
                 href="/src/pages/(sous-page)/Shocking_Revelations/pdf/Behold_A_Throne_part_12.pdf"
                 target="_blank"
               >
-                Adobe PDF Format
+                Endrika Adobe PDF
               </a>
             </div>
           </div>
@@ -119,7 +288,7 @@ export function Behold_A_Throne() {
         <p className="p-info-text-shock">
           <br />
           <Link to="/Shocking_Revelations/3">
-            <span className="lnk-info-text-shock">&lt; Back</span>
+            <span className="lnk-info-text-shock">&lt; Miverina</span>
           </Link>
         </p>
       </div>

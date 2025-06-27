@@ -63,8 +63,9 @@ const HomePage = () => {
 
         <div className="rmb-p-fmt">
           <p className="rmb-text-fmt pg-text-ltr-sp1  w_4/5 text_center mx_auto">
-            The Good News of Yahweh Magazine encompasses a variety of truthful
-            topics based on the Word of God to counter today's fake news.
+            Ny Gazetim-panambadian’i Yahweh dia ahitana karazan-kevitra
+            marim-pototra mifototra amin’ny Tenin’Andriamanitra, mba hanohitra
+            ny vaovao sandoka ankehitriny.
           </p>
         </div>
 
@@ -76,19 +77,21 @@ const HomePage = () => {
         </div>
         <div className="rmb-p-fmt px_4">
           <p className="bn-div-fmt-p-sz-sp-bl text_center text_xls font_bolds mb_4s">
-            CAN YOU IDENTIFY THE SON?
+            AFAKA MAMANTATRA NY ZANAKA VE IANAO?
           </p>
 
           <p className="rmb-text-fmt pg-text-ltr-sp1">
-            Will you recognize Him? What is His name, if you can tell? What
-            shall He look like when He returns at the Second Advent to receive
-            us unto Himself? All these questions and more are answered on this
-            powerful 2-disc DVD set entitled,{" "}
+            Ho fantatrao Ve Izy? Iza no Anarany, raha tohizinao? Hijery tahaky
+            ny aho Izy rehefa miverina amin’ny Fiverenany Fanindroany mba haka
+            antsika ho any Aminy? Valiny ireo fanontaniana ireo sy maro hafa koa
+            no hita ao amin’ity sety DVD misy kapila roa mahery ity, antsoina
+            hoe,{" "}
             <strong>
-              "Yahweh Ben Yahweh Is The True God and Eternal Life."
+              "I Yahweh Ben Yahweh no Andriamanitra Marina sy ny Fiainana
+              Mandrakizay."
             </strong>{" "}
-            Sit back and watch this short DVD snippet and then order your copy
-            today to receive His full message of salvation.
+            Mipetraha tsara ka jereo ity sombin-dahatsary fohy ity, ary baovao
+            izao mba hahazoanao ny hafatra feno famonjena avy Aminy.
           </p>
         </div>
 
@@ -118,9 +121,10 @@ const HomePage = () => {
             alt="Breaking News"
           />
           <p className="bn-div-fmt-p-sz-home">
-            A flashing button indicates that some
+            Ny bokotra mirehitra dia manondro fa misy...
             <br />
-            important information has been posted
+            Ny bokotra mirehitra dia manondro fa misy hafatra manan-danja
+            napetraka.
           </p>
         </div>
       </div>

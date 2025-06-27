@@ -69,6 +69,9 @@
   .bottom-media-img-sab {
     width: 100%;
   }
+      .books_img_size {
+        width: 70%;
+    }
 }
 @media screen and (max-width: 480px) {
   #pg-banner-sab {

@@ -1,0 +1,304 @@
+/* Base Styles - Mobile First */
+.contact-container {
+  /* background-image: url("/placeholder.svg?height=1000&width=800"); */
+  background-image: url("../image/bgMetal1.jpg");
+  /* background-image: url(""); */
+  background-repeat: repeat-y;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.contact-banner {
+  background-image: url("../image/page-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}
+
+.gold-bar {
+  background-image: url("../image/Gold_Bar_1216.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 24px;
+}
+
+.title-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.title-image {
+  max-width: 100%;
+  height: auto;
+  width: 90%;
+}
+
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact-section {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.icon-container {
+  flex-shrink: 0;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.phone-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.contact-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.contact-label {
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.address {
+  color: #333;
+}
+
+.phone-header {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.phone-item {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phone-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.phone-number {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.section-divider {
+  background-image: url("../image/Bar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  height: 12px;
+  margin: 1.5rem auto;
+}
+
+.email-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.email-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.email-label {
+  text-decoration: underline;
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.email-address {
+  font-size: 1.1rem;
+  color: #0066cc;
+}
+
+.bottom-media {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.bottom-image {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+  .contact-banner {
+    height: 300px;
+  }
+
+  .gold-bar {
+    height: 32px;
+  }
+
+  .title-section {
+    padding: 3rem 2rem;
+  }
+
+  .title-image {
+    width: 75%;
+  }
+
+  .contact-content {
+    padding: 0 2rem;
+  }
+
+  .contact-text {
+    font-size: 1.3rem;
+  }
+
+  .contact-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .phone-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .phone-numbers {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .phone-number {
+    font-size: 1.4rem;
+  }
+
+  .email-label {
+    font-size: 1.5rem;
+  }
+
+  .email-address {
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+  .contact-container {
+    max-width: 1216px;
+    margin: 0 auto;
+  }
+
+  .contact-banner {
+    height: 400px;
+  }
+
+  .gold-bar {
+    height: 44px;
+  }
+
+  .title-section {
+    padding: 4rem 2rem;
+  }
+
+  .contact-content {
+    padding: 0 3rem;
+  }
+
+  .contact-item {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-text {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .contact-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .phone-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .phone-header {
+    font-size: 1.3rem;
+  }
+
+  .phone-number {
+    font-size: 1.6rem;
+  }
+
+  .section-divider {
+    width: 80%;
+  }
+
+  .email-section {
+    padding: 3rem 2rem;
+  }
+
+  .email-label {
+    font-size: 1.8rem;
+  }
+
+  .email-address {
+    font-size: 1.5rem;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+  .contact-banner {
+    height: 535px;
+  }
+
+  .contact-text {
+    font-size: 1.8rem;
+  }
+
+  .phone-number {
+    font-size: 1.8rem;
+  }
+
+  .email-label {
+    font-size: 2rem;
+  }
+
+  .email-address {
+    font-size: 1.6rem;
+  }
+}
