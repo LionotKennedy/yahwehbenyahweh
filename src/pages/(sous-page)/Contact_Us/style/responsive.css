@@ -1,350 +1,211 @@
+/* RESPONSIVE */
 @media screen and (max-width: 1024px) {
+  #pg-banner-contact {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
 
-    #backdrop-contact {
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 100%;
-    }
-
-    #pg-banner {
-        background-image: url("../images/page-banner.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 0;
-        padding-top: 43.99%;
-    }
-
-    #The_Followers_of_Yahweh_Ben_Yahweh {
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-
-    .sec-bar {
-        background-color: transparent;
-        background-image: url("../../images/Bar.png");
-        background-repeat: no-repeat;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-        height: 12px;
-    }
-
-    .pg-text-fmt {
-        font-size: 38px;
-        text-align: justify;
-        line-height: 1.1;
-        padding-left: 15%;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    #pg-btm-media {
-        left: 0px;
-    }
+  #top-bar-gold-contact {
+    background-image: url("../image/Gold_Bar_1216.jpg");
+    width: 100%;
+    height: 44px;
+  }
+  .width_text {
+    font-size: 30px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+  .img-size-mail {
+    width: 90%;
+  }
+  .pg-text-fmt-contact {
+    font-size: 38px;
+    text-align: justify;
+    line-height: 1.1;
+    padding-left: 15%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .sec-bar-contact {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+  }
+  #pg-btm-media-contact {
+    left: 0px;
+  }
 }
-
 @media screen and (max-width: 768px) {
-
-    #backdrop-contact {
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 100%;
-    }
-
-    .David {
-        font-family: 'David Libre', serif;
-        font-size: 32px;
-    }
-
-    .pg-text-fmt {
-        font-size: 30px;
-        text-align: justify;
-        line-height: 1;
-        letter-spacing: .1px;
-    }
-
-    #pg-banner {
-        background-image: url("../images/page-banner.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 0;
-        padding-top: 43.99%;
-    }
-
-    #The_Followers_of_Yahweh_Ben_Yahweh {
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-
-    .img-size {
-        width: 75%;
-    }
-
-    #pg-btm-media {
-        left: 0px;
-    }
-
-    .pg-link-text-ul-1 {
-        text-decoration: underline;
-        position: relative;
-        left: 153px;
-    }
-
-    .div-phone-fmt {
-        position: relative;
-        left: 146px;
-    }
-
-    #Email_Us {
-        display: block;
-        position: relative;
-        top: 163px;
-        left: -50;
-        padding-left: 25%;
-        padding-right: 25%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        font-size: 35px;
-        line-height: -1.5;
-        z-index: 99;
-    }
-
+  .width_text {
+    font-size: 25px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+  #pg-banner-contact {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-contact {
+    width: 100%;
+    height: 32px;
+  }
+  .img-size-mail {
+    width: 70%;
+  }
+  .pg-text-fmt-contact {
+    font-size: 30px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+  .div-phone-fmt-contact {
+    position: relative;
+    left: 146px;
+  }
+  #Email_Us {
+    display: block;
+    position: relative;
+    top: 163px;
+    left: -50;
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 35px;
+    line-height: -1.5;
+    z-index: 99;
+  }
+  .pg-link-text-ul-1-contact {
+    text-decoration: underline;
+    position: relative;
+    left: 153px;
+  }
+  #pg-btm-media-contact {
+    left: 0px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  #pg-banner-contact {
+    background-image: url("../image/page-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 43.99%;
+  }
+  #top-bar-gold-contact {
+    width: 100%;
+    height: 22px;
+  }
 
-    #backdrop-contact {
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 100%;
-    }
-
-    .David {
-        font-family: 'David Libre', serif;
-        font-size: 24px;
-    }
-
-    .pg-text-fmt {
-        font-size: 18px;
-        text-align: justify;
-        line-height: 1;
-        letter-spacing: .1px;
-        padding-left: 0px;
-        padding-bottom: 0px;
-    }
-
-
-    #pg-banner {
-        background-image: url("../images/page-banner.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 0;
-        padding-top: 43.99%;
-    }
-
-    #The_Followers_of_Yahweh_Ben_Yahweh {
-        padding-top: 40px;
-        padding-bottom: 0px;
-    }
-
-    .img-size {
-        width: 80%;
-    }
-
-    .pg-text-fmt-cnt {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .side-image {
-        display: inline-block;
-        float: left;
-        position: relative;
-        top: 0px;
-        height: 99px;
-        padding-right: 10px;
-    }
-
-    .sec-bar {
-        background-color: transparent;
-        background-image: url("../../images/Bar.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-        height: 12px;
-        margin-top: 24px;
-        margin-bottom: -9px;
-    }
-
-    #pg-btm-media {
-        left: 0px;
-    }
-
-    .img-size-mail {
-        width: 110px;
-    }
-
-    .img-size-phone {
-        width: 46px;
-    }
-
-    #Email_Us {
-        display: block;
-        position: absolute;
-        top: -5px;
-        /* left: 7px; */
-        padding-left: 25%;
-        padding-right: 25%;
-        left: -40px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        font-size: 18px;
-        line-height: 1.5;
-        z-index: 90;
-        WIDTH: 70%;
-    }
-
-    #Yahweh_Ben_Yahweh {
-        display: block;
-        position: relative;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 40px;
-        padding-bottom: 24px;
-    }
-
-    .pg-btm-pd-mod {
-        padding-bottom: 0px !important;
-    }
-
-    .div-phone-fmt {
-        position: relative;
-        left: 26px;
-        padding-left: 0px;
-        width: 173px;
-    }
-
-    .side-phone {
-        display: inline-block;
-        float: left;
-        position: relative;
-        height: 100px;
-        top: -10px;
-        padding-left: 10px;
-    }
-
-    .pg-link-text-ul-1 {
-        position: relative;
-        left: 1px;
-    }
-
-}
-
-@media screen and (max-width: 376px) {
-
-    .pg-text-ltr-sp-9 {
-        letter-spacing: .0px;
-    }
-
-    .pg-link-text-ul-1 {
-        position: relative;
-        left: 1px;
-    }
-
-}
-
-@media screen and (max-width: 361px) {
-
-    .pg-text-ltr-sp-9 {
-        letter-spacing: .0px;
-    }
-
-    .pg-text-fmt {
-        font-size: 17px;
-        line-height: 1.1;
-        letter-spacing: .1px;
-    }
-
-    .side-phone {
-        height: 70px;
-    }
-
-    .pg-link-text-ul-1 {
-        position: relative;
-        left: 1px;
-    }
-
-}
-
-@media screen and (max-width: 321px) {
-
-    .pg-text-ltr-sp-2 {
-        letter-spacing: .6px;
-    }
-
-    .pg-text-ltr-sp-8 {
-        letter-spacing: .6px;
-    }
-
-    .pg-text-ltr-sp-9 {
-        letter-spacing: 1.2px;
-    }
-
-    .David {
-        font-family: 'David Libre', serif;
-        font-size: 20px;
-    }
-
-    .pg-text-fmt {
-        font-size: 13px;
-        text-align: justify;
-        line-height: 1;
-        letter-spacing: -.1px;
-    }
-
-    .sec-bar {
-        background-color: transparent;
-        background-image: url(../../images/Bar.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-        height: 12px;
-        margin-top: 1px;
-        margin-bottom: -36px;
-    }
-
-    #Email_Us {
-        display: block;
-        position: absolute;
-        top: -5px;
-        left: -10px;
-        padding-left: 17%;
-        padding-right: 25%;
-        left: -25px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        font-size: 17px;
-        line-height: 1.5;
-        z-index: 90;
-    }
-
-    .pg-link-text-ul-1 {
-        position: relative;
-        left: 1px;
-    }
-
+  .width_text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+  .img-size-mail {
+    width: 40%;
+  }
+  .pg-btm-pd-mod-contact {
+    padding-bottom: 0px !important;
+  }
+  #Yahweh_Ben_Yahweh-contact {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+  .pg-text-fmt-contact {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1;
+    letter-spacing: 0.1px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+  .side-image-contact {
+    display: inline-block;
+    float: left;
+    position: relative;
+    top: 0px;
+    height: 99px;
+    padding-right: 10px;
+  }
+  .img-size-mail {
+    width: 110px;
+  }
+  .sec-bar-contact {
+    background-color: transparent;
+    background-image: url("../image/Bar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 12px;
+    margin-top: 24px;
+    margin-bottom: -9px;
+  }
+  .div-phone-fmt-contact {
+    position: relative;
+    left: 26px;
+    padding-left: 0px;
+    width: 173px;
+  }
+  .side-phone-contact {
+    display: inline-block;
+    float: left;
+    position: relative;
+    height: 100px;
+    top: -10px;
+    padding-left: 10px;
+  }
+  .img-size-phone-contact {
+    width: 46px;
+  }
+  #Email_Us {
+    display: block;
+    position: absolute;
+    top: -5px;
+    /* left: 7px; */
+    padding-left: 25%;
+    padding-right: 25%;
+    left: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    z-index: 90;
+    width: 70%;
+  }
+  .pg-link-text-ul-1-contact {
+    position: relative;
+    left: 1px;
+  }
+  #pg-btm-media-contact {
+    left: 0px;
+  }
 }

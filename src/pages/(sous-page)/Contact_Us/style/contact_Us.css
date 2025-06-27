@@ -2,27 +2,14 @@
 
 #backdrop-contact {
   background-image: url("../image/bgMetal1.jpg");
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   display: block;
-  width: 1216px;
+  /* width: 1216px; */
   margin-left: auto;
   margin-right: auto;
   height: auto;
   min-height: 100%;
   z-index: -1;
-}
-
-.pg-text-fmt {
-  font-size: 38px;
-  text-align: justify;
-  line-height: 1.1;
-  padding-left: 25%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.pg-text-ltr-sp {
-  letter-spacing: -1px;
 }
 
 #pg-banner-contact {
@@ -31,137 +18,13 @@
   height: 535px;
 }
 
-.pg-link-text {
-  display: block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  justify-content: center;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 42px;
-}
-
-.pg-btm-pd-mod {
-  padding-bottom: 40px !important;
-}
-
-.pg-top-pd-mod {
-  padding-top: 20px !important;
-}
-
-.pg-top-mrgn-mod {
-  margin-top: 2px !important;
-}
-
-.pg-link-text-ul {
-  text-decoration: underline;
-}
-
-.pg-ctr {
-  text-align: center;
-}
-
-.pg-title-break {
-  display: block;
-  position: relative;
-  margin-left: 9%;
-  padding-top: 10px;
-  padding-bottom: 1px;
-}
-
-.side-image {
-  display: inline-block;
-  float: left;
-  position: relative;
-  top: 10px;
-  height: 200px;
-  padding-right: 24px;
-}
-
-.side-padding {
-  padding-left: 40%;
-}
-
-.side-padding-ls {
-  padding-left: 5%;
-}
-
-.side-phone {
-  display: inline-block;
-  float: left;
-  position: relative;
-  height: 120px;
-  top: -10px;
-  padding-left: 10px;
-}
-
-.side-text {
-  display: inline-block;
-  float: left;
-}
-
-.side-text {
-  display: inline-block;
-  float: left;
-}
-
-.side-clear {
-  clear: both;
-}
-
-.img-size-mail {
-  width: 121px;
-}
-
-.img-size-phone {
-  width: 86px;
-}
-
-.wrapper-contact {
-  display: block;
-  position: relative;
-  /*height: 420px;*/
-  width: 100%;
-}
-
-#Email_Us {
-  display: block;
-  position: absolute;
-  top: 80px;
-  padding-left: 25%;
-  padding-right: 25%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: 42px;
-  line-height: 1.5;
-  z-index: 99;
-}
-
-#pg-btm-media-contact {
-  /*background-image: url("../images/bottom-media.jpg");
-    background-repeat: no-repeat;*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bottom-media-img-contact {
-      width: 100%;
-    position: relative;
-    top: 7px;
-}
-
-/* PERSONNALIZE */
-
 #top-bar-gold-contact {
   background-image: url("../image/Gold_Bar_1216.jpg");
-  width: 100%;
+  width: 1216px;
   height: 44px;
 }
 
-#Yahweh_Ben_Yahweh_contact {
+#Yahweh_Ben_Yahweh-contact {
   display: block;
   position: relative;
   text-align: center;
@@ -178,95 +41,113 @@
 .img-size-mail {
   width: 121px;
 }
-
-/* RESPONSIVE */
-@media screen and (max-width: 1024px) {
-  /* #backdrop-contact {
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-  } */
-
-  #pg-banner-contact {
-    background-image: url("../image/page-banner.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 43.99%;
-  }
-
-  #top-bar-gold-contact {
-    background-image: url("../image/Gold_Bar_1216.jpg");
-    width: 100%;
-    height: 44px;
-  }
-  .width_text {
-    font-size: 30px;
-    text-align: justify;
-    line-height: 1;
-    letter-spacing: 0.1px;
-  }
-  .img-size-mail {
-    width: 90%;
-  }
+.pg-btm-pd-mod-contact {
+  padding-bottom: 40px !important;
 }
-@media screen and (max-width: 768px) {
-  /* #backdrop-contact {
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 100%;
-    } */
-  .width_text {
-    font-size: 25px;
-    text-align: justify;
-    line-height: 1;
-    letter-spacing: 0.1px;
-  }
-  #pg-banner-contact {
-    background-image: url("../image/page-banner.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 43.99%;
-  }
-  #top-bar-gold-contact {
-    width: 100%;
-    height: 22px;
-  }
-  .img-size-mail {
-    width: 70%;
-  }
+.style-contact1 {
+  width: 75%;
 }
-
-@media screen and (max-width: 480px) {
-  /* #backdrop-contact {
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-  } */
-
-  #pg-banner-contact {
-    background-image: url("../image/page-banner.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 0;
-    padding-top: 43.99%;
-  }
-  #top-bar-gold-contact {
-    width: 100%;
-    height: 11px;
-  }
-
-  .width_text {
-    font-size: 15px;
-    text-align: justify;
-    line-height: 1;
-    letter-spacing: 0.1px;
-  }
-  .img-size-mail {
-    width: 40%;
-  }
+.sec-text-contact {
+  width: 82%;
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pg-text-fmt-contact {
+  font-size: 38px;
+  text-align: justify;
+  line-height: 1.1;
+  padding-left: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.side-image-contact {
+  display: inline-block;
+  float: left;
+  position: relative;
+  top: 10px;
+  height: 200px;
+  padding-right: 24px;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.img-size-mail {
+  width: 121px;
+}
+.pg-link-text-ul-contact {
+  text-decoration: underline;
+}
+.side-clear-contact {
+  clear: both;
+}
+.sec-bar-contact {
+  background-color: transparent;
+  background-image: url("../image/Bar.png");
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+  height: 12px;
+}
+.pg-top-pd-mod-contact {
+  padding-top: 20px !important;
+}
+.side-padding-ls-contact {
+  padding-left: 5%;
+}
+.side-padding-contact {
+  padding-left: 40%;
+}
+.side-text-contact {
+  display: inline-block;
+  float: left;
+}
+.side-phone-contact {
+  display: inline-block;
+  float: left;
+  position: relative;
+  height: 120px;
+  top: -10px;
+  padding-left: 10px;
+}
+.img-size-phone-contact {
+  width: 86px;
+}
+.wrapper-contact {
+  display: block;
+  position: relative;
+  /* height: 420px; */
+  width: 100%;
+}
+#Email_Us {
+  display: block;
+  position: absolute;
+  top: 80px;
+  padding-left: 25%;
+  padding-right: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 42px;
+  line-height: 1.5;
+  z-index: 99;
+}
+#pg-btm-media-contact {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.bottom-media-img-contact {
+  width: 100%;
+}
+.side-clear {
+    clear: both;
 }
