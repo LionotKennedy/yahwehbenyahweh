@@ -48,7 +48,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 418px; 
+  width: 418px;
   height: 90px;
   display: inline-block;
 }
@@ -59,20 +59,23 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 200px; /* Ajustez selon vos besoins */
-  height: 50px;
+  /* width: 200px;
+  height: 50px; */
+  width: 418px;
+  height: 90px;
   display: inline-block;
 }
 
 /* Breaking News Image */
-.breaking-news-img {
-  background-image: url("../images/Breaking_News.png");
+.breakingnews-img-home {
+  background-image: url("/src/pages/images/Breaking_News.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 300px; /* Ajustez selon vos besoins */
-  height: 100px;
-  display: inline-block;
+  width: 330px;
+  height: 0;
+  padding-top: 20%; /* Ajustez selon le ratio de votre image */
+  margin: 0 auto;
 }
 
 /* Video Posters */
@@ -95,6 +98,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* PERSONNALISER */
+.breakingnews-img-home {
+  width: 330px;
 }
 
 /* Responsive adjustments */

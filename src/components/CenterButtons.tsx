@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./styles/centerButtons.css";
+// import "./styles/centerButtons_2.css";
 
 interface CenterButton {
   href: string;
@@ -7,6 +8,11 @@ interface CenterButton {
   alt: string;
   external?: boolean;
 }
+// interface CenterButton {
+//   href: string;
+//   alt: string;
+//   external?: boolean;
+// }
 
 const centerButtons: CenterButton[] = [
   {
@@ -72,6 +78,26 @@ const centerButtons: CenterButton[] = [
   },
 ];
 
+
+// const centerButtons: CenterButton[] = [
+//   { href: "/Tetragrammaton", alt: "Tetragrammaton" },
+//   { href: "/The_Nation_of_Yahweh", alt: "The Nation of Yahweh" },
+//   { href: "/The_Universe_of_Yahweh", alt: "The Universe of Yahweh" },
+//   { href: "/The_Feasts_of_Yahweh", alt: "The Feasts of Yahweh" },
+//   { href: "/The_Good_News_of_Yahweh", alt: "The Good News of Yahweh" },
+//   { href: "/The_Crucifixion", alt: "The Crucifixion" },
+//   { href: "/Shocking_Revelations", alt: "Shocking Revelations" },
+//   { href: "/The_Sabbath", alt: "The Sabbath" },
+//   { href: "/Erosion_of_The_Constitution", alt: "Erosion of The Constitution" },
+//   { href: "/Operation_Word_War", alt: "Operation Word War" },
+//   { href: "/Balance_Justice", alt: "Balance Justice" },
+//   { 
+//     href: "https://shop.yahwehbenyahweh.com/", 
+//     alt: "On-line Book Store",
+//     external: true 
+//   },
+// ];
+
 export function CenterButtons() {
   return (
     // <div className="center-buttons _grid grid_cols_2 md:grid-cols-3 lg:grid-cols-4 gap_4 p_4">
@@ -104,6 +130,33 @@ export function CenterButtons() {
   );
 }
 
+
+
+// export function CenterButtons() {
+//   return (
+//     <div className="center-buttons-home">
+//       {centerButtons.map((button, index) => (
+//         <div key={index} className="center-button-home">
+//           {button.external ? (
+//             <a href={button.href} target="_blank" rel="noopener noreferrer">
+//               <div 
+//                 className={`center-button-img-home ${button.alt.toLowerCase().replace(/\s+/g, '-')}-img`}
+//                 aria-label={button.alt}
+//               ></div>
+//             </a>
+//           ) : (
+//             <Link to={button.href}>
+//               <div 
+//                 className={`center-button-img-home ${button.alt.toLowerCase().replace(/\s+/g, '-')}-img`}
+//                 aria-label={button.alt}
+//               ></div>
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
 
 
 
@@ -215,3 +268,192 @@ export function CenterButtons() {
 //   )
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import "./styles/centerButtons_3.css"
+
+// import { Link } from "react-router-dom"
+// import "./styles/centerButtons.css"
+// import "./styles/centerButtons_4.css"
+
+// interface CenterButton {
+//   href: string
+//   alt: string
+//   cssClass: string
+//   external?: boolean
+// }
+
+// const centerButtons: CenterButton[] = [
+//   {
+//     href: "/Tetragrammaton",
+//     cssClass: "tetragrammaton-img",
+//     alt: "Tetragrammaton",
+//   },
+//   {
+//     href: "/The_Nation_of_Yahweh",
+//     cssClass: "nation-yahweh-img",
+//     alt: "The Nation of Yahweh",
+//   },
+//   {
+//     href: "/The_Universe_of_Yahweh",
+//     cssClass: "universe-yahweh-img",
+//     alt: "The Universe of Yahweh",
+//   },
+//   {
+//     href: "/The_Feasts_of_Yahweh",
+//     cssClass: "feasts-img",
+//     alt: "The Feasts of Yahweh",
+//   },
+//   {
+//     href: "/The_Good_News_of_Yahweh",
+//     cssClass: "good-news-img",
+//     alt: "The Good News of Yahweh",
+//   },
+//   {
+//     href: "/The_Crucifixion",
+//     cssClass: "crucifixion-img",
+//     alt: "The Crucifixion",
+//   },
+//   {
+//     href: "/Shocking_Revelations",
+//     cssClass: "shock-img",
+//     alt: "Shocking Revelations",
+//   },
+//   {
+//     href: "/The_Sabbath",
+//     cssClass: "sabbath-img",
+//     alt: "The Sabbath",
+//   },
+//   {
+//     href: "/Erosion_of_The_Constitution",
+//     cssClass: "erosion-img",
+//     alt: "Erosion of The Constitution",
+//   },
+//   {
+//     href: "/Operation_Word_War",
+//     cssClass: "operation-img",
+//     alt: "Operation Word War",
+//   },
+//   {
+//     href: "/Balance_Justice",
+//     cssClass: "balance-justice-img",
+//     alt: "Balance Justice",
+//   },
+//   {
+//     href: "https://shop.yahwehbenyahweh.com/",
+//     cssClass: "bookstore-img",
+//     alt: "On-line Book Store",
+//     external: true,
+//   },
+// ]
+
+// export function CenterButtons() {
+//   return (
+//     <div className="center-buttons-home">
+//       {centerButtons.map((button, index) => (
+//         <div key={index} className="center-button-home">
+//           {button.external ? (
+//             <a href={button.href} target="_blank" rel="noopener noreferrer">
+//               <div className={`center-button-img-home ${button.cssClass}`} role="img" aria-label={button.alt}></div>
+//             </a>
+//           ) : (
+//             <Link to={button.href}>
+//               <div className={`center-button-img-home ${button.cssClass}`} role="img" aria-label={button.alt}></div>
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }

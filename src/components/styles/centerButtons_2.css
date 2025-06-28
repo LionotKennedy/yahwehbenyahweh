@@ -1,0 +1,112 @@
+
+.center-buttons-home {
+  width: 1216px;
+  text-align: center;
+}
+
+.center-button-home {
+  display: block;
+  float: left;
+}
+
+.center-button-img-home {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+
+
+/* Classes pour chaque image de fond */
+.tetragrammaton-img {
+  background-image: url("/src/components/images/center-buttons/Tetragrammaton.jpg");
+}
+
+.the-nation-of-yahweh-img {
+  background-image: url("/src/components/images/center-buttons/The_Nation_of_Yahweh.jpg");
+}
+
+.the-universe-of-yahweh-img {
+  background-image: url("/src/components/images/center-buttons/Universe_of.jpg");
+}
+
+.the-feasts-of-yahweh-img {
+  background-image: url("/src/components/images/center-buttons/Feasts.jpg");
+}
+
+.the-good-news-of-yahweh-img {
+  background-image: url("/src/components/images/center-buttons/Good_News.jpg");
+}
+
+.the-crucifixion-img {
+  background-image: url("/src/components/images/center-buttons/Crucifixion.jpg");
+}
+
+.shocking-revelations-img {
+  background-image: url("/src/components/images/center-buttons/Shock.jpg");
+}
+
+.the-sabbath-img {
+  background-image: url("/src/components/images/center-buttons/Sab.jpg");
+}
+
+.erosion-of-the-constitution-img {
+  background-image: url("/src/components/images/center-buttons/Erosion.jpg");
+}
+
+.operation-word-war-img {
+  background-image: url("/src/components/images/center-buttons/Op_WW.jpg");
+}
+
+.balance-justice-img {
+  background-image: url("/src/components/images/center-buttons/Balance_Justice.jpg");
+}
+
+.on-line-book-store-img {
+  background-image: url("/src/components/images/center-buttons/ON-Line_Bookstore.jpg");
+}
+
+/* Responsive styles - inchangés */
+@media screen and (max-width: 1024px) {
+  .center-buttons-home {
+    width: 100%;
+  }
+  .center-button-home {
+    width: 25%;
+  }
+  .center-button-img-home {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .center-buttons-home {
+    width: 100%;
+  }
+  .center-button-home {
+    width: 25%;
+  }
+  .center-button-img-home {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .center-buttons-home {
+    width: 100%;
+  }
+  .center-button-home {
+    width: 33.33%;
+  }
+  .center-button-img-home {
+    width: 100%;
+    height: 100px;
+  }
+}

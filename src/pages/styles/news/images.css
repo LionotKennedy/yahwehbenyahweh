@@ -1,0 +1,129 @@
+/* Images avec background-image */
+
+/* Gold Bar */
+#top-bar-gold-home {
+  background-image: url("/src/pages/images/Gold_Bar_1216.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1216px;
+  height: 44px;
+}
+
+/* Book of the Month Image */
+.botm-img {
+  background-image: url("/src/pages/images/botm-img-0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px; /* Ajustez selon vos besoins */
+  display: block;
+}
+
+/* Read More Button */
+.read-more-button-img {
+  background-image: url("/src/pages/images/read-more-button.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 418px;
+  height: 80px; /* Ajustez selon vos besoins */
+  display: block;
+}
+
+/* Order Now Button */
+.order-now-button-img {
+  background-image: url("/src/pages/images/ord-now-button.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 60px; /* Ajustez selon vos besoins */
+  display: block;
+  cursor: pointer;
+}
+
+/* Breaking News Image */
+.breaking-news-img {
+  background-image: url("/src/pages/images/Breaking_News.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 330px;
+  height: 100px; /* Ajustez selon vos besoins */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Classes de base pour la structure */
+.clear-both-home {
+  clear: both;
+}
+
+.botm-image-contain-home {
+  width: 1186px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botm-image-home {
+  width: 100%;
+}
+
+.style-home {
+  text-align: center;
+  padding-top: 0.8em;
+}
+
+.sp-button-img-home {
+  width: 418px;
+}
+
+.vidPos-home {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+.vid-width-home {
+  width: 811px;
+}
+
+.div-pad-home {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.bn-div-fmt-home {
+  display: block;
+  position: relative;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.breakingnews-img-home {
+  width: 330px;
+}
+
+.bn-div-fmt-p-sz-home {
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.textCenterPt {
+  text-align: center;
+  padding-top: 1em;
+}

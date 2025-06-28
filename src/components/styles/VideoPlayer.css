@@ -1,0 +1,194 @@
+
+/* .video-poster {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.video-poster video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+ */
+
+/* .good-news-poster {
+  background-image: url("/src/pages/images/Good_News_of_Yahweh.jpg");
+}
+
+.feast-theme-poster {
+  background-image: url("/src/pages/images/page-banner_.jpg");
+}
+
+.eternal-life-poster {
+  background-image: url("/src/pages/images/Eternal_Life.jpg");
+} */
+
+/* .vidPos-home {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+.vid-width-home {
+  width: 811px;
+}
+
+@media (max-width: 1024px) {
+  .vid-width-home {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .vidPos-home {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vidPos-home {
+    padding-top: 20px;
+  }
+} */
+
+
+
+
+/* Conteneur vidéo avec poster */
+/* .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 811px;
+  margin: 0 auto;
+} */
+
+/* Conteneur principal */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 811px; /* Largeur de la vidéo */
+  margin: 0 auto;
+}
+
+
+/* .video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+} */
+ /* Poster stylisé */
+.video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain; /* Ajuste l'image à la taille du conteneur */
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* .video-container video[data-playing="true"]::before {
+  display: none;
+}
+ */
+ /* Cache le poster quand la vidéo joue */
+.video-container.playing::before {
+  display: none;
+}
+
+/* Styles des vidéos */
+.video-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #000; /* Fond noir si la vidéo a des bords */
+}
+
+
+/* Classes spécifiques pour chaque poster */
+.video-container.good-news-poster::before {
+  background-image: url("/src/pages/images/Good_News_of_Yahweh.jpg");
+}
+
+.video-container.feast-theme-poster::before {
+  background-image: url("/src/pages/images/page-banner_.jpg");
+}
+
+.video-container.eternal-life-poster::before {
+  background-image: url("/src/pages/images/Eternal_Life.jpg");
+}
+
+
+/* Style de la vidéo */
+/* .vid-width {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+} */
+
+/* Responsive */
+/* @media (max-width: 1024px) {
+  .video-container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .vidPos-home {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vidPos-home {
+    padding-top: 20px;
+  }
+} */
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .video-container {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .vidPos-home {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vidPos-home {
+    padding-top: 20px;
+  }
+  
+  .video-container {
+    max-width: 95%;
+  }
+}

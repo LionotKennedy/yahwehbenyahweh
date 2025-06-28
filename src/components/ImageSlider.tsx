@@ -4,10 +4,15 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./styles/ImageSlider.css";
+import "./styles/ImageSlider_2.css";
 
+// interface Slide {
+//   id: number;
+//   image: string;
+//   alt: string;
+// }
 interface Slide {
   id: number;
-  image: string;
   alt: string;
 }
 
@@ -88,7 +93,7 @@ export function ImageSlider({
               : "none",
           }}
         >
-          {extendedSlides.map((slide, index) => (
+          {/* {extendedSlides.map((slide, index) => (
             <div key={`${slide.id}-${index}`} className="sp-slide">
               <img
                 src={slide.image || "/placeholder.svg"}
@@ -97,6 +102,14 @@ export function ImageSlider({
                 loading={index > 1 ? "lazy" : "eager"}
               />
             </div>
+          ))} */}
+          {extendedSlides.map((slide, index) => (
+            <div 
+              key={`${slide.id}-${index}`} 
+              className={`sp-slide slide-${slide.id}`}
+              role="img"
+              aria-label={slide.alt}
+            />
           ))}
         </div>
       </div>
