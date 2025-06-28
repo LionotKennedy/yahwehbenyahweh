@@ -1,0 +1,97 @@
+/* Image du titre Yahweh */
+/* .yahweh-title-img {
+  background-image: url("/public/About_Yahweh/image/Yahweh.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 341px;
+  height: 0;
+  padding-top: 30%;
+  margin: 0 auto;
+  display: block;
+} */
+
+.yahweh-title-img {
+  background-image: url("/public/About_Yahweh/image/Yahweh.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 341px;
+  height: 100%; /* Modifié */
+  padding-top: 10%; /* Supprimé le padding */
+  margin: 0 auto;
+  display: block;
+  line-height: 0; /* Ajouté pour éliminer l'espace résiduel */
+}
+
+/* Image du bas */
+/* .bottom-media-img-about {
+  background-image: url("/public/About_Yahweh/image/bottom-media.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-top: 43.99%;
+  display: block;
+} */
+
+.bottom-media-img-about {
+  background-image: url("/public/About_Yahweh/image/bottom-media.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: auto; /* Modifié */
+  padding-top: 43.99%; /* Supprimé */
+  display: block;
+  line-height: 0; /* Ajouté */
+  font-size: 0; /* Ajouté pour éliminer l'espace résiduel */
+}
+
+@media screen and (max-width: 1024px) {
+  .yahweh-title-img {
+    width: 341px;
+  }
+  
+  .bottom-media-img-about {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .yahweh-title-img {
+    width: 241px;
+  }
+  
+  .bottom-media-img-about {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .yahweh-title-img {
+    width: 125px;
+  }
+  
+  .bottom-media-img-about {
+    width: 100%;
+  }
+}
+
+#Yahweh_Ben_Yahweh {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 0 !important; 
+  line-height: 0; 
+}
+
+#pg-btm-media-about {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 0; 
+  padding: 0 !important; 
+}

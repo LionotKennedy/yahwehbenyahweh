@@ -34,7 +34,7 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="pg-title-break-y">
         <img
-          src="/public/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          src="/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
           alt="His Mission"
           className="style-width-y"
         />
@@ -70,7 +70,7 @@ export function AboutYahwehBenYahweh() {
       <div className="pg-title-break-y">
         <img
           // src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
-          src="/public/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          src="/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
           alt="His Mission"
           className="style-width-y"
         />
