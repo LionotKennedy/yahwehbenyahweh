@@ -7,7 +7,7 @@ export function AboutYahwehBenYahweh() {
       <div id="top-bar-gold-about-y" className=""></div>
       <div id="Yahweh_Ben_Yahweh-y" className="pg-btm-pd-mod-y">
         <img
-          src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/Yahweh_Ben_Yahweh.png"
+          src="/public/About_Yahweh_Ben_Yahweh/image/Yahweh_Ben_Yahweh.png"
           alt="Yahweh Ben Yahweh"
           className="style-width-y"
         />
@@ -34,7 +34,7 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="pg-title-break-y">
         <img
-          src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          src="/public/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
           alt="His Mission"
           className="style-width-y"
         />
@@ -69,7 +69,8 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="pg-title-break-y">
         <img
-          src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          // src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          src="/public/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
           alt="His Mission"
           className="style-width-y"
         />
@@ -93,7 +94,8 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="pg-title-break-y">
         <img
-          src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          // src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          src="/public/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
           alt="His Mission"
           className="style-width-y"
         />
@@ -138,7 +140,8 @@ export function AboutYahwehBenYahweh() {
       <div id="pg-btm-media-y" className="">
         <img
           className="bottom-media-img mx-auto"
-          src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/bottom-media.png"
+          // src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/bottom-media.png"
+          src="/public/About_Yahweh_Ben_Yahweh/image/bottom-media.png"
           alt="Bottom Media"
         />
       </div>

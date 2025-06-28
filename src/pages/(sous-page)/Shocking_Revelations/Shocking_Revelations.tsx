@@ -16,7 +16,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/The_Stirring_Up_of_Grecia">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Stirring_Up_of_Grecia.jpg"
+                  src="/public/Shocking_Revelations/image/The_Stirring_Up_of_Grecia.jpg"
                   alt="The Stirring Up of Grecia"
                 />
               </Link>
@@ -29,7 +29,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/An_Uprising_In_The_Camp">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/An_Uprising_In_The_Camp.jpg"
+                  src="/public/Shocking_Revelations/image/An_Uprising_In_The_Camp.jpg"
                   alt="An Uprising In The Camp"
                 />
               </Link>
@@ -42,7 +42,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/Behold_A_White_Cloud">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Behold_A_White_Cloud.jpg"
+                  src="/public/Shocking_Revelations/image/Behold_A_White_Cloud.jpg"
                   alt="Behold A White Cloud"
                 />
               </Link>
@@ -58,7 +58,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/Let_Him_That_Readeth_Understand">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Let_Him_That_Readeth_Understand.jpg"
+                  src="/public/Shocking_Revelations/image/Let_Him_That_Readeth_Understand.jpg"
                   alt="Let Him That “Readeth” Understand"
                 />
               </Link>
@@ -71,7 +71,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/Many_False_Prophets_Shall_Rise">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Many_False_Prophets_Shall_Rise.jpg"
+                  src="/public/Shocking_Revelations/image/Many_False_Prophets_Shall_Rise.jpg"
                   alt="And Many “False” Prophets Shall Rise, And Shall . . ."
                 />
               </Link>
@@ -84,7 +84,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/The_Abomination_of_Desolation">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Abomination_of_Desolation.jpg"
+                  src="/public/Shocking_Revelations/image/The_Abomination_of_Desolation.jpg"
                   alt="The Abomination of Desolation"
                 />
               </Link>
@@ -100,7 +100,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/The_Seven_Seals_of_The_Apocalypse">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Seven_Seals_of_The_Apocalypse.jpg"
+                  src="/public/Shocking_Revelations/image/The_Seven_Seals_of_The_Apocalypse.jpg"
                   alt="The Seven Seals of The Apocalypse"
                 />
               </Link>
@@ -113,7 +113,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/The_Rising_of_The">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Rising_of_The%20Beast_Out_of_The_Sea.jpg"
+                  src="/public/Shocking_Revelations/image/The_Rising_of_The%20Beast_Out_of_The_Sea.jpg"
                   alt="The Rising of The Beast Out of The Sea"
                 />
               </Link>
@@ -126,7 +126,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/Another_Beast_Coming">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Another_Beast_Coming_Up_Out_of_The_Earth.jpg"
+                  src="/public/Shocking_Revelations/image/Another_Beast_Coming_Up_Out_of_The_Earth.jpg"
                   alt="Another Beast Coming Up Out of The Earth"
                 />
               </Link>
@@ -142,7 +142,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/The_Beast_Like">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Beast_Like_Unto_A_Leopard.jpg"
+                  src="/public/Shocking_Revelations/image/The_Beast_Like_Unto_A_Leopard.jpg"
                   alt="The Beast Like Unto A Leopard"
                 />
               </Link>
@@ -155,7 +155,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/The_Seven_Last_Plagues">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Seven_Last_Plagues.jpg"
+                  src="/public/Shocking_Revelations/image/The_Seven_Last_Plagues.jpg"
                   alt="The Seven Last Plagues"
                 />
               </Link>
@@ -168,7 +168,7 @@ export function Shocking_Revelations() {
               <Link to="/Shocking_Revelations/The_Sign_of_The_Times">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Sign_of_The_Times_The_Seven_Trumpets.jpg"
+                  src="/public/Shocking_Revelations/image/The_Sign_of_The_Times_The_Seven_Trumpets.jpg"
                   alt="The Sign of The Times: The Seven Trumpets"
                 />
               </Link>

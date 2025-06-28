@@ -169,7 +169,7 @@ export function The_Nation_of_Yahweh() {
       <div id="top-bar-gold-nation" className=""></div>
       <div id="The_Nation_of_Yahweh-nation" className="">
         <img
-          src="/src/pages/(sous-page)/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh.png"
+          src="/public/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh.png"
           alt="Ny Firenen'i Yahweh"
           className="width-nation"
         />
@@ -221,7 +221,7 @@ export function The_Nation_of_Yahweh() {
       <div id="Our_Motto_is-nation">
         <img
           className="Motto_img-nation"
-          src="/src/pages/(sous-page)/The_Nation_of_Yahweh/image/Our_Motto_Ln.png"
+          src="/public/The_Nation_of_Yahweh/image/Our_Motto_Ln.png"
           alt="NY TENINDRINTSIKA DIA: ANDRIAMANITRA TOKANA! SAINA TOKANA! FITIA TOKANA! SY ASA TOKANA!"
         />
       </div>
@@ -241,7 +241,7 @@ export function The_Nation_of_Yahweh() {
             target="_blank"
           >
             <img
-              src="/src/pages/(sous-page)/The_Nation_of_Yahweh/image/French_ver.png"
+              src="/public/The_Nation_of_Yahweh/image/French_ver.png"
               alt="Iza ny Firenen'i Yahweh PDF frantsay"
               className="width-guide-nation"
             />
@@ -250,7 +250,7 @@ export function The_Nation_of_Yahweh() {
         <div className="pg-guide-nation">
           <a href="pdf/Who_Is_The_Nation_Spanish_Web.pdf" target="_blank">
             <img
-              src="/src/pages/(sous-page)/The_Nation_of_Yahweh/image/Spanish_ver.png"
+              src="/public/The_Nation_of_Yahweh/image/Spanish_ver.png"
               alt="Iza ny Firenen'i Yahweh PDF espaniola"
               className="width-guide-nation"
             />
@@ -259,7 +259,7 @@ export function The_Nation_of_Yahweh() {
         <div className="pg-guide-nation">
           <a href="pdf/Who_Is_The_Nation_English_Web.pdf" target="_blank">
             <img
-              src="/src/pages/(sous-page)/The_Nation_of_Yahweh/image/English_ver.png"
+              src="/public/The_Nation_of_Yahweh/image/English_ver.png"
               alt="Iza ny Firenen'i Yahweh PDF anglisy"
               className="width-guide-nation"
             />
@@ -270,7 +270,7 @@ export function The_Nation_of_Yahweh() {
       <div id="Nation-info-nation">
         <img
           className="book-img-nation"
-          src="/src/pages/(sous-page)/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh-info.png"
+          src="/public/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh-info.png"
           alt="Toromarika momba ny Firenen'i Yahweh"
         />
       </div>

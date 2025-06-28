@@ -111,7 +111,7 @@ export function Balance_Justice() {
       <div id="The_Abraham_Foundation">
         <img
           id="title-img-bal"
-          src="/src/pages/(sous-page)/Balance_Justice/image/The_Abraham_Foundation.png"
+          src="/public/Balance_Justice/image/The_Abraham_Foundation.png"
           alt="Ny Fondation Abraham"
         />
       </div>
@@ -160,7 +160,7 @@ export function Balance_Justice() {
       <div>
         <img
           className="bottom-media-img-bal"
-          src="/src/pages/(sous-page)/Balance_Justice/image/bottom-media.jpg"
+          src="/public/Balance_Justice/image/bottom-media.jpg"
           alt=""
         />
       </div>

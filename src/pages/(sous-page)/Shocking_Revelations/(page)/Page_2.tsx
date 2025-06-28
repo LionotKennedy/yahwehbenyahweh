@@ -17,7 +17,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/YBY_The_Appointed">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/YBY_The_Appointed_Watchman.jpg"
+                  src="/public/Shocking_Revelations/image/YBY_The_Appointed_Watchman.jpg"
                   alt="Yahweh Ben Yahweh, The Appointed Watchman"
                 />
               </Link>
@@ -30,7 +30,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/The_Day_of_The_Lord">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Day_of_The_Lord_YBY_Is_At_Hand.jpg"
+                  src="/public/Shocking_Revelations/image/The_Day_of_The_Lord_YBY_Is_At_Hand.jpg"
                   alt="TThe Day of The Lord, Yahweh Ben Yahweh, Is At Hand"
                 />
               </Link>
@@ -43,7 +43,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/Nebuchadnezzar">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Nebuchadnezzar_The_King_Belshazzar.jpg"
+                  src="/public/Shocking_Revelations/image/Nebuchadnezzar_The_King_Belshazzar.jpg"
                   alt="Nebuchadnezzar: The King . . .  Belshazzar"
                 />
               </Link>
@@ -59,7 +59,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/Judgment_Shall_Sit">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Judgment_Shall_Sit.jpg"
+                  src="/public/Shocking_Revelations/image/Judgment_Shall_Sit.jpg"
                   alt="Judgment Shall Sit"
                 />
               </Link>
@@ -72,7 +72,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/The_Sheep_of_YBY">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Sheep_of_YBY_Will_Not_Follow_Another.jpg"
+                  src="/public/Shocking_Revelations/image/The_Sheep_of_YBY_Will_Not_Follow_Another.jpg"
                   alt="The Sheep of Yahweh Ben Yahweh Will Not Follow Another . . ."
                 />
               </Link>
@@ -85,7 +85,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/The_Decryption_of_Shadrach">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Decryption_of_Shadrach_Meshach_and_Abed-nego.jpg"
+                  src="/public/Shocking_Revelations/image/The_Decryption_of_Shadrach_Meshach_and_Abed-nego.jpg"
                   alt="The “Decryption” of Shadrach, Meshach, and Abed-nego"
                 />
               </Link>
@@ -101,7 +101,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/The_Mysteries">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Mysteries_of_The_Great_Image.jpg"
+                  src="/public/Shocking_Revelations/image/The_Mysteries_of_The_Great_Image.jpg"
                   alt="The Mysteries of The  Great Image"
                 />
               </Link>
@@ -114,7 +114,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/Mystery_Babylon">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Mystery_Babylon_The_Great_Has_Fallen.jpg"
+                  src="/public/Shocking_Revelations/image/Mystery_Babylon_The_Great_Has_Fallen.jpg"
                   alt="Mystery Babylon The Great Has Fallen"
                 />
               </Link>
@@ -127,7 +127,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/The_Bottomless_Pit">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Bottomless_Pit_The_Key_and_a_Great_Chain.jpg"
+                  src="/public/Shocking_Revelations/image/The_Bottomless_Pit_The_Key_and_a_Great_Chain.jpg"
                   alt="The Bottomless Pit The Key and a Great Chain"
                 />
               </Link>
@@ -143,7 +143,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/The_Final_Judgment">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Final_Judgment.jpg"
+                  src="/public/Shocking_Revelations/image/The_Final_Judgment.jpg"
                   alt="The Final Judgment"
                 />
               </Link>
@@ -156,7 +156,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/Get_Thee_Out">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Get_Thee_Out_of_Thy_Country.jpg"
+                  src="/public/Shocking_Revelations/image/Get_Thee_Out_of_Thy_Country.jpg"
                   alt="Get Thee Out of Thy Country"
                 />
               </Link>
@@ -169,7 +169,7 @@ export function Page_2() {
               <Link to="/Shocking_Revelations/2/The_Wall_of_Jericho">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Wall_of_Jericho_Shall_Fall_Down_Flat.jpg"
+                  src="/public/Shocking_Revelations/image/The_Wall_of_Jericho_Shall_Fall_Down_Flat.jpg"
                   alt="The Wall of Jericho Shall Fall Down Flat"
                 />
               </Link>

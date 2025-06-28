@@ -2,7 +2,7 @@
 
 /* Slider Images */
 .banner-1-img {
-  background-image: url("/images/index-banner-1.jpg");
+  background-image: url("../images/index-banner-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -11,7 +11,7 @@
 }
 
 .banner-2-img {
-  background-image: url("/images/index-banner-2.jpg");
+  background-image: url("../images/index-banner-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -20,7 +20,7 @@
 }
 
 .banner-3-img {
-  background-image: url("/images/index-banner-3.jpg");
+  background-image: url("../images/index-banner-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,28 +30,32 @@
 
 /* Book of the Month Image */
 .botm-img {
-  background-image: url("/images/botm-img-0.jpg");
+  background-image: url("../images/botm-img-0.jpg");
   background-size: cover;
+  /* background-size: contain; */
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 300px; /* Ajustez selon vos besoins */
+  height: 550px;
+  /* height: 0; */
+  /* padding-top: 0%; */
+  /* padding: 0px; */
 }
 
 /* Read More Button */
 .read-more-button-img {
-  background-image: url("/images/read-more-button.png");
+  background-image: url("../images/read-more-button.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 200px; /* Ajustez selon vos besoins */
-  height: 50px;
+  width: 418px; 
+  height: 90px;
   display: inline-block;
 }
 
 /* Order Now Button */
 .order-now-button-img {
-  background-image: url("/images/ord-now-button.png");
+  background-image: url("../images/ord-now-button.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -62,7 +66,7 @@
 
 /* Breaking News Image */
 .breaking-news-img {
-  background-image: url("/images/Breaking_News.png");
+  background-image: url("../images/Breaking_News.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -73,21 +77,21 @@
 
 /* Video Posters */
 .page-banner-poster {
-  background-image: url("/images/page-banner_.jpg");
+  background-image: url("../images/page-banner_.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .good-news-poster {
-  background-image: url("/images/Good_News_of_Yahweh.jpg");
+  background-image: url("../images/Good_News_of_Yahweh.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .eternal-life-poster {
-  background-image: url("/images/Eternal_Life.jpg");
+  background-image: url("../images/Eternal_Life.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

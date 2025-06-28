@@ -10,7 +10,7 @@ const CulturalAttire = () => {
       <div id="The_Cultural_Attire_of" className="">
         <img
           // src="/image/The_Cultural_Attire_of_Yahweh.png"
-          src="/src/pages/(sous-page)/CulturalAttire/image/The_Cultural_Attire_of_Yahweh.png"
+          src="/public/CulturalAttire/image/The_Cultural_Attire_of_Yahweh.png"
           className="wid-cul"
           alt="The Cultural Attire of Yahweh"
         />
@@ -106,7 +106,7 @@ const CulturalAttire = () => {
       <div id="pg-btm-media-cul" className="">
         <img
           className="bottom-media-img-cul"
-          src="/src/pages/(sous-page)/CulturalAttire/image/bottom-media.jpg"
+          src="/public/CulturalAttire/image/bottom-media.jpg"
           alt="Bottom Media"
         />
       </div>

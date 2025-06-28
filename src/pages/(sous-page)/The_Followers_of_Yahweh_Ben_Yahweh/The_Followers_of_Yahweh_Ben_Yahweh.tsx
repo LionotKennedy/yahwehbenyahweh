@@ -8,7 +8,7 @@ export function The_Followers_of_Yahweh_Ben_Yahweh() {
       <div id="The_Followers_of_Yahweh_Ben_Yahweh">
         <img
           className="img-size-fol"
-          src="/src/pages/(sous-page)/The_Followers_of_Yahweh_Ben_Yahweh/image/The_Followers_of_Yahweh_Ben_Yahweh.png"
+          src="/public/The_Followers_of_Yahweh_Ben_Yahweh/image/The_Followers_of_Yahweh_Ben_Yahweh.png"
           alt="The Followers of Yahweh Ben Yahweh"
         />
       </div>
@@ -84,7 +84,7 @@ export function The_Followers_of_Yahweh_Ben_Yahweh() {
       <div id="pg-btm-media-fol">
         <img
           className="bottom-media-img-fol"
-          src="/src/pages/(sous-page)/The_Followers_of_Yahweh_Ben_Yahweh/image/bottom-media.jpg"
+          src="/public/The_Followers_of_Yahweh_Ben_Yahweh/image/bottom-media.jpg"
           alt="Bottom Media"
         />
       </div>

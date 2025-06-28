@@ -271,7 +271,7 @@ export function The_Sabbath() {
           >
             <img
               width="75%"
-              src="/src/pages/(sous-page)/The_Sabbath/image/French_ver.png"
+              src="/public/The_Sabbath/image/French_ver.png"
               alt="Torolalana famakiana ny Sabata amin'ny teny frantsay PDF"
             />
           </a>
@@ -283,7 +283,7 @@ export function The_Sabbath() {
           >
             <img
               width="75%"
-              src="/src/pages/(sous-page)/The_Sabbath/image/Spanish_ver.png"
+              src="/public/The_Sabbath/image/Spanish_ver.png"
               alt="Torolalana famakiana ny Sabata amin'ny teny espaniola PDF"
             />
           </a>
@@ -295,7 +295,7 @@ export function The_Sabbath() {
           >
             <img
               width="75%"
-              src="/src/pages/(sous-page)/The_Sabbath/image/English_ver.png"
+              src="/public/The_Sabbath/image/English_ver.png"
               alt="Torolalana famakiana ny Sabata amin'ny teny anglisy PDF"
             />
           </a>
@@ -305,14 +305,14 @@ export function The_Sabbath() {
       <div id="Sabbath_Books">
         <img
           className="books_img_size"
-          src="/src/pages/(sous-page)/The_Sabbath/image/Sabbath_Remember_Books.png"
+          src="/public/The_Sabbath/image/Sabbath_Remember_Books.png"
           alt="Torolalana famakiana ny Sabata"
         />
       </div>
       <div>
         <img
           className="bottom-media-img-sab"
-          src="/src/pages/(sous-page)/The_Sabbath/image/bottom-media.jpg"
+          src="/public/The_Sabbath/image/bottom-media.jpg"
           alt=""
         />
       </div>

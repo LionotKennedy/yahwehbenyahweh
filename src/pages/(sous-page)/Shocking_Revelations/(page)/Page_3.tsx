@@ -17,7 +17,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/The_Chronicles">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Chronicles_of_The_Two_Witnesses.jpg"
+                  src="/public/Shocking_Revelations/image/The_Chronicles_of_The_Two_Witnesses.jpg"
                   alt="The Chronicles of The “Two  Witnesses”"
                 />
               </a>
@@ -30,7 +30,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/The_Missionary_Spirit">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Missionary_Spirit.jpg"
+                  src="/public/Shocking_Revelations/image/The_Missionary_Spirit.jpg"
                   alt="The Missionary Spirit"
                 />
               </a>
@@ -43,7 +43,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/Overcome_Blood">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Overcome_Blood_of_the_Lamb_and_Word_of_Testimony.jpg"
+                  src="/public/Shocking_Revelations/image/Overcome_Blood_of_the_Lamb_and_Word_of_Testimony.jpg"
                   alt="Overcome: Blood of the Lamb and Word of Testimony"
                 />
               </a>
@@ -59,7 +59,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/First_Resurrection">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/First_Resurrection_First_Come_First_Served.jpg"
+                  src="/public/Shocking_Revelations/image/First_Resurrection_First_Come_First_Served.jpg"
                   alt="First Resurrection:  First Come, First Served"
                 />
               </a>
@@ -72,7 +72,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/The_Redeemed">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Redeemed_of_Israel.jpg"
+                  src="/public/Shocking_Revelations/image/The_Redeemed_of_Israel.jpg"
                   alt="The Redeemed of Israel"
                 />
               </a>
@@ -85,7 +85,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/Submitting_To_The_Will">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Submitting_To_The_Will_of_Yahweh_Ben_Yahweh.jpg"
+                  src="/public/Shocking_Revelations/image/Submitting_To_The_Will_of_Yahweh_Ben_Yahweh.jpg"
                   alt="Submitting To The  Will of Yahweh Ben Yahweh"
                 />
               </a>
@@ -101,7 +101,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/The_Healing_Light">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Healing_Light.jpg"
+                  src="/public/Shocking_Revelations/image/The_Healing_Light.jpg"
                   alt="The Healing Light"
                 />
               </a>
@@ -114,7 +114,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/The_Sign_Of_The_Times">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/The_Sign_Of_The_Times.jpg"
+                  src="/public/Shocking_Revelations/image/The_Sign_Of_The_Times.jpg"
                   alt="The Sign Of The Times"
                 />
               </a>
@@ -127,7 +127,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/Who_Is_Worthy">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Who_Is_Worthy_To_Open_The_Book_And_Loose.jpg"
+                  src="/public/Shocking_Revelations/image/Who_Is_Worthy_To_Open_The_Book_And_Loose.jpg"
                   alt="Who Is Worthy To Open The Book And Loose . . ."
                 />
               </a>
@@ -143,7 +143,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/YBY_Coming_In">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/YBY_Coming_In_The_Clouds_of_Heaven.jpg"
+                  src="/public/Shocking_Revelations/image/YBY_Coming_In_The_Clouds_of_Heaven.jpg"
                   alt="Yahweh Ben Yahweh Coming In The Clouds of Heaven . . ."
                 />
               </a>
@@ -156,7 +156,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/Behold_A_Throne">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Behold_A_Throne_Was_Set_In_Heaven.jpg"
+                  src="/public/Shocking_Revelations/image/Behold_A_Throne_Was_Set_In_Heaven.jpg"
                   alt="Behold, A Throne Was Set In Heaven"
                 />
               </a>
@@ -169,7 +169,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/A_Message_For">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/A_Message_For_Law_Keepers.jpg"
+                  src="/public/Shocking_Revelations/image/A_Message_For_Law_Keepers.jpg"
                   alt="A Message For Law Keepers . . . The Blood of The Lamb . ."
                 />
               </a>
@@ -185,7 +185,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/Go_To_The_Ant">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/Go_To_The_Ant.jpg"
+                  src="/public/Shocking_Revelations/image/Go_To_The_Ant.jpg"
                   alt="Go To The Ant"
                 />
               </a>
@@ -198,7 +198,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/YBY_The_Only_Door">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/YBY_The_Only_Door_To_The_Sheepfold.jpg"
+                  src="/public/Shocking_Revelations/image/YBY_The_Only_Door_To_The_Sheepfold.jpg"
                   alt="Yahweh Ben Yahweh The Only Door To The Sheepfold"
                 />
               </a>
@@ -211,7 +211,7 @@ export function Page_3() {
               <a href="/Shocking_Revelations/3/When_The_Sun">
                 <img
                   className="img-size-shock"
-                  src="/src/pages/(sous-page)/Shocking_Revelations/image/When_The_Sun_Stood_Still.jpg"
+                  src="/public/Shocking_Revelations/image/When_The_Sun_Stood_Still.jpg"
                   alt="When The Sun Stood Still"
                 />
               </a>

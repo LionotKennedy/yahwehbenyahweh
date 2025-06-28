@@ -62,6 +62,9 @@
   #pg-btm-media-contact {
     left: 0px;
   }
+  .bottom-media-img-contact {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   #backdrop-contact {
@@ -119,6 +122,9 @@
   }
   #pg-btm-media-contact {
     left: 0px;
+  }
+  .bottom-media-img-contact {
+    width: 100%;
   }
 }
 

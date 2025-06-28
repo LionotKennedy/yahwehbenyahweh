@@ -143,7 +143,7 @@ export function Erosion_of_The_Constitution() {
         <a href="pdf/Erosion_of_The_Constitution_Web.pdf" target="_blank">
           <img
             className="img-size-ero"
-            src="/src/pages/(sous-page)/Erosion_of_The_Constitution/image/truth.png"
+            src="/public/Erosion_of_The_Constitution/image/truth.png"
             alt="Rakitra momba ny Fahasimban'ny Lalàmpanorenana"
           />
         </a>
@@ -151,13 +151,13 @@ export function Erosion_of_The_Constitution() {
       <div>
         <img
           className="bottom-media-img-ero"
-          src="/src/pages/(sous-page)/Erosion_of_The_Constitution/image/bottom-media.jpg"
+          src="/public/Erosion_of_The_Constitution/image/bottom-media.jpg"
         ></img>
       </div>
       <div>
         <img
           className="bottom-media-img-ero"
-          src="/src/pages/(sous-page)/Erosion_of_The_Constitution/image/Gold_Bar_1216.jpg"
+          src="/public/Erosion_of_The_Constitution/image/Gold_Bar_1216.jpg"
         ></img>
       </div>
     </>

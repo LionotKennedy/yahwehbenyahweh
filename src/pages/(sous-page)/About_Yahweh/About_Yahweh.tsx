@@ -8,7 +8,7 @@ export function AboutYahweh() {
       <div id="Yahweh_Ben_Yahweh" className="pg-btm-pd-mod-about">
         <img
           id="title-img-about"
-          src="/src/pages/(sous-page)/About_Yahweh/image/Yahweh.png"
+          src="/public/About_Yahweh/image/Yahweh.png"
           alt="Yahweh"
           className=""
         />
@@ -93,7 +93,7 @@ export function AboutYahweh() {
       <div id="pg-btm-media-about" className="">
         <img
           className="bottom-media-img-about"
-          src="/src/pages/(sous-page)/About_Yahweh/image/bottom-media.png"
+          src="/public/About_Yahweh/image/bottom-media.png"
           alt="Bottom Media"
         />
       </div>

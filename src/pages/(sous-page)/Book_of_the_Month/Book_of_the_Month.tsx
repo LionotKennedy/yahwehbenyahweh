@@ -138,7 +138,7 @@ export function Book_of_the_Month() {
             >
               <img
                 className="botm-book-size-img-month"
-                src="/src/pages/(sous-page)/Book_of_the_Month/image/Book_of_The_Month.png"
+                src="/public/Book_of_the_Month/image/Book_of_The_Month.png"
                 alt="Manorina Fototra Mahery"
               />
             </a>
@@ -152,7 +152,7 @@ export function Book_of_the_Month() {
             >
               <img
                 className="botm-button-size-img-month"
-                src="/src/pages/(sous-page)/Book_of_the_Month/image/Order_Now.png"
+                src="/public/Book_of_the_Month/image/Order_Now.png"
                 alt="Kaomandy izao"
               />
             </a>
@@ -188,7 +188,7 @@ export function Book_of_the_Month() {
       <div>
         <img
           className="bottom-media-img"
-          src="/src/pages/(sous-page)/Book_of_the_Month/image/bottom-media.jpg"
+          src="/public/Book_of_the_Month/image/bottom-media.jpg"
         />
       </div>
     </>

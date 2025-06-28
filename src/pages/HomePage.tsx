@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import "./styles/homePage.css";
 import "./styles/home.css";
 import "./styles/responsive.css";
-import { VideoPlayer } from "../components/VideoPlayer";
+import "./styles/images.css";
+import { VideoPlayer } from "../components/VideoPlayer"; 
 
 const slides = [
   { id: 1, image: "/src/assets/images/index-banner-3.jpg", alt: "Banner 3" },
@@ -28,20 +29,22 @@ const HomePage = () => {
       {/* Book of the Month */}
       <div className="botm-image-contain-home">
         <Link to="/Book_of_the_Month">
-          <img
+          {/* <img
             className="botm-image-home"
             src="/src/pages/images/botm-img-0.jpg"
             alt="Book of the month"
-          />
+          /> */}
+          <div className="botm-img botm-image-home"></div>
         </Link>
       </div>
       <div className="style-home">
         <Link to="/Book_of_the_Month">
-          <img
+          {/* <img
             className="sp-button-img-home"
             src="/src/pages/images/read-more-button.png"
             alt="Read More . . ."
-          />
+          /> */}
+          <div className="read-more-button-img sp-button-img-home"></div>
         </Link>
       </div>
       <div className="clear-both-home"></div>

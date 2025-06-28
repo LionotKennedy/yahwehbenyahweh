@@ -200,7 +200,7 @@ export function The_Crucifixion() {
       <div id="top-bar-gold-cru"></div>
       <div id="No-cru">
         <img
-          src="/src/pages/(sous-page)/The_Crucifixion/image/No.png"
+          src="/public/The_Crucifixion/image/No.png"
           alt="Tsy"
           className="width-cru"
         />
@@ -343,7 +343,7 @@ export function The_Crucifixion() {
           <div id="Bird">
             <img
               className="width-cru2"
-              src="/src/pages/(sous-page)/The_Crucifixion/image/Bird.png"
+              src="/public/The_Crucifixion/image/Bird.png"
               alt="Vorona"
             />
           </div>

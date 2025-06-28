@@ -180,7 +180,7 @@ export function Operation_Word_War() {
       <div className="pg-title-break-ope">
         <img
           className="bottom-media-img-ope"
-          src="/src/pages/(sous-page)/Operation_Word_War/image/div-bar.png"
+          src="/public/Operation_Word_War/image/div-bar.png"
           alt="sakana mizara"
         />
       </div>
@@ -193,7 +193,7 @@ export function Operation_Word_War() {
       <div className="pg-title-break-ope">
         <img
           className="bottom-media-img-ope"
-          src="/src/pages/(sous-page)/Operation_Word_War/image/div-bar.png"
+          src="/public/Operation_Word_War/image/div-bar.png"
           alt="sakana mizara"
         />
       </div>
@@ -208,7 +208,7 @@ export function Operation_Word_War() {
       <div className="pg-title-break-ope">
         <img
           className="bottom-media-img-ope"
-          src="/src/pages/(sous-page)/Operation_Word_War/image/div-bar.png"
+          src="/public/Operation_Word_War/image/div-bar.png"
           alt="sakana mizara"
         />
       </div>
@@ -223,7 +223,7 @@ export function Operation_Word_War() {
       <div className="pg-title-break-ope">
         <img
           className="bottom-media-img-ope"
-          src="/src/pages/(sous-page)/Operation_Word_War/image/div-bar.png"
+          src="/public/Operation_Word_War/image/div-bar.png"
           alt="sakana mizara"
         />
       </div>
@@ -238,7 +238,7 @@ export function Operation_Word_War() {
         <a href="pdf/Operation_Word_War_Web.pdf" target="_blank">
           <img
             className="img-size-ope"
-            src="/src/pages//(sous-page)/Operation_Word_War/image/Authentic.jpg"
+            src="/public/Operation_Word_War/image/Authentic.jpg"
             alt="Rakitra marina momba ny Operation Word War Web"
           />
         </a>
@@ -246,7 +246,7 @@ export function Operation_Word_War() {
       <div>
         <img
           className="bottom-media-img-ope"
-          src="/src/pages/(sous-page)/Operation_Word_War/image/bottom-media.jpg"
+          src="/public/Operation_Word_War/image/bottom-media.jpg"
         />
       </div>
     </>

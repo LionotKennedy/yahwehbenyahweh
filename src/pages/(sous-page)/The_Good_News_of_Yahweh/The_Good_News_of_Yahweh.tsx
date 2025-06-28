@@ -16,7 +16,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Volume_3.png"
+                src="/public/The_Good_News_of_Yahweh/image/Volume_3.png"
                 alt=""
               />
             </div>
@@ -45,7 +45,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Volume_2.png"
+                src="/public/The_Good_News_of_Yahweh/image/Volume_2.png"
                 alt=""
               />
             </div>
@@ -74,7 +74,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Volume_1.png"
+                src="/public/The_Good_News_of_Yahweh/image/Volume_1.png"
                 alt=""
               />
             </div>
@@ -106,7 +106,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Jun_Jul_Aug_2017_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Jun_Jul_Aug_2017_Issue.png"
                 alt=""
               />
             </div>
@@ -135,7 +135,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Mar_Apr_May_2017_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Mar_Apr_May_2017_Issue.png"
                 alt=""
               />
             </div>
@@ -164,7 +164,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Oct_Nov_Dec_2016_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Oct_Nov_Dec_2016_Issue.png"
                 alt=""
               />
             </div>
@@ -196,7 +196,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Jul_Aug_Sep_2016_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Jul_Aug_Sep_2016_Issue.png"
                 alt=""
               />
             </div>
@@ -224,7 +224,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Apr_May_Jun_2016_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Apr_May_Jun_2016_Issue.png"
                 alt=""
               />
             </div>
@@ -252,7 +252,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Jan_Feb_Mar_2016_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Jan_Feb_Mar_2016_Issue.png"
                 alt=""
               />
             </div>
@@ -284,7 +284,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Nov_Dec_2015_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Nov_Dec_2015_Issue.png"
                 alt=""
               />
             </div>
@@ -313,7 +313,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Sep_Oct_2015_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Sep_Oct_2015_Issue.png"
                 alt=""
               />
             </div>
@@ -342,7 +342,7 @@ export function The_Good_News_of_Yahweh() {
             <div>
               <img
                 className="img-size-news"
-                src="/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Nov_Dec_2014_Issue.png"
+                src="/public/The_Good_News_of_Yahweh/image/Nov_Dec_2014_Issue.png"
                 alt=""
               />
             </div>

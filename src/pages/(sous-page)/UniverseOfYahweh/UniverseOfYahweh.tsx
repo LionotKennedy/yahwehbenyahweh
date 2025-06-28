@@ -209,7 +209,7 @@ const UniverseOfYahweh = () => {
       <div className="py-8">
         <img
           className="bottom-media-img mx-auto"
-          src="/src/pages/(sous-page)/UniverseOfYahweh/image/bottom-media.jpg"
+          src="/public/UniverseOfYahweh/image/bottom-media.jpg"
           alt="Bottom Media"
         />
       </div>

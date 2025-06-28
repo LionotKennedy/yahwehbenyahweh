@@ -11,7 +11,7 @@
 //       <div id="The_Feasts_of_Yahweh-feast">
 //         <img
 //           className="img-size-feast"
-//           src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/The_Feasts_of_Yahweh.png"
+//           src="/public/The_Feasts_of_Yahweh/image/The_Feasts_of_Yahweh.png"
 //           alt="The Feasts of Yahweh"
 //         />
 //       </div>
@@ -30,7 +30,7 @@
 //           </p>
 //           <div>
 //             <img
-//               src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/Feast_Theme.png"
+//               src="/public/The_Feasts_of_Yahweh/image/Feast_Theme.png"
 //               className="width-feast"
 //             />
 //           </div>
@@ -47,14 +47,14 @@
 //             <a href="pdf/Passover_Feast_Pkg_2025_Web.pdf" target="_blank">
 //               <img
 //                 className="img-mrg-feast"
-//                 src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-rd.png"
+//                 src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-rd.png"
 //                 alt="Download Feast package PDF"
 //               />
 //             </a>
-//             <a href="/src/pages/(sous-page)/The_Feasts_of_Yahweh/html/FOP_2025.html" target="_blank">
+//             <a href="/public/The_Feasts_of_Yahweh/html/FOP_2025.html" target="_blank">
 //               <img
 //                 className="img-mrg-feast"
-//                 src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-rd.png"
+//                 src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-rd.png"
 //                 alt="Feast package HTML"
 //               />
 //             </a>
@@ -63,7 +63,7 @@
 //         <div id="feasts-trs-bkg-1-feast">
 //           <img
 //             className="feast-bk-img-sz-1"
-//             src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-1.png"
+//             src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-1.png"
 //           />
 //         </div>
 //       </div>
@@ -124,7 +124,7 @@
 //             </p>
 //             <div>
 //               <img
-//                 src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/Feast_Theme.png"
+//                 src="/public/The_Feasts_of_Yahweh/image/Feast_Theme.png"
 //                 className="width-feast"
 //               />
 //             </div>
@@ -141,14 +141,14 @@
 //               <a href="pdf/Feast_of_Weeks_2025_Pkg_Web.pdf" target="_blank">
 //                 <img
 //                   className="img-mrg-feast"
-//                   src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-gr.png"
+//                   src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-gr.png"
 //                   alt="Download Feast package PDF"
 //                 />
 //               </a>
-//               <a href="/src/pages/(sous-page)/The_Feasts_of_Yahweh/html/FOW_2025.html" target="_blank">
+//               <a href="/public/The_Feasts_of_Yahweh/html/FOW_2025.html" target="_blank">
 //                 <img
 //                   className="img-mrg-feast"
-//                   src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-gr.png"
+//                   src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-gr.png"
 //                   alt="Feast package HTML"
 //                 />
 //               </a>
@@ -158,7 +158,7 @@
 //         <div id="feasts-trs-bkg-2-feast">
 //           <img
 //             className="feast-bk-img-sz-2"
-//             src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-2.png"
+//             src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-2.png"
 //           />
 //         </div>
 //       </div>
@@ -234,7 +234,7 @@
 //                   <video
 //                     className="video-width"
 //                     controls
-//                     poster="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.jpg"
+//                     poster="/public/The_Feasts_of_Yahweh/image/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.jpg"
 //                   >
 //                     <source
 //                       src="https://ms.yahwehbenyahweh.com/video/720/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.mp4"
@@ -249,7 +249,7 @@
 //             <div className="feasts-trs-bkg-4-1">
 //               <img
 //                 className="feast-bk-img-sz-4"
-//                 src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
+//                 src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
 //                 alt=""
 //               />
 //             </div>
@@ -277,7 +277,7 @@
 //                 <div className="vidPos2" id="video">
 //                   <video
 //                     controls
-//                     poster="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/ATONEMENT_FEAST_PAGE_CLIP.jpg"
+//                     poster="/public/The_Feasts_of_Yahweh/image/ATONEMENT_FEAST_PAGE_CLIP.jpg"
 //                     className="video-width"
 //                   >
 //                     <source
@@ -294,7 +294,7 @@
 //               <img
 //                 alt=""
 //                 className="feast-bk-img-sz-4"
-//                 src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
+//                 src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
 //               />
 //             </div>
 //           </div>
@@ -310,7 +310,7 @@
 //         >
 //           <image
 //             className="book-feast-img1"
-//             href="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/book-links.jpg"
+//             href="/public/The_Feasts_of_Yahweh/image/book-links.jpg"
 //             target="_blank"
 //           />
 
@@ -408,7 +408,7 @@
 //             </p>
 //             <div>
 //               <img
-//                 src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/Feast_Theme.png"
+//                 src="/public/The_Feasts_of_Yahweh/image/Feast_Theme.png"
 //                 className="width-feast"
 //               />
 //             </div>
@@ -429,7 +429,7 @@
 //         </div>
 //         <div id="feasts-trs-bkg-1">
 //           <img
-//             src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-3.png"
+//             src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-3.png"
 //             alt=""
 //             className="feast-bk-img-sz-3"
 //           />
@@ -487,7 +487,7 @@ export function The_Feasts_of_Yahweh() {
       <div id="The_Feasts_of_Yahweh-feast">
         <img
           className="img-size-feast"
-          src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/The_Feasts_of_Yahweh.png"
+          src="/public/The_Feasts_of_Yahweh/image/The_Feasts_of_Yahweh.png"
           alt="Ny Fetin'i Yahweh"
         />
       </div>
@@ -506,7 +506,7 @@ export function The_Feasts_of_Yahweh() {
           </p>
           <div>
             <img
-              src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/Feast_Theme.png"
+              src="/public/The_Feasts_of_Yahweh/image/Feast_Theme.png"
               className="width-feast"
             />
           </div>
@@ -522,14 +522,14 @@ export function The_Feasts_of_Yahweh() {
             <a href="pdf/Passover_Feast_Pkg_2025_Web.pdf" target="_blank">
               <img
                 className="img-mrg-feast"
-                src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-rd.png"
+                src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-rd.png"
                 alt="Ampidino ny fonosana fety PDF"
               />
             </a>
-            <a href="/src/pages/(sous-page)/The_Feasts_of_Yahweh/html/FOP_2025.html" target="_blank">
+            <a href="/public/The_Feasts_of_Yahweh/html/FOP_2025.html" target="_blank">
               <img
                 className="img-mrg-feast"
-                src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-rd.png"
+                src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-rd.png"
                 alt="Fonosana fety HTML"
               />
             </a>
@@ -538,7 +538,7 @@ export function The_Feasts_of_Yahweh() {
         <div id="feasts-trs-bkg-1-feast">
           <img
             className="feast-bk-img-sz-1"
-            src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-1.png"
+            src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-1.png"
           />
         </div>
       </div>
@@ -595,7 +595,7 @@ export function The_Feasts_of_Yahweh() {
             </p>
             <div>
               <img
-                src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/Feast_Theme.png"
+                src="/public/The_Feasts_of_Yahweh/image/Feast_Theme.png"
                 className="width-feast"
               />
             </div>
@@ -611,14 +611,14 @@ export function The_Feasts_of_Yahweh() {
               <a href="pdf/Feast_of_Weeks_2025_Pkg_Web.pdf" target="_blank">
                 <img
                   className="img-mrg-feast"
-                  src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-gr.png"
+                  src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-pdf-gr.png"
                   alt="Ampidino ny fonosana fety PDF"
                 />
               </a>
-              <a href="/src/pages/(sous-page)/The_Feasts_of_Yahweh/html/FOW_2025.html" target="_blank">
+              <a href="/public/The_Feasts_of_Yahweh/html/FOW_2025.html" target="_blank">
                 <img
                   className="img-mrg-feast"
-                  src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-gr.png"
+                  src="/public/The_Feasts_of_Yahweh/image/dl-feast-pkg-htm-gr.png"
                   alt="Fonosana fety HTML"
                 />
               </a>
@@ -628,7 +628,7 @@ export function The_Feasts_of_Yahweh() {
         <div id="feasts-trs-bkg-2-feast">
           <img
             className="feast-bk-img-sz-2"
-            src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-2.png"
+            src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-2.png"
           />
         </div>
       </div>
@@ -698,7 +698,7 @@ export function The_Feasts_of_Yahweh() {
                   <video
                     className="video-width"
                     controls
-                    poster="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.jpg"
+                    poster="/public/The_Feasts_of_Yahweh/image/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.jpg"
                   >
                     <source
                       src="https://ms.yahwehbenyahweh.com/video/720/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.mp4"
@@ -713,7 +713,7 @@ export function The_Feasts_of_Yahweh() {
             <div className="feasts-trs-bkg-4-1">
               <img
                 className="feast-bk-img-sz-4"
-                src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
+                src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
                 alt=""
               />
             </div>
@@ -741,7 +741,7 @@ export function The_Feasts_of_Yahweh() {
                 <div className="vidPos2" id="video">
                   <video
                     controls
-                    poster="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/ATONEMENT_FEAST_PAGE_CLIP.jpg"
+                    poster="/public/The_Feasts_of_Yahweh/image/ATONEMENT_FEAST_PAGE_CLIP.jpg"
                     className="video-width"
                   >
                     <source
@@ -758,7 +758,7 @@ export function The_Feasts_of_Yahweh() {
               <img
                 alt=""
                 className="feast-bk-img-sz-4"
-                src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
+                src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-A-a.png"
               />
             </div>
           </div>
@@ -774,7 +774,7 @@ export function The_Feasts_of_Yahweh() {
         >
           <image
             className="book-feast-img1"
-            href="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/book-links.jpg"
+            href="/public/The_Feasts_of_Yahweh/image/book-links.jpg"
             target="_blank"
           />
 
@@ -872,7 +872,7 @@ export function The_Feasts_of_Yahweh() {
             </p>
             <div>
               <img
-                src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/Feast_Theme.png"
+                src="/public/The_Feasts_of_Yahweh/image/Feast_Theme.png"
                 className="width-feast"
               />
             </div>
@@ -891,7 +891,7 @@ export function The_Feasts_of_Yahweh() {
         </div>
         <div id="feasts-trs-bkg-1">
           <img
-            src="/src/pages/(sous-page)/The_Feasts_of_Yahweh/image/feasts-trs-bkg-3.png"
+            src="/public/The_Feasts_of_Yahweh/image/feasts-trs-bkg-3.png"
             alt=""
             className="feast-bk-img-sz-3"
           />
