@@ -1,6 +1,7 @@
 import "./style/about_Yahweh_Ben_Yahweh.css";
 import "./style/responsive.css";
 import YahwehImg from "./image/Yahweh_Ben_Yahweh.png";
+import HisMission from "./image/His_Mission.png";
 export function AboutYahwehBenYahweh() {
   return (
     <div className="about-yahweh-ben-yahweh-page">
@@ -72,7 +73,8 @@ export function AboutYahwehBenYahweh() {
       <div className="pg-title-break-y">
         <img
           // src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
-          src="/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          // src="/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
+          src={HisMission}
           alt="His Mission"
           className="style-width-y"
         />
