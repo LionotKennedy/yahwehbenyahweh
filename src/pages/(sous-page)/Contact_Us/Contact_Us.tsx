@@ -104,6 +104,12 @@
 import "./style/contact-us.css";
 import "./style/contact_Us.css";
 import "./style/responsive.css";
+// import "./style/news.css";
+import To_Contact_Us from "./image/To_Contact_Us.png";
+import mail from "./image/mail.png";
+import phone from "./image/phone.png";
+import bottomMedia from "./image/bottom-media.jpg";
+
 
 export function ContactUs() {
   return (
@@ -115,7 +121,8 @@ export function ContactUs() {
       {/* Title Section */}
       <div className="title-section">
         <img
-          src="/public/Contact_Us/image/To_Contact_Us.png?height=200&width=600"
+          // src="/public/Contact_Us/image/To_Contact_Us.png?height=200&width=600"
+          src={To_Contact_Us}
           alt="To Contact Us"
           className="title-image"
         />
@@ -128,7 +135,8 @@ export function ContactUs() {
           <div className="contact-item">
             <div className="icon-container">
               <img
-                src="/public/Contact_Us/image/mail.png?height=80&width=80"
+                // src="/public/Contact_Us/image/mail.png?height=80&width=80"
+                src={mail}
                 alt="mail icon"
                 className="contact-icon"
               />
@@ -155,7 +163,8 @@ export function ContactUs() {
           <div className="contact-item">
             <div className="icon-container">
               <img
-                src="/public/Contact_Us/image/mail.png"
+                // src="/public/Contact_Us/image/mail.png"
+                src={mail}
                 alt="mail icon"
                 className="contact-icon"
               />
@@ -195,7 +204,8 @@ export function ContactUs() {
             </div>
             <div className="icon-container">
               <img
-                src="/public/Contact_Us/image/phone.png?height=60&width=60"
+                // src="/public/Contact_Us/image/phone.png?height=60&width=60"
+                src={phone}
                 alt="phone icon"
                 className="phone-icon"
               />
@@ -222,23 +232,50 @@ export function ContactUs() {
           />
         </div> */}
       </div>
-        <div className="wrapper-contact">
-          <div id="Email_Us">
-            <p>
-              <span className="pg-link-text-ul-1-contact">
+      <div className="wrapper-contact">
+        <div id="Email_Us">
+          <p>
+            <span className="pg-link-text-ul-1-contact">
+              <strong>Ny adiresy mailakanay</strong>
+            </span>
+            <br />
+            yahweh@yahwehbenyahweh.com
+          </p>
+        </div>
+        <div id="pg-btm-media-contact">
+          <img
+            className="bottom-media-img-contact"
+            // src="/public/Contact_Us/image/bottom-media.jpg"
+            src={bottomMedia}
+          />
+        </div>
+      </div>
+      {/* Email Section - Version responsive */}
+      {/* <div className="wrapper-contact">
+        <div id="Email_Us" className="responsive-email-section">
+          <div className="email-content">
+            <p className="email-text">
+              <span className="email-label">
                 <strong>Ny adiresy mailakanay</strong>
               </span>
               <br />
-              yahweh@yahwehbenyahweh.com
+              <a
+                href="mailto:yahweh@yahwehbenyahweh.com"
+                className="email-link"
+              >
+                yahweh@yahwehbenyahweh.com
+              </a>
             </p>
           </div>
-          <div id="pg-btm-media-contact">
-            <img
-              className="bottom-media-img-contact"
-              src="/public/Contact_Us/image/bottom-media.jpg"
-            />
-          </div>
         </div>
+      <div id="pg-btm-media-contact">
+          <img
+            className="bottom-media-img-contact"
+            src={bottomMedia}
+            alt="Media bottom"
+          />
+        </div>
+      </div> */}
 
       <div className="gold-bar"></div>
     </div>

@@ -161,6 +161,12 @@
 
 import "./style/the_Nation_of_Yahweh.css";
 import "./style/responsive.css";
+import TheNationofYahweh from "./image/The_Nation_of_Yahweh.png";
+import OurMottoLn from "./image/Our_Motto_Ln.png";
+import FrenchVer from "./image/French_ver.png";
+import SpanishVer from "./image/Spanish_ver.png";
+import EnglishVer from "./image/English_ver.png";
+import TheNationofYahwehInfo from "./image/The_Nation_of_Yahweh-info.png";
 
 export function The_Nation_of_Yahweh() {
   return (
@@ -169,7 +175,8 @@ export function The_Nation_of_Yahweh() {
       <div id="top-bar-gold-nation" className=""></div>
       <div id="The_Nation_of_Yahweh-nation" className="">
         <img
-          src="/public/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh.png"
+          // src="/public/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh.png"
+          src={TheNationofYahweh}
           alt="Ny Firenen'i Yahweh"
           className="width-nation"
         />
@@ -221,7 +228,8 @@ export function The_Nation_of_Yahweh() {
       <div id="Our_Motto_is-nation">
         <img
           className="Motto_img-nation"
-          src="/public/The_Nation_of_Yahweh/image/Our_Motto_Ln.png"
+          // src="/public/The_Nation_of_Yahweh/image/Our_Motto_Ln.png"
+          src={OurMottoLn}
           alt="NY TENINDRINTSIKA DIA: ANDRIAMANITRA TOKANA! SAINA TOKANA! FITIA TOKANA! SY ASA TOKANA!"
         />
       </div>
@@ -241,7 +249,8 @@ export function The_Nation_of_Yahweh() {
             target="_blank"
           >
             <img
-              src="/public/The_Nation_of_Yahweh/image/French_ver.png"
+              // src="/public/The_Nation_of_Yahweh/image/French_ver.png"
+              src={FrenchVer}
               alt="Iza ny Firenen'i Yahweh PDF frantsay"
               className="width-guide-nation"
             />
@@ -250,7 +259,8 @@ export function The_Nation_of_Yahweh() {
         <div className="pg-guide-nation">
           <a href="pdf/Who_Is_The_Nation_Spanish_Web.pdf" target="_blank">
             <img
-              src="/public/The_Nation_of_Yahweh/image/Spanish_ver.png"
+              // src="/public/The_Nation_of_Yahweh/image/Spanish_ver.png"
+              src={SpanishVer}
               alt="Iza ny Firenen'i Yahweh PDF espaniola"
               className="width-guide-nation"
             />
@@ -259,7 +269,8 @@ export function The_Nation_of_Yahweh() {
         <div className="pg-guide-nation">
           <a href="pdf/Who_Is_The_Nation_English_Web.pdf" target="_blank">
             <img
-              src="/public/The_Nation_of_Yahweh/image/English_ver.png"
+              // src="/public/The_Nation_of_Yahweh/image/English_ver.png"
+              src={EnglishVer}
               alt="Iza ny Firenen'i Yahweh PDF anglisy"
               className="width-guide-nation"
             />
@@ -270,7 +281,8 @@ export function The_Nation_of_Yahweh() {
       <div id="Nation-info-nation">
         <img
           className="book-img-nation"
-          src="/public/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh-info.png"
+          // src="/public/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh-info.png"
+          src={TheNationofYahwehInfo}
           alt="Toromarika momba ny Firenen'i Yahweh"
         />
       </div>

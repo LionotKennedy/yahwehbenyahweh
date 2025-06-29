@@ -1,5 +1,13 @@
 
 import "./style/tetragrammaton.css";
+import Tetragrama from "./image/Tetragrammaton.png";
+import Yahweh from "./image/Yahweh.png";
+import Yahweh_Ben_Yahweh from "./image/Yahweh_Ben_Yahweh.png";
+import YAHWEH from "./image/YAHWEH-.png";
+import YHWH from "./image/YHWH.png";
+import bottomMedia from "./image/bottom-media.png";
+// import mail from "./image/mail.png";
+// import phone from "./image/phone.png";
 export function Tetragrammaton() {
   return (
     <div className="tetragrammaton-page">
@@ -8,14 +16,16 @@ export function Tetragrammaton() {
       <div className="div-width-tetra">
         <div id="Tetragrammaton">
           <img
-            src="/public/Tetragrammaton/image/Tetragrammaton.png"
+            // src="/public/Tetragrammaton/image/Tetragrammaton.png"
+            src={Tetragrama}
             alt="Tetragrammaton"
             className="width-pers1-tetra"
           />
         </div>
         <div id="Yahweh">
           <img
-            src="/public/Tetragrammaton/image/Yahweh.png"
+            // src="/public/Tetragrammaton/image/Yahweh.png"
+            src={Yahweh}
             alt="Yahweh"
             className="width-pers2-tetra"
           />
@@ -28,7 +38,8 @@ export function Tetragrammaton() {
         <div className="sec-bar-tetra"></div>
         <div id="Yahweh">
           <img
-            src="/public/Tetragrammaton/image/Yahweh_Ben_Yahweh.png"
+            // src="/public/Tetragrammaton/image/Yahweh_Ben_Yahweh.png"
+            src={Yahweh_Ben_Yahweh}
             alt="Yahweh Ben Yahweh"
             className="width-pers3-tetra"
           />
@@ -43,7 +54,8 @@ export function Tetragrammaton() {
           <p className="pg-text-fmt-lrg-tetra">
             <img
               className="Yahweh-img-tetra"
-              src="/public/Tetragrammaton/image/Yahweh.png"
+              // src="/public/Tetragrammaton/image/Yahweh.png"
+              src={Yahweh}
               alt="Yahweh"
             />{" "}
             IZANY NO ANARAN'ANDRIAMANITRA ARAKA NY
@@ -53,13 +65,15 @@ export function Tetragrammaton() {
           <p className="pg-text-fmt-lrg-tetra">
             <img
               className="YAHWEH-CAP-img-tetra"
-              src="/public/Tetragrammaton/image/YAHWEH-.png"
+              // src="/public/Tetragrammaton/image/YAHWEH-.png"
+              src={YAHWEH}
               alt="YAHWEH"
             />{" "}
             (
             <img
               className="Yahweh-img-tetra"
-              src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
+              // src="/src/pages/(sous-page)/Tetragrammaton/image/Yahweh.png"
+              src={Yahweh}
               alt="Yahweh"
             />
             ) ANDRIAMANITRA NY FANEKENA
@@ -67,7 +81,8 @@ export function Tetragrammaton() {
             ISRAELY,{" "}
             <img
               className="YHWH-img-tetra"
-              src="/public/Tetragrammaton/image/YHWH.png"
+              // src="/public/Tetragrammaton/image/YHWH.png"
+              src={YHWH}
               alt="Yahweh"
             />
             , AO AMIN'NY HEBREO TALOHA.
@@ -92,7 +107,8 @@ export function Tetragrammaton() {
             <br />
             <img
               className="YHWH-img-tetra"
-              src="/public/Tetragrammaton/image/YHWH.png"
+              // src="/public/Tetragrammaton/image/YHWH.png"
+              src={YHWH}
               alt="Yahweh"
             />
             .
@@ -100,13 +116,15 @@ export function Tetragrammaton() {
           <p className="pg-text-fmt-lrg-tetra">
             <img
               className="YAHWEH-CAP-img-tetra"
-              src="/public)/Tetragrammaton/image/YAHWEH-.png"
+              // src="/public)/Tetragrammaton/image/YAHWEH-.png"
+              src={YAHWEH}
               alt="YAHWEH"
             />{" "}
             (
             <img
               className="Yahweh-img-tetra"
-              src="/public/Tetragrammaton/image/Yahweh.png"
+              // src="/public/Tetragrammaton/image/Yahweh.png"
+              src={Yahweh}
               alt="Yahweh"
             />
             ) ANDRIAMANITRA NY FANEKENA
@@ -114,7 +132,8 @@ export function Tetragrammaton() {
             ISRAELY,{" "}
             <img
               className="YHWH-img-tetra"
-              src="/public/Tetragrammaton/image/YHWH.png"
+              // src="/public/Tetragrammaton/image/YHWH.png"
+              src={YHWH}
               alt="Yahweh"
             />
             , AO AMIN'NY HEBREO TALOHA.
@@ -136,7 +155,8 @@ export function Tetragrammaton() {
             <br />
             <img
               className="YAHWEH-CAP-img-tetra"
-              src="/public/Tetragrammaton/image/YAHWEH-.png"
+              // src="/public/Tetragrammaton/image/YAHWEH-.png"
+              src={YAHWEH}
               alt="YAHWEH"
             />{" "}
             (KJV-RSV "ILAY TOMPO").
@@ -155,13 +175,15 @@ export function Tetragrammaton() {
             TETRAGRAMMATON:{" "}
             <img
               className="YHWH-img-tetra"
-              src="/public/Tetragrammaton/image/YHWH.png"
+              // src="/public/Tetragrammaton/image/YHWH.png"
+              src={YHWH}
               alt="Yahweh"
             />{" "}
             (
             <img
               className="Yahweh-img-tetra"
-              src="/public/Tetragrammaton/image/Yahweh.png"
+              // src="/public/Tetragrammaton/image/Yahweh.png"
+              src={Yahweh}
               alt="Yahweh"
             />
             ) TSIKY
@@ -178,7 +200,8 @@ export function Tetragrammaton() {
       <div id="pg-btm-media-tetra">
         <img
           className="bottom-media-img-tetra"
-          src="/public/Tetragrammaton/image/bottom-media.png"
+          // src="/public/Tetragrammaton/image/bottom-media.png"
+          src={bottomMedia}
         />
       </div>
       {/* Coucou 8 */}

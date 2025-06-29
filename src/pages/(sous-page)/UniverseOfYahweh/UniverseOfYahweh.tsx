@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { VideoPlayer } from "../../../components/VideoPlayer";
 import "../UniverseOfYahweh/style/universeOfYahweh.css";
+import bottomMedia from "./image/bottom-media.jpg";
 // import "../UniverseOfYahweh/style/responsive.css";
 
 const UniverseOfYahweh = () => {
@@ -209,7 +210,8 @@ const UniverseOfYahweh = () => {
       <div className="py-8">
         <img
           className="bottom-media-img mx-auto"
-          src="/public/UniverseOfYahweh/image/bottom-media.jpg"
+          // src="/public/UniverseOfYahweh/image/bottom-media.jpg"
+          src={bottomMedia}
           alt="Bottom Media"
         />
       </div>

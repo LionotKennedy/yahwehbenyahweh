@@ -1,6 +1,8 @@
 import "./style/culturalAttire.css";
 import "./style/responsive.css";
 // import "../../../components/css/default.css";
+import TheCulturalAttire from "./image/The_Cultural_Attire_of_Yahweh.png";
+import bottomMedia from "./image/bottom-media.jpg";
 
 const CulturalAttire = () => {
   return (
@@ -10,7 +12,8 @@ const CulturalAttire = () => {
       <div id="The_Cultural_Attire_of" className="">
         <img
           // src="/image/The_Cultural_Attire_of_Yahweh.png"
-          src="/public/CulturalAttire/image/The_Cultural_Attire_of_Yahweh.png"
+          // src="/public/CulturalAttire/image/The_Cultural_Attire_of_Yahweh.png"
+          src={TheCulturalAttire}
           className="wid-cul"
           alt="The Cultural Attire of Yahweh"
         />
@@ -106,7 +109,8 @@ const CulturalAttire = () => {
       <div id="pg-btm-media-cul" className="">
         <img
           className="bottom-media-img-cul"
-          src="/public/CulturalAttire/image/bottom-media.jpg"
+          // src="/public/CulturalAttire/image/bottom-media.jpg"
+          src={bottomMedia}
           alt="Bottom Media"
         />
       </div>
