@@ -1,0 +1,493 @@
+// interface CenterButton {
+//   href: string;
+//   alt: string;
+//   external?: boolean;
+// }
+
+
+// import { Link } from "react-router-dom";
+// import "./styles/centerButtons.css";
+// // import "./styles/centerButtons_2.css";
+
+// interface CenterButton {
+//   href: string;
+//   image: string;
+//   alt: string;
+//   external?: boolean;
+// }
+
+// const centerButtons: CenterButton[] = [
+//   {
+//     href: "/Tetragrammaton",
+//     image: "/src/components/images/center-buttons/Tetragrammaton.jpg",
+//     alt: "Tetragrammaton",
+//   },
+//   {
+//     href: "/The_Nation_of_Yahweh",
+//     image: "/src/components/images/center-buttons/The_Nation_of_Yahweh.jpg",
+//     alt: "The Nation of Yahweh",
+//   },
+//   {
+//     href: "/The_Universe_of_Yahweh",
+//     image: "/src/components/images/center-buttons/Universe_of.jpg",
+//     alt: "The Universe of Yahweh",
+//   },
+//   {
+//     href: "/The_Feasts_of_Yahweh",
+//     image: "/src/components/images/center-buttons/Feasts.jpg",
+//     alt: "The Feasts of Yahweh",
+//   },
+//   {
+//     href: "/The_Good_News_of_Yahweh",
+//     image: "/src/components/images/center-buttons/Good_News.jpg",
+//     alt: "The Good News of Yahweh",
+//   },
+//   {
+//     href: "/The_Crucifixion",
+//     image: "/src/components/images/center-buttons/Crucifixion.jpg",
+//     alt: "The Crucifixion",
+//   },
+//   {
+//     href: "/Shocking_Revelations",
+//     image: "/src/components/images/center-buttons/Shock.jpg",
+//     alt: "Shocking Revelations",
+//   },
+//   {
+//     href: "/The_Sabbath",
+//     image: "/src/components/images/center-buttons/Sab.jpg",
+//     alt: "The Sabbath",
+//   },
+//   {
+//     href: "/Erosion_of_The_Constitution",
+//     image: "/src/components/images/center-buttons/Erosion.jpg",
+//     alt: "Erosion of The Constitution",
+//   },
+//   {
+//     href: "/Operation_Word_War",
+//     image: "/src/components/images/center-buttons/Op_WW.jpg",
+//     alt: "Operation Word War",
+//   },
+//   {
+//     href: "/Balance_Justice",
+//     image: "/src/components/images/center-buttons/Balance_Justice.jpg",
+//     alt: "Balance Justice",
+//   },
+//   {
+//     href: "https://shop.yahwehbenyahweh.com/",
+//     image: "/src/components/images/center-buttons/ON-Line_Bookstore.jpg",
+//     alt: "On-line Book Store",
+//     external: true,
+//   },
+// ];
+
+
+
+
+// export function CenterButtons() {
+//   return (
+//     // <div className="center-buttons _grid grid_cols_2 md:grid-cols-3 lg:grid-cols-4 gap_4 p_4">
+//     <div className="center-buttons-home">
+//       {centerButtons.map((button, index) => (
+//         // <div key={index} className="center-button">
+//         <div key={index} className="center-button-home">
+//           {button.external ? (
+//             <a href={button.href} target="_blank" rel="noopener noreferrer">
+//               <img
+//                 src={button.image || "/placeholder.svg"}
+//                 alt={button.alt}
+//                 // className="center-button-img w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+//                 className="center-button-img-home"
+//               />
+//             </a>
+//           ) : (
+//             <Link to={button.href}>
+//               <img
+//                 src={button.image || "/placeholder.svg"}
+//                 alt={button.alt}
+//                 className="center-button-img-home"
+//                 // className="center-button-img w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+//               />
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const centerButtons: CenterButton[] = [
+//   { href: "/Tetragrammaton", alt: "Tetragrammaton" },
+//   { href: "/The_Nation_of_Yahweh", alt: "The Nation of Yahweh" },
+//   { href: "/The_Universe_of_Yahweh", alt: "The Universe of Yahweh" },
+//   { href: "/The_Feasts_of_Yahweh", alt: "The Feasts of Yahweh" },
+//   { href: "/The_Good_News_of_Yahweh", alt: "The Good News of Yahweh" },
+//   { href: "/The_Crucifixion", alt: "The Crucifixion" },
+//   { href: "/Shocking_Revelations", alt: "Shocking Revelations" },
+//   { href: "/The_Sabbath", alt: "The Sabbath" },
+//   { href: "/Erosion_of_The_Constitution", alt: "Erosion of The Constitution" },
+//   { href: "/Operation_Word_War", alt: "Operation Word War" },
+//   { href: "/Balance_Justice", alt: "Balance Justice" },
+//   { 
+//     href: "https://shop.yahwehbenyahweh.com/", 
+//     alt: "On-line Book Store",
+//     external: true 
+//   },
+// ];
+
+
+// export function CenterButtons() {
+//   return (
+//     <div className="center-buttons-home">
+//       {centerButtons.map((button, index) => (
+//         <div key={index} className="center-button-home">
+//           {button.external ? (
+//             <a href={button.href} target="_blank" rel="noopener noreferrer">
+//               <div 
+//                 className={`center-button-img-home ${button.alt.toLowerCase().replace(/\s+/g, '-')}-img`}
+//                 aria-label={button.alt}
+//               ></div>
+//             </a>
+//           ) : (
+//             <Link to={button.href}>
+//               <div 
+//                 className={`center-button-img-home ${button.alt.toLowerCase().replace(/\s+/g, '-')}-img`}
+//                 aria-label={button.alt}
+//               ></div>
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Link } from "react-router-dom"
+// import "./styles/centerButtons.css"
+
+// interface CenterButton {
+//   href: string
+//   className: string
+//   alt: string
+//   external?: boolean
+// }
+
+// const centerButtons: CenterButton[] = [
+//   {
+//     href: "/Tetragrammaton",
+//     className: "tetragrammaton-img",
+//     alt: "Tetragrammaton",
+//   },
+//   {
+//     href: "/The_Nation_of_Yahweh",
+//     className: "nation-yahweh-img",
+//     alt: "The Nation of Yahweh",
+//   },
+//   {
+//     href: "/The_Universe_of_Yahweh",
+//     className: "universe-yahweh-img",
+//     alt: "The Universe of Yahweh",
+//   },
+//   {
+//     href: "/The_Feasts_of_Yahweh",
+//     className: "feasts-img",
+//     alt: "The Feasts of Yahweh",
+//   },
+//   {
+//     href: "/The_Good_News_of_Yahweh",
+//     className: "good-news-img",
+//     alt: "The Good News of Yahweh",
+//   },
+//   {
+//     href: "/The_Crucifixion",
+//     className: "crucifixion-img",
+//     alt: "The Crucifixion",
+//   },
+//   {
+//     href: "/Shocking_Revelations",
+//     className: "shock-img",
+//     alt: "Shocking Revelations",
+//   },
+//   {
+//     href: "/The_Sabbath",
+//     className: "sabbath-img",
+//     alt: "The Sabbath",
+//   },
+//   {
+//     href: "/Erosion_of_The_Constitution",
+//     className: "erosion-img",
+//     alt: "Erosion of The Constitution",
+//   },
+//   {
+//     href: "/Operation_Word_War",
+//     className: "operation-img",
+//     alt: "Operation Word War",
+//   },
+//   {
+//     href: "/Balance_Justice",
+//     className: "balance-justice-img",
+//     alt: "Balance Justice",
+//   },
+//   {
+//     href: "https://shop.yahwehbenyahweh.com/",
+//     className: "bookstore-img",
+//     alt: "On-line Book Store",
+//     external: true,
+//   },
+// ]
+
+// export function CenterButtons() {
+//   return (
+//     <div className="center-buttons-home">
+//       {centerButtons.map((button, index) => (
+//         <div key={index} className="center-button-home">
+//           {button.external ? (
+//             <a href={button.href} target="_blank" rel="noopener noreferrer">
+//               <div className={`center-button-img-home ${button.className}`} aria-label={button.alt} role="img"></div>
+//             </a>
+//           ) : (
+//             <Link to={button.href}>
+//               <div className={`center-button-img-home ${button.className}`} aria-label={button.alt} role="img"></div>
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import "./styles/centerButtons_3.css"
+
+// import { Link } from "react-router-dom"
+// import "./styles/centerButtons.css"
+// import "./styles/centerButtons_4.css"
+
+// interface CenterButton {
+//   href: string
+//   alt: string
+//   cssClass: string
+//   external?: boolean
+// }
+
+// const centerButtons: CenterButton[] = [
+//   {
+//     href: "/Tetragrammaton",
+//     cssClass: "tetragrammaton-img",
+//     alt: "Tetragrammaton",
+//   },
+//   {
+//     href: "/The_Nation_of_Yahweh",
+//     cssClass: "nation-yahweh-img",
+//     alt: "The Nation of Yahweh",
+//   },
+//   {
+//     href: "/The_Universe_of_Yahweh",
+//     cssClass: "universe-yahweh-img",
+//     alt: "The Universe of Yahweh",
+//   },
+//   {
+//     href: "/The_Feasts_of_Yahweh",
+//     cssClass: "feasts-img",
+//     alt: "The Feasts of Yahweh",
+//   },
+//   {
+//     href: "/The_Good_News_of_Yahweh",
+//     cssClass: "good-news-img",
+//     alt: "The Good News of Yahweh",
+//   },
+//   {
+//     href: "/The_Crucifixion",
+//     cssClass: "crucifixion-img",
+//     alt: "The Crucifixion",
+//   },
+//   {
+//     href: "/Shocking_Revelations",
+//     cssClass: "shock-img",
+//     alt: "Shocking Revelations",
+//   },
+//   {
+//     href: "/The_Sabbath",
+//     cssClass: "sabbath-img",
+//     alt: "The Sabbath",
+//   },
+//   {
+//     href: "/Erosion_of_The_Constitution",
+//     cssClass: "erosion-img",
+//     alt: "Erosion of The Constitution",
+//   },
+//   {
+//     href: "/Operation_Word_War",
+//     cssClass: "operation-img",
+//     alt: "Operation Word War",
+//   },
+//   {
+//     href: "/Balance_Justice",
+//     cssClass: "balance-justice-img",
+//     alt: "Balance Justice",
+//   },
+//   {
+//     href: "https://shop.yahwehbenyahweh.com/",
+//     cssClass: "bookstore-img",
+//     alt: "On-line Book Store",
+//     external: true,
+//   },
+// ]
+
+// export function CenterButtons() {
+//   return (
+//     <div className="center-buttons-home">
+//       {centerButtons.map((button, index) => (
+//         <div key={index} className="center-button-home">
+//           {button.external ? (
+//             <a href={button.href} target="_blank" rel="noopener noreferrer">
+//               <div className={`center-button-img-home ${button.cssClass}`} role="img" aria-label={button.alt}></div>
+//             </a>
+//           ) : (
+//             <Link to={button.href}>
+//               <div className={`center-button-img-home ${button.cssClass}`} role="img" aria-label={button.alt}></div>
+//             </Link>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   )
+// }
