@@ -2,7 +2,7 @@
 .slider-pro {
   position: relative;
   width: 100%;
-  height: 535px;
+  /* height: 535px; */
   overflow: hidden;
 }
 
@@ -93,10 +93,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .slider-pro {
+  /* .slider-pro {
     height: 300px;
   }
-  
+   */
   .nav-button {
     padding: 8px;
   }
@@ -145,3 +145,10 @@
 }
 
 
+/* PERSONNALISATION */
+.anoth-style {
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+}
