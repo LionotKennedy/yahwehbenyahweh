@@ -6,8 +6,7 @@ import Yahweh_Ben_Yahweh from "./image/Yahweh_Ben_Yahweh.png";
 import YAHWEH from "./image/YAHWEH-.png";
 import YHWH from "./image/YHWH.png";
 import bottomMedia from "./image/bottom-media.png";
-// import mail from "./image/mail.png";
-// import phone from "./image/phone.png";
+
 export function Tetragrammaton() {
   return (
     <div className="tetragrammaton-page">

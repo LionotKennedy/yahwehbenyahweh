@@ -1,5 +1,5 @@
 @media screen and (max-width: 1024px) {
-  #pg-banner-about {
+  #pg-banner-abouty {
     background-image: url("../image/page-banner.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  #pg-banner-about {
+  #pg-banner-abouty {
     background-image: url("../image/page-banner.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  #pg-banner-about {
+  #pg-banner-abouty {
     background-image: url("../image/page-banner.jpg");
     background-size: contain;
     background-repeat: no-repeat;

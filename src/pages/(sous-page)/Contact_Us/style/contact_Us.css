@@ -142,7 +142,7 @@ img {
   position: absolute;
   top: 80px;
   padding-left: 25%;
-  padding-right: 25%;
+  /* padding-right: 25%; */
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -164,4 +164,58 @@ img {
 }
 .side-clear {
   clear: both;
+}
+
+.dd {
+  /* display: none; */
+  /* font-size: 18px; */
+  /* padding: 20px; */
+  /* margin: 20px auto; */
+  /* align-items: center; */
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+  .dd {
+    font-size: 32px;
+  }
+  /* .dds {
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+  } */
+}
+@media screen and (max-width: 768px) {
+  .dd {
+    font-size: 22px;
+  }
+  /* .dds {
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+  } */
+}
+@media screen and (max-width: 480px) {
+  .dd {
+    font-size: 18px;
+  }
+  /* .dds {
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+  } */
 }

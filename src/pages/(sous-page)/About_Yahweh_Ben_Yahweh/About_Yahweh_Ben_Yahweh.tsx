@@ -102,7 +102,7 @@ export function AboutYahwehBenYahweh() {
         <img
           // src="/src/pages/(sous-page)/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
           // src="/public/About_Yahweh_Ben_Yahweh/image/His_Mission.png"
-         src={HisMission}
+          src={HisMission}
           alt="His Mission"
           className="style-width-y"
         />
