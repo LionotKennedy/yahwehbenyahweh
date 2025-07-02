@@ -1,112 +1,76 @@
-import React, { createContext, useContext, useReducer, type ReactNode } from 'react';
-import type { AppState, User, ContentItem, ImageItem } from '../types';
 
-type AppAction = 
-  | { type: 'LOGIN'; payload: User }
-  | { type: 'LOGOUT' }
-  | { type: 'SET_PAGE'; payload: string }
-  | { type: 'UPDATE_CONTENT'; payload: ContentItem }
-  | { type: 'DELETE_CONTENT'; payload: string }
-  | { type: 'ADD_IMAGE'; payload: ImageItem }
-  | { type: 'DELETE_IMAGE'; payload: string };
+"use client"
+
+import type React from "react"
+import { createContext, useContext, useReducer } from "react"
+
+interface User {
+  id: string
+  name: string
+  email: string
+}
+
+interface ContentItem {
+  id: string
+  title: string
+  lastModified: Date
+}
+
+interface ImageItem {
+  id: string
+  url: string
+  alt: string
+}
+
+interface AppState {
+  user: User | null
+  content: ContentItem[]
+  images: ImageItem[]
+}
+
+interface AppContextType {
+  state: AppState
+  dispatch: React.Dispatch<any>
+}
+
+const AppContext = createContext<AppContextType | undefined>(undefined)
 
 const initialState: AppState = {
-  user: null,
-  isAuthenticated: false,
-  currentPage: 'dashboard',
+  user: {
+    id: "1",
+    name: "Administrateur",
+    email: "admin@example.com",
+  },
   content: [
-    {
-      id: '1',
-      title: 'Page d\'accueil',
-      content: 'Contenu de la page d\'accueil...',
-      lastModified: new Date(),
-      author: 'Admin'
-    },
-    {
-      id: '2',
-      title: 'À propos',
-      content: 'Contenu de la page à propos...',
-      lastModified: new Date(),
-      author: 'Admin'
-    }
+    { id: "1", title: "Article sur Yahweh", lastModified: new Date() },
+    { id: "2", title: "Les fêtes de Yahweh", lastModified: new Date() },
+    { id: "3", title: "Histoire de la nation", lastModified: new Date() },
   ],
   images: [
-    {
-      id: '1',
-      name: 'hero-banner.jpg',
-      url: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg',
-      alt: 'Image de bannière principale',
-      size: 2048000,
-      uploadDate: new Date()
-    }
-  ]
-};
+    { id: "1", url: "/placeholder.svg?height=100&width=150", alt: "Image 1" },
+    { id: "2", url: "/placeholder.svg?height=100&width=150", alt: "Image 2" },
+    { id: "3", url: "/placeholder.svg?height=100&width=150", alt: "Image 3" },
+    { id: "4", url: "/placeholder.svg?height=100&width=150", alt: "Image 4" },
+  ],
+}
 
-function appReducer(state: AppState, action: AppAction): AppState {
+function appReducer(state: AppState, action: any) {
   switch (action.type) {
-    case 'LOGIN':
-      return {
-        ...state,
-        user: action.payload,
-        isAuthenticated: true
-      };
-    case 'LOGOUT':
-      return {
-        ...state,
-        user: null,
-        isAuthenticated: false
-      };
-    case 'SET_PAGE':
-      return {
-        ...state,
-        currentPage: action.payload
-      };
-    case 'UPDATE_CONTENT':
-      return {
-        ...state,
-        content: state.content.map(item =>
-          item.id === action.payload.id ? action.payload : item
-        )
-      };
-    case 'DELETE_CONTENT':
-      return {
-        ...state,
-        content: state.content.filter(item => item.id !== action.payload)
-      };
-    case 'ADD_IMAGE':
-      return {
-        ...state,
-        images: [...state.images, action.payload]
-      };
-    case 'DELETE_IMAGE':
-      return {
-        ...state,
-        images: state.images.filter(item => item.id !== action.payload)
-      };
     default:
-      return state;
+      return state
   }
 }
 
-const AppContext = createContext<{
-  state: AppState;
-  dispatch: React.Dispatch<AppAction>;
-} | null>(null);
+export function AppProvider({ children }: { children: React.ReactNode }) {
+  const [state, dispatch] = useReducer(appReducer, initialState)
 
-export function AppProvider({ children }: { children: ReactNode }) {
-  const [state, dispatch] = useReducer(appReducer, initialState);
-
-  return (
-    <AppContext.Provider value={{ state, dispatch }}>
-      {children}
-    </AppContext.Provider>
-  );
+  return <AppContext.Provider value={{ state, dispatch }}>{children}</AppContext.Provider>
 }
 
 export function useApp() {
-  const context = useContext(AppContext);
-  if (!context) {
-    throw new Error('useApp must be used within an AppProvider');
+  const context = useContext(AppContext)
+  if (context === undefined) {
+    throw new Error("useApp must be used within an AppProvider")
   }
-  return context;
+  return context
 }

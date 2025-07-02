@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // admin/components/ProtectedRoute.tsx
+// "use client"
+
+// import type React from "react"
+// import { Navigate } from "react-router-dom"
+
+// interface ProtectedRouteProps {
+//   children: React.ReactNode
+//   requiresAuth?: boolean
+// }
+
+// export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, requiresAuth = false }) => {
+//   // En développement, on ignore la vérification
+//   if (process.env.NODE_ENV === "development") {
+//     return <>{children}</>
+//   }
+
+//   // En production, on garde la vérification normale
+//   const isAuthenticated = localStorage.getItem("adminToken") !== null
+//   if (requiresAuth && !isAuthenticated) {
+//     return <Navigate to="/admin/login" replace />
+//   }
+
+//   return <>{children}</>
+// }

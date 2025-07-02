@@ -13,14 +13,15 @@ const AdminLogin: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    navigate("/admin");
 
     // Logique de connexion simple (à remplacer par votre API)
-    if (credentials.email === "admin" && credentials.password === "password") {
-      localStorage.setItem("adminToken", "your-token-here");
-      navigate("/admin");
-    } else {
-      setError("Identifiants incorrects");
-    }
+    // if (credentials.email === "admin" && credentials.password === "password") {
+    //   localStorage.setItem("adminToken", "your-token-here");
+    //   navigate("/admin");
+    // } else {
+    //   setError("Identifiants incorrects");
+    // }
   };
 
   return (

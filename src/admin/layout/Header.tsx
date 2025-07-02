@@ -1,32 +1,32 @@
-import React from 'react';
-import { Bell, Search } from 'lucide-react';
 
-interface HeaderProps {
-  title: string;
-}
+"use client"
 
-export function Header({ title }: HeaderProps) {
+import { useNavigate } from "react-router-dom"
+import { LogOut, User } from "lucide-react"
+
+export function AdminNavbar() {
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    localStorage.removeItem("adminToken")
+    navigate("/admin/login")
+  }
+
   return (
-    <header className="header">
-      <div className="header-content">
-        <h2 className="header-title">{title}</h2>
-        
-        <div className="header-actions">
-          <div className="search-container">
-            <Search className="search-icon" size={20} />
-            <input
-              type="text"
-              placeholder="Rechercher..."
-              className="search-input"
-            />
+    <header className="admin-navbar">
+      <div className="navbar-content">
+        <h1>Administration</h1>
+        <div className="navbar-actions">
+          <div className="user-info">
+            <User size={20} />
+            <span>Admin</span>
           </div>
-          
-          <button className="notification-btn">
-            <Bell size={20} />
-            <span className="notification-badge">3</span>
+          <button onClick={handleLogout} className="logout-btn">
+            <LogOut size={20} />
+            <span>Déconnexion</span>
           </button>
         </div>
       </div>
     </header>
-  );
+  )
 }

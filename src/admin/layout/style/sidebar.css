@@ -1,0 +1,125 @@
+.sidebar-admin {
+  background-color: var(--slate-900);
+  color: white;
+  width: 256px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-header-admin {
+  padding: 24px;
+  border-bottom: 1px solid var(--slate-700);
+}
+.sidebar-title-admin {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.sidebar-subtitle-admin {
+  color: #94a3b8;
+  font-size: 14px;
+}
+.sidebar-nav-admin {
+  flex: 1;
+  padding: 16px;
+}
+.nav-list-admin {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.nav-item-admin button:hover {
+  background-color: var(--slate-800);
+  color: white;
+}
+
+.nav-item-admin button.active {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+.sidebar-footer-admin {
+  padding: 16px;
+  border-top: 1px solid var(--slate-700);
+}
+.user-info-admin {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.user-avatar-admin {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-details-admin h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-details-admin p {
+  font-size: 12px;
+  color: #94a3b8;
+}
+.nav-link-admin {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.75rem 1.5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 14px;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+}
+
+.nav-link-admin:hover {
+  background-color: #334155;
+  color: white;
+}
+
+.nav-link-admin.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.sidebar-nav-admin {
+  padding: 1rem 0;
+}
+
+.sidebar-nav-admin ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav-admin li {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar-admin {
+    width: 200px;
+  }
+}
+@media (max-width: 640px) {
+  .sidebar-admin {
+    width: 100%;
+    position: fixed;
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-admin.open {
+    transform: translateX(0);
+  }
+  }

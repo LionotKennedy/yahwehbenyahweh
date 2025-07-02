@@ -1,70 +1,53 @@
-import React from 'react';
-import { 
-  LayoutDashboard, 
-  FileText, 
-  Image, 
-  Settings, 
-  User,
-  LogOut 
-} from 'lucide-react';
-import { useApp } from '../contexts/AppContext';
+import { Link, useLocation } from "react-router-dom";
+import { LayoutDashboard, Users, FileText, Settings, User } from "lucide-react";
+import '../layout/style/sidebar.css'
 
-const menuItems = [
-  { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { id: 'content', label: 'Contenu', icon: FileText },
-  { id: 'images', label: 'Images', icon: Image },
-  { id: 'settings', label: 'Paramètres', icon: Settings },
-];
+export function AdminSidebar() {
+  const location = useLocation();
 
-export function Sidebar() {
-  const { state, dispatch } = useApp();
-
-  const handleLogout = () => {
-    dispatch({ type: 'LOGOUT' });
-  };
+  const menuItems = [
+    { path: "/admin", label: "Tableau de bord", icon: LayoutDashboard },
+    { path: "/admin/users", label: "Utilisateurs", icon: Users },
+    { path: "/admin/content", label: "Contenu", icon: FileText },
+    { path: "/admin/settings", label: "Paramètres", icon: Settings },
+  ];
 
   return (
-    <div className="sidebar">
-      <div className="sidebar-header">
-        <h1 className="sidebar-title">Back Office</h1>
-        <p className="sidebar-subtitle">Administration</p>
+    <div className="sidebar-admin">
+      <div className="sidebar-header-admin">
+        <h1 className="sidebar-title-admin">Back Office</h1>
+        <p className="sidebar-subtitle-admin">Administration</p>
       </div>
-
-      <nav className="sidebar-nav">
-        <ul className="nav-list">
+      <nav className="sidebar-nav-admin">
+        <ul className="nav-list-admin">
           {menuItems.map((item) => {
             const Icon = item.icon;
-            const isActive = state.currentPage === item.id;
-            
+            const isActive = location.pathname === item.path;
+
             return (
-              <li key={item.id} className="nav-item">
-                <button
-                  onClick={() => dispatch({ type: 'SET_PAGE', payload: item.id })}
-                  className={isActive ? 'active' : ''}
+              <li key={item.path} className="nav-item-admin">
+                <Link
+                  to={item.path}
+                  className={`nav-link-admin ${isActive ? "active" : ""}`}
                 >
                   <Icon size={20} />
                   <span>{item.label}</span>
-                </button>
+                </Link>
               </li>
             );
           })}
         </ul>
       </nav>
-
-      <div className="sidebar-footer">
-        <div className="user-info">
-          <div className="user-avatar">
+      <div className="sidebar-footer-admin">
+        <div className="user-info-admin">
+          <div className="user-avatar-admin">
             <User size={16} />
           </div>
-          <div className="user-details">
-            <h4>{state.user?.name}</h4>
-            <p>{state.user?.role}</p>
+          <div className="user-details-admin">
+            <h4>Admin</h4>
+            <p>admin</p>
           </div>
         </div>
-        <button onClick={handleLogout} className="logout-btn">
-          <LogOut size={16} />
-          <span>Déconnexion</span>
-        </button>
       </div>
     </div>
   );
