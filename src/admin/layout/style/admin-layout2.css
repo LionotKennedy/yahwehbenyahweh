@@ -1,0 +1,41 @@
+/* Pour le conteneur principal */
+.admin-layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Pour la sidebar */
+.sidebar-admin {
+  background-color: var(--slate-900);
+  color: white;
+  width: 256px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pour le contenu principal */
+.admin-content {
+  margin-left: 256px; /* Doit correspondre à la largeur de la sidebar */
+  width: calc(100% - 256px);
+}
+
+/* Pour la navbar */
+.admin-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  width: 100%;
+}
+
+/* Pour le contenu principal */
+.admin-main {
+  padding: 1.5rem;
+  min-height: calc(100vh - 60px); /* Ajustez selon la hauteur de votre navbar */
+}

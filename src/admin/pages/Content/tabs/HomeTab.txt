@@ -1,0 +1,1411 @@
+// import React from 'react';
+
+// const HomeTab: React.FC = () => {
+//   return (
+//     <div className="tab-content fade-in">
+//       <h2>Bienvenue sur notre site</h2>
+//       <p>Ceci est la page d'accueil. Vous trouverez ici les dernières actualités.</p>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+//      // États pour les valeurs modifiables
+//   const [videoLink, setVideoLink] = useState('https://example.com/video.mp4');
+//   const [title, setTitle] = useState('Welcome to our community');
+//   const [description, setDescription] = useState('This platform serves as a resource for spiritual growth and community connection.');
+  
+//   // États d'édition
+//   const [editingVideo, setEditingVideo] = useState(false);
+//   const [editingTitle, setEditingTitle] = useState(false);
+//   const [editingDescription, setEditingDescription] = useState(false);
+  
+//   // Fonctions de sauvegarde
+//   const saveVideoLink = () => {
+//     console.log('Video link saved:', videoLink);
+//     setEditingVideo(false);
+//     // Ici, vous ajouteriez l'appel API pour sauvegarder en base de données
+//   };
+  
+//   const saveTitle = () => {
+//     console.log('Title saved:', title);
+//     setEditingTitle(false);
+//   };
+  
+//   const saveDescription = () => {
+//     console.log('Description saved:', description);
+//     setEditingDescription(false);
+//   };
+
+
+
+
+
+
+
+
+//  <div className="home-tab">
+//       {/* Section Home - Édition Backoffice */}
+//       <section className="home-section admin-section">
+//         <h1 className="section-title">Home - Administration</h1>
+        
+//         {/* Champ Video Link */}
+//         <div className="admin-field">
+//           <label>Video Embed URL:</label>
+//           {editingVideo ? (
+//             <div className="edit-group">
+//               <input
+//                 type="text"
+//                 value={videoLink}
+//                 onChange={(e) => setVideoLink(e.target.value)}
+//                 className="admin-input"
+//               />
+//               <button onClick={saveVideoLink} className="save-btn">
+//                 Save
+//               </button>
+//               <button onClick={() => setEditingVideo(false)} className="cancel-btn">
+//                 Cancel
+//               </button>
+//             </div>
+//           ) : (
+//             <div className="display-group">
+//               <span>{videoLink}</span>
+//               <button onClick={() => setEditingVideo(true)} className="edit-btn">
+//                 Edit
+//               </button>
+//             </div>
+//           )}
+//         </div>
+        
+//         {/* Champ Title */}
+//         <div className="admin-field">
+//           <label>Section Title:</label>
+//           {editingTitle ? (
+//             <div className="edit-group">
+//               <input
+//                 type="text"
+//                 value={title}
+//                 onChange={(e) => setTitle(e.target.value)}
+//                 className="admin-input"
+//               />
+//               <button onClick={saveTitle} className="save-btn">
+//                 Save
+//               </button>
+//               <button onClick={() => setEditingTitle(false)} className="cancel-btn">
+//                 Cancel
+//               </button>
+//             </div>
+//           ) : (
+//             <div className="display-group">
+//               <span>{title}</span>
+//               <button onClick={() => setEditingTitle(true)} className="edit-btn">
+//                 Edit
+//               </button>
+//             </div>
+//           )}
+//         </div>
+        
+//         {/* Champ Description */}
+//         <div className="admin-field">
+//           <label>Description:</label>
+//           {editingDescription ? (
+//             <div className="edit-group">
+//               <textarea
+//                 value={description}
+//                 onChange={(e) => setDescription(e.target.value)}
+//                 className="admin-textarea"
+//                 rows={4}
+//               />
+//               <button onClick={saveDescription} className="save-btn">
+//                 Save
+//               </button>
+//               <button onClick={() => setEditingDescription(false)} className="cancel-btn">
+//                 Cancel
+//               </button>
+//             </div>
+//           ) : (
+//             <div className="display-group">
+//               <p>{description}</p>
+//               <button onClick={() => setEditingDescription(true)} className="edit-btn">
+//                 Edit
+//               </button>
+//             </div>
+//           )}
+//         </div>
+        
+//         {/* Aperçu Vidéo */}
+//         <div className="video-preview">
+//           <h3>Video Preview:</h3>
+//           <div className="video-container">
+//             {videoLink ? (
+//               <iframe
+//                 src={videoLink}
+//                 title="Community Video"
+//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//                 allowFullScreen
+//               />
+//             ) : (
+//               <div className="video-placeholder">No video URL provided</div>
+//             )}
+//           </div>
+//         </div>
+//       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import './style/HomeTab.css';
+
+
+
+// import './style/HomeTab.css';
+
+// const HomeTab: React.FC = () => {
+
+//   return (
+//     <div className="home-tab">
+//       {/* Section Home */}
+//       <section className="home-section">
+//         <h1 className="section-title">Home</h1>
+//         <div className="section-content">
+//           <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//           <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//         </div>
+//       </section>
+   
+
+//       {/* Section Yahweh */}
+//       <section className="yahweh-section">
+//         <h1 className="section-title">Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh is the sacred name of the Almighty Creator.</p>
+//           <p>We honor and worship Yahweh as the one true God.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Yahweh Ben Yahweh */}
+//       <section className="yahweh-ben-section">
+//         <h1 className="section-title">Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh Ben Yahweh, meaning "The Son of God," is our spiritual leader.</p>
+//           <p>His teachings guide us in the path of righteousness and truth.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Followers */}
+//       <section className="followers-section">
+//         <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>We are a community dedicated to living according to divine principles.</p>
+//           <p>Our fellowship is based on love, respect, and spiritual growth.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Cultural Attire */}
+//       <section className="attire-section">
+//         <h1 className="section-title">Cultural Attire</h1>
+//         <div className="section-content">
+//           <p>Our traditional garments reflect our spiritual identity and heritage.</p>
+//           <p>The attire symbolizes purity, dignity, and connection to our roots.</p>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client"
+
+// import type React from "react"
+// import { useState } from "react"
+// import "./style/HomeTab.css"
+// import "./style/HomeTab4.css"
+
+// interface HomeData {
+//   videoLink: string
+//   title: string
+//   description: string
+// }
+
+// const HomeTab: React.FC = () => {
+//   // État pour les données de la section Home
+//   const [homeData, setHomeData] = useState<HomeData>({
+//     videoLink: "https://example.com/video.mp4",
+//     title: "Welcome to the official website of the Yahweh Ben Yahweh community.",
+//     description: "This platform serves as a resource for spiritual growth and community connection.",
+//   })
+
+//   // États temporaires pour les champs en cours d'édition
+//   const [tempVideoLink, setTempVideoLink] = useState(homeData.videoLink)
+//   const [tempTitle, setTempTitle] = useState(homeData.title)
+//   const [tempDescription, setTempDescription] = useState(homeData.description)
+
+//   // États pour les indicateurs de sauvegarde
+//   const [savingStates, setSavingStates] = useState({
+//     videoLink: false,
+//     title: false,
+//     description: false,
+//   })
+
+//   // États pour les messages de succès
+//   const [successStates, setSuccessStates] = useState({
+//     videoLink: false,
+//     title: false,
+//     description: false,
+//   })
+
+//   // Fonction générique pour sauvegarder un champ
+//   const saveField = async (field: keyof HomeData, value: string) => {
+//     setSavingStates((prev) => ({ ...prev, [field]: true }))
+
+//     try {
+//       // Simulation d'un appel API
+//       await new Promise((resolve) => setTimeout(resolve, 1000))
+
+//       // Mise à jour des données
+//       setHomeData((prev) => ({ ...prev, [field]: value }))
+
+//       // Affichage du message de succès
+//       setSuccessStates((prev) => ({ ...prev, [field]: true }))
+
+//       // Masquer le message après 2 secondes
+//       setTimeout(() => {
+//         setSuccessStates((prev) => ({ ...prev, [field]: false }))
+//       }, 2000)
+//     } catch (error) {
+//       console.error("Erreur lors de la sauvegarde:", error)
+//     } finally {
+//       setSavingStates((prev) => ({ ...prev, [field]: false }))
+//     }
+//   }
+
+//   // Fonctions de sauvegarde spécifiques
+//   const saveVideoLink = () => saveField("videoLink", tempVideoLink)
+//   const saveTitle = () => saveField("title", tempTitle)
+//   const saveDescription = () => saveField("description", tempDescription)
+
+//   // Fonction pour vérifier si un champ a été modifié
+//   const isFieldModified = (field: keyof HomeData, tempValue: string) => {
+//     return homeData[field] !== tempValue
+//   }
+
+//   return (
+//     <div className="home-tab">
+//       {/* Section Home avec champs éditables */}
+//       <section className="home-section">
+//         <h1 className="section-title">Home - Configuration</h1>
+
+//         <div className="admin-panel">
+//           {/* Champ Lien Vidéo */}
+//           <div className="field-group">
+//             <label className="field-label">
+//               <span className="label-text">Lien Vidéo</span>
+//               <span className="label-required">*</span>
+//             </label>
+//             <div className="input-container">
+//               <input
+//                 type="url"
+//                 className="field-input"
+//                 value={tempVideoLink}
+//                 onChange={(e) => setTempVideoLink(e.target.value)}
+//                 placeholder="https://example.com/video.mp4"
+//               />
+//               <button
+//                 className={`save-btn ${isFieldModified("videoLink", tempVideoLink) ? "modified" : ""} ${savingStates.videoLink ? "saving" : ""} ${successStates.videoLink ? "success" : ""}`}
+//                 onClick={saveVideoLink}
+//                 disabled={savingStates.videoLink || !isFieldModified("videoLink", tempVideoLink)}
+//               >
+//                 {savingStates.videoLink ? (
+//                   <span className="btn-content">
+//                     <span className="spinner"></span>
+//                     Sauvegarde...
+//                   </span>
+//                 ) : successStates.videoLink ? (
+//                   <span className="btn-content">
+//                     <span className="check-icon">✓</span>
+//                     Sauvegardé
+//                   </span>
+//                 ) : (
+//                   <span className="btn-content">
+//                     <span className="save-icon">💾</span>
+//                     Sauvegarder
+//                   </span>
+//                 )}
+//               </button>
+//             </div>
+//             {successStates.videoLink && <div className="success-message">Lien vidéo mis à jour avec succès !</div>}
+//           </div>
+
+//           {/* Champ Titre */}
+//           <div className="field-group">
+//             <label className="field-label">
+//               <span className="label-text">Titre Principal</span>
+//               <span className="label-required">*</span>
+//             </label>
+//             <div className="input-container">
+//               <input
+//                 type="text"
+//                 className="field-input"
+//                 value={tempTitle}
+//                 onChange={(e) => setTempTitle(e.target.value)}
+//                 placeholder="Entrez le titre principal"
+//               />
+//               <button
+//                 className={`save-btn ${isFieldModified("title", tempTitle) ? "modified" : ""} ${savingStates.title ? "saving" : ""} ${successStates.title ? "success" : ""}`}
+//                 onClick={saveTitle}
+//                 disabled={savingStates.title || !isFieldModified("title", tempTitle)}
+//               >
+//                 {savingStates.title ? (
+//                   <span className="btn-content">
+//                     <span className="spinner"></span>
+//                     Sauvegarde...
+//                   </span>
+//                 ) : successStates.title ? (
+//                   <span className="btn-content">
+//                     <span className="check-icon">✓</span>
+//                     Sauvegardé
+//                   </span>
+//                 ) : (
+//                   <span className="btn-content">
+//                     <span className="save-icon">💾</span>
+//                     Sauvegarder
+//                   </span>
+//                 )}
+//               </button>
+//             </div>
+//             {successStates.title && <div className="success-message">Titre mis à jour avec succès !</div>}
+//           </div>
+
+//           {/* Champ Description */}
+//           <div className="field-group">
+//             <label className="field-label">
+//               <span className="label-text">Description</span>
+//               <span className="label-required">*</span>
+//             </label>
+//             <div className="input-container textarea-container">
+//               <textarea
+//                 className="field-textarea"
+//                 value={tempDescription}
+//                 onChange={(e) => setTempDescription(e.target.value)}
+//                 placeholder="Entrez la description"
+//                 rows={4}
+//               />
+//               <button
+//                 className={`save-btn ${isFieldModified("description", tempDescription) ? "modified" : ""} ${savingStates.description ? "saving" : ""} ${successStates.description ? "success" : ""}`}
+//                 onClick={saveDescription}
+//                 disabled={savingStates.description || !isFieldModified("description", tempDescription)}
+//               >
+//                 {savingStates.description ? (
+//                   <span className="btn-content">
+//                     <span className="spinner"></span>
+//                     Sauvegarde...
+//                   </span>
+//                 ) : successStates.description ? (
+//                   <span className="btn-content">
+//                     <span className="check-icon">✓</span>
+//                     Sauvegardé
+//                   </span>
+//                 ) : (
+//                   <span className="btn-content">
+//                     <span className="save-icon">💾</span>
+//                     Sauvegarder
+//                   </span>
+//                 )}
+//               </button>
+//             </div>
+//             {successStates.description && <div className="success-message">Description mise à jour avec succès !</div>}
+//           </div>
+
+//           {/* Aperçu des données actuelles */}
+//           <div className="preview-section">
+//             <h3 className="preview-title">Aperçu Actuel</h3>
+//             <div className="preview-content">
+//               <div className="preview-item">
+//                 <strong>Vidéo:</strong>
+//                 <a href={homeData.videoLink} target="_blank" rel="noopener noreferrer" className="video-link">
+//                   {homeData.videoLink}
+//                 </a>
+//               </div>
+//               <div className="preview-item">
+//                 <strong>Titre:</strong> {homeData.title}
+//               </div>
+//               <div className="preview-item">
+//                 <strong>Description:</strong> {homeData.description}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Autres sections inchangées */}
+//       <section className="yahweh-section">
+//         <h1 className="section-title">Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh is the sacred name of the Almighty Creator.</p>
+//           <p>We honor and worship Yahweh as the one true God.</p>
+//         </div>
+//       </section>
+
+//       <section className="yahweh-ben-section">
+//         <h1 className="section-title">Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh Ben Yahweh, meaning "The Son of God," is our spiritual leader.</p>
+//           <p>His teachings guide us in the path of righteousness and truth.</p>
+//         </div>
+//       </section>
+
+//       <section className="followers-section">
+//         <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>We are a community dedicated to living according to divine principles.</p>
+//           <p>Our fellowship is based on love, respect, and spiritual growth.</p>
+//         </div>
+//       </section>
+
+//       <section className="attire-section">
+//         <h1 className="section-title">Cultural Attire</h1>
+//         <div className="section-content">
+//           <p>Our traditional garments reflect our spiritual identity and heritage.</p>
+//           <p>The attire symbolizes purity, dignity, and connection to our roots.</p>
+//         </div>
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default HomeTab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import { Save, Video, Type, FileText } from 'lucide-react';
+// import './style/HomeTab.css';
+// import './style/HomeTab3.css';
+
+// const HomeTab: React.FC = () => {
+//   const [videoLink1, setVideoLink1] = useState('');
+//   const [videoLink2, setVideoLink2] = useState('');
+//   const [videoLink3, setVideoLink3] = useState('');
+//   const [title, setTitle] = useState('');
+//   const [description, setDescription] = useState('');
+
+//   const handleSaveVideoLink1 = () => {
+//     console.log('Video link 1 saved:', videoLink1);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveVideoLink2 = () => {
+//     console.log('Video link 2 saved:', videoLink2);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveVideoLink3 = () => {
+//     console.log('Video link 3 saved:', videoLink3);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveTitle = () => {
+//     console.log('Title saved:', title);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveDescription = () => {
+//     console.log('Description saved:', description);
+//     // Logique de sauvegarde ici
+//   };
+
+//   return (
+//     <div className="home-tab">
+//       {/* Section Home */}
+//       <section className="home-section">
+//         <h1 className="section-title">Home</h1>
+//         <div className="section-content">
+//           <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//           <p>This platform serves as a resource for spiritual growth and community connection.</p>
+          
+//           {/* Champs d'édition personnalisés */}
+//           <div className="admin-controls">
+//             <h3 className="admin-title">Administration des contenus</h3>
+            
+//             {/* Champ Lien Vidéo 1 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Video className="label-icon" size={16} />
+//                 Lien vidéo 1
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="url"
+//                   value={videoLink1}
+//                   onChange={(e) => setVideoLink1(e.target.value)}
+//                   placeholder="https://youtube.com/watch?v=..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveVideoLink1}
+//                   className="save-button video-save"
+//                   disabled={!videoLink1.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Lien Vidéo 2 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Video className="label-icon" size={16} />
+//                 Lien vidéo 2
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="url"
+//                   value={videoLink2}
+//                   onChange={(e) => setVideoLink2(e.target.value)}
+//                   placeholder="https://youtube.com/watch?v=..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveVideoLink2}
+//                   className="save-button video-save"
+//                   disabled={!videoLink2.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Lien Vidéo 3 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Video className="label-icon" size={16} />
+//                 Lien vidéo 3
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="url"
+//                   value={videoLink3}
+//                   onChange={(e) => setVideoLink3(e.target.value)}
+//                   placeholder="https://youtube.com/watch?v=..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveVideoLink3}
+//                   className="save-button video-save"
+//                   disabled={!videoLink3.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Titre */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Type className="label-icon" size={16} />
+//                 Titre
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="text"
+//                   value={title}
+//                   onChange={(e) => setTitle(e.target.value)}
+//                   placeholder="Entrez le titre..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveTitle}
+//                   className="save-button title-save"
+//                   disabled={!title.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Description */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={description}
+//                   onChange={(e) => setDescription(e.target.value)}
+//                   placeholder="Entrez la description..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveDescription}
+//                   className="save-button description-save"
+//                   disabled={!description.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Section Yahweh */}
+//       <section className="yahweh-section">
+//         <h1 className="section-title">Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh is the sacred name of the Almighty Creator.</p>
+//           <p>We honor and worship Yahweh as the one true God.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Yahweh Ben Yahweh */}
+//       <section className="yahweh-ben-section">
+//         <h1 className="section-title">Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh Ben Yahweh, meaning "The Son of God," is our spiritual leader.</p>
+//           <p>His teachings guide us in the path of righteousness and truth.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Followers */}
+//       <section className="followers-section">
+//         <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>We are a community dedicated to living according to divine principles.</p>
+//           <p>Our fellowship is based on love, respect, and spiritual growth.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Cultural Attire */}
+//       <section className="attire-section">
+//         <h1 className="section-title">Cultural Attire</h1>
+//         <div className="section-content">
+//           <p>Our traditional garments reflect our spiritual identity and heritage.</p>
+//           <p>The attire symbolizes purity, dignity, and connection to our roots.</p>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import { Save, Video, Type, FileText } from 'lucide-react';
+// import './style/HomeTab.css';
+// import './style/HomeTab3.css';
+
+// const HomeTab: React.FC = () => {
+//   const [videoLink1, setVideoLink1] = useState('');
+//   const [videoLink2, setVideoLink2] = useState('');
+//   const [videoLink3, setVideoLink3] = useState('');
+//   const [title, setTitle] = useState('');
+//   const [description, setDescription] = useState('');
+
+//   // États pour la section Yahweh
+//   const [yahwehTitle1, setYahwehTitle1] = useState('');
+//   const [yahwehTitle2, setYahwehTitle2] = useState('');
+//   const [yahwehDescription1, setYahwehDescription1] = useState('');
+//   const [yahwehDescription2, setYahwehDescription2] = useState('');
+//   const [yahwehDescription3, setYahwehDescription3] = useState('');
+//   const [yahwehDescription4, setYahwehDescription4] = useState('');
+//   const [yahwehDescription5, setYahwehDescription5] = useState('');
+//   const [yahwehDescription6, setYahwehDescription6] = useState('');
+
+//   const handleSaveVideoLink1 = () => {
+//     console.log('Video link 1 saved:', videoLink1);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveVideoLink2 = () => {
+//     console.log('Video link 2 saved:', videoLink2);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveVideoLink3 = () => {
+//     console.log('Video link 3 saved:', videoLink3);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveTitle = () => {
+//     console.log('Title saved:', title);
+//     // Logique de sauvegarde ici
+//   };
+
+//   const handleSaveDescription = () => {
+//     console.log('Description saved:', description);
+//     // Logique de sauvegarde ici
+//   };
+
+//   // Fonctions de sauvegarde pour la section Yahweh
+//   const handleSaveYahwehTitle1 = () => {
+//     console.log('Yahweh Title 1 saved:', yahwehTitle1);
+//   };
+
+//   const handleSaveYahwehTitle2 = () => {
+//     console.log('Yahweh Title 2 saved:', yahwehTitle2);
+//   };
+
+//   const handleSaveYahwehDescription1 = () => {
+//     console.log('Yahweh Description 1 saved:', yahwehDescription1);
+//   };
+
+//   const handleSaveYahwehDescription2 = () => {
+//     console.log('Yahweh Description 2 saved:', yahwehDescription2);
+//   };
+
+//   const handleSaveYahwehDescription3 = () => {
+//     console.log('Yahweh Description 3 saved:', yahwehDescription3);
+//   };
+
+//   const handleSaveYahwehDescription4 = () => {
+//     console.log('Yahweh Description 4 saved:', yahwehDescription4);
+//   };
+
+//   const handleSaveYahwehDescription5 = () => {
+//     console.log('Yahweh Description 5 saved:', yahwehDescription5);
+//   };
+
+//   const handleSaveYahwehDescription6 = () => {
+//     console.log('Yahweh Description 6 saved:', yahwehDescription6);
+//   };
+
+//   return (
+//     <div className="home-tab">
+//       {/* Section Home */}
+//       <section className="home-section">
+//         <h1 className="section-title">Home</h1>
+//         <div className="section-content">
+//           <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//           <p>This platform serves as a resource for spiritual growth and community connection.</p>
+          
+//           {/* Champs d'édition personnalisés */}
+//           <div className="admin-controls">
+//             <h3 className="admin-title">Administration des contenus</h3>
+            
+//             {/* Champ Lien Vidéo 1 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Video className="label-icon" size={16} />
+//                 Lien vidéo 1
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="url"
+//                   value={videoLink1}
+//                   onChange={(e) => setVideoLink1(e.target.value)}
+//                   placeholder="https://youtube.com/watch?v=..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveVideoLink1}
+//                   className="save-button video-save"
+//                   disabled={!videoLink1.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Lien Vidéo 2 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Video className="label-icon" size={16} />
+//                 Lien vidéo 2
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="url"
+//                   value={videoLink2}
+//                   onChange={(e) => setVideoLink2(e.target.value)}
+//                   placeholder="https://youtube.com/watch?v=..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveVideoLink2}
+//                   className="save-button video-save"
+//                   disabled={!videoLink2.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Lien Vidéo 3 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Video className="label-icon" size={16} />
+//                 Lien vidéo 3
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="url"
+//                   value={videoLink3}
+//                   onChange={(e) => setVideoLink3(e.target.value)}
+//                   placeholder="https://youtube.com/watch?v=..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveVideoLink3}
+//                   className="save-button video-save"
+//                   disabled={!videoLink3.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Titre */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Type className="label-icon" size={16} />
+//                 Titre
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="text"
+//                   value={title}
+//                   onChange={(e) => setTitle(e.target.value)}
+//                   placeholder="Entrez le titre..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveTitle}
+//                   className="save-button title-save"
+//                   disabled={!title.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Champ Description */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={description}
+//                   onChange={(e) => setDescription(e.target.value)}
+//                   placeholder="Entrez la description..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveDescription}
+//                   className="save-button description-save"
+//                   disabled={!description.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Section Yahweh */}
+//       <section className="yahweh-section">
+//         <h1 className="section-title">Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh is the sacred name of the Almighty Creator.</p>
+//           <p>We honor and worship Yahweh as the one true God.</p>
+          
+//           {/* Champs d'édition pour la section Yahweh */}
+//           <div className="admin-controls">
+//             <h3 className="admin-title">Administration Yahweh</h3>
+            
+//             {/* Titre 1 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Type className="label-icon" size={16} />
+//                 Titre 1
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="text"
+//                   value={yahwehTitle1}
+//                   onChange={(e) => setYahwehTitle1(e.target.value)}
+//                   placeholder="Entrez le titre 1..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehTitle1}
+//                   className="save-button title-save"
+//                   disabled={!yahwehTitle1.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Titre 2 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <Type className="label-icon" size={16} />
+//                 Titre 2
+//               </label>
+//               <div className="input-wrapper">
+//                 <input
+//                   type="text"
+//                   value={yahwehTitle2}
+//                   onChange={(e) => setYahwehTitle2(e.target.value)}
+//                   placeholder="Entrez le titre 2..."
+//                   className="custom-input"
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehTitle2}
+//                   className="save-button title-save"
+//                   disabled={!yahwehTitle2.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Description 1 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description 1
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={yahwehDescription1}
+//                   onChange={(e) => setYahwehDescription1(e.target.value)}
+//                   placeholder="Entrez la description 1..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehDescription1}
+//                   className="save-button description-save"
+//                   disabled={!yahwehDescription1.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Description 2 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description 2
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={yahwehDescription2}
+//                   onChange={(e) => setYahwehDescription2(e.target.value)}
+//                   placeholder="Entrez la description 2..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehDescription2}
+//                   className="save-button description-save"
+//                   disabled={!yahwehDescription2.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Description 3 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description 3
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={yahwehDescription3}
+//                   onChange={(e) => setYahwehDescription3(e.target.value)}
+//                   placeholder="Entrez la description 3..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehDescription3}
+//                   className="save-button description-save"
+//                   disabled={!yahwehDescription3.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Description 4 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description 4
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={yahwehDescription4}
+//                   onChange={(e) => setYahwehDescription4(e.target.value)}
+//                   placeholder="Entrez la description 4..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehDescription4}
+//                   className="save-button description-save"
+//                   disabled={!yahwehDescription4.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Description 5 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description 5
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={yahwehDescription5}
+//                   onChange={(e) => setYahwehDescription5(e.target.value)}
+//                   placeholder="Entrez la description 5..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehDescription5}
+//                   className="save-button description-save"
+//                   disabled={!yahwehDescription5.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Description 6 */}
+//             <div className="input-group">
+//               <label className="input-label">
+//                 <FileText className="label-icon" size={16} />
+//                 Description 6
+//               </label>
+//               <div className="input-wrapper">
+//                 <textarea
+//                   value={yahwehDescription6}
+//                   onChange={(e) => setYahwehDescription6(e.target.value)}
+//                   placeholder="Entrez la description 6..."
+//                   className="custom-textarea"
+//                   rows={3}
+//                 />
+//                 <button 
+//                   onClick={handleSaveYahwehDescription6}
+//                   className="save-button description-save"
+//                   disabled={!yahwehDescription6.trim()}
+//                 >
+//                   <Save size={14} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Section Yahweh Ben Yahweh */}
+//       <section className="yahweh-ben-section">
+//         <h1 className="section-title">Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>Yahweh Ben Yahweh, meaning "The Son of God," is our spiritual leader.</p>
+//           <p>His teachings guide us in the path of righteousness and truth.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Followers */}
+//       <section className="followers-section">
+//         <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//         <div className="section-content">
+//           <p>We are a community dedicated to living according to divine principles.</p>
+//           <p>Our fellowship is based on love, respect, and spiritual growth.</p>
+//         </div>
+//       </section>
+
+//       {/* Section Cultural Attire */}
+//       <section className="attire-section">
+//         <h1 className="section-title">Cultural Attire</h1>
+//         <div className="section-content">
+//           <p>Our traditional garments reflect our spiritual identity and heritage.</p>
+//           <p>The attire symbolizes purity, dignity, and connection to our roots.</p>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

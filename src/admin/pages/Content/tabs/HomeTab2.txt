@@ -1,0 +1,805 @@
+
+import React, { useState } from 'react';
+import { Save, Video, Type, FileText } from 'lucide-react';
+import './style/HomeTab.css';
+import './style/HomeTab3.css';
+
+const HomeTab: React.FC = () => {
+  const [videoLink1, setVideoLink1] = useState('');
+  const [videoLink2, setVideoLink2] = useState('');
+  const [videoLink3, setVideoLink3] = useState('');
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+
+  // États pour la section Yahweh
+  const [yahwehTitle1, setYahwehTitle1] = useState('');
+  const [yahwehTitle2, setYahwehTitle2] = useState('');
+  const [yahwehDescription1, setYahwehDescription1] = useState('');
+  const [yahwehDescription2, setYahwehDescription2] = useState('');
+  const [yahwehDescription3, setYahwehDescription3] = useState('');
+  const [yahwehDescription4, setYahwehDescription4] = useState('');
+  const [yahwehDescription5, setYahwehDescription5] = useState('');
+  const [yahwehDescription6, setYahwehDescription6] = useState('');
+
+  // États pour la section Yahweh Ben Yahweh
+  const [yahwehBenTitle1, setYahwehBenTitle1] = useState('');
+  const [yahwehBenTitle2, setYahwehBenTitle2] = useState('');
+  const [yahwehBenDescription1, setYahwehBenDescription1] = useState('');
+  const [yahwehBenDescription2, setYahwehBenDescription2] = useState('');
+  const [yahwehBenDescription3, setYahwehBenDescription3] = useState('');
+  const [yahwehBenDescription4, setYahwehBenDescription4] = useState('');
+  const [yahwehBenDescription5, setYahwehBenDescription5] = useState('');
+  const [yahwehBenDescription6, setYahwehBenDescription6] = useState('');
+  const [yahwehBenDescription7, setYahwehBenDescription7] = useState('');
+  const [yahwehBenDescription8, setYahwehBenDescription8] = useState('');
+  const [yahwehBenDescription9, setYahwehBenDescription9] = useState('');
+
+  const handleSaveVideoLink1 = () => {
+    console.log('Video link 1 saved:', videoLink1);
+    // Logique de sauvegarde ici
+  };
+
+  const handleSaveVideoLink2 = () => {
+    console.log('Video link 2 saved:', videoLink2);
+    // Logique de sauvegarde ici
+  };
+
+  const handleSaveVideoLink3 = () => {
+    console.log('Video link 3 saved:', videoLink3);
+    // Logique de sauvegarde ici
+  };
+
+  const handleSaveTitle = () => {
+    console.log('Title saved:', title);
+    // Logique de sauvegarde ici
+  };
+
+  const handleSaveDescription = () => {
+    console.log('Description saved:', description);
+    // Logique de sauvegarde ici
+  };
+
+  // Fonctions de sauvegarde pour la section Yahweh
+  const handleSaveYahwehTitle1 = () => {
+    console.log('Yahweh Title 1 saved:', yahwehTitle1);
+  };
+
+  const handleSaveYahwehTitle2 = () => {
+    console.log('Yahweh Title 2 saved:', yahwehTitle2);
+  };
+
+  const handleSaveYahwehDescription1 = () => {
+    console.log('Yahweh Description 1 saved:', yahwehDescription1);
+  };
+
+  const handleSaveYahwehDescription2 = () => {
+    console.log('Yahweh Description 2 saved:', yahwehDescription2);
+  };
+
+  const handleSaveYahwehDescription3 = () => {
+    console.log('Yahweh Description 3 saved:', yahwehDescription3);
+  };
+
+  const handleSaveYahwehDescription4 = () => {
+    console.log('Yahweh Description 4 saved:', yahwehDescription4);
+  };
+
+  const handleSaveYahwehDescription5 = () => {
+    console.log('Yahweh Description 5 saved:', yahwehDescription5);
+  };
+
+  const handleSaveYahwehDescription6 = () => {
+    console.log('Yahweh Description 6 saved:', yahwehDescription6);
+  };
+
+  // Fonctions de sauvegarde pour la section Yahweh Ben Yahweh
+  const handleSaveYahwehBenTitle1 = () => {
+    console.log('Yahweh Ben Title 1 saved:', yahwehBenTitle1);
+  };
+
+  const handleSaveYahwehBenTitle2 = () => {
+    console.log('Yahweh Ben Title 2 saved:', yahwehBenTitle2);
+  };
+
+  const handleSaveYahwehBenDescription1 = () => {
+    console.log('Yahweh Ben Description 1 saved:', yahwehBenDescription1);
+  };
+
+  const handleSaveYahwehBenDescription2 = () => {
+    console.log('Yahweh Ben Description 2 saved:', yahwehBenDescription2);
+  };
+
+  const handleSaveYahwehBenDescription3 = () => {
+    console.log('Yahweh Ben Description 3 saved:', yahwehBenDescription3);
+  };
+
+  const handleSaveYahwehBenDescription4 = () => {
+    console.log('Yahweh Ben Description 4 saved:', yahwehBenDescription4);
+  };
+
+  const handleSaveYahwehBenDescription5 = () => {
+    console.log('Yahweh Ben Description 5 saved:', yahwehBenDescription5);
+  };
+
+  const handleSaveYahwehBenDescription6 = () => {
+    console.log('Yahweh Ben Description 6 saved:', yahwehBenDescription6);
+  };
+
+  const handleSaveYahwehBenDescription7 = () => {
+    console.log('Yahweh Ben Description 7 saved:', yahwehBenDescription7);
+  };
+
+  const handleSaveYahwehBenDescription8 = () => {
+    console.log('Yahweh Ben Description 8 saved:', yahwehBenDescription8);
+  };
+
+  const handleSaveYahwehBenDescription9 = () => {
+    console.log('Yahweh Ben Description 9 saved:', yahwehBenDescription9);
+  };
+
+  return (
+    <div className="home-tab">
+      {/* Section Home */}
+      <section className="home-section">
+        <h1 className="section-title">Homefffff</h1>
+        <div className="section-content">
+          <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+          <p>This platform serves as a resource for spiritual growth and community connection.</p>
+          
+          {/* Champs d'édition personnalisés */}
+          <div className="admin-controls">
+            <h3 className="admin-title">Administration des contenus</h3>
+            
+            {/* Champ Lien Vidéo 1 */}
+            <div className="input-group">
+              <label className="input-label">
+                <Video className="label-icon" size={16} />
+                Lien vidéo 1
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="url"
+                  value={videoLink1}
+                  onChange={(e) => setVideoLink1(e.target.value)}
+                  placeholder="https://youtube.com/watch?v=..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveVideoLink1}
+                  className="save-button video-save"
+                  disabled={!videoLink1.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Champ Lien Vidéo 2 */}
+            <div className="input-group">
+              <label className="input-label">
+                <Video className="label-icon" size={16} />
+                Lien vidéo 2
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="url"
+                  value={videoLink2}
+                  onChange={(e) => setVideoLink2(e.target.value)}
+                  placeholder="https://youtube.com/watch?v=..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveVideoLink2}
+                  className="save-button video-save"
+                  disabled={!videoLink2.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Champ Lien Vidéo 3 */}
+            <div className="input-group">
+              <label className="input-label">
+                <Video className="label-icon" size={16} />
+                Lien vidéo 3
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="url"
+                  value={videoLink3}
+                  onChange={(e) => setVideoLink3(e.target.value)}
+                  placeholder="https://youtube.com/watch?v=..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveVideoLink3}
+                  className="save-button video-save"
+                  disabled={!videoLink3.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Champ Titre */}
+            <div className="input-group">
+              <label className="input-label">
+                <Type className="label-icon" size={16} />
+                Titre
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder="Entrez le titre..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveTitle}
+                  className="save-button title-save"
+                  disabled={!title.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Champ Description */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="Entrez la description..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveDescription}
+                  className="save-button description-save"
+                  disabled={!description.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Yahweh */}
+      <section className="yahweh-section">
+        <h1 className="section-title">Yahweh</h1>
+        <div className="section-content">
+          <p>Yahweh is the sacred name of the Almighty Creator.</p>
+          <p>We honor and worship Yahweh as the one true God.</p>
+          
+          {/* Champs d'édition pour la section Yahweh */}
+          <div className="admin-controls">
+            <h3 className="admin-title">Administration Yahweh</h3>
+            
+            {/* Titre 1 */}
+            <div className="input-group">
+              <label className="input-label">
+                <Type className="label-icon" size={16} />
+                Titre 1
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  value={yahwehTitle1}
+                  onChange={(e) => setYahwehTitle1(e.target.value)}
+                  placeholder="Entrez le titre 1..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveYahwehTitle1}
+                  className="save-button title-save"
+                  disabled={!yahwehTitle1.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Titre 2 */}
+            <div className="input-group">
+              <label className="input-label">
+                <Type className="label-icon" size={16} />
+                Titre 2
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  value={yahwehTitle2}
+                  onChange={(e) => setYahwehTitle2(e.target.value)}
+                  placeholder="Entrez le titre 2..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveYahwehTitle2}
+                  className="save-button title-save"
+                  disabled={!yahwehTitle2.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 1 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 1
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehDescription1}
+                  onChange={(e) => setYahwehDescription1(e.target.value)}
+                  placeholder="Entrez la description 1..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehDescription1}
+                  className="save-button description-save"
+                  disabled={!yahwehDescription1.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 2 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 2
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehDescription2}
+                  onChange={(e) => setYahwehDescription2(e.target.value)}
+                  placeholder="Entrez la description 2..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehDescription2}
+                  className="save-button description-save"
+                  disabled={!yahwehDescription2.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 3 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 3
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehDescription3}
+                  onChange={(e) => setYahwehDescription3(e.target.value)}
+                  placeholder="Entrez la description 3..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehDescription3}
+                  className="save-button description-save"
+                  disabled={!yahwehDescription3.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 4 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 4
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehDescription4}
+                  onChange={(e) => setYahwehDescription4(e.target.value)}
+                  placeholder="Entrez la description 4..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehDescription4}
+                  className="save-button description-save"
+                  disabled={!yahwehDescription4.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 5 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 5
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehDescription5}
+                  onChange={(e) => setYahwehDescription5(e.target.value)}
+                  placeholder="Entrez la description 5..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehDescription5}
+                  className="save-button description-save"
+                  disabled={!yahwehDescription5.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 6 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 6
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehDescription6}
+                  onChange={(e) => setYahwehDescription6(e.target.value)}
+                  placeholder="Entrez la description 6..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehDescription6}
+                  className="save-button description-save"
+                  disabled={!yahwehDescription6.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Yahweh Ben Yahweh */}
+      <section className="yahweh-ben-section">
+        <h1 className="section-title">Yahweh Ben Yahweh</h1>
+        <div className="section-content">
+          <p>Yahweh Ben Yahweh, meaning "The Son of God," is our spiritual leader.</p>
+          <p>His teachings guide us in the path of righteousness and truth.</p>
+          
+          {/* Champs d'édition pour la section Yahweh Ben Yahweh */}
+          <div className="admin-controls">
+            <h3 className="admin-title">Administration Yahweh Ben Yahweh</h3>
+            
+            {/* Titre 1 */}
+            <div className="input-group">
+              <label className="input-label">
+                <Type className="label-icon" size={16} />
+                Titre 1
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  value={yahwehBenTitle1}
+                  onChange={(e) => setYahwehBenTitle1(e.target.value)}
+                  placeholder="Entrez le titre 1..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveYahwehBenTitle1}
+                  className="save-button title-save"
+                  disabled={!yahwehBenTitle1.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Titre 2 */}
+            <div className="input-group">
+              <label className="input-label">
+                <Type className="label-icon" size={16} />
+                Titre 2
+              </label>
+              <div className="input-wrapper">
+                <input
+                  type="text"
+                  value={yahwehBenTitle2}
+                  onChange={(e) => setYahwehBenTitle2(e.target.value)}
+                  placeholder="Entrez le titre 2..."
+                  className="custom-input"
+                />
+                <button 
+                  onClick={handleSaveYahwehBenTitle2}
+                  className="save-button title-save"
+                  disabled={!yahwehBenTitle2.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 1 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 1
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription1}
+                  onChange={(e) => setYahwehBenDescription1(e.target.value)}
+                  placeholder="Entrez la description 1..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription1}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription1.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 2 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 2
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription2}
+                  onChange={(e) => setYahwehBenDescription2(e.target.value)}
+                  placeholder="Entrez la description 2..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription2}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription2.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 3 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 3
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription3}
+                  onChange={(e) => setYahwehBenDescription3(e.target.value)}
+                  placeholder="Entrez la description 3..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription3}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription3.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 4 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 4
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription4}
+                  onChange={(e) => setYahwehBenDescription4(e.target.value)}
+                  placeholder="Entrez la description 4..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription4}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription4.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 5 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 5
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription5}
+                  onChange={(e) => setYahwehBenDescription5(e.target.value)}
+                  placeholder="Entrez la description 5..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription5}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription5.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 6 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 6
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription6}
+                  onChange={(e) => setYahwehBenDescription6(e.target.value)}
+                  placeholder="Entrez la description 6..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription6}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription6.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 7 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 7
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription7}
+                  onChange={(e) => setYahwehBenDescription7(e.target.value)}
+                  placeholder="Entrez la description 7..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription7}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription7.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 8 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 8
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription8}
+                  onChange={(e) => setYahwehBenDescription8(e.target.value)}
+                  placeholder="Entrez la description 8..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription8}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription8.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+
+            {/* Description 9 */}
+            <div className="input-group">
+              <label className="input-label">
+                <FileText className="label-icon" size={16} />
+                Description 9
+              </label>
+              <div className="input-wrapper">
+                <textarea
+                  value={yahwehBenDescription9}
+                  onChange={(e) => setYahwehBenDescription9(e.target.value)}
+                  placeholder="Entrez la description 9..."
+                  className="custom-textarea"
+                  rows={3}
+                />
+                <button 
+                  onClick={handleSaveYahwehBenDescription9}
+                  className="save-button description-save"
+                  disabled={!yahwehBenDescription9.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Followers */}
+      <section className="followers-section">
+        <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+        <div className="section-content">
+          <p>We are a community dedicated to living according to divine principles.</p>
+          <p>Our fellowship is based on love, respect, and spiritual growth.</p>
+        </div>
+      </section>
+
+      {/* Section Cultural Attire */}
+      <section className="attire-section">
+        <h1 className="section-title">Cultural Attire</h1>
+        <div className="section-content">
+          <p>Our traditional garments reflect our spiritual identity and heritage.</p>
+          <p>The attire symbolizes purity, dignity, and connection to our roots.</p>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default HomeTab;

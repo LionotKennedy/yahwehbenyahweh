@@ -1,0 +1,350 @@
+/* Styles existants pour les sections */
+.home-tab {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.section-content {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #3498db;
+}
+
+/* Nouveaux styles pour le panneau d'administration */
+.admin-panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e8ed;
+  margin-bottom: 2rem;
+}
+
+.field-group {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.label-text {
+  margin-right: 0.25rem;
+}
+
+.label-required {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.textarea-container {
+  align-items: flex-end;
+}
+
+.field-input,
+.field-textarea {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+.field-input:focus,
+.field-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  background: #fafbfc;
+}
+
+.field-textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+.save-btn {
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  position: relative;
+  overflow: hidden;
+  background: #95a5a6;
+  color: #ffffff;
+}
+
+.save-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.save-btn.modified {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  transform: translateY(-1px);
+}
+
+.save-btn.modified:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  transform: translateY(-2px);
+}
+
+.save-btn.saving {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  pointer-events: none;
+}
+
+.save-btn.success {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.check-icon {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.save-icon {
+  font-size: 1rem;
+}
+
+.success-message {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #d5f4e6, #a8e6cf);
+  color: #27ae60;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-left: 4px solid #27ae60;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.preview-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #ecf0f1;
+}
+
+.preview-title {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.preview-title::before {
+  content: "👁️";
+  font-size: 1.2rem;
+}
+
+.preview-content {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.preview-item {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-radius: 6px;
+  border-left: 3px solid #3498db;
+}
+
+.preview-item:last-child {
+  margin-bottom: 0;
+}
+
+.preview-item strong {
+  color: #2c3e50;
+  display: inline-block;
+  min-width: 100px;
+  margin-right: 0.5rem;
+}
+
+.video-link {
+  color: #3498db;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.3s ease;
+}
+
+.video-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Styles pour les autres sections */
+.yahweh-section,
+.yahweh-ben-section,
+.followers-section,
+.attire-section {
+  margin-bottom: 2rem;
+}
+
+.yahweh-section .section-title {
+  border-bottom-color: #9b59b6;
+}
+
+.yahweh-section .section-content {
+  border-left-color: #9b59b6;
+}
+
+.yahweh-ben-section .section-title {
+  border-bottom-color: #e74c3c;
+}
+
+.yahweh-ben-section .section-content {
+  border-left-color: #e74c3c;
+}
+
+.followers-section .section-title {
+  border-bottom-color: #f39c12;
+}
+
+.followers-section .section-content {
+  border-left-color: #f39c12;
+}
+
+.attire-section .section-title {
+  border-bottom-color: #1abc9c;
+}
+
+.attire-section .section-content {
+  border-left-color: #1abc9c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-tab {
+    padding: 15px;
+  }
+
+  .admin-panel {
+    padding: 1.5rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .textarea-container {
+    align-items: stretch;
+  }
+
+  .save-btn {
+    margin-top: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .preview-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-panel {
+    padding: 1rem;
+  }
+
+  .field-input,
+  .field-textarea {
+    padding: 0.75rem;
+  }
+
+  .save-btn {
+    padding: 0.75rem 1rem;
+    min-width: 120px;
+  }
+}
