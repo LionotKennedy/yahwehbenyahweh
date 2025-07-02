@@ -65,6 +65,14 @@ function App() {
                 // </ProtectedRoute>
               }
             />
+            <Route
+              path="images"
+              element={
+                // <ProtectedRoute requiresAuth={true}>
+                <AdminImage />
+                // </ProtectedRoute>
+              }
+            />
           </Route>
 
           {/* Layout Client */}
@@ -91,6 +99,7 @@ function App() {
 const AdminDashboard = React.lazy(() => import("./admin/pages/Dashboard/Dashboard"))
 const AdminUsers = React.lazy(() => import("./admin/pages/Users/Users"))
 const AdminContent = React.lazy(() => import("./admin/pages/Content/Content"))
+const AdminImage = React.lazy(() => import("./admin/pages/Image/Image"))
 const AdminSettings = React.lazy(() => import("./admin/pages/Settings/Settings"))
 
 export default App

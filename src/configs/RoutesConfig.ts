@@ -117,6 +117,7 @@ const shockingRevelationsPage3 = {
 const AdminDashboard = lazy(() => import("../admin/pages/Dashboard/Dashboard"))
 const AdminUsers = lazy(() => import("../admin/pages/Users/Users"))
 const AdminContent = lazy(() => import("../admin/pages/Content/Content"))
+const AdminImage = lazy(() => import("../admin/pages/Image/Image"))
 const AdminSettings = lazy(() => import("../admin/pages/Settings/Settings"))
 
 export interface RouteConfig {
@@ -158,6 +159,7 @@ export const routesConfig: RouteConfig[] = [
     { path: "/admin", component: AdminDashboard, requiresAuth: true },
     { path: "/admin/users", component: AdminUsers, requiresAuth: true },
     { path: "/admin/content", component: AdminContent, requiresAuth: true },
+    { path: "/admin/images", component: AdminImage, requiresAuth: true },
     { path: "/admin/settings", component: AdminSettings, requiresAuth: true },
 ]
 
