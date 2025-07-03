@@ -1,0 +1,22 @@
+{
+  "homePage": {
+    "videoSection": {
+      "title": "AFAKA MAMANTATRA NY ZANAKA VE IANAO?",
+      "content": "Ho fantatrao Ve Izy? Iza no Anarany, raha tohizinao? Hijery tahaky ny aho Izy rehefa miverina amin'ny Fiverenany Fanindroany mba haka antsika ho any Aminy? Valiny ireo fanontaniana ireo sy maro hafa koa no hita ao amin'ity sety DVD misy kapila roa mahery ity, antsoina hoe, \"I Yahweh Ben Yahweh no Andriamanitra Marina sy ny Fiainana Mandrakizay.\" Mipetraha tsara ka jereo ity sombin-dahatsary fohy ity, ary baovao izao mba hahazoanao ny hafatra feno famonjena avy Aminy."
+    },
+    "videos": [
+      {
+        "src": "https://ms.yahwehbenyahweh.com/video/720/2025_FeastThemeVideo_New.mp4",
+        "poster": "page-banner_.jpg"
+      },
+      {
+        "src": "https://ms.yahwehbenyahweh.com/video/720/Good_News_Commercial.mp4",
+        "poster": "Good_News_of_Yahweh.jpg"
+      },
+      {
+        "src": "https://ms.yahwehbenyahweh.com/video/720/Home_Page_Promo.mp4",
+        "poster": "Eternal_Life.jpg"
+      }
+    ]
+  }
+}

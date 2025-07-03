@@ -1,4 +1,241 @@
-import React, { useState } from "react";
+
+  // const handleSaveVideoLink1 = () => {
+  //   console.log("Video link 1 saved:", videoLink1);
+  //   // Logique de sauvegarde ici
+  // };
+
+  // const handleSaveVideoLink2 = () => {
+  //   console.log("Video link 2 saved:", videoLink2);
+  //   // Logique de sauvegarde ici
+  // };
+
+  // const handleSaveVideoLink3 = () => {
+  //   console.log("Video link 3 saved:", videoLink3);
+  //   // Logique de sauvegarde ici
+  // };
+
+  // const handleSaveTitle = () => {
+  //   console.log("Title saved:", title);
+  //   // Logique de sauvegarde ici
+  // };
+
+  // const handleSaveDescription = () => {
+  //   console.log("Description saved:", description);
+  //   // Logique de sauvegarde ici
+  // };
+
+  // // Fonctions de sauvegarde pour la section Yahweh
+  // const handleSaveYahwehTitle1 = () => {
+  //   console.log("Yahweh Title 1 saved:", yahwehTitle1);
+  // };
+
+  // const handleSaveYahwehTitle2 = () => {
+  //   console.log("Yahweh Title 2 saved:", yahwehTitle2);
+  // };
+
+  // const handleSaveYahwehDescription1 = () => {
+  //   console.log("Yahweh Description 1 saved:", yahwehDescription1);
+  // };
+
+  // const handleSaveYahwehDescription2 = () => {
+  //   console.log("Yahweh Description 2 saved:", yahwehDescription2);
+  // };
+
+  // const handleSaveYahwehDescription3 = () => {
+  //   console.log("Yahweh Description 3 saved:", yahwehDescription3);
+  // };
+
+  // const handleSaveYahwehDescription4 = () => {
+  //   console.log("Yahweh Description 4 saved:", yahwehDescription4);
+  // };
+
+  // const handleSaveYahwehDescription5 = () => {
+  //   console.log("Yahweh Description 5 saved:", yahwehDescription5);
+  // };
+
+  // const handleSaveYahwehDescription6 = () => {
+  //   console.log("Yahweh Description 6 saved:", yahwehDescription6);
+  // };
+
+  // // Fonctions de sauvegarde pour la section Yahweh Ben Yahweh
+  // const handleSaveYahwehBenTitle1 = () => {
+  //   console.log("Yahweh Ben Title 1 saved:", yahwehBenTitle1);
+  // };
+
+  // const handleSaveYahwehBenTitle2 = () => {
+  //   console.log("Yahweh Ben Title 2 saved:", yahwehBenTitle2);
+  // };
+
+  // const handleSaveYahwehBenDescription1 = () => {
+  //   console.log("Yahweh Ben Description 1 saved:", yahwehBenDescription1);
+  // };
+
+  // const handleSaveYahwehBenDescription2 = () => {
+  //   console.log("Yahweh Ben Description 2 saved:", yahwehBenDescription2);
+  // };
+
+  // const handleSaveYahwehBenDescription3 = () => {
+  //   console.log("Yahweh Ben Description 3 saved:", yahwehBenDescription3);
+  // };
+
+  // const handleSaveYahwehBenDescription4 = () => {
+  //   console.log("Yahweh Ben Description 4 saved:", yahwehBenDescription4);
+  // };
+
+  // const handleSaveYahwehBenDescription5 = () => {
+  //   console.log("Yahweh Ben Description 5 saved:", yahwehBenDescription5);
+  // };
+
+  // const handleSaveYahwehBenDescription6 = () => {
+  //   console.log("Yahweh Ben Description 6 saved:", yahwehBenDescription6);
+  // };
+
+  // const handleSaveYahwehBenDescription7 = () => {
+  //   console.log("Yahweh Ben Description 7 saved:", yahwehBenDescription7);
+  // };
+
+  // const handleSaveYahwehBenDescription8 = () => {
+  //   console.log("Yahweh Ben Description 8 saved:", yahwehBenDescription8);
+  // };
+
+  // const handleSaveYahwehBenDescription9 = () => {
+  //   console.log("Yahweh Ben Description 9 saved:", yahwehBenDescription9);
+  // };
+
+  // // Fonctions de sauvegarde pour la section Followers
+  // const handleSaveFollowersTitle = () => {
+  //   console.log("Followers Title saved:", followersTitle);
+  // };
+
+  // const handleSaveFollowersDescription1 = () => {
+  //   console.log("Followers Description 1 saved:", followersDescription1);
+  // };
+
+  // const handleSaveFollowersDescription2 = () => {
+  //   console.log("Followers Description 2 saved:", followersDescription2);
+  // };
+
+  // const handleSaveFollowersDescription3 = () => {
+  //   console.log("Followers Description 3 saved:", followersDescription3);
+  // };
+
+  // const handleSaveFollowersDescription4 = () => {
+  //   console.log("Followers Description 4 saved:", followersDescription4);
+  // };
+
+  // const handleSaveFollowersDescription5 = () => {
+  //   console.log("Followers Description 5 saved:", followersDescription5);
+  // };
+
+  // // Fonctions de sauvegarde pour la section Cultural Attire
+  // const handleSaveAttireTitle = () => {
+  //   console.log("Attire Title saved:", attireTitle);
+  // };
+
+  // const handleSaveAttireDescription1 = () => {
+  //   console.log("Attire Description 1 saved:", attireDescription1);
+  // };
+
+  // const handleSaveAttireDescription2 = () => {
+  //   console.log("Attire Description 2 saved:", attireDescription2);
+  // };
+
+  // const handleSaveAttireDescription3 = () => {
+  //   console.log("Attire Description 3 saved:", attireDescription3);
+  // };
+
+  // const handleSaveAttireDescription4 = () => {
+  //   console.log("Attire Description 4 saved:", attireDescription4);
+  // };
+
+  // const handleSaveAttireDescription5 = () => {
+  //   console.log("Attire Description 5 saved:", attireDescription5);
+  // };
+  
+ // État pour le chargement
+ 
+ // Fonction pour charger les données JSON
+ // const loadJsonData = async () => {
+  //   try {
+  //     setIsLoading(true)
+  //     // Remplacez ce chemin par le chemin réel vers votre fichier JSON
+  //     // const response = await fetch("/data/homepage-content.json")
+  //     const response = await fetch("data/home.json")
+
+  //     if (!response.ok) {
+    //       throw new Error("Erreur lors du chargement des données")
+    //     }
+    
+    //     const data: HomePageData = await response.json()
+    
+    //     // Charger les données dans les états
+    //     if (data.homePage) {
+      //       // Section Home
+      //       setTitle(data.homePage.videoSection.title || "")
+  //       setDescription(data.homePage.videoSection.content || "")
+
+  //       // Charger les liens vidéo
+  //       if (data.homePage.videos && data.homePage.videos.length > 0) {
+  //         setVideoLink1(data.homePage.videos[0]?.src || "")
+  //         setVideoLink2(data.homePage.videos[1]?.src || "")
+  //         setVideoLink3(data.homePage.videos[2]?.src || "")
+  //       }
+  //     }
+  
+  //     setError(null)
+  //   } catch (err) {
+    //     console.error("Erreur lors du chargement des données:", err)
+    //     setError("Impossible de charger les données. Vérifiez que le fichier JSON existe.")
+    //   } finally {
+      //     setIsLoading(false)
+      //   }
+      // }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useEffect, useState } from "react";
 import {
   Save,
   Video,
@@ -10,8 +247,24 @@ import {
 import "./style/HomeTab.css";
 import "./style/HomeTab3.css";
 import "./style/HomeTab5.css";
+import contentData from "../../../../data/home.json";
+// Interface pour typer les données JSON
+interface HomePageData {
+  homePage: {
+    videoSection: {
+      title: string
+      content: string
+    }
+    videos: Array<{
+      src: string
+      poster: string
+    }>
+  }
+}
 
 const HomeTab: React.FC = () => {
+
+  // États pour la section Home
   const [videoLink1, setVideoLink1] = useState("");
   const [videoLink2, setVideoLink2] = useState("");
   const [videoLink3, setVideoLink3] = useState("");
@@ -66,158 +319,248 @@ const HomeTab: React.FC = () => {
   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
   const [isAttireOpen, setIsAttireOpen] = useState(true);
 
+      const [isLoading, setIsLoading] = useState(true)
+      const [error, setError] = useState<string | null>(null)
+      
+      const loadJsonData = async () => {
+        try {
+          setIsLoading(true);
+    
+    // Utilisation des données directement importées
+    const data: HomePageData = contentData;
+
+    // Charger les données dans les états
+    if (data.homePage) {
+      // Section Home
+      setTitle(data.homePage.videoSection.title || "");
+      setDescription(data.homePage.videoSection.content || "");
+
+      // Charger les liens vidéo
+      if (data.homePage.videos && data.homePage.videos.length > 0) {
+        setVideoLink1(data.homePage.videos[0]?.src || "");
+        setVideoLink2(data.homePage.videos[1]?.src || "");
+        setVideoLink3(data.homePage.videos[2]?.src || "");
+      }
+    }
+
+    setError(null);
+  } catch (err) {
+    console.error("Erreur lors du traitement des données:", err);
+    setError("Impossible de traiter les données.");
+  } finally {
+    setIsLoading(false);
+  }
+}
+
+  // Charger les données au montage du composant
+  useEffect(() => {
+    loadJsonData()
+  }, [])
+
+  // Fonction pour sauvegarder les données (à adapter selon votre backend)
+  const saveDataToJson = async (section: string, field: string, value: string) => {
+    try {
+      // Ici vous pouvez implémenter la logique pour sauvegarder dans votre backend
+      console.log(`Sauvegarde: ${section}.${field} = ${value}`)
+
+      // Exemple d'appel API pour sauvegarder
+      // const response = await fetch('/api/save-content', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ section, field, value })
+      // });
+
+      alert(`${field} sauvegardé avec succès!`)
+    } catch (err) {
+      console.error("Erreur lors de la sauvegarde:", err)
+      alert("Erreur lors de la sauvegarde")
+    }
+  }
+
+  // Fonctions de sauvegarde mises à jour
   const handleSaveVideoLink1 = () => {
-    console.log("Video link 1 saved:", videoLink1);
-    // Logique de sauvegarde ici
-  };
+    saveDataToJson("homePage.videos[0]", "src", videoLink1)
+  }
 
   const handleSaveVideoLink2 = () => {
-    console.log("Video link 2 saved:", videoLink2);
-    // Logique de sauvegarde ici
-  };
+    saveDataToJson("homePage.videos[1]", "src", videoLink2)
+  }
 
   const handleSaveVideoLink3 = () => {
-    console.log("Video link 3 saved:", videoLink3);
-    // Logique de sauvegarde ici
-  };
+    saveDataToJson("homePage.videos[2]", "src", videoLink3)
+  }
 
   const handleSaveTitle = () => {
-    console.log("Title saved:", title);
-    // Logique de sauvegarde ici
-  };
+    saveDataToJson("homePage.videoSection", "title", title)
+  }
 
   const handleSaveDescription = () => {
-    console.log("Description saved:", description);
-    // Logique de sauvegarde ici
-  };
+    saveDataToJson("homePage.videoSection", "content", description)
+  }
 
   // Fonctions de sauvegarde pour la section Yahweh
   const handleSaveYahwehTitle1 = () => {
-    console.log("Yahweh Title 1 saved:", yahwehTitle1);
-  };
+    saveDataToJson("yahweh", "title1", yahwehTitle1)
+  }
 
   const handleSaveYahwehTitle2 = () => {
-    console.log("Yahweh Title 2 saved:", yahwehTitle2);
-  };
+    saveDataToJson("yahweh", "title2", yahwehTitle2)
+  }
 
   const handleSaveYahwehDescription1 = () => {
-    console.log("Yahweh Description 1 saved:", yahwehDescription1);
-  };
+    saveDataToJson("yahweh", "description1", yahwehDescription1)
+  }
 
   const handleSaveYahwehDescription2 = () => {
-    console.log("Yahweh Description 2 saved:", yahwehDescription2);
-  };
+    saveDataToJson("yahweh", "description2", yahwehDescription2)
+  }
 
   const handleSaveYahwehDescription3 = () => {
-    console.log("Yahweh Description 3 saved:", yahwehDescription3);
-  };
+    saveDataToJson("yahweh", "description3", yahwehDescription3)
+  }
 
   const handleSaveYahwehDescription4 = () => {
-    console.log("Yahweh Description 4 saved:", yahwehDescription4);
-  };
+    saveDataToJson("yahweh", "description4", yahwehDescription4)
+  }
 
   const handleSaveYahwehDescription5 = () => {
-    console.log("Yahweh Description 5 saved:", yahwehDescription5);
-  };
+    saveDataToJson("yahweh", "description5", yahwehDescription5)
+  }
 
   const handleSaveYahwehDescription6 = () => {
-    console.log("Yahweh Description 6 saved:", yahwehDescription6);
-  };
+    saveDataToJson("yahweh", "description6", yahwehDescription6)
+  }
 
   // Fonctions de sauvegarde pour la section Yahweh Ben Yahweh
   const handleSaveYahwehBenTitle1 = () => {
-    console.log("Yahweh Ben Title 1 saved:", yahwehBenTitle1);
-  };
+    saveDataToJson("yahwehBen", "title1", yahwehBenTitle1)
+  }
 
   const handleSaveYahwehBenTitle2 = () => {
-    console.log("Yahweh Ben Title 2 saved:", yahwehBenTitle2);
-  };
+    saveDataToJson("yahwehBen", "title2", yahwehBenTitle2)
+  }
 
   const handleSaveYahwehBenDescription1 = () => {
-    console.log("Yahweh Ben Description 1 saved:", yahwehBenDescription1);
-  };
+    saveDataToJson("yahwehBen", "description1", yahwehBenDescription1)
+  }
 
   const handleSaveYahwehBenDescription2 = () => {
-    console.log("Yahweh Ben Description 2 saved:", yahwehBenDescription2);
-  };
+    saveDataToJson("yahwehBen", "description2", yahwehBenDescription2)
+  }
 
   const handleSaveYahwehBenDescription3 = () => {
-    console.log("Yahweh Ben Description 3 saved:", yahwehBenDescription3);
-  };
+    saveDataToJson("yahwehBen", "description3", yahwehBenDescription3)
+  }
 
   const handleSaveYahwehBenDescription4 = () => {
-    console.log("Yahweh Ben Description 4 saved:", yahwehBenDescription4);
-  };
+    saveDataToJson("yahwehBen", "description4", yahwehBenDescription4)
+  }
 
   const handleSaveYahwehBenDescription5 = () => {
-    console.log("Yahweh Ben Description 5 saved:", yahwehBenDescription5);
-  };
+    saveDataToJson("yahwehBen", "description5", yahwehBenDescription5)
+  }
 
   const handleSaveYahwehBenDescription6 = () => {
-    console.log("Yahweh Ben Description 6 saved:", yahwehBenDescription6);
-  };
+    saveDataToJson("yahwehBen", "description6", yahwehBenDescription6)
+  }
 
   const handleSaveYahwehBenDescription7 = () => {
-    console.log("Yahweh Ben Description 7 saved:", yahwehBenDescription7);
-  };
+    saveDataToJson("yahwehBen", "description7", yahwehBenDescription7)
+  }
 
   const handleSaveYahwehBenDescription8 = () => {
-    console.log("Yahweh Ben Description 8 saved:", yahwehBenDescription8);
-  };
+    saveDataToJson("yahwehBen", "description8", yahwehBenDescription8)
+  }
 
   const handleSaveYahwehBenDescription9 = () => {
-    console.log("Yahweh Ben Description 9 saved:", yahwehBenDescription9);
-  };
+    saveDataToJson("yahwehBen", "description9", yahwehBenDescription9)
+  }
 
   // Fonctions de sauvegarde pour la section Followers
   const handleSaveFollowersTitle = () => {
-    console.log("Followers Title saved:", followersTitle);
-  };
+    saveDataToJson("followers", "title", followersTitle)
+  }
 
   const handleSaveFollowersDescription1 = () => {
-    console.log("Followers Description 1 saved:", followersDescription1);
-  };
+    saveDataToJson("followers", "description1", followersDescription1)
+  }
 
   const handleSaveFollowersDescription2 = () => {
-    console.log("Followers Description 2 saved:", followersDescription2);
-  };
+    saveDataToJson("followers", "description2", followersDescription2)
+  }
 
   const handleSaveFollowersDescription3 = () => {
-    console.log("Followers Description 3 saved:", followersDescription3);
-  };
+    saveDataToJson("followers", "description3", followersDescription3)
+  }
 
   const handleSaveFollowersDescription4 = () => {
-    console.log("Followers Description 4 saved:", followersDescription4);
-  };
+    saveDataToJson("followers", "description4", followersDescription4)
+  }
 
   const handleSaveFollowersDescription5 = () => {
-    console.log("Followers Description 5 saved:", followersDescription5);
-  };
+    saveDataToJson("followers", "description5", followersDescription5)
+  }
 
   // Fonctions de sauvegarde pour la section Cultural Attire
   const handleSaveAttireTitle = () => {
-    console.log("Attire Title saved:", attireTitle);
-  };
+    saveDataToJson("attire", "title", attireTitle)
+  }
 
   const handleSaveAttireDescription1 = () => {
-    console.log("Attire Description 1 saved:", attireDescription1);
-  };
+    saveDataToJson("attire", "description1", attireDescription1)
+  }
 
   const handleSaveAttireDescription2 = () => {
-    console.log("Attire Description 2 saved:", attireDescription2);
-  };
+    saveDataToJson("attire", "description2", attireDescription2)
+  }
 
   const handleSaveAttireDescription3 = () => {
-    console.log("Attire Description 3 saved:", attireDescription3);
-  };
+    saveDataToJson("attire", "description3", attireDescription3)
+  }
 
   const handleSaveAttireDescription4 = () => {
-    console.log("Attire Description 4 saved:", attireDescription4);
-  };
+    saveDataToJson("attire", "description4", attireDescription4)
+  }
 
   const handleSaveAttireDescription5 = () => {
-    console.log("Attire Description 5 saved:", attireDescription5);
-  };
+    saveDataToJson("attire", "description5", attireDescription5)
+  }
+
+  // Affichage du chargement
+  if (isLoading) {
+    return (
+      <div className="home-tab fade-in">
+        <div style={{ textAlign: "center", padding: "2rem" }}>
+          <p>Chargement des données...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Affichage d'erreur
+  if (error) {
+    return (
+      <div className="home-tab fade-in">
+        <div style={{ textAlign: "center", padding: "2rem", color: "red" }}>
+          <p>{error}</p>
+          <button
+            onClick={loadJsonData}
+            style={{
+              marginTop: "1rem",
+              padding: "0.5rem 1rem",
+              backgroundColor: "#007bff",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+            }}
+          >
+            Réessayer
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="home-tab fade-in">
