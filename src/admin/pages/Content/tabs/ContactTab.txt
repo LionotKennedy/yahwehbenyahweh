@@ -1,0 +1,41 @@
+// import React from 'react';
+
+// const ContactTab: React.FC = () => {
+//   return (
+//     <div className="tab-content fade-in">
+//       <h2>Bienvenue sur notre site Contact</h2>
+//       <p>Ceci est la page d'accueil. Vous trouverez ici les dernières actualités.</p>
+//     </div>
+//   );
+// };
+
+// export default ContactTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

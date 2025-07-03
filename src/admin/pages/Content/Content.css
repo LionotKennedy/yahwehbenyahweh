@@ -35,7 +35,9 @@
 }
 
 .nav-button.active {
-  background-color: #4CAF50;
+  /* background-color: #4CAF50; */
+  /* background-color: var(--slate-900); */
+  background-color: #3b82f6;
   color: white;
 }
 

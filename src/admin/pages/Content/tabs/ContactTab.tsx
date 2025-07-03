@@ -1,44 +1,3 @@
-// import React from 'react';
-
-// const ContactTab: React.FC = () => {
-//   return (
-//     <div className="tab-content fade-in">
-//       <h2>Bienvenue sur notre site Contact</h2>
-//       <p>Ceci est la page d'accueil. Vous trouverez ici les dernières actualités.</p>
-//     </div>
-//   );
-// };
-
-// export default ContactTab;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 import React, { useState } from 'react';
 import { Save, Phone, Mail, FileText, Type } from 'lucide-react';
@@ -74,7 +33,7 @@ const ContactTab: React.FC = () => {
   };
 
   return (
-    <div className="contact-tab">
+    <div className="contact-tab fade-in">
       <h1 className="contact-title">Page Contact</h1>
       
       <div className="contact-admin-controls">

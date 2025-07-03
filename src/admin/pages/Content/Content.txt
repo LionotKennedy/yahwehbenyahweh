@@ -1,0 +1,341 @@
+// import { FileText, Plus, Search, Edit, Trash2 } from "lucide-react"
+
+// const content = [
+//   { id: 1, title: "L'Univers de Yahweh", type: "Page", status: "Publié", lastModified: "2024-01-15" },
+//   { id: 2, title: "Les Fêtes de Yahweh", type: "Article", status: "Brouillon", lastModified: "2024-01-14" },
+//   { id: 3, title: "À propos de Yahweh Ben Yahweh", type: "Page", status: "Publié", lastModified: "2024-01-13" },
+// ]
+
+// <div className="page-content">
+//       <div className="page-header mb-6">
+//         <div className="flex justify-between items-center">
+//           <div>
+//             <h3>Gestion du contenu</h3>
+//             <p>Créez et gérez le contenu de votre site web.</p>
+//           </div>
+//           <button className="btn-primary">
+//             <Plus size={20} />
+//             <span>Nouveau contenu</span>
+//           </button>
+//         </div>
+//       </div>
+
+//       <div className="card">
+//         <div className="card-content">
+//           <div className="table-header">
+//             <div className="search-box">
+//               <Search size={20} />
+//               <input type="text" placeholder="Rechercher du contenu..." />
+//             </div>
+//           </div>
+
+//           <div className="table-container">
+//             <table className="data-table">
+//               <thead>
+//                 <tr>
+//                   <th>Titre</th>
+//                   <th>Type</th>
+//                   <th>Statut</th>
+//                   <th>Dernière modification</th>
+//                   <th>Actions</th>
+//                 </tr>
+//               </thead>
+//               <tbody>
+//                 {content.map((item) => (
+//                   <tr key={item.id}>
+//                     <td>
+//                       <div className="content-info">
+//                         <FileText size={16} />
+//                         <span>{item.title}</span>
+//                       </div>
+//                     </td>
+//                     <td>{item.type}</td>
+//                     <td>
+//                       <span className={`status ${item.status.toLowerCase()}`}>{item.status}</span>
+//                     </td>
+//                     <td>{item.lastModified}</td>
+//                     <td>
+//                       <div className="action-buttons">
+//                         <button className="action-btn edit">
+//                           <Edit size={16} />
+//                         </button>
+//                         <button className="action-btn delete">
+//                           <Trash2 size={16} />
+//                         </button>
+//                       </div>
+//                     </td>
+//                   </tr>
+//                 ))}
+//               </tbody>
+//             </table>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+
+// function Content() {
+//   return (
+//     <div>
+
+//     </div>
+//   )
+// }
+
+// export default Content
+
+// import React, { useState } from 'react';
+// import './Content.css'; // Import du fichier CSS
+
+// function Content() {
+//   const [activeTab, setActiveTab] = useState(1);
+
+//   return (
+//     <div className="container">
+//       {/* Barre de navigation */}
+//       <nav className="nav-bar">
+//         <button
+//           className={activeTab === 1 ? "nav-button active" : "nav-button"}
+//           onClick={() => setActiveTab(1)}
+//         >
+//           Accueil
+//         </button>
+//         <button
+//           className={activeTab === 2 ? "nav-button active" : "nav-button"}
+//           onClick={() => setActiveTab(2)}
+//         >
+//           Services
+//         </button>
+//         <button
+//           className={activeTab === 3 ? "nav-button active" : "nav-button"}
+//           onClick={() => setActiveTab(3)}
+//         >
+//           À propos
+//         </button>
+//         <button
+//           className={activeTab === 4 ? "nav-button active" : "nav-button"}
+//           onClick={() => setActiveTab(4)}
+//         >
+//           Contact
+//         </button>
+//       </nav>
+
+//       {/* Contenu des onglets */}
+//       <div className="content">
+//         {activeTab === 1 && (
+//           <div className="tab-content fade-in">
+//             <h2>Bienvenue sur notre site</h2>
+//             <p>Ceci est la page d'accueil. Vous trouverez ici les dernières actualités.</p>
+//           </div>
+//         )}
+
+//         {activeTab === 2 && (
+//           <div className="tab-content fade-in">
+//             <h2>Nos Services</h2>
+//             <ul>
+//               <li>Service 1: Développement web</li>
+//               <li>Service 2: Design graphique</li>
+//               <li>Service 3: Marketing digital</li>
+//             </ul>
+//           </div>
+//         )}
+
+//         {activeTab === 3 && (
+//           <div className="tab-content fade-in">
+//             <h2>À propos de nous</h2>
+//             <p>Nous sommes une entreprise innovante créée en 2020, spécialisée dans les solutions digitales.</p>
+//           </div>
+//         )}
+
+//         {activeTab === 4 && (
+//           <div className="tab-content fade-in">
+//             <h2>Contactez-nous</h2>
+//             <p>Email: contact@example.com</p>
+//             <p>Téléphone: 01 23 45 67 89</p>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Content;
+
+// "use client"
+
+// import { useState } from "react"
+// import styles from "./content.module.css"
+
+// function Content() {
+//   const [activeMenu, setActiveMenu] = useState("accueil")
+
+//   const menuItems = [
+//     { id: "accueil", label: "Accueil", icon: "🏠" },
+//     { id: "services", label: "Services", icon: "⚙️" },
+//     { id: "portfolio", label: "Portfolio", icon: "💼" },
+//     { id: "contact", label: "Contact", icon: "📞" },
+//   ]
+
+//   const renderContent = () => {
+//     switch (activeMenu) {
+//       case "accueil":
+//         return (
+//           <div className={styles.contentSection}>
+//             <h2>Bienvenue sur notre site</h2>
+//             <p>
+//               Découvrez notre entreprise et nos valeurs. Nous sommes spécialisés dans le développement web moderne et
+//               les solutions digitales innovantes.
+//             </p>
+//             <div className={styles.features}>
+//               <div className={styles.feature}>
+//                 <h3>🚀 Innovation</h3>
+//                 <p>Technologies de pointe</p>
+//               </div>
+//               <div className={styles.feature}>
+//                 <h3>💡 Créativité</h3>
+//                 <p>Solutions sur mesure</p>
+//               </div>
+//               <div className={styles.feature}>
+//                 <h3>🎯 Performance</h3>
+//                 <p>Résultats garantis</p>
+//               </div>
+//             </div>
+//           </div>
+//         )
+//       case "services":
+//         return (
+//           <div className={styles.contentSection}>
+//             <h2>Nos Services</h2>
+//             <div className={styles.servicesList}>
+//               <div className={styles.serviceCard}>
+//                 <h3>Développement Web</h3>
+//                 <p>Sites web modernes et responsives avec React, Next.js et TypeScript</p>
+//                 <span className={styles.price}>À partir de 1500€</span>
+//               </div>
+//               <div className={styles.serviceCard}>
+//                 <h3>Applications Mobile</h3>
+//                 <p>Apps natives et cross-platform pour iOS et Android</p>
+//                 <span className={styles.price}>À partir de 3000€</span>
+//               </div>
+//               <div className={styles.serviceCard}>
+//                 <h3>E-commerce</h3>
+//                 <p>Boutiques en ligne complètes avec système de paiement</p>
+//                 <span className={styles.price}>À partir de 2500€</span>
+//               </div>
+//             </div>
+//           </div>
+//         )
+//       case "portfolio":
+//         return (
+//           <div className={styles.contentSection}>
+//             <h2>Notre Portfolio</h2>
+//             <div className={styles.portfolioGrid}>
+//               <div className={styles.portfolioItem}>
+//                 <div className={styles.portfolioImage}>🌐</div>
+//                 <h3>Site Corporate</h3>
+//                 <p>Site vitrine pour une entreprise de consulting</p>
+//                 <div className={styles.tags}>
+//                   <span>React</span>
+//                   <span>Tailwind</span>
+//                 </div>
+//               </div>
+//               <div className={styles.portfolioItem}>
+//                 <div className={styles.portfolioImage}>🛒</div>
+//                 <h3>E-commerce Fashion</h3>
+//                 <p>Boutique en ligne de vêtements avec 1000+ produits</p>
+//                 <div className={styles.tags}>
+//                   <span>Next.js</span>
+//                   <span>Stripe</span>
+//                 </div>
+//               </div>
+//               <div className={styles.portfolioItem}>
+//                 <div className={styles.portfolioImage}>📱</div>
+//                 <h3>App Mobile</h3>
+//                 <p>Application de livraison de repas</p>
+//                 <div className={styles.tags}>
+//                   <span>React Native</span>
+//                   <span>Firebase</span>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )
+//       case "contact":
+//         return (
+//           <div className={styles.contentSection}>
+//             <h2>Contactez-nous</h2>
+//             <div className={styles.contactContainer}>
+//               <div className={styles.contactInfo}>
+//                 <h3>Informations de contact</h3>
+//                 <div className={styles.contactItem}>
+//                   <span className={styles.contactIcon}>📧</span>
+//                   <span>contact@monentreprise.fr</span>
+//                 </div>
+//                 <div className={styles.contactItem}>
+//                   <span className={styles.contactIcon}>📞</span>
+//                   <span>+33 1 23 45 67 89</span>
+//                 </div>
+//                 <div className={styles.contactItem}>
+//                   <span className={styles.contactIcon}>📍</span>
+//                   <span>123 Rue de la Tech, 75001 Paris</span>
+//                 </div>
+//               </div>
+//               <div className={styles.contactForm}>
+//                 <h3>Envoyez-nous un message</h3>
+//                 <form>
+//                   <input type="text" placeholder="Votre nom" className={styles.input} />
+//                   <input type="email" placeholder="Votre email" className={styles.input} />
+//                   <textarea placeholder="Votre message" className={styles.textarea}></textarea>
+//                   <button type="submit" className={styles.submitBtn}>
+//                     Envoyer
+//                   </button>
+//                 </form>
+//               </div>
+//             </div>
+//           </div>
+//         )
+//       default:
+//         return null
+//     }
+//   }
+
+//   return (
+//     <div className={styles.container}>
+//       <nav className={styles.navbar}>
+//         <div className={styles.navBrand}>
+//           <h1>MonEntreprise</h1>
+//         </div>
+//         <ul className={styles.navMenu}>
+//           {menuItems.map((item) => (
+//             <li key={item.id} className={styles.navItem}>
+//               <button
+//                 className={`${styles.navLink} ${activeMenu === item.id ? styles.active : ""}`}
+//                 onClick={() => setActiveMenu(item.id)}
+//               >
+//                 <span className={styles.navIcon}>{item.icon}</span>
+//                 <span className={styles.navLabel}>{item.label}</span>
+//               </button>
+//             </li>
+//           ))}
+//         </ul>
+//       </nav>
+
+//       <main className={styles.mainContent}>{renderContent()}</main>
+//     </div>
+//   )
+// }
+
+// export default Content
+
+
+
+
+
+
+
+
+
+
+
+
+
+

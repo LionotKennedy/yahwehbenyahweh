@@ -220,7 +220,7 @@ const HomeTab: React.FC = () => {
   };
 
   return (
-    <div className="home-tab">
+    <div className="home-tab fade-in">
       {/* Section Home */}
       <section className="home-section">
         <div
