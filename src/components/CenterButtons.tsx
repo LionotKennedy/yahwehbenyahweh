@@ -17,12 +17,14 @@ import OperationWordWarImg from "./images/center-buttons/Op_WW.jpg";
 import BalanceJusticeImg from "./images/center-buttons/Balance_Justice.jpg";
 import OnlineBookstoreImg from "./images/center-buttons/ON-Line_Bookstore.jpg";
 
+
 interface CenterButton {
   href: string;
   image: string;
   alt: string;
   external?: boolean;
 }
+
 
 const centerButtons: CenterButton[] = [
   {
@@ -87,7 +89,7 @@ const centerButtons: CenterButton[] = [
     external: true,
   },
 ];
-
+// const images: ImageSection = Btn_img
 export function CenterButtons() {
   return (
     <div className="center-buttons-home">

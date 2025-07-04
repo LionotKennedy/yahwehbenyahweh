@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 1024px) {
   #pg-banner-fol {
-    background-image: url("../image/page-banner.jpg");
+    /* background-image: url("../image/page-banner.jpg"); */
     background-size: contain;
     background-repeat: repeat-y;
     width: 100%;
@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 480px) {
   #pg-banner-fol {
-    background-image: url("../image/page-banner.jpg");
+    /* background-image: url("../image/page-banner.jpg"); */
     background-size: contain;
     background-repeat: repeat-y;
     width: 100%;

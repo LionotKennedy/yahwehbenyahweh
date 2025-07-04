@@ -17,10 +17,12 @@ import Crucifixion from "./image/2025/155_The_Crucifixion_Of_The_Messiah.png";
 import LambYahweh from "./image/2025/168_YBY_The_Lamb_of_Yahweh.png";
 import SignsWonders from "./image/2025/171_The_Signs_Wonders.png";
 
+import imagesData from "../../../data/img/about-images.json";
+
 export function Books_for_the_Year() {
   return (
     <>
-      <div id="pg-banner-year"></div>
+      <div id="pg-banner-year"  style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_Books_for_the_Year})` }}></div>
       <div id="top-bar-gold-year"></div>
       <div id="MONTH_BOOK_READING_SCHEDULE">
         <img

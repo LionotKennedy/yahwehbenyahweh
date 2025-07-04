@@ -1,0 +1,10 @@
+regle image sur btn cote client et back office
+
+importation de tout image dans back office
+
+choix de la base de donnée (facule a importer)
+
+backend pour image
+
+tu peut me creer une code backend pour cette projet avec techno nodeJS et expressJS base de donnée postgreSQL 
+avec structure Route,Controller,Model,env...etc pour ajouter et modifier de l'imgae

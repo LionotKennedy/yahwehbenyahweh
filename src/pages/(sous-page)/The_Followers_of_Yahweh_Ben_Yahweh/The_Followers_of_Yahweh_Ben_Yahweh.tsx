@@ -2,11 +2,12 @@ import "./style/the_Followers_of_Yahweh_Ben_Yahweh.css";
 import "./style/responsive.css";
 import Followers from "./image/The_Followers_of_Yahweh_Ben_Yahweh.png";
 import bottomMedia from "./image/bottom-media.jpg";
+import imagesData from "../../../data/img/about-images.json";
 
 export function The_Followers_of_Yahweh_Ben_Yahweh() {
   return (
     <div className="followers-page">
-      <div id="pg-banner-fol" className=""></div>
+      <div id="pg-banner-fol" className="" style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_The_Followers})` }}></div>
       <div id="top-bar-gold-fol" className=""></div>
       <div id="The_Followers_of_Yahweh_Ben_Yahweh">
         <img

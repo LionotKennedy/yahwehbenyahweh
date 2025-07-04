@@ -3,10 +3,12 @@ import "./style/responsive.css";
 import YahwehImg from "./image/Yahweh_Ben_Yahweh.png";
 import HisMission from "./image/His_Mission.png";
 import bottomMedia from "./image/bottom-media.png";
+import imagesData from "../../../data/about-images.json";
+
 export function AboutYahwehBenYahweh() {
   return (
     <div className="about-yahweh-ben-yahweh-page">
-      <div id="pg-banner-about-y" className="page-banner"></div>
+      <div id="pg-banner-about-y" className="page-banner" style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh})` }}></div>
       <div id="top-bar-gold-about-y" className=""></div>
       <div id="Yahweh_Ben_Yahweh-y" className="pg-btm-pd-mod-y">
         <img

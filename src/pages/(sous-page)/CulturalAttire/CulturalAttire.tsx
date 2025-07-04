@@ -3,11 +3,12 @@ import "./style/responsive.css";
 // import "../../../components/css/default.css";
 import TheCulturalAttire from "./image/The_Cultural_Attire_of_Yahweh.png";
 import bottomMedia from "./image/bottom-media.jpg";
+import imagesData from "../../../data/img/about-images.json";
 
 const CulturalAttire = () => {
   return (
     <div className="cultural-attire-page">
-      <div id="pg-banner-cul" className=""></div>
+      <div id="pg-banner-cul" className=""  style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_Cultural_Attire})` }}></div>
       <div id="top-bar-gold-cul" className=""></div>
       <div id="The_Cultural_Attire_of" className="">
         <img

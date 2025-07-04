@@ -1,0 +1,1376 @@
+// function HomeTab() {
+//   return (
+//     <div className="container">
+//         Section d'accueil
+//     </div>
+//   );
+// }
+
+// export default HomeTab;
+
+//   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>, setter: Function, index?: number) => {
+//     const file = e.target.files?.[0];
+//     if (file) {
+//       const reader = new FileReader();
+//       reader.onload = () => {
+//         if (index !== undefined && Array.isArray(setter)) {
+//           const newImages = [...setter];
+//           newImages[index] = reader.result as string;
+//           setter(newImages);
+//         } else {
+//           setter(reader.result as string);
+//         }
+//       };
+//       reader.readAsDataURL(file);
+//     }
+//   };
+
+// import React, { useState } from "react";
+// import {
+//   Upload,
+//   Save,
+//   Image as ImageIcon,
+//   ChevronUp,
+//   ChevronDown,
+// } from "lucide-react";
+// import "./style/HomeTab.css";
+
+// const HomeTab: React.FC = () => {
+//   // Section Home - Images states
+//   const [homeImages1, setHomeImages1] = useState(["", "", ""]); // 3 images même ligne
+//   const [homeImages2, setHomeImages2] = useState(Array(12).fill("")); // 12 images même ligne
+//   const [homeImage3, setHomeImage3] = useState(""); // 1 image
+//   const [homeImage4, setHomeImage4] = useState(""); // 1 image
+
+//   // Other sections - Single image states
+//   const [booksImage, setBooksImage] = useState("");
+//   const [aboutYahwehImage, setAboutYahwehImage] = useState("");
+//   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState("");
+//   const [followersImage, setFollowersImage] = useState("");
+//   const [culturalImage, setCulturalImage] = useState("");
+
+//   // États pour gérer l'ouverture/fermeture des sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true);
+//   const [isBooksOpen, setIsBooksOpen] = useState(true);
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true);
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true);
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true);
+
+//   // Handle image upload
+//   const handleImageUpload = (
+//     e: React.ChangeEvent<HTMLInputElement>,
+//     setter: Function,
+//     index?: number
+//   ) => {
+//     const file = e.target.files?.[0];
+//     if (file) {
+//       const reader = new FileReader();
+//       reader.onload = () => {
+//         if (index !== undefined) {
+//           // Pour les tableaux d'images (homeImages1 et homeImages2)
+//           if (setter === setHomeImages1) {
+//             setHomeImages1((prev) => {
+//               const newImages = [...prev];
+//               newImages[index] = reader.result as string;
+//               return newImages;
+//             });
+//           } else if (setter === setHomeImages2) {
+//             setHomeImages2((prev) => {
+//               const newImages = [...prev];
+//               newImages[index] = reader.result as string;
+//               return newImages;
+//             });
+//           }
+//         } else {
+//           // Pour les images uniques
+//           setter(reader.result as string);
+//         }
+//       };
+//       reader.readAsDataURL(file);
+//     }
+//   };
+
+//   // Handle save image
+//   const handleSaveImage = (imageData: string | string[], section: string) => {
+//     console.log(`Image sauvegardée pour ${section}:`, imageData);
+//   };
+
+//   return (
+//     <div className="home-container">
+//       {/* Section 1: Home */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsHomeOpen(!isHomeOpen)}
+//         >
+//           <h1 className="section-title">Home</h1>
+//           <button className="toggle-section">
+//             {isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 images même ligne */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Images principales (3)</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((image, index) => (
+//                   <div key={index} className="image-upload-container">
+//                     <div className="image-preview">
+//                       {image ? (
+//                         <img
+//                           src={image}
+//                           alt={`Home ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                       ) : (
+//                         <div className="image-placeholder">
+//                           <ImageIcon size={32} />
+//                           <span>Image {index + 1}</span>
+//                         </div>
+//                       )}
+//                     </div>
+//                     <div className="image-controls">
+//                       <label className="upload-btn">
+//                         <Upload size={16} />
+//                         <input
+//                           type="file"
+//                           accept="image/*"
+//                           onChange={(e) =>
+//                             handleImageUpload(e, setHomeImages1, index)
+//                           }
+//                           hidden
+//                         />
+//                       </label>
+//                       <button
+//                         onClick={() =>
+//                           handleSaveImage(
+//                             homeImages1[index],
+//                             `Home-${index + 1}`
+//                           )
+//                         }
+//                         className="save-btn"
+//                         disabled={!homeImages1[index]}
+//                       >
+//                         <Save size={16} />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* 12 images même ligne */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => (
+//                   <div key={index} className="image-upload-container small">
+//                     <div className="image-preview">
+//                       {image ? (
+//                         <img
+//                           src={image}
+//                           alt={`Gallery ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                       ) : (
+//                         <div className="image-placeholder">
+//                           <ImageIcon size={20} />
+//                         </div>
+//                       )}
+//                     </div>
+//                     <div className="image-controls">
+//                       <label className="upload-btn small">
+//                         <Upload size={12} />
+//                         <input
+//                           type="file"
+//                           accept="image/*"
+//                           onChange={(e) =>
+//                             handleImageUpload(e, setHomeImages2, index)
+//                           }
+//                           hidden
+//                         />
+//                       </label>
+//                       <button
+//                         onClick={() =>
+//                           handleSaveImage(
+//                             homeImages2[index],
+//                             `Gallery-${index + 1}`
+//                           )
+//                         }
+//                         className="save-btn small"
+//                         disabled={!homeImages2[index]}
+//                       >
+//                         <Save size={12} />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* Image individuelle 3 */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Image featured 1</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   {homeImage3 ? (
+//                     <img
+//                       src={homeImage3}
+//                       alt="Featured 1"
+//                       className="preview-image"
+//                     />
+//                   ) : (
+//                     <div className="image-placeholder">
+//                       <ImageIcon size={48} />
+//                       <span>Image featured 1</span>
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     Télécharger
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage3)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() =>
+//                       handleSaveImage(homeImage3, "Home-Featured-1")
+//                     }
+//                     className="save-btn"
+//                     disabled={!homeImage3}
+//                   >
+//                     <Save size={16} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Image individuelle 4 */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Image featured 2</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   {homeImage4 ? (
+//                     <img
+//                       src={homeImage4}
+//                       alt="Featured 2"
+//                       className="preview-image"
+//                     />
+//                   ) : (
+//                     <div className="image-placeholder">
+//                       <ImageIcon size={48} />
+//                       <span>Image featured 2</span>
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     Télécharger
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage4)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() =>
+//                       handleSaveImage(homeImage4, "Home-Featured-2")
+//                     }
+//                     className="save-btn"
+//                     disabled={!homeImage4}
+//                   >
+//                     <Save size={16} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsBooksOpen(!isBooksOpen)}
+//         >
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setBooksImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img
+//                     src={aboutYahwehImage}
+//                     alt="About Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(aboutYahwehImage, "About-Yahweh")
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) =>
+//                       handleImageUpload(e, setAboutYahwehBenImage)
+//                     }
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(
+//                       aboutYahwehBenImage,
+//                       "About-Yahweh-Ben-Yahweh"
+//                     )
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsFollowersOpen(!isFollowersOpen)}
+//         >
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img
+//                     src={followersImage}
+//                     alt="Followers"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsCulturalOpen(!isCulturalOpen)}
+//         >
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img
+//                     src={culturalImage}
+//                     alt="Cultural Attire"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setCulturalImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(culturalImage, "Cultural-Attire")
+//                   }
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from "react";
+// import {
+//   Upload,
+//   Save,
+//   Image as ImageIcon,
+//   ChevronUp,
+//   ChevronDown,
+// } from "lucide-react";
+// import "./style/HomeTab.css";
+// import homeImagesData from "../../../../data/images-home.json";
+
+// const HomeTab: React.FC = () => {
+//   // Section Home - Images states
+//   const [homeImages1, setHomeImages1] = useState(["", "", ""]); // 3 images même ligne
+//   const [homeImages2, setHomeImages2] = useState(Array(12).fill("")); // 12 images même ligne
+//   const [homeImage3, setHomeImage3] = useState(""); // 1 image
+//   const [homeImage4, setHomeImage4] = useState(""); // 1 image
+
+//   // Other sections - Single image states
+//   const [booksImage, setBooksImage] = useState("");
+//   const [aboutYahwehImage, setAboutYahwehImage] = useState("");
+//   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState("");
+//   const [followersImage, setFollowersImage] = useState("");
+//   const [culturalImage, setCulturalImage] = useState("");
+
+//   // États pour gérer l'ouverture/fermeture des sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true);
+//   const [isBooksOpen, setIsBooksOpen] = useState(true);
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true);
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true);
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true);
+
+//   // Charger les images depuis le JSON au démarrage
+//   useEffect(() => {
+//     console.log("Chargement des images depuis le JSON...", homeImagesData);
+    
+//     // Charger les 3 banners dans homeImages1
+//     const bannerImages = homeImagesData.banners.map(banner => banner.path);
+//     setHomeImages1(bannerImages);
+    
+//     // Charger les autres images
+//     setBooksImage(homeImagesData.bookOfTheMonth.path);
+//     setHomeImage3(homeImagesData.videoPoster.pageBanner.path);
+//     setHomeImage4(homeImagesData.breakingNews.path);
+    
+//     // Pour les 12 images de la galerie, on utilise les images disponibles et on répète si nécessaire
+//     const galleryImages = [
+//       homeImagesData.videoPoster.goodNews.path,
+//       homeImagesData.videoPoster.eternalLife.path,
+//       homeImagesData.buttons.readMore.path,
+//       homeImagesData.buttons.orderNow.path,
+//       // Répéter les images disponibles pour remplir les 12 emplacements
+//       ...homeImagesData.banners.map(banner => banner.path),
+//       homeImagesData.bookOfTheMonth.path,
+//       homeImagesData.videoPoster.pageBanner.path,
+//       homeImagesData.breakingNews.path,
+//       homeImagesData.videoPoster.goodNews.path,
+//       homeImagesData.videoPoster.eternalLife.path
+//     ].slice(0, 12);
+    
+//     setHomeImages2(galleryImages);
+    
+//     // Utiliser une des images pour les autres sections
+//     setAboutYahwehImage(homeImagesData.videoPoster.goodNews.path);
+//     setAboutYahwehBenImage(homeImagesData.videoPoster.eternalLife.path);
+//     setFollowersImage(homeImagesData.videoPoster.pageBanner.path);
+//     setCulturalImage(homeImagesData.bookOfTheMonth.path);
+//   }, []);
+
+//   // Handle image upload
+//   const handleImageUpload = (
+//     e: React.ChangeEvent<HTMLInputElement>,
+//     setter: Function,
+//     index?: number
+//   ) => {
+//     const file = e.target.files?.[0];
+//     if (file) {
+//       const reader = new FileReader();
+//       reader.onload = () => {
+//         if (index !== undefined) {
+//           // Pour les tableaux d'images (homeImages1 et homeImages2)
+//           if (setter === setHomeImages1) {
+//             setHomeImages1((prev) => {
+//               const newImages = [...prev];
+//               newImages[index] = reader.result as string;
+//               return newImages;
+//             });
+//           } else if (setter === setHomeImages2) {
+//             setHomeImages2((prev) => {
+//               const newImages = [...prev];
+//               newImages[index] = reader.result as string;
+//               return newImages;
+//             });
+//           }
+//         } else {
+//           // Pour les images uniques
+//           setter(reader.result as string);
+//         }
+//       };
+//       reader.readAsDataURL(file);
+//     }
+//   };
+
+//   // Handle save image
+//   const handleSaveImage = (imageData: string | string[], section: string) => {
+//     console.log(`Image sauvegardée pour ${section}:`, imageData);
+//   };
+
+//   return (
+//     <div className="home-container">
+//       {/* Section 1: Home */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsHomeOpen(!isHomeOpen)}
+//         >
+//           <h1 className="section-title">Home</h1>
+//           <button className="toggle-section">
+//             {isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 images même ligne */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Images principales (3)</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((image, index) => (
+//                   <div key={index} className="image-upload-container">
+//                     <div className="image-preview">
+//                       {image ? (
+//                         <img
+//                           src={image}
+//                           alt={`Home ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                       ) : (
+//                         <div className="image-placeholder">
+//                           <ImageIcon size={32} />
+//                           <span>Image {index + 1}</span>
+//                         </div>
+//                       )}
+//                     </div>
+//                     <div className="image-controls">
+//                       <label className="upload-btn">
+//                         <Upload size={16} />
+//                         <input
+//                           type="file"
+//                           accept="image/*"
+//                           onChange={(e) =>
+//                             handleImageUpload(e, setHomeImages1, index)
+//                           }
+//                           hidden
+//                         />
+//                       </label>
+//                       <button
+//                         onClick={() =>
+//                           handleSaveImage(
+//                             homeImages1[index],
+//                             `Home-${index + 1}`
+//                           )
+//                         }
+//                         className="save-btn"
+//                         disabled={!homeImages1[index]}
+//                       >
+//                         <Save size={16} />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* 12 images même ligne */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => (
+//                   <div key={index} className="image-upload-container small">
+//                     <div className="image-preview">
+//                       {image ? (
+//                         <img
+//                           src={image}
+//                           alt={`Gallery ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                       ) : (
+//                         <div className="image-placeholder">
+//                           <ImageIcon size={20} />
+//                         </div>
+//                       )}
+//                     </div>
+//                     <div className="image-controls">
+//                       <label className="upload-btn small">
+//                         <Upload size={12} />
+//                         <input
+//                           type="file"
+//                           accept="image/*"
+//                           onChange={(e) =>
+//                             handleImageUpload(e, setHomeImages2, index)
+//                           }
+//                           hidden
+//                         />
+//                       </label>
+//                       <button
+//                         onClick={() =>
+//                           handleSaveImage(
+//                             homeImages2[index],
+//                             `Gallery-${index + 1}`
+//                           )
+//                         }
+//                         className="save-btn small"
+//                         disabled={!homeImages2[index]}
+//                       >
+//                         <Save size={12} />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* Image individuelle 3 */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Image featured 1</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   {homeImage3 ? (
+//                     <img
+//                       src={homeImage3}
+//                       alt="Featured 1"
+//                       className="preview-image"
+//                     />
+//                   ) : (
+//                     <div className="image-placeholder">
+//                       <ImageIcon size={48} />
+//                       <span>Image featured 1</span>
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     Télécharger
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage3)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() =>
+//                       handleSaveImage(homeImage3, "Home-Featured-1")
+//                     }
+//                     className="save-btn"
+//                     disabled={!homeImage3}
+//                   >
+//                     <Save size={16} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Image individuelle 4 */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Image featured 2</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   {homeImage4 ? (
+//                     <img
+//                       src={homeImage4}
+//                       alt="Featured 2"
+//                       className="preview-image"
+//                     />
+//                   ) : (
+//                     <div className="image-placeholder">
+//                       <ImageIcon size={48} />
+//                       <span>Image featured 2</span>
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     Télécharger
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage4)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() =>
+//                       handleSaveImage(homeImage4, "Home-Featured-2")
+//                     }
+//                     className="save-btn"
+//                     disabled={!homeImage4}
+//                   >
+//                     <Save size={16} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsBooksOpen(!isBooksOpen)}
+//         >
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setBooksImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img
+//                     src={aboutYahwehImage}
+//                     alt="About Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(aboutYahwehImage, "About-Yahweh")
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) =>
+//                       handleImageUpload(e, setAboutYahwehBenImage)
+//                     }
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(
+//                       aboutYahwehBenImage,
+//                       "About-Yahweh-Ben-Yahweh"
+//                     )
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsFollowersOpen(!isFollowersOpen)}
+//         >
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img
+//                     src={followersImage}
+//                     alt="Followers"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsCulturalOpen(!isCulturalOpen)}
+//         >
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img
+//                     src={culturalImage}
+//                     alt="Cultural Attire"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setCulturalImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(culturalImage, "Cultural-Attire")
+//                   }
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function HomeTab() {
+//   return (
+//     <div className="container">
+//         Section d'accueil
+//     </div>
+//   );
+// }
+
+// export default HomeTab;
+
+//   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>, setter: Function, index?: number) => {
+//     const file = e.target.files?.[0];
+//     if (file) {
+//       const reader = new FileReader();
+//       reader.onload = () => {
+//         if (index !== undefined && Array.isArray(setter)) {
+//           const newImages = [...setter];
+//           newImages[index] = reader.result as string;
+//           setter(newImages);
+//         } else {
+//           setter(reader.result as string);
+//         }
+//       };
+//       reader.readAsDataURL(file);
+//     }
+//   };
