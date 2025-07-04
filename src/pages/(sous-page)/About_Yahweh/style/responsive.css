@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px) {
   #pg-banner-abouty {
-    background-image: url("../image/page-banner.jpg");
+    /* background-image: url("../image/page-banner.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -36,7 +36,7 @@
 
 @media screen and (max-width: 768px) {
   #pg-banner-abouty {
-    background-image: url("../image/page-banner.jpg");
+    /* background-image: url("../image/page-banner.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -80,7 +80,7 @@
 
 @media screen and (max-width: 480px) {
   #pg-banner-abouty {
-    background-image: url("../image/page-banner.jpg");
+    /* background-image: url("../image/page-banner.jpg"); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
