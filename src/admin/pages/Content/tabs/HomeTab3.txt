@@ -1,7 +1,204 @@
-"use client";
+// const [homeResponse, yahwehResponse, yahwehBenResponse, followersResponse, attireResponse] = await Promise.all([
+//   fetch(contentData),
+//   fetch(YahweData),
+//   fetch(YahwehBenYahweh_Data),
+//   fetch(CulturalAttire_Data),
+//   fetch(Followers_Data),
+// ])
 
-import type React from "react";
-import { useState, useEffect } from "react";
+// const handleSaveVideoLink1 = () => {
+//   console.log("Video link 1 saved:", videoLink1);
+//   // Logique de sauvegarde ici
+// };
+
+// const handleSaveVideoLink2 = () => {
+//   console.log("Video link 2 saved:", videoLink2);
+//   // Logique de sauvegarde ici
+// };
+
+// const handleSaveVideoLink3 = () => {
+//   console.log("Video link 3 saved:", videoLink3);
+//   // Logique de sauvegarde ici
+// };
+
+// const handleSaveTitle = () => {
+//   console.log("Title saved:", title);
+//   // Logique de sauvegarde ici
+// };
+
+// const handleSaveDescription = () => {
+//   console.log("Description saved:", description);
+//   // Logique de sauvegarde ici
+// };
+
+// // Fonctions de sauvegarde pour la section Yahweh
+// const handleSaveYahwehTitle1 = () => {
+//   console.log("Yahweh Title 1 saved:", yahwehTitle1);
+// };
+
+// const handleSaveYahwehTitle2 = () => {
+//   console.log("Yahweh Title 2 saved:", yahwehTitle2);
+// };
+
+// const handleSaveYahwehDescription1 = () => {
+//   console.log("Yahweh Description 1 saved:", yahwehDescription1);
+// };
+
+// const handleSaveYahwehDescription2 = () => {
+//   console.log("Yahweh Description 2 saved:", yahwehDescription2);
+// };
+
+// const handleSaveYahwehDescription3 = () => {
+//   console.log("Yahweh Description 3 saved:", yahwehDescription3);
+// };
+
+// const handleSaveYahwehDescription4 = () => {
+//   console.log("Yahweh Description 4 saved:", yahwehDescription4);
+// };
+
+// const handleSaveYahwehDescription5 = () => {
+//   console.log("Yahweh Description 5 saved:", yahwehDescription5);
+// };
+
+// const handleSaveYahwehDescription6 = () => {
+//   console.log("Yahweh Description 6 saved:", yahwehDescription6);
+// };
+
+// // Fonctions de sauvegarde pour la section Yahweh Ben Yahweh
+// const handleSaveYahwehBenTitle1 = () => {
+//   console.log("Yahweh Ben Title 1 saved:", yahwehBenTitle1);
+// };
+
+// const handleSaveYahwehBenTitle2 = () => {
+//   console.log("Yahweh Ben Title 2 saved:", yahwehBenTitle2);
+// };
+
+// const handleSaveYahwehBenDescription1 = () => {
+//   console.log("Yahweh Ben Description 1 saved:", yahwehBenDescription1);
+// };
+
+// const handleSaveYahwehBenDescription2 = () => {
+//   console.log("Yahweh Ben Description 2 saved:", yahwehBenDescription2);
+// };
+
+// const handleSaveYahwehBenDescription3 = () => {
+//   console.log("Yahweh Ben Description 3 saved:", yahwehBenDescription3);
+// };
+
+// const handleSaveYahwehBenDescription4 = () => {
+//   console.log("Yahweh Ben Description 4 saved:", yahwehBenDescription4);
+// };
+
+// const handleSaveYahwehBenDescription5 = () => {
+//   console.log("Yahweh Ben Description 5 saved:", yahwehBenDescription5);
+// };
+
+// const handleSaveYahwehBenDescription6 = () => {
+//   console.log("Yahweh Ben Description 6 saved:", yahwehBenDescription6);
+// };
+
+// const handleSaveYahwehBenDescription7 = () => {
+//   console.log("Yahweh Ben Description 7 saved:", yahwehBenDescription7);
+// };
+
+// const handleSaveYahwehBenDescription8 = () => {
+//   console.log("Yahweh Ben Description 8 saved:", yahwehBenDescription8);
+// };
+
+// const handleSaveYahwehBenDescription9 = () => {
+//   console.log("Yahweh Ben Description 9 saved:", yahwehBenDescription9);
+// };
+
+// // Fonctions de sauvegarde pour la section Followers
+// const handleSaveFollowersTitle = () => {
+//   console.log("Followers Title saved:", followersTitle);
+// };
+
+// const handleSaveFollowersDescription1 = () => {
+//   console.log("Followers Description 1 saved:", followersDescription1);
+// };
+
+// const handleSaveFollowersDescription2 = () => {
+//   console.log("Followers Description 2 saved:", followersDescription2);
+// };
+
+// const handleSaveFollowersDescription3 = () => {
+//   console.log("Followers Description 3 saved:", followersDescription3);
+// };
+
+// const handleSaveFollowersDescription4 = () => {
+//   console.log("Followers Description 4 saved:", followersDescription4);
+// };
+
+// const handleSaveFollowersDescription5 = () => {
+//   console.log("Followers Description 5 saved:", followersDescription5);
+// };
+
+// // Fonctions de sauvegarde pour la section Cultural Attire
+// const handleSaveAttireTitle = () => {
+//   console.log("Attire Title saved:", attireTitle);
+// };
+
+// const handleSaveAttireDescription1 = () => {
+//   console.log("Attire Description 1 saved:", attireDescription1);
+// };
+
+// const handleSaveAttireDescription2 = () => {
+//   console.log("Attire Description 2 saved:", attireDescription2);
+// };
+
+// const handleSaveAttireDescription3 = () => {
+//   console.log("Attire Description 3 saved:", attireDescription3);
+// };
+
+// const handleSaveAttireDescription4 = () => {
+//   console.log("Attire Description 4 saved:", attireDescription4);
+// };
+
+// const handleSaveAttireDescription5 = () => {
+//   console.log("Attire Description 5 saved:", attireDescription5);
+// };
+
+// État pour le chargement
+
+// Fonction pour charger les données JSON
+// const loadJsonData = async () => {
+//   try {
+//     setIsLoading(true)
+//     // Remplacez ce chemin par le chemin réel vers votre fichier JSON
+//     // const response = await fetch("/data/homepage-content.json")
+//     const response = await fetch("data/home.json")
+
+//     if (!response.ok) {
+//       throw new Error("Erreur lors du chargement des données")
+//     }
+
+//     const data: HomePageData = await response.json()
+
+//     // Charger les données dans les états
+//     if (data.homePage) {
+//       // Section Home
+//       setTitle(data.homePage.videoSection.title || "")
+//       setDescription(data.homePage.videoSection.content || "")
+
+//       // Charger les liens vidéo
+//       if (data.homePage.videos && data.homePage.videos.length > 0) {
+//         setVideoLink1(data.homePage.videos[0]?.src || "")
+//         setVideoLink2(data.homePage.videos[1]?.src || "")
+//         setVideoLink3(data.homePage.videos[2]?.src || "")
+//       }
+//     }
+
+//     setError(null)
+//   } catch (err) {
+//     console.error("Erreur lors du chargement des données:", err)
+//     setError("Impossible de charger les données. Vérifiez que le fichier JSON existe.")
+//   } finally {
+//     setIsLoading(false)
+//   }
+// }
+
+import React, { useEffect, useState } from "react";
 import {
   Save,
   Video,
@@ -14,12 +211,7 @@ import "./style/HomeTab.css";
 import "./style/HomeTab3.css";
 import "./style/HomeTab5.css";
 import contentData from "../../../../data/home.json";
-import YahweData from "../../../../data/yahweh.json";
-import YahwehBenYahweh_Data from "../../../../data/yahweh-ben-yahweh.json";
-import CulturalAttire_Data from "../../../../data/followers.json";
-import Followers_Data from "../../../../data/cultural-attire.json";
-
-// Interfaces pour typer les données JSON
+// Interface pour typer les données JSON
 interface HomePageData {
   homePage: {
     videoSection: {
@@ -30,57 +222,6 @@ interface HomePageData {
       src: string;
       poster: string;
     }>;
-  };
-}
-
-interface YahwehData {
-  yahweh: {
-    title1: string;
-    title2: string;
-    description1: string;
-    description2: string;
-    description3: string;
-    description4: string;
-    description5: string;
-    description6: string;
-  };
-}
-
-interface YahwehBenYahwehData {
-  yahwehBenYahweh: {
-    title1: string;
-    title2: string;
-    description1: string;
-    description2: string;
-    description3: string;
-    description4: string;
-    description5: string;
-    description6: string;
-    description7: string;
-    description8: string;
-    description9: string;
-  };
-}
-
-interface FollowersData {
-  followers: {
-    title: string;
-    description1: string;
-    description2: string;
-    description3: string;
-    description4: string;
-    description5: string;
-  };
-}
-
-interface CulturalAttireData {
-  culturalAttire: {
-    title: string;
-    description1: string;
-    description2: string;
-    description3: string;
-    description4: string;
-    description5: string;
   };
 }
 
@@ -131,6 +272,8 @@ const HomeTab: React.FC = () => {
   const [attireDescription4, setAttireDescription4] = useState("");
   const [attireDescription5, setAttireDescription5] = useState("");
 
+  // ... keep existing code (handleSaveVideoLink functions and other Home section handlers)
+
   // États pour gérer l'ouverture/fermeture des sections
   const [isHomeOpen, setIsHomeOpen] = useState(true);
   const [isYahwehOpen, setIsYahwehOpen] = useState(true);
@@ -141,128 +284,31 @@ const HomeTab: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fonction pour charger tous les fichiers JSON
-  const loadAllJsonData = async () => {
+  const loadJsonData = async () => {
     try {
       setIsLoading(true);
 
-      // Charger tous les fichiers JSON en parallèle
-      const [
-        homeResponse,
-        yahwehResponse,
-        yahwehBenResponse,
-        followersResponse,
-        attireResponse,
-      ] = [
-        contentData,
-        YahweData,
-        YahwehBenYahweh_Data,
-        CulturalAttire_Data,
-        Followers_Data,
-      ];
+      // Utilisation des données directement importées
+      const data: HomePageData = contentData;
 
-      // Vérifier que toutes les requêtes ont réussi
-      if (
-        !homeResponse.homePage ||
-        !yahwehResponse.yahweh ||
-        !yahwehBenResponse.yahwehBenYahweh ||
-        !followersResponse.followers ||
-        !attireResponse.culturalAttire
-      ) {
-        throw new Error(
-          "Erreur lors du chargement d'un ou plusieurs fichiers JSON"
-        );
-      }
+      // Charger les données dans les états
+      if (data.homePage) {
+        // Section Home
+        setTitle(data.homePage.videoSection.title || "");
+        setDescription(data.homePage.videoSection.content || "");
 
-      // Parser les données JSON
-      const homeData: HomePageData = homeResponse;
-      const yahwehData: YahwehData = yahwehResponse;
-      const yahwehBenData: YahwehBenYahwehData = yahwehBenResponse;
-      const followersData: FollowersData = followersResponse;
-      const attireData: CulturalAttireData = attireResponse;
-
-      // Charger les données Home
-      if (homeData.homePage) {
-        setTitle(homeData.homePage.videoSection.title || "");
-        setDescription(homeData.homePage.videoSection.content || "");
-        if (homeData.homePage.videos && homeData.homePage.videos.length > 0) {
-          setVideoLink1(homeData.homePage.videos[0]?.src || "");
-          setVideoLink2(homeData.homePage.videos[1]?.src || "");
-          setVideoLink3(homeData.homePage.videos[2]?.src || "");
+        // Charger les liens vidéo
+        if (data.homePage.videos && data.homePage.videos.length > 0) {
+          setVideoLink1(data.homePage.videos[0]?.src || "");
+          setVideoLink2(data.homePage.videos[1]?.src || "");
+          setVideoLink3(data.homePage.videos[2]?.src || "");
         }
-      }
-
-      // Charger les données Yahweh
-      if (yahwehData.yahweh) {
-        setYahwehTitle1(yahwehData.yahweh.title1 || "");
-        setYahwehTitle2(yahwehData.yahweh.title2 || "");
-        setYahwehDescription1(yahwehData.yahweh.description1 || "");
-        setYahwehDescription2(yahwehData.yahweh.description2 || "");
-        setYahwehDescription3(yahwehData.yahweh.description3 || "");
-        setYahwehDescription4(yahwehData.yahweh.description4 || "");
-        setYahwehDescription5(yahwehData.yahweh.description5 || "");
-        setYahwehDescription6(yahwehData.yahweh.description6 || "");
-      }
-
-      // Charger les données Yahweh Ben Yahweh
-      if (yahwehBenData.yahwehBenYahweh) {
-        setYahwehBenTitle1(yahwehBenData.yahwehBenYahweh.title1 || "");
-        setYahwehBenTitle2(yahwehBenData.yahwehBenYahweh.title2 || "");
-        setYahwehBenDescription1(
-          yahwehBenData.yahwehBenYahweh.description1 || ""
-        );
-        setYahwehBenDescription2(
-          yahwehBenData.yahwehBenYahweh.description2 || ""
-        );
-        setYahwehBenDescription3(
-          yahwehBenData.yahwehBenYahweh.description3 || ""
-        );
-        setYahwehBenDescription4(
-          yahwehBenData.yahwehBenYahweh.description4 || ""
-        );
-        setYahwehBenDescription5(
-          yahwehBenData.yahwehBenYahweh.description5 || ""
-        );
-        setYahwehBenDescription6(
-          yahwehBenData.yahwehBenYahweh.description6 || ""
-        );
-        setYahwehBenDescription7(
-          yahwehBenData.yahwehBenYahweh.description7 || ""
-        );
-        setYahwehBenDescription8(
-          yahwehBenData.yahwehBenYahweh.description8 || ""
-        );
-        setYahwehBenDescription9(
-          yahwehBenData.yahwehBenYahweh.description9 || ""
-        );
-      }
-
-      // Charger les données Followers
-      if (followersData.followers) {
-        setFollowersTitle(followersData.followers.title || "");
-        setFollowersDescription1(followersData.followers.description1 || "");
-        setFollowersDescription2(followersData.followers.description2 || "");
-        setFollowersDescription3(followersData.followers.description3 || "");
-        setFollowersDescription4(followersData.followers.description4 || "");
-        setFollowersDescription5(followersData.followers.description5 || "");
-      }
-
-      // Charger les données Cultural Attire
-      if (attireData.culturalAttire) {
-        setAttireTitle(attireData.culturalAttire.title || "");
-        setAttireDescription1(attireData.culturalAttire.description1 || "");
-        setAttireDescription2(attireData.culturalAttire.description2 || "");
-        setAttireDescription3(attireData.culturalAttire.description3 || "");
-        setAttireDescription4(attireData.culturalAttire.description4 || "");
-        setAttireDescription5(attireData.culturalAttire.description5 || "");
       }
 
       setError(null);
     } catch (err) {
-      console.error("Erreur lors du chargement des données:", err);
-      setError(
-        "Impossible de charger les données. Vérifiez que tous les fichiers JSON existent."
-      );
+      console.error("Erreur lors du traitement des données:", err);
+      setError("Impossible de traiter les données.");
     } finally {
       setIsLoading(false);
     }
@@ -270,18 +316,26 @@ const HomeTab: React.FC = () => {
 
   // Charger les données au montage du composant
   useEffect(() => {
-    loadAllJsonData();
+    loadJsonData();
   }, []);
 
-  // Fonction pour sauvegarder les données
+  // Fonction pour sauvegarder les données (à adapter selon votre backend)
   const saveDataToJson = async (
     section: string,
     field: string,
     value: string
   ) => {
     try {
-      console.log(`Sauvegarde: ${section}.${field} = ${value}`);
       // Ici vous pouvez implémenter la logique pour sauvegarder dans votre backend
+      console.log(`Sauvegarde: ${section}.${field} = ${value}`);
+
+      // Exemple d'appel API pour sauvegarder
+      // const response = await fetch('/api/save-content', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ section, field, value })
+      // });
+
       alert(`${field} sauvegardé avec succès!`);
     } catch (err) {
       console.error("Erreur lors de la sauvegarde:", err);
@@ -289,87 +343,154 @@ const HomeTab: React.FC = () => {
     }
   };
 
-  // Fonctions de sauvegarde pour Home
-  const handleSaveVideoLink1 = () =>
+  // Fonctions de sauvegarde mises à jour
+  const handleSaveVideoLink1 = () => {
     saveDataToJson("homePage.videos[0]", "src", videoLink1);
-  const handleSaveVideoLink2 = () =>
+  };
+
+  const handleSaveVideoLink2 = () => {
     saveDataToJson("homePage.videos[1]", "src", videoLink2);
-  const handleSaveVideoLink3 = () =>
+  };
+
+  const handleSaveVideoLink3 = () => {
     saveDataToJson("homePage.videos[2]", "src", videoLink3);
-  const handleSaveTitle = () =>
+  };
+
+  const handleSaveTitle = () => {
     saveDataToJson("homePage.videoSection", "title", title);
-  const handleSaveDescription = () =>
+  };
+
+  const handleSaveDescription = () => {
     saveDataToJson("homePage.videoSection", "content", description);
+  };
 
-  // Fonctions de sauvegarde pour Yahweh
-  const handleSaveYahwehTitle1 = () =>
+  // Fonctions de sauvegarde pour la section Yahweh
+  const handleSaveYahwehTitle1 = () => {
     saveDataToJson("yahweh", "title1", yahwehTitle1);
-  const handleSaveYahwehTitle2 = () =>
+  };
+
+  const handleSaveYahwehTitle2 = () => {
     saveDataToJson("yahweh", "title2", yahwehTitle2);
-  const handleSaveYahwehDescription1 = () =>
+  };
+
+  const handleSaveYahwehDescription1 = () => {
     saveDataToJson("yahweh", "description1", yahwehDescription1);
-  const handleSaveYahwehDescription2 = () =>
+  };
+
+  const handleSaveYahwehDescription2 = () => {
     saveDataToJson("yahweh", "description2", yahwehDescription2);
-  const handleSaveYahwehDescription3 = () =>
+  };
+
+  const handleSaveYahwehDescription3 = () => {
     saveDataToJson("yahweh", "description3", yahwehDescription3);
-  const handleSaveYahwehDescription4 = () =>
+  };
+
+  const handleSaveYahwehDescription4 = () => {
     saveDataToJson("yahweh", "description4", yahwehDescription4);
-  const handleSaveYahwehDescription5 = () =>
+  };
+
+  const handleSaveYahwehDescription5 = () => {
     saveDataToJson("yahweh", "description5", yahwehDescription5);
-  const handleSaveYahwehDescription6 = () =>
+  };
+
+  const handleSaveYahwehDescription6 = () => {
     saveDataToJson("yahweh", "description6", yahwehDescription6);
+  };
 
-  // Fonctions de sauvegarde pour Yahweh Ben Yahweh
-  const handleSaveYahwehBenTitle1 = () =>
-    saveDataToJson("yahwehBenYahweh", "title1", yahwehBenTitle1);
-  const handleSaveYahwehBenTitle2 = () =>
-    saveDataToJson("yahwehBenYahweh", "title2", yahwehBenTitle2);
-  const handleSaveYahwehBenDescription1 = () =>
-    saveDataToJson("yahwehBenYahweh", "description1", yahwehBenDescription1);
-  const handleSaveYahwehBenDescription2 = () =>
-    saveDataToJson("yahwehBenYahweh", "description2", yahwehBenDescription2);
-  const handleSaveYahwehBenDescription3 = () =>
-    saveDataToJson("yahwehBenYahweh", "description3", yahwehBenDescription3);
-  const handleSaveYahwehBenDescription4 = () =>
-    saveDataToJson("yahwehBenYahweh", "description4", yahwehBenDescription4);
-  const handleSaveYahwehBenDescription5 = () =>
-    saveDataToJson("yahwehBenYahweh", "description5", yahwehBenDescription5);
-  const handleSaveYahwehBenDescription6 = () =>
-    saveDataToJson("yahwehBenYahweh", "description6", yahwehBenDescription6);
-  const handleSaveYahwehBenDescription7 = () =>
-    saveDataToJson("yahwehBenYahweh", "description7", yahwehBenDescription7);
-  const handleSaveYahwehBenDescription8 = () =>
-    saveDataToJson("yahwehBenYahweh", "description8", yahwehBenDescription8);
-  const handleSaveYahwehBenDescription9 = () =>
-    saveDataToJson("yahwehBenYahweh", "description9", yahwehBenDescription9);
+  // Fonctions de sauvegarde pour la section Yahweh Ben Yahweh
+  const handleSaveYahwehBenTitle1 = () => {
+    saveDataToJson("yahwehBen", "title1", yahwehBenTitle1);
+  };
 
-  // Fonctions de sauvegarde pour Followers
-  const handleSaveFollowersTitle = () =>
+  const handleSaveYahwehBenTitle2 = () => {
+    saveDataToJson("yahwehBen", "title2", yahwehBenTitle2);
+  };
+
+  const handleSaveYahwehBenDescription1 = () => {
+    saveDataToJson("yahwehBen", "description1", yahwehBenDescription1);
+  };
+
+  const handleSaveYahwehBenDescription2 = () => {
+    saveDataToJson("yahwehBen", "description2", yahwehBenDescription2);
+  };
+
+  const handleSaveYahwehBenDescription3 = () => {
+    saveDataToJson("yahwehBen", "description3", yahwehBenDescription3);
+  };
+
+  const handleSaveYahwehBenDescription4 = () => {
+    saveDataToJson("yahwehBen", "description4", yahwehBenDescription4);
+  };
+
+  const handleSaveYahwehBenDescription5 = () => {
+    saveDataToJson("yahwehBen", "description5", yahwehBenDescription5);
+  };
+
+  const handleSaveYahwehBenDescription6 = () => {
+    saveDataToJson("yahwehBen", "description6", yahwehBenDescription6);
+  };
+
+  const handleSaveYahwehBenDescription7 = () => {
+    saveDataToJson("yahwehBen", "description7", yahwehBenDescription7);
+  };
+
+  const handleSaveYahwehBenDescription8 = () => {
+    saveDataToJson("yahwehBen", "description8", yahwehBenDescription8);
+  };
+
+  const handleSaveYahwehBenDescription9 = () => {
+    saveDataToJson("yahwehBen", "description9", yahwehBenDescription9);
+  };
+
+  // Fonctions de sauvegarde pour la section Followers
+  const handleSaveFollowersTitle = () => {
     saveDataToJson("followers", "title", followersTitle);
-  const handleSaveFollowersDescription1 = () =>
-    saveDataToJson("followers", "description1", followersDescription1);
-  const handleSaveFollowersDescription2 = () =>
-    saveDataToJson("followers", "description2", followersDescription2);
-  const handleSaveFollowersDescription3 = () =>
-    saveDataToJson("followers", "description3", followersDescription3);
-  const handleSaveFollowersDescription4 = () =>
-    saveDataToJson("followers", "description4", followersDescription4);
-  const handleSaveFollowersDescription5 = () =>
-    saveDataToJson("followers", "description5", followersDescription5);
+  };
 
-  // Fonctions de sauvegarde pour Cultural Attire
-  const handleSaveAttireTitle = () =>
-    saveDataToJson("culturalAttire", "title", attireTitle);
-  const handleSaveAttireDescription1 = () =>
-    saveDataToJson("culturalAttire", "description1", attireDescription1);
-  const handleSaveAttireDescription2 = () =>
-    saveDataToJson("culturalAttire", "description2", attireDescription2);
-  const handleSaveAttireDescription3 = () =>
-    saveDataToJson("culturalAttire", "description3", attireDescription3);
-  const handleSaveAttireDescription4 = () =>
-    saveDataToJson("culturalAttire", "description4", attireDescription4);
-  const handleSaveAttireDescription5 = () =>
-    saveDataToJson("culturalAttire", "description5", attireDescription5);
+  const handleSaveFollowersDescription1 = () => {
+    saveDataToJson("followers", "description1", followersDescription1);
+  };
+
+  const handleSaveFollowersDescription2 = () => {
+    saveDataToJson("followers", "description2", followersDescription2);
+  };
+
+  const handleSaveFollowersDescription3 = () => {
+    saveDataToJson("followers", "description3", followersDescription3);
+  };
+
+  const handleSaveFollowersDescription4 = () => {
+    saveDataToJson("followers", "description4", followersDescription4);
+  };
+
+  const handleSaveFollowersDescription5 = () => {
+    saveDataToJson("followers", "description5", followersDescription5);
+  };
+
+  // Fonctions de sauvegarde pour la section Cultural Attire
+  const handleSaveAttireTitle = () => {
+    saveDataToJson("attire", "title", attireTitle);
+  };
+
+  const handleSaveAttireDescription1 = () => {
+    saveDataToJson("attire", "description1", attireDescription1);
+  };
+
+  const handleSaveAttireDescription2 = () => {
+    saveDataToJson("attire", "description2", attireDescription2);
+  };
+
+  const handleSaveAttireDescription3 = () => {
+    saveDataToJson("attire", "description3", attireDescription3);
+  };
+
+  const handleSaveAttireDescription4 = () => {
+    saveDataToJson("attire", "description4", attireDescription4);
+  };
+
+  const handleSaveAttireDescription5 = () => {
+    saveDataToJson("attire", "description5", attireDescription5);
+  };
 
   // Affichage du chargement
   if (isLoading) {
@@ -389,7 +510,7 @@ const HomeTab: React.FC = () => {
         <div style={{ textAlign: "center", padding: "2rem", color: "red" }}>
           <p>{error}</p>
           <button
-            onClick={loadAllJsonData}
+            onClick={loadJsonData}
             style={{
               marginTop: "1rem",
               padding: "0.5rem 1rem",
@@ -569,7 +690,6 @@ const HomeTab: React.FC = () => {
       {/* ... keep existing code (Section Yahweh and Yahweh Ben Yahweh with all their fields) */}
 
       {/* Section Yahweh */}
-      {/* Section Yahweh */}
       <section className="yahweh-section">
         <div
           className="section-header"
@@ -580,12 +700,13 @@ const HomeTab: React.FC = () => {
             {isYahwehOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
           </button>
         </div>
-
         {isYahwehOpen && (
+          // <h1 className="section-title">Yahweh</h1>
           <div className="section-content">
             <p>Yahweh is the sacred name of the Almighty Creator.</p>
             <p>We honor and worship Yahweh as the one true God.</p>
 
+            {/* Champs d'édition pour la section Yahweh */}
             <div className="admin-controls">
               <h3 className="admin-title">Administration Yahweh</h3>
 
