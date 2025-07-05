@@ -6,7 +6,9 @@ import {
   ChevronUp,
   ChevronDown,
 } from "lucide-react";
-import homeImagesData from "../../../../data/images-home.json"; // Import du JSON
+import homeImagesData from "../../../../data/images-home.json";
+import buttonsData from "../../../../data/bouton-img.json";
+import backgroundImagesData from "../../../../data/img/about-images.json";
 
 import "./style/HomeTab.css";
 
@@ -15,7 +17,6 @@ interface ImageData {
   path: string;
   alt: string;
 }
-
 
 interface HomeImagesData {
   banners: ImageData[];
@@ -32,29 +33,49 @@ interface HomeImagesData {
   breakingNews: ImageData;
 }
 
+interface ButtonData {
+  id: number;
+  path: string;
+  alt: string;
+}
+interface BackgroundImages {
+  pageBanner_About_Yahweh: string;
+  pageBannerAbout_Yahweh_Ben_Yahweh: string;
+  pageBannerAbout_The_Followers: string;
+  pageBannerAbout_Cultural_Attire: string;
+  pageBannerAbout_Books_for_the_Year: string;
+}
 const HomeTab: React.FC = () => {
   // Chargement initial des images depuis le JSON
   const [defaultImages, setDefaultImages] =
     useState<HomeImagesData>(homeImagesData);
-
 
   // États pour les images modifiables
   const [homeImages1, setHomeImages1] = useState<string[]>(() =>
     defaultImages.banners.slice(0, 3).map((banner) => banner.path)
   );
 
-  const [homeImages2, setHomeImages2] = useState<string[]>(Array(12).fill(""));
+  // const [homeImages2, setHomeImages2] = useState<string[]>(Array(12).fill(""));
+  const [homeImages2, setHomeImages2] = useState<string[]>(() =>
+    buttonsData.boutons.map((bouton: ButtonData) => bouton.path)
+  );
   const [homeImage3, setHomeImage3] = useState(
     defaultImages.bookOfTheMonth.path
   );
   const [homeImage4, setHomeImage4] = useState(defaultImages.breakingNews.path);
 
   // Autres états images
-  const [booksImage, setBooksImage] = useState("");
-  const [aboutYahwehImage, setAboutYahwehImage] = useState("");
-  const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState("");
-  const [followersImage, setFollowersImage] = useState("");
-  const [culturalImage, setCulturalImage] = useState("");
+  // const [booksImage, setBooksImage] = useState("");
+  // const [aboutYahwehImage, setAboutYahwehImage] = useState("");
+  // const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState("");
+  // const [followersImage, setFollowersImage] = useState("");
+  // const [culturalImage, setCulturalImage] = useState("");
+  // États pour les images modifiables
+const [booksImage, setBooksImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year);
+const [aboutYahwehImage, setAboutYahwehImage] = useState(backgroundImagesData.backgroundImages.pageBanner_About_Yahweh);
+const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh);
+const [followersImage, setFollowersImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers);
+const [culturalImage, setCulturalImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire);
 
   // États pour les sections
   const [isHomeOpen, setIsHomeOpen] = useState(true);
@@ -73,7 +94,6 @@ const HomeTab: React.FC = () => {
     setHomeImage4(defaultImages.breakingNews.path);
   }, [defaultImages]);
 
-  
   // Gestion du téléchargement d'images
   const handleImageUpload = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -177,48 +197,56 @@ const HomeTab: React.FC = () => {
             <div className="image-group">
               <h3 className="image-group-title">Galerie (12 images)</h3>
               <div className="images-row-12">
-                {homeImages2.map((image, index) => (
-                  <div key={index} className="image-upload-container small">
-                    <div className="image-preview">
-                      {image ? (
-                        <img
-                          src={image}
-                          alt={`Gallery ${index + 1}`}
-                          className="preview-image"
-                        />
-                      ) : (
-                        <div className="image-placeholder">
-                          <ImageIcon size={20} />
-                        </div>
-                      )}
-                    </div>
-                    <div className="image-controls">
-                      <label className="upload-btn small">
-                        <Upload size={12} />
-                        <input
-                          type="file"
-                          accept="image/*"
-                          onChange={(e) =>
-                            handleImageUpload(e, setHomeImages2, index)
+                {homeImages2.map((image, index) => {
+                  const bouton = buttonsData.boutons[index]; // Utilisez buttonsData ici
+                  return (
+                    <div
+                      key={bouton.id}
+                      className="image-upload-container small"
+                    >
+                      {" "}
+                      {/* Utilisez l'ID comme clé */}
+                      <div className="image-preview">
+                        {image ? (
+                          <>
+                            <img
+                              src={image}
+                              alt={bouton.alt}
+                              className="preview-image"
+                            />
+                            <div className="image-alt-text">{bouton.alt}</div>
+                          </>
+                        ) : (
+                          <div className="image-placeholder">
+                            <ImageIcon size={20} />
+                          </div>
+                        )}
+                      </div>
+                      <div className="image-controls">
+                        <label className="upload-btn small">
+                          <Upload size={12} />
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={(e) => {
+                              handleImageUpload(e, setHomeImages2, index);
+                            }}
+                            hidden
+                          />
+                        </label>
+                        <button
+                          onClick={() =>
+                            handleSaveImage(image, `Gallery-${bouton.id}`)
                           }
-                          hidden
-                        />
-                      </label>
-                      <button
-                        onClick={() =>
-                          handleSaveImage(
-                            homeImages2[index],
-                            `Gallery-${index + 1}`
-                          )
-                        }
-                        className="save-btn small"
-                        disabled={!homeImages2[index]}
-                      >
-                        <Save size={12} />
-                      </button>
+                          className="save-btn small"
+                          disabled={!image}
+                        >
+                          <Save size={12} />
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 

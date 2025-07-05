@@ -1,6 +1,6 @@
-regle image sur btn cote client et back office
++regle image sur btn cote client et back office
 
-importation de tout image dans back office
++importation de tout image dans back office
 
 choix de la base de donnée (facule a importer)
 
