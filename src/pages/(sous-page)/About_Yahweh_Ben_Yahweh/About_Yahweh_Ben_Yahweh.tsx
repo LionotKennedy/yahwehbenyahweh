@@ -3,7 +3,7 @@ import "./style/responsive.css";
 import YahwehImg from "./image/Yahweh_Ben_Yahweh.png";
 import HisMission from "./image/His_Mission.png";
 import bottomMedia from "./image/bottom-media.png";
-import imagesData from "../../../data/about-images.json";
+import imagesData from "../../../data/img/about-images.json";
 
 export function AboutYahwehBenYahweh() {
   return (

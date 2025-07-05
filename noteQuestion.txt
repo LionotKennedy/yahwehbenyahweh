@@ -8,3 +8,6 @@ backend pour image
 
 tu peut me creer une code backend pour cette projet avec techno nodeJS et expressJS base de donnée postgreSQL 
 avec structure Route,Controller,Model,env...etc pour ajouter et modifier de l'imgae
+
+
+la ce bon maintenant tu peut me creer code ajout et modification (en backend) a partir des mes informations sache que chaque section aura sa propre table 

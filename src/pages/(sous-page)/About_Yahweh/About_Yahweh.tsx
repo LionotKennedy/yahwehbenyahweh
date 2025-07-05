@@ -3,7 +3,7 @@ import "./style/responsive.css";
 
 import Yahweh from "./image/Yahweh.png";
 import bottomMedia from "./image/bottom-media.png";
-import imagesData from "../../../data/about-images.json";
+import imagesData from "../../../data/img/about-images.json";
 
 
 export function AboutYahweh() {
