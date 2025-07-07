@@ -10,4 +10,19 @@ tu peut me creer une code backend pour cette projet avec techno nodeJS et expres
 avec structure Route,Controller,Model,env...etc pour ajouter et modifier de l'imgae
 
 
-la ce bon maintenant tu peut me creer code ajout et modification (en backend) a partir des mes informations sache que chaque section aura sa propre table 
+la ce bon maintenant tu peut me creer code ajout et modification (en backend) a partir des mes informations 
+sache que chaque section aura sa propre table 
+
+
+
+
+Code update lorsqu'on a bien effectier la modification, l'image encienne reste toujours dans le dossier upload,
+alors que j'ai voulais qu'il supprime l'encienne image apres avoir effectier la modication c'est a dire il va 
+rempler par nouvelle image
+
+add 12 image
+
+
+ts tiako hatao forcé valeur id reny bro
+
+description halatsak am backend

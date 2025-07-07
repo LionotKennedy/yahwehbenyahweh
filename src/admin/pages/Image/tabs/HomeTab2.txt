@@ -1,0 +1,4695 @@
+// import React, { useState, useEffect } from "react";
+// import {
+//   Upload,
+//   Save,
+//   Image as ImageIcon,
+//   ChevronUp,
+//   ChevronDown,
+// } from "lucide-react";
+// import homeImagesData from "../../../../data/images-home.json";
+// import buttonsData from "../../../../data/bouton-img.json";
+// import backgroundImagesData from "../../../../data/img/about-images.json";
+
+// import "./style/HomeTab.css";
+
+// interface ImageData {
+//   id?: number;
+//   path: string;
+//   alt: string;
+// }
+
+// interface HomeImagesData {
+//   banners: ImageData[];
+//   bookOfTheMonth: ImageData;
+//   buttons: {
+//     readMore: ImageData;
+//     orderNow: ImageData;
+//   };
+//   videoPoster: {
+//     pageBanner: ImageData;
+//     goodNews: ImageData;
+//     eternalLife: ImageData;
+//   };
+//   breakingNews: ImageData;
+// }
+
+// interface ButtonData {
+//   id: number;
+//   path: string;
+//   alt: string;
+// }
+// interface BackgroundImages {
+//   pageBanner_About_Yahweh: string;
+//   pageBannerAbout_Yahweh_Ben_Yahweh: string;
+//   pageBannerAbout_The_Followers: string;
+//   pageBannerAbout_Cultural_Attire: string;
+//   pageBannerAbout_Books_for_the_Year: string;
+// }
+// const HomeTab: React.FC = () => {
+//   // Chargement initial des images depuis le JSON
+//   const [defaultImages, setDefaultImages] =
+//     useState<HomeImagesData>(homeImagesData);
+
+//   // États pour les images modifiables
+//   const [homeImages1, setHomeImages1] = useState<string[]>(() =>
+//     defaultImages.banners.slice(0, 3).map((banner) => banner.path)
+//   );
+
+//   // const [homeImages2, setHomeImages2] = useState<string[]>(Array(12).fill(""));
+//   const [homeImages2, setHomeImages2] = useState<string[]>(() =>
+//     buttonsData.boutons.map((bouton: ButtonData) => bouton.path)
+//   );
+//   const [homeImage3, setHomeImage3] = useState(
+//     defaultImages.bookOfTheMonth.path
+//   );
+//   const [homeImage4, setHomeImage4] = useState(defaultImages.breakingNews.path);
+
+//   // Autres états images
+//   // const [booksImage, setBooksImage] = useState("");
+//   // const [aboutYahwehImage, setAboutYahwehImage] = useState("");
+//   // const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState("");
+//   // const [followersImage, setFollowersImage] = useState("");
+//   // const [culturalImage, setCulturalImage] = useState("");
+//   // États pour les images modifiables
+// const [booksImage, setBooksImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year);
+// const [aboutYahwehImage, setAboutYahwehImage] = useState(backgroundImagesData.backgroundImages.pageBanner_About_Yahweh);
+// const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh);
+// const [followersImage, setFollowersImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers);
+// const [culturalImage, setCulturalImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire);
+
+//   // États pour les sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true);
+//   const [isBooksOpen, setIsBooksOpen] = useState(true);
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true);
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true);
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true);
+
+//   // Effet pour charger les images par défaut
+//   useEffect(() => {
+//     setHomeImages1(
+//       defaultImages.banners.slice(0, 3).map((banner) => banner.path)
+//     );
+//     setHomeImage3(defaultImages.bookOfTheMonth.path);
+//     setHomeImage4(defaultImages.breakingNews.path);
+//   }, [defaultImages]);
+
+//   // Gestion du téléchargement d'images
+//   const handleImageUpload = (
+//     e: React.ChangeEvent<HTMLInputElement>,
+//     setter:
+//       | React.Dispatch<React.SetStateAction<string>>
+//       | React.Dispatch<React.SetStateAction<string[]>>,
+//     index?: number
+//   ) => {
+//     const file = e.target.files?.[0];
+//     if (!file) return;
+
+//     const reader = new FileReader();
+//     reader.onload = () => {
+//       const result = reader.result as string;
+
+//       if (index !== undefined) {
+//         // Cas des tableaux (homeImages1 et homeImages2)
+//         if (setter === setHomeImages1 || setter === setHomeImages2) {
+//           setter((prev: string[]) => {
+//             const newImages = [...prev];
+//             newImages[index] = result;
+//             return newImages;
+//           });
+//         }
+//       } else {
+//         // Cas des images uniques
+//         if (typeof setter === "function") {
+//           (setter as React.Dispatch<React.SetStateAction<string>>)(result);
+//         }
+//       }
+//     };
+//     reader.readAsDataURL(file);
+//   };
+
+//   // Sauvegarde des images
+//   const handleSaveImage = (imageData: string | string[], section: string) => {
+//     console.log(`Image sauvegardée pour ${section}:`, imageData);
+//     // Ici vous pourriez envoyer les données à votre API
+//   };
+
+//   // Rendu du composant
+//   return (
+//     <div className="home-container">
+//       {/* Section Home */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsHomeOpen(!isHomeOpen)}
+//         >
+//           <h1 className="section-title">Home</h1>
+//           <button className="toggle-section">
+//             {isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 bannières principales */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Bannières principales (3)</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((image, index) => (
+//                   <div key={index} className="image-upload-container">
+//                     <div className="image-preview">
+//                       <img
+//                         src={image}
+//                         alt={`Banner ${index + 1}`}
+//                         className="preview-image"
+//                       />
+//                     </div>
+//                     <div className="image-controls">
+//                       <label className="upload-btn">
+//                         <Upload size={16} />
+//                         <input
+//                           type="file"
+//                           accept="image/*"
+//                           onChange={(e) =>
+//                             handleImageUpload(e, setHomeImages1, index)
+//                           }
+//                           hidden
+//                         />
+//                       </label>
+//                       <button
+//                         onClick={() =>
+//                           handleSaveImage(
+//                             homeImages1[index],
+//                             `Banner-${index + 1}`
+//                           )
+//                         }
+//                         className="save-btn"
+//                       >
+//                         <Save size={16} />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* 12 images galerie */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => {
+//                   const bouton = buttonsData.boutons[index]; // Utilisez buttonsData ici
+//                   return (
+//                     <div
+//                       key={bouton.id}
+//                       className="image-upload-container small"
+//                     >
+//                       {" "}
+//                       {/* Utilisez l'ID comme clé */}
+//                       <div className="image-preview">
+//                         {image ? (
+//                           <>
+//                             <img
+//                               src={image}
+//                               alt={bouton.alt}
+//                               className="preview-image"
+//                             />
+//                             <div className="image-alt-text">{bouton.alt}</div>
+//                           </>
+//                         ) : (
+//                           <div className="image-placeholder">
+//                             <ImageIcon size={20} />
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn small">
+//                           <Upload size={12} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => {
+//                               handleImageUpload(e, setHomeImages2, index);
+//                             }}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() =>
+//                             handleSaveImage(image, `Gallery-${bouton.id}`)
+//                           }
+//                           className="save-btn small"
+//                           disabled={!image}
+//                         >
+//                           <Save size={12} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* Livre du mois */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Livre du mois</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage3}
+//                     alt={defaultImages.bookOfTheMonth.alt}
+//                     className="preview-image"
+//                   />
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage3)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() =>
+//                       handleSaveImage(homeImage3, "Book-of-the-Month")
+//                     }
+//                     className="save-btn"
+//                   >
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* breakingNews */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Breaking News</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage4}
+//                     alt={defaultImages.breakingNews.alt}
+//                     className="preview-image"
+//                   />
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage4)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() =>
+//                       handleSaveImage(homeImage4, "Read-More-Button")
+//                     }
+//                     className="save-btn"
+//                   >
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsBooksOpen(!isBooksOpen)}
+//         >
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setBooksImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img
+//                     src={aboutYahwehImage}
+//                     alt="About Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(aboutYahwehImage, "About-Yahweh")
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) =>
+//                       handleImageUpload(e, setAboutYahwehBenImage)
+//                     }
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(
+//                       aboutYahwehBenImage,
+//                       "About-Yahweh-Ben-Yahweh"
+//                     )
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsFollowersOpen(!isFollowersOpen)}
+//         >
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img
+//                     src={followersImage}
+//                     alt="Followers"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsCulturalOpen(!isCulturalOpen)}
+//         >
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img
+//                     src={culturalImage}
+//                     alt="Cultural Attire"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setCulturalImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(culturalImage, "Cultural-Attire")
+//                   }
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from "react";
+// import {
+//   Upload,
+//   Save,
+//   Image as ImageIcon,
+//   ChevronUp,
+//   ChevronDown,
+// } from "lucide-react";
+// import homeImagesData from "../../../../data/images-home.json";
+// import buttonsData from "../../../../data/bouton-img.json";
+// import backgroundImagesData from "../../../../data/img/about-images.json";
+// import "./style/HomeTab.css";
+
+// interface ImageData {
+//   id?: number;
+//   path: string;
+//   alt: string;
+// }
+
+// interface HomeImagesData {
+//   banners: ImageData[];
+//   bookOfTheMonth: ImageData;
+//   buttons: {
+//     readMore: ImageData;
+//     orderNow: ImageData;
+//   };
+//   videoPoster: {
+//     pageBanner: ImageData;
+//     goodNews: ImageData;
+//     eternalLife: ImageData;
+//   };
+//   breakingNews: ImageData;
+// }
+
+// interface ButtonData {
+//   id: number;
+//   path: string;
+//   alt: string;
+// }
+
+// interface Banner {
+//   id: number;
+//   path: string;
+//   alt: string | null;
+//   position: number;
+//   created_at?: string;
+//   updated_at?: string;
+// }
+
+// interface BackgroundImages {
+//   pageBanner_About_Yahweh: string;
+//   pageBannerAbout_Yahweh_Ben_Yahweh: string;
+//   pageBannerAbout_The_Followers: string;
+//   pageBannerAbout_Cultural_Attire: string;
+//   pageBannerAbout_Books_for_the_Year: string;
+// }
+
+// const HomeTab: React.FC = () => {
+//   // Chargement initial des images depuis le JSON
+//   const [defaultImages, setDefaultImages] = useState<HomeImagesData>(homeImagesData);
+
+//   // États pour les images modifiables
+//   const [homeImages1, setHomeImages1] = useState<Banner[]>([]);
+//   const [homeImages2, setHomeImages2] = useState<string[]>(() =>
+//     buttonsData.boutons.map((bouton: ButtonData) => bouton.path)
+//   );
+//   const [homeImage3, setHomeImage3] = useState(defaultImages.bookOfTheMonth.path);
+//   const [homeImage4, setHomeImage4] = useState(defaultImages.breakingNews.path);
+//   const [booksImage, setBooksImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year
+//   );
+//   const [aboutYahwehImage, setAboutYahwehImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBanner_About_Yahweh
+//   );
+//   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh
+//   );
+//   const [followersImage, setFollowersImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers
+//   );
+//   const [culturalImage, setCulturalImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire
+//   );
+
+//   // États pour les sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true);
+//   const [isBooksOpen, setIsBooksOpen] = useState(true);
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true);
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true);
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true);
+
+//   // Effet pour charger les images depuis l'API
+//   useEffect(() => {
+//     const fetchBanners = async () => {
+//       try {
+//         const response = await fetch('http://localhost:5000/api/home/banners');
+//         if (!response.ok) throw new Error('Erreur réseau');
+        
+//         const data = await response.json();
+        
+//         // Prenez les 3 premières bannières pour la section principale
+//         const mainBanners = data.slice(0, 3);
+//         setHomeImages1(mainBanners);
+        
+//         // Utilisez les bannières restantes pour les autres sections
+//         if (data.length > 3) {
+//           setHomeImage3(data[3].path); // Livre du mois
+//           setHomeImage4(data[4].path); // Breaking News
+//         }
+//       } catch (error) {
+//         console.error('Erreur lors du chargement des bannières:', error);
+//         // Fallback aux images par défaut
+//         setHomeImages1(defaultImages.banners.slice(0, 3).map(banner => ({
+//           id: Math.floor(Math.random() * 1000),
+//           path: banner.path,
+//           alt: banner.alt,
+//           position: 0
+//         }));
+//       }
+//     };
+
+//     fetchBanners();
+//   }, []);
+
+//   // Gestion du téléchargement d'images
+// const handleImageUpload = (
+//   e: React.ChangeEvent<HTMLInputElement>,
+//   setter: React.Dispatch<React.SetStateAction<Banner[]>> | React.Dispatch<React.SetStateAction<string>>,
+//   index?: number
+// ) => {
+//   const file = e.target.files?.[0];
+//   if (!file) return;
+
+//   const reader = new FileReader();
+//   reader.onload = () => {
+//     const result = reader.result as string;
+
+//     // Cas des bannières principales
+//     if (index !== undefined) {
+//       setHomeImages1(prevBanners => {
+//         return prevBanners.map((banner, i) => 
+//           i === index 
+//             ? { ...banner, path: result, alt: banner.alt || `Banner ${i + 1}` }
+//             : banner
+//         );
+//       });
+//     }
+//     // Cas des autres images
+//     else {
+//       if (typeof setter === 'function') {
+//         // Type assertion pour les setters de string
+//         const stringSetter = setter as React.Dispatch<React.SetStateAction<string>>;
+//         stringSetter(result);
+//       }
+//     }
+//   };
+//   reader.readAsDataURL(file);
+// };
+
+//   // Sauvegarde des images
+//   const handleSaveImage = async (imageData: string | Banner[], section: string) => {
+//     try {
+//       if (section.startsWith('Banner-') && Array.isArray(homeImages1)) {
+//         const bannerId = section.split('-')[1];
+//         const bannerIndex = homeImages1.findIndex(b => b.id.toString() === bannerId);
+        
+//         if (bannerIndex === -1) return;
+
+//         const formData = new FormData();
+//         const fileInput = document.createElement('input');
+//         fileInput.type = 'file';
+        
+//         console.log(`Bannière ${bannerId} sauvegardée:`, homeImages1[bannerIndex]);
+//       } else {
+//         console.log(`Image sauvegardée pour ${section}:`, imageData);
+//       }
+//     } catch (error) {
+//       console.error('Erreur lors de la sauvegarde:', error);
+//     }
+//   };
+
+//   // Rendu du composant
+//   return (
+//     <div className="home-container">
+//       {/* Section Home */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsHomeOpen(!isHomeOpen)}>
+//           <h1 className="section-title">Home</h1>
+//           <button className="toggle-section">
+//             {isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 bannières principales */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Bannières principales (3)</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((banner, index) => (
+//                   <div key={banner.id} className="image-upload-container">
+//                     <div className="image-preview">
+//                       <img
+//                         src={banner.path}
+//                         alt={banner.alt || `Banner ${index + 1}`}
+//                         className="preview-image"
+//                       />
+//                     </div>
+//                     <div className="image-controls">
+//                       <label className="upload-btn">
+//                         <Upload size={16} />
+//                         <input
+//                           type="file"
+//                           accept="image/*"
+//                           onChange={(e) => handleImageUpload(e, setHomeImages1, index)}
+//                           hidden
+//                         />
+//                       </label>
+//                       <button
+//                         onClick={() => handleSaveImage(homeImages1, `Banner-${banner.id}`)}
+//                         className="save-btn"
+//                       >
+//                         <Save size={16} />
+//                       </button>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* 12 images galerie */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => {
+//                   const bouton = buttonsData.boutons[index];
+//                   return (
+//                     <div key={bouton.id} className="image-upload-container small">
+//                       <div className="image-preview">
+//                         {image ? (
+//                           <>
+//                             <img
+//                               src={image}
+//                               alt={bouton.alt}
+//                               className="preview-image"
+//                             />
+//                             <div className="image-alt-text">{bouton.alt}</div>
+//                           </>
+//                         ) : (
+//                           <div className="image-placeholder">
+//                             <ImageIcon size={20} />
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn small">
+//                           <Upload size={12} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => handleImageUpload(e, setHomeImages2, index)}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(image, `Gallery-${bouton.id}`)}
+//                           className="save-btn small"
+//                           disabled={!image}
+//                         >
+//                           <Save size={12} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* Livre du mois */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Livre du mois</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage3}
+//                     alt={defaultImages.bookOfTheMonth.alt}
+//                     className="preview-image"
+//                   />
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage3)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() => handleSaveImage(homeImage3, "Book-of-the-Month")}
+//                     className="save-btn"
+//                   >
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Breaking News */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Breaking News</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage4}
+//                     alt={defaultImages.breakingNews.alt}
+//                     className="preview-image"
+//                   />
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input
+//                       type="file"
+//                       accept="image/*"
+//                       onChange={(e) => handleImageUpload(e, setHomeImage4)}
+//                       hidden
+//                     />
+//                   </label>
+//                   <button
+//                     onClick={() => handleSaveImage(homeImage4, "Breaking-News")}
+//                     className="save-btn"
+//                   >
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsBooksOpen(!isBooksOpen)}
+//         >
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setBooksImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img
+//                     src={aboutYahwehImage}
+//                     alt="About Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(aboutYahwehImage, "About-Yahweh")
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}
+//         >
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) =>
+//                       handleImageUpload(e, setAboutYahwehBenImage)
+//                     }
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(
+//                       aboutYahwehBenImage,
+//                       "About-Yahweh-Ben-Yahweh"
+//                     )
+//                   }
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsFollowersOpen(!isFollowersOpen)}
+//         >
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img
+//                     src={followersImage}
+//                     alt="Followers"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div
+//           className="section-header"
+//           onClick={() => setIsCulturalOpen(!isCulturalOpen)}
+//         >
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? (
+//               <ChevronUp size={24} />
+//             ) : (
+//               <ChevronDown size={24} />
+//             )}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img
+//                     src={culturalImage}
+//                     alt="Cultural Attire"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setCulturalImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() =>
+//                     handleSaveImage(culturalImage, "Cultural-Attire")
+//                   }
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HomeTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client"
+
+// import type React from "react"
+// import { useState, useEffect } from "react"
+// import { Upload, Save, ImageIcon, ChevronUp, ChevronDown, Loader2 } from "lucide-react"
+// import homeImagesData from "../../../../data/images-home.json"
+// import buttonsData from "../../../../data/bouton-img.json"
+// import backgroundImagesData from "../../../../data/img/about-images.json"
+// import "./style/HomeTab.css"
+
+// interface ImageData {
+//   id?: number
+//   path: string
+//   alt: string
+// }
+
+// interface BannerData {
+//   id: number
+//   path: string
+//   alt: string | null
+//   position: number
+//   created_at: string
+//   updated_at: string
+// }
+
+// interface HomeImagesData {
+//   banners: ImageData[]
+//   bookOfTheMonth: ImageData
+//   buttons: {
+//     readMore: ImageData
+//     orderNow: ImageData
+//   }
+//   videoPoster: {
+//     pageBanner: ImageData
+//     goodNews: ImageData
+//     eternalLife: ImageData
+//   }
+//   breakingNews: ImageData
+// }
+
+// interface ButtonData {
+//   id: number
+//   path: string
+//   alt: string
+// }
+
+// interface BackgroundImages {
+//   pageBanner_About_Yahweh: string
+//   pageBannerAbout_Yahweh_Ben_Yahweh: string
+//   pageBannerAbout_The_Followers: string
+//   pageBannerAbout_Cultural_Attire: string
+//   pageBannerAbout_Books_for_the_Year: string
+// }
+
+// const HomeTab: React.FC = () => {
+//   // États de chargement et d'erreur
+//   const [loading, setLoading] = useState(true)
+//   const [error, setError] = useState<string | null>(null)
+
+//   // Données des banners depuis l'API
+//   const [banners, setBanners] = useState<BannerData[]>([])
+
+//   // Chargement initial des images depuis le JSON (fallback)
+//   const [defaultImages, setDefaultImages] = useState<HomeImagesData>(homeImagesData)
+
+//   // États pour les images modifiables
+//   const [homeImages1, setHomeImages1] = useState<string[]>([])
+//   const [homeImages2, setHomeImages2] = useState<string[]>(() =>
+//     buttonsData.boutons.map((bouton: ButtonData) => bouton.path),
+//   )
+//   const [homeImage3, setHomeImage3] = useState("")
+//   const [homeImage4, setHomeImage4] = useState("")
+
+//   // États pour les images de background
+//   const [booksImage, setBooksImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year)
+//   const [aboutYahwehImage, setAboutYahwehImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBanner_About_Yahweh,
+//   )
+//   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh,
+//   )
+//   const [followersImage, setFollowersImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers,
+//   )
+//   const [culturalImage, setCulturalImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire,
+//   )
+
+//   // États pour les sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true)
+//   const [isBooksOpen, setIsBooksOpen] = useState(true)
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true)
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true)
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true)
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true)
+
+//   // Fonction pour récupérer les banners depuis l'API
+//   const fetchBanners = async () => {
+//     try {
+//       setLoading(true)
+//       setError(null)
+
+//       const response = await fetch("http://localhost:5000/api/home/banners", {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//       })
+
+//       if (!response.ok) {
+//         throw new Error(`Erreur HTTP: ${response.status}`)
+//       }
+
+//       const data: BannerData[] = await response.json()
+//       setBanners(data)
+
+//       // Trier les banners par ID pour avoir un ordre cohérent
+//       const sortedBanners = data.sort((a, b) => a.id - b.id)
+
+//       // Mettre à jour les images selon les IDs
+//       // IDs 1, 2, 3 pour les bannières principales
+//       const mainBanners = sortedBanners
+//         .filter((banner) => [1, 2, 3].includes(banner.id))
+//         .sort((a, b) => a.id - b.id)
+//         .map((banner) => banner.path)
+
+//       // Compléter avec des images par défaut si nécessaire
+//       while (mainBanners.length < 3) {
+//         mainBanners.push(defaultImages.banners[mainBanners.length]?.path || "")
+//       }
+
+//       setHomeImages1(mainBanners)
+
+//       // ID 4 pour le livre du mois
+//       const bookBanner = sortedBanners.find((banner) => banner.id === 4)
+//       if (bookBanner) {
+//         setHomeImage3(bookBanner.path)
+//       } else {
+//         setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       }
+
+//       // ID 5 pour breaking news
+//       const newsBanner = sortedBanners.find((banner) => banner.id === 5)
+//       if (newsBanner) {
+//         setHomeImage4(newsBanner.path)
+//       } else {
+//         setHomeImage4(defaultImages.breakingNews.path)
+//       }
+//     } catch (err) {
+//       console.error("Erreur lors de la récupération des banners:", err)
+//       setError(err instanceof Error ? err.message : "Erreur inconnue")
+
+//       // Utiliser les images par défaut en cas d'erreur
+//       setHomeImages1(defaultImages.banners.slice(0, 3).map((banner) => banner.path))
+//       setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       setHomeImage4(defaultImages.breakingNews.path)
+//     } finally {
+//       setLoading(false)
+//     }
+//   }
+
+//   // Effet pour charger les banners au montage du composant
+//   useEffect(() => {
+//     fetchBanners()
+//   }, [])
+
+//   // Gestion du téléchargement d'images
+//   const handleImageUpload = (
+//     e: React.ChangeEvent<HTMLInputElement>,
+//     setter: React.Dispatch<React.SetStateAction<string>> | React.Dispatch<React.SetStateAction<string[]>>,
+//     index?: number,
+//   ) => {
+//     const file = e.target.files?.[0]
+//     if (!file) return
+
+//     const reader = new FileReader()
+//     reader.onload = () => {
+//       const result = reader.result as string
+//       if (index !== undefined) {
+//         // Cas des tableaux (homeImages1 et homeImages2)
+//         if (setter === setHomeImages1 || setter === setHomeImages2) {
+//           setter((prev: string[]) => {
+//             const newImages = [...prev]
+//             newImages[index] = result
+//             return newImages
+//           })
+//         }
+//       } else {
+//         // Cas des images uniques
+//         if (typeof setter === "function") {
+//           ;(setter as React.Dispatch<React.SetStateAction<string>>)(result)
+//         }
+//       }
+//     }
+//     reader.readAsDataURL(file)
+//   }
+
+//   // Sauvegarde des images
+//   const handleSaveImage = (imageData: string | string[], section: string) => {
+//     console.log(`Image sauvegardée pour ${section}:`, imageData)
+//     // Ici vous pourriez envoyer les données à votre API
+//   }
+
+//   // Fonction pour rafraîchir les données
+//   const handleRefresh = () => {
+//     fetchBanners()
+//   }
+
+//   // Affichage du loader pendant le chargement
+//   if (loading) {
+//     return (
+//       <div className="home-container">
+//         <div
+//           className="loading-container"
+//           style={{
+//             display: "flex",
+//             justifyContent: "center",
+//             alignItems: "center",
+//             height: "200px",
+//             flexDirection: "column",
+//             gap: "16px",
+//           }}
+//         >
+//           <Loader2 className="animate-spin" size={32} />
+//           <p>Chargement des images...</p>
+//         </div>
+//       </div>
+//     )
+//   }
+
+//   // Rendu du composant
+//   return (
+//     <div className="home-container">
+//       {/* Affichage d'erreur si nécessaire */}
+//       {error && (
+//         <div
+//           className="error-container"
+//           style={{
+//             backgroundColor: "#fee2e2",
+//             border: "1px solid #fecaca",
+//             borderRadius: "8px",
+//             padding: "12px",
+//             marginBottom: "16px",
+//             color: "#dc2626",
+//           }}
+//         >
+//           <p>Erreur lors du chargement: {error}</p>
+//           <button
+//             onClick={handleRefresh}
+//             style={{
+//               marginTop: "8px",
+//               padding: "4px 8px",
+//               backgroundColor: "#dc2626",
+//               color: "white",
+//               border: "none",
+//               borderRadius: "4px",
+//               cursor: "pointer",
+//             }}
+//           >
+//             Réessayer
+//           </button>
+//         </div>
+//       )}
+
+//       {/* Section Home */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsHomeOpen(!isHomeOpen)}>
+//           <h1 className="section-title">Home {banners.length > 0 && `(${banners.length} banners chargées)`}</h1>
+//           <button className="toggle-section">{isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}</button>
+//         </div>
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 bannières principales */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Bannières principales (3) - IDs: 1, 2, 3</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((image, index) => {
+//                   const bannerId = index + 1
+//                   const bannerData = banners.find((b) => b.id === bannerId)
+//                   return (
+//                     <div key={index} className="image-upload-container">
+//                       <div className="image-preview">
+//                         <img
+//                           src={image || "/placeholder.svg"}
+//                           alt={bannerData?.alt || `Banner ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                         {bannerData && (
+//                           <div
+//                             className="image-info"
+//                             style={{
+//                               position: "absolute",
+//                               bottom: "4px",
+//                               left: "4px",
+//                               backgroundColor: "rgba(0,0,0,0.7)",
+//                               color: "white",
+//                               padding: "2px 6px",
+//                               borderRadius: "4px",
+//                               fontSize: "12px",
+//                             }}
+//                           >
+//                             ID: {bannerData.id}
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn">
+//                           <Upload size={16} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => handleImageUpload(e, setHomeImages1, index)}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(homeImages1[index], `Banner-${index + 1}`)}
+//                           className="save-btn"
+//                         >
+//                           <Save size={16} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* 12 images galerie */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => {
+//                   const bouton = buttonsData.boutons[index]
+//                   return (
+//                     <div key={bouton.id} className="image-upload-container small">
+//                       <div className="image-preview">
+//                         {image ? (
+//                           <>
+//                             <img src={image || "/placeholder.svg"} alt={bouton.alt} className="preview-image" />
+//                             <div className="image-alt-text">{bouton.alt}</div>
+//                           </>
+//                         ) : (
+//                           <div className="image-placeholder">
+//                             <ImageIcon size={20} />
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn small">
+//                           <Upload size={12} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => {
+//                               handleImageUpload(e, setHomeImages2, index)
+//                             }}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(image, `Gallery-${bouton.id}`)}
+//                           className="save-btn small"
+//                           disabled={!image}
+//                         >
+//                           <Save size={12} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* Livre du mois */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Livre du mois - ID: 4</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage3 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 4)?.alt || "Book of the Month"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 4) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 4
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage3)} hidden />
+//                   </label>
+//                   <button onClick={() => handleSaveImage(homeImage3, "Book-of-the-Month")} className="save-btn">
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Breaking News */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Breaking News - ID: 5</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage4 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 5)?.alt || "Breaking News"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 5) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 5
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage4)} hidden />
+//                   </label>
+//                   <button onClick={() => handleSaveImage(homeImage4, "Breaking-News")} className="save-btn">
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsBooksOpen(!isBooksOpen)}>
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage || "/placeholder.svg"} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setBooksImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}>
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img src={aboutYahwehImage || "/placeholder.svg"} alt="About Yahweh" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehImage, "About-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}>
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage || "/placeholder.svg"}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehBenImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehBenImage, "About-Yahweh-Ben-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsFollowersOpen(!isFollowersOpen)}>
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img src={followersImage || "/placeholder.svg"} alt="Followers" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsCulturalOpen(!isCulturalOpen)}>
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img src={culturalImage || "/placeholder.svg"} alt="Cultural Attire" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setCulturalImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(culturalImage, "Cultural-Attire")}
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default HomeTab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client"
+
+// import type React from "react"
+// import { useState, useEffect } from "react"
+// import { Upload, Save, ImageIcon, ChevronUp, ChevronDown, Loader2 } from "lucide-react"
+// import homeImagesData from "../../../../data/images-home.json"
+// import buttonsData from "../../../../data/bouton-img.json"
+// import backgroundImagesData from "../../../../data/img/about-images.json"
+// import "./style/HomeTab.css"
+
+// interface ImageData {
+//   id?: number
+//   path: string
+//   alt: string
+// }
+
+// interface BannerData {
+//   id: number
+//   path: string
+//   alt: string | null
+//   position: number
+//   created_at: string
+//   updated_at: string
+// }
+
+// interface HomeImagesData {
+//   banners: ImageData[]
+//   bookOfTheMonth: ImageData
+//   buttons: {
+//     readMore: ImageData
+//     orderNow: ImageData
+//   }
+//   videoPoster: {
+//     pageBanner: ImageData
+//     goodNews: ImageData
+//     eternalLife: ImageData
+//   }
+//   breakingNews: ImageData
+// }
+
+// interface ButtonData {
+//   id: number
+//   path: string
+//   alt: string
+// }
+
+// interface BackgroundImages {
+//   pageBanner_About_Yahweh: string
+//   pageBannerAbout_Yahweh_Ben_Yahweh: string
+//   pageBannerAbout_The_Followers: string
+//   pageBannerAbout_Cultural_Attire: string
+//   pageBannerAbout_Books_for_the_Year: string
+// }
+
+// const HomeTab: React.FC = () => {
+//   // États de chargement et d'erreur
+//   const [loading, setLoading] = useState(true)
+//   const [error, setError] = useState<string | null>(null)
+
+//   // Données des banners depuis l'API
+//   const [banners, setBanners] = useState<BannerData[]>([])
+
+//   // Chargement initial des images depuis le JSON (fallback)
+//   const [defaultImages, setDefaultImages] = useState<HomeImagesData>(homeImagesData)
+
+//   // États pour les images modifiables
+//   const [homeImages1, setHomeImages1] = useState<string[]>([])
+//   const [homeImages2, setHomeImages2] = useState<string[]>(() =>
+//     buttonsData.boutons.map((bouton: ButtonData) => bouton.path),
+//   )
+//   const [homeImage3, setHomeImage3] = useState("")
+//   const [homeImage4, setHomeImage4] = useState("")
+
+//   // États pour les images de background
+//   const [booksImage, setBooksImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year)
+//   const [aboutYahwehImage, setAboutYahwehImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBanner_About_Yahweh,
+//   )
+//   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh,
+//   )
+//   const [followersImage, setFollowersImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers,
+//   )
+//   const [culturalImage, setCulturalImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire,
+//   )
+
+//   // États pour les sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true)
+//   const [isBooksOpen, setIsBooksOpen] = useState(true)
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true)
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true)
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true)
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true)
+
+//   // Fonction pour récupérer les banners depuis l'API
+//   const fetchBanners = async () => {
+//     try {
+//       setLoading(true)
+//       setError(null)
+
+//       console.log("🚀 Début de la récupération des banners...")
+
+//       const response = await fetch("http://localhost:5000/api/home/banners", {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//       })
+
+//       console.log("📡 Réponse de l'API:", response)
+//       console.log("📊 Status de la réponse:", response.status)
+//       console.log("✅ Réponse OK:", response.ok)
+
+//       if (!response.ok) {
+//         throw new Error(`Erreur HTTP: ${response.status}`)
+//       }
+
+//       const data: BannerData[] = await response.json()
+//       console.log("📦 Données brutes reçues:", data)
+//       console.log("🔢 Nombre de banners reçues:", data.length)
+
+//       setBanners(data)
+
+//       // Trier les banners par ID pour avoir un ordre cohérent
+//       const sortedBanners = data.sort((a, b) => a.id - b.id)
+//       console.log("🔄 Banners triées par ID:", sortedBanners)
+
+//       // Mettre à jour les images selon les IDs
+//       // IDs 1, 2, 3 pour les bannières principales
+//       const mainBanners = sortedBanners
+//         .filter((banner) => [1, 2, 3].includes(banner.id))
+//         .sort((a, b) => a.id - b.id)
+//         .map((banner) => banner.path)
+
+//       console.log("🎯 Banners principales (IDs 1,2,3):", mainBanners)
+
+//       // Compléter avec des images par défaut si nécessaire
+//       while (mainBanners.length < 3) {
+//         mainBanners.push(defaultImages.banners[mainBanners.length]?.path || "")
+//       }
+
+//       console.log("🎯 Banners principales finales:", mainBanners)
+//       setHomeImages1(mainBanners)
+
+//       // ID 4 pour le livre du mois
+//       const bookBanner = sortedBanners.find((banner) => banner.id === 4)
+//       console.log("📚 Banner livre du mois (ID 4):", bookBanner)
+//       if (bookBanner) {
+//         console.log("📚 Path du livre du mois:", bookBanner.path)
+//         setHomeImage3(bookBanner.path)
+//       } else {
+//         console.log("📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut")
+//         setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       }
+
+//       // ID 5 pour breaking news
+//       const newsBanner = sortedBanners.find((banner) => banner.id === 5)
+//       console.log("📰 Banner breaking news (ID 5):", newsBanner)
+//       if (newsBanner) {
+//         console.log("📰 Path du breaking news:", newsBanner.path)
+//         setHomeImage4(newsBanner.path)
+//       } else {
+//         console.log("📰 Aucune banner ID 5 trouvée, utilisation de l'image par défaut")
+//         setHomeImage4(defaultImages.breakingNews.path)
+//       }
+
+//       console.log("✅ Mise à jour des états terminée")
+//     } catch (err) {
+//       console.error("❌ Erreur lors de la récupération des banners:", err)
+//       setError(err instanceof Error ? err.message : "Erreur inconnue")
+
+//       // Utiliser les images par défaut en cas d'erreur
+//       console.log("🔄 Utilisation des images par défaut en cas d'erreur")
+//       setHomeImages1(defaultImages.banners.slice(0, 3).map((banner) => banner.path))
+//       setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       setHomeImage4(defaultImages.breakingNews.path)
+//     } finally {
+//       setLoading(false)
+//       console.log("🏁 Fin de la récupération des banners")
+//     }
+//   }
+
+//   // Effet pour charger les banners au montage du composant
+//   useEffect(() => {
+//     console.log("🔄 useEffect déclenché - Appel de fetchBanners")
+//     fetchBanners()
+//   }, [])
+
+//   // Gestion du téléchargement d'images
+//   const handleImageUpload = (
+//     e: React.ChangeEvent<HTMLInputElement>,
+//     setter: React.Dispatch<React.SetStateAction<string>> | React.Dispatch<React.SetStateAction<string[]>>,
+//     index?: number,
+//   ) => {
+//     const file = e.target.files?.[0]
+//     if (!file) return
+
+//     const reader = new FileReader()
+//     reader.onload = () => {
+//       const result = reader.result as string
+//       if (index !== undefined) {
+//         // Cas des tableaux (homeImages1 et homeImages2)
+//         if (setter === setHomeImages1 || setter === setHomeImages2) {
+//           setter((prev: string[]) => {
+//             const newImages = [...prev]
+//             newImages[index] = result
+//             return newImages
+//           })
+//         }
+//       } else {
+//         // Cas des images uniques
+//         if (typeof setter === "function") {
+//           ;(setter as React.Dispatch<React.SetStateAction<string>>)(result)
+//         }
+//       }
+//     }
+//     reader.readAsDataURL(file)
+//   }
+
+//   // Sauvegarde des images
+//   const handleSaveImage = (imageData: string | string[], section: string) => {
+//     console.log(`Image sauvegardée pour ${section}:`, imageData)
+//     // Ici vous pourriez envoyer les données à votre API
+//   }
+
+//   // Fonction pour rafraîchir les données
+//   const handleRefresh = () => {
+//     fetchBanners()
+//   }
+
+//   // Affichage du loader pendant le chargement
+//   if (loading) {
+//     return (
+//       <div className="home-container">
+//         <div
+//           className="loading-container"
+//           style={{
+//             display: "flex",
+//             justifyContent: "center",
+//             alignItems: "center",
+//             height: "200px",
+//             flexDirection: "column",
+//             gap: "16px",
+//           }}
+//         >
+//           <Loader2 className="animate-spin" size={32} />
+//           <p>Chargement des images...</p>
+//         </div>
+//       </div>
+//     )
+//   }
+
+//   // Rendu du composant
+//   return (
+//     <div className="home-container">
+//       {/* Affichage d'erreur si nécessaire */}
+//       {error && (
+//         <div
+//           className="error-container"
+//           style={{
+//             backgroundColor: "#fee2e2",
+//             border: "1px solid #fecaca",
+//             borderRadius: "8px",
+//             padding: "12px",
+//             marginBottom: "16px",
+//             color: "#dc2626",
+//           }}
+//         >
+//           <p>Erreur lors du chargement: {error}</p>
+//           <button
+//             onClick={handleRefresh}
+//             style={{
+//               marginTop: "8px",
+//               padding: "4px 8px",
+//               backgroundColor: "#dc2626",
+//               color: "white",
+//               border: "none",
+//               borderRadius: "4px",
+//               cursor: "pointer",
+//             }}
+//           >
+//             Réessayer
+//           </button>
+//         </div>
+//       )}
+
+//       {/* Section Home */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsHomeOpen(!isHomeOpen)}>
+//           <h1 className="section-title">Home {banners.length > 0 && `(${banners.length} banners chargées)`}</h1>
+//           <button className="toggle-section">{isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}</button>
+//         </div>
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 bannières principales */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Bannières principales (3) - IDs: 1, 2, 3</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((image, index) => {
+//                   const bannerId = index + 1
+//                   const bannerData = banners.find((b) => b.id === bannerId)
+//                   return (
+//                     <div key={index} className="image-upload-container">
+//                       <div className="image-preview">
+//                         <img
+//                           src={image || "/placeholder.svg"}
+//                           alt={bannerData?.alt || `Banner ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                         {bannerData && (
+//                           <div
+//                             className="image-info"
+//                             style={{
+//                               position: "absolute",
+//                               bottom: "4px",
+//                               left: "4px",
+//                               backgroundColor: "rgba(0,0,0,0.7)",
+//                               color: "white",
+//                               padding: "2px 6px",
+//                               borderRadius: "4px",
+//                               fontSize: "12px",
+//                             }}
+//                           >
+//                             ID: {bannerData.id}
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn">
+//                           <Upload size={16} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => handleImageUpload(e, setHomeImages1, index)}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(homeImages1[index], `Banner-${index + 1}`)}
+//                           className="save-btn"
+//                         >
+//                           <Save size={16} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* 12 images galerie */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => {
+//                   const bouton = buttonsData.boutons[index]
+//                   return (
+//                     <div key={bouton.id} className="image-upload-container small">
+//                       <div className="image-preview">
+//                         {image ? (
+//                           <>
+//                             <img src={image || "/placeholder.svg"} alt={bouton.alt} className="preview-image" />
+//                             <div className="image-alt-text">{bouton.alt}</div>
+//                           </>
+//                         ) : (
+//                           <div className="image-placeholder">
+//                             <ImageIcon size={20} />
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn small">
+//                           <Upload size={12} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => {
+//                               handleImageUpload(e, setHomeImages2, index)
+//                             }}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(image, `Gallery-${bouton.id}`)}
+//                           className="save-btn small"
+//                           disabled={!image}
+//                         >
+//                           <Save size={12} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* Livre du mois */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Livre du mois - ID: 4</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage3 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 4)?.alt || "Book of the Month"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 4) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 4
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage3)} hidden />
+//                   </label>
+//                   <button onClick={() => handleSaveImage(homeImage3, "Book-of-the-Month")} className="save-btn">
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Breaking News */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Breaking News - ID: 5</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage4 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 5)?.alt || "Breaking News"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 5) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 5
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage4)} hidden />
+//                   </label>
+//                   <button onClick={() => handleSaveImage(homeImage4, "Breaking-News")} className="save-btn">
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsBooksOpen(!isBooksOpen)}>
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage || "/placeholder.svg"} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setBooksImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}>
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img src={aboutYahwehImage || "/placeholder.svg"} alt="About Yahweh" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehImage, "About-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}>
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage || "/placeholder.svg"}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehBenImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehBenImage, "About-Yahweh-Ben-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsFollowersOpen(!isFollowersOpen)}>
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img src={followersImage || "/placeholder.svg"} alt="Followers" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsCulturalOpen(!isCulturalOpen)}>
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img src={culturalImage || "/placeholder.svg"} alt="Cultural Attire" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setCulturalImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(culturalImage, "Cultural-Attire")}
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default HomeTab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client"
+
+// import type React from "react"
+// import { useState, useEffect } from "react"
+// import { Upload, Save, ImageIcon, ChevronUp, ChevronDown, Loader2 } from "lucide-react"
+// import homeImagesData from "../../../../data/images-home.json"
+// import buttonsData from "../../../../data/bouton-img.json"
+// import backgroundImagesData from "../../../../data/img/about-images.json"
+// import "./style/HomeTab.css"
+
+// interface ImageData {
+//   id?: number
+//   path: string
+//   alt: string
+// }
+
+// interface BannerData {
+//   id: number
+//   path: string
+//   alt: string | null
+//   position: number
+//   created_at: string
+//   updated_at: string
+// }
+
+// interface HomeImagesData {
+//   banners: ImageData[]
+//   bookOfTheMonth: ImageData
+//   buttons: {
+//     readMore: ImageData
+//     orderNow: ImageData
+//   }
+//   videoPoster: {
+//     pageBanner: ImageData
+//     goodNews: ImageData
+//     eternalLife: ImageData
+//   }
+//   breakingNews: ImageData
+// }
+
+// interface ButtonData {
+//   id: number
+//   path: string
+//   alt: string
+// }
+
+// interface BackgroundImages {
+//   pageBanner_About_Yahweh: string
+//   pageBannerAbout_Yahweh_Ben_Yahweh: string
+//   pageBannerAbout_The_Followers: string
+//   pageBannerAbout_Cultural_Attire: string
+//   pageBannerAbout_Books_for_the_Year: string
+// }
+
+// // Fonction pour construire l'URL complète des images
+// const getImageUrl = (path: string): string => {
+//   if (!path) return "/placeholder.svg"
+//   // Si le path commence par http, c'est déjà une URL complète
+//   if (path.startsWith("http")) return path
+//   // Sinon, ajouter l'URL du serveur backend
+//   return `http://localhost:5000${path}`
+// }
+
+// const HomeTab: React.FC = () => {
+//   // États de chargement et d'erreur
+//   const [loading, setLoading] = useState(true)
+//   const [error, setError] = useState<string | null>(null)
+
+//   // Données des banners depuis l'API
+//   const [banners, setBanners] = useState<BannerData[]>([])
+
+//   // Chargement initial des images depuis le JSON (fallback)
+//   const [defaultImages, setDefaultImages] = useState<HomeImagesData>(homeImagesData)
+
+//   // États pour les images modifiables
+//   const [homeImages1, setHomeImages1] = useState<string[]>([])
+//   const [homeImages2, setHomeImages2] = useState<string[]>(() =>
+//     buttonsData.boutons.map((bouton: ButtonData) => bouton.path),
+//   )
+//   const [homeImage3, setHomeImage3] = useState("")
+//   const [homeImage4, setHomeImage4] = useState("")
+
+//   // États pour les images de background
+//   const [booksImage, setBooksImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year)
+//   const [aboutYahwehImage, setAboutYahwehImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBanner_About_Yahweh,
+//   )
+//   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh,
+//   )
+//   const [followersImage, setFollowersImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers,
+//   )
+//   const [culturalImage, setCulturalImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire,
+//   )
+
+//   // États pour les sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true)
+//   const [isBooksOpen, setIsBooksOpen] = useState(true)
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true)
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true)
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true)
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true)
+
+//   // Fonction pour récupérer les banners depuis l'API
+//   const fetchBanners = async () => {
+//     try {
+//       setLoading(true)
+//       setError(null)
+
+//       console.log("🚀 Début de la récupération des banners...")
+
+//       const response = await fetch("http://localhost:5000/api/home/banners", {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//       })
+
+//       console.log("📡 Réponse de l'API:", response)
+//       console.log("📊 Status de la réponse:", response.status)
+//       console.log("✅ Réponse OK:", response.ok)
+
+//       if (!response.ok) {
+//         throw new Error(`Erreur HTTP: ${response.status}`)
+//       }
+
+//       const data: BannerData[] = await response.json()
+//       console.log("📦 Données brutes reçues:", data)
+//       console.log("🔢 Nombre de banners reçues:", data.length)
+
+//       setBanners(data)
+
+//       // Trier les banners par ID pour avoir un ordre cohérent
+//       const sortedBanners = data.sort((a, b) => a.id - b.id)
+//       console.log("🔄 Banners triées par ID:", sortedBanners)
+
+//       // Mettre à jour les images selon les IDs
+//       // IDs 1, 2, 3 pour les bannières principales
+//       const mainBanners = sortedBanners
+//         .filter((banner) => [1, 2, 3].includes(banner.id))
+//         .sort((a, b) => a.id - b.id)
+//         .map((banner) => getImageUrl(banner.path))
+
+//       console.log("🎯 Banners principales (IDs 1,2,3):", mainBanners)
+//       console.log("🎯 URLs complètes des banners principales:", mainBanners)
+
+//       // Compléter avec des images par défaut si nécessaire
+//       while (mainBanners.length < 3) {
+//         mainBanners.push(defaultImages.banners[mainBanners.length]?.path || "")
+//       }
+
+//       console.log("🎯 Banners principales finales:", mainBanners)
+//       setHomeImages1(mainBanners)
+
+//       // ID 4 pour le livre du mois
+//       const bookBanner = sortedBanners.find((banner) => banner.id === 4)
+//       console.log("📚 Banner livre du mois (ID 4):", bookBanner)
+//       if (bookBanner) {
+//         console.log("📚 Path du livre du mois:", bookBanner.path)
+//         setHomeImage3(getImageUrl(bookBanner.path))
+//         console.log("📚 URL complète du livre du mois:", getImageUrl(bookBanner.path))
+//       } else {
+//         console.log("📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut")
+//         setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       }
+
+//       // ID 5 pour breaking news
+//       const newsBanner = sortedBanners.find((banner) => banner.id === 5)
+//       console.log("📰 Banner breaking news (ID 5):", newsBanner)
+//       if (newsBanner) {
+//         console.log("📰 Path du breaking news:", newsBanner.path)
+//         setHomeImage4(getImageUrl(newsBanner.path))
+//         console.log("📰 URL complète du breaking news:", getImageUrl(newsBanner.path))
+//       } else {
+//         console.log("📰 Aucune banner ID 5 trouvée, utilisation de l'image par défaut")
+//         setHomeImage4(defaultImages.breakingNews.path)
+//       }
+
+//       console.log("✅ Mise à jour des états terminée")
+//     } catch (err) {
+//       console.error("❌ Erreur lors de la récupération des banners:", err)
+//       setError(err instanceof Error ? err.message : "Erreur inconnue")
+
+//       // Utiliser les images par défaut en cas d'erreur
+//       console.log("🔄 Utilisation des images par défaut en cas d'erreur")
+//       setHomeImages1(defaultImages.banners.slice(0, 3).map((banner) => banner.path))
+//       setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       setHomeImage4(defaultImages.breakingNews.path)
+//     } finally {
+//       setLoading(false)
+//       console.log("🏁 Fin de la récupération des banners")
+//     }
+//   }
+
+//   // Effet pour charger les banners au montage du composant
+//   useEffect(() => {
+//     console.log("🔄 useEffect déclenché - Appel de fetchBanners")
+//     fetchBanners()
+//   }, [])
+
+//   // Gestion du téléchargement d'images
+//   const handleImageUpload = (
+//     e: React.ChangeEvent<HTMLInputElement>,
+//     setter: React.Dispatch<React.SetStateAction<string>> | React.Dispatch<React.SetStateAction<string[]>>,
+//     index?: number,
+//   ) => {
+//     const file = e.target.files?.[0]
+//     if (!file) return
+
+//     const reader = new FileReader()
+//     reader.onload = () => {
+//       const result = reader.result as string
+//       if (index !== undefined) {
+//         // Cas des tableaux (homeImages1 et homeImages2)
+//         if (setter === setHomeImages1 || setter === setHomeImages2) {
+//           setter((prev: string[]) => {
+//             const newImages = [...prev]
+//             newImages[index] = result
+//             return newImages
+//           })
+//         }
+//       } else {
+//         // Cas des images uniques
+//         if (typeof setter === "function") {
+//           ;(setter as React.Dispatch<React.SetStateAction<string>>)(result)
+//         }
+//       }
+//     }
+//     reader.readAsDataURL(file)
+//   }
+
+//   // Sauvegarde des images
+//   const handleSaveImage = (imageData: string | string[], section: string) => {
+//     console.log(`Image sauvegardée pour ${section}:`, imageData)
+//     // Ici vous pourriez envoyer les données à votre API
+//   }
+
+//   // Fonction pour rafraîchir les données
+//   const handleRefresh = () => {
+//     fetchBanners()
+//   }
+
+//   // Affichage du loader pendant le chargement
+//   if (loading) {
+//     return (
+//       <div className="home-container">
+//         <div
+//           className="loading-container"
+//           style={{
+//             display: "flex",
+//             justifyContent: "center",
+//             alignItems: "center",
+//             height: "200px",
+//             flexDirection: "column",
+//             gap: "16px",
+//           }}
+//         >
+//           <Loader2 className="animate-spin" size={32} />
+//           <p>Chargement des images...</p>
+//         </div>
+//       </div>
+//     )
+//   }
+
+//   // Rendu du composant
+//   return (
+//     <div className="home-container">
+//       {/* Affichage d'erreur si nécessaire */}
+//       {error && (
+//         <div
+//           className="error-container"
+//           style={{
+//             backgroundColor: "#fee2e2",
+//             border: "1px solid #fecaca",
+//             borderRadius: "8px",
+//             padding: "12px",
+//             marginBottom: "16px",
+//             color: "#dc2626",
+//           }}
+//         >
+//           <p>Erreur lors du chargement: {error}</p>
+//           <button
+//             onClick={handleRefresh}
+//             style={{
+//               marginTop: "8px",
+//               padding: "4px 8px",
+//               backgroundColor: "#dc2626",
+//               color: "white",
+//               border: "none",
+//               borderRadius: "4px",
+//               cursor: "pointer",
+//             }}
+//           >
+//             Réessayer
+//           </button>
+//         </div>
+//       )}
+
+//       {/* Section Home */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsHomeOpen(!isHomeOpen)}>
+//           <h1 className="section-title">Home {banners.length > 0 && `(${banners.length} banners chargées)`}</h1>
+//           <button className="toggle-section">{isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}</button>
+//         </div>
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 bannières principales */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Bannières principales (3) - IDs: 1, 2, 3</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((image, index) => {
+//                   const bannerId = index + 1
+//                   const bannerData = banners.find((b) => b.id === bannerId)
+//                   return (
+//                     <div key={index} className="image-upload-container">
+//                       <div className="image-preview">
+//                         <img
+//                           src={image || "/placeholder.svg"}
+//                           alt={bannerData?.alt || `Banner ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                         {bannerData && (
+//                           <div
+//                             className="image-info"
+//                             style={{
+//                               position: "absolute",
+//                               bottom: "4px",
+//                               left: "4px",
+//                               backgroundColor: "rgba(0,0,0,0.7)",
+//                               color: "white",
+//                               padding: "2px 6px",
+//                               borderRadius: "4px",
+//                               fontSize: "12px",
+//                             }}
+//                           >
+//                             ID: {bannerData.id}
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn">
+//                           <Upload size={16} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => handleImageUpload(e, setHomeImages1, index)}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(homeImages1[index], `Banner-${index + 1}`)}
+//                           className="save-btn"
+//                         >
+//                           <Save size={16} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* 12 images galerie */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => {
+//                   const bouton = buttonsData.boutons[index]
+//                   return (
+//                     <div key={bouton.id} className="image-upload-container small">
+//                       <div className="image-preview">
+//                         {image ? (
+//                           <>
+//                             <img src={image || "/placeholder.svg"} alt={bouton.alt} className="preview-image" />
+//                             <div className="image-alt-text">{bouton.alt}</div>
+//                           </>
+//                         ) : (
+//                           <div className="image-placeholder">
+//                             <ImageIcon size={20} />
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn small">
+//                           <Upload size={12} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => {
+//                               handleImageUpload(e, setHomeImages2, index)
+//                             }}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(image, `Gallery-${bouton.id}`)}
+//                           className="save-btn small"
+//                           disabled={!image}
+//                         >
+//                           <Save size={12} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* Livre du mois */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Livre du mois - ID: 4</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage3 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 4)?.alt || "Book of the Month"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 4) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 4
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage3)} hidden />
+//                   </label>
+//                   <button onClick={() => handleSaveImage(homeImage3, "Book-of-the-Month")} className="save-btn">
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Breaking News */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Breaking News - ID: 5</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage4 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 5)?.alt || "Breaking News"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 5) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 5
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage4)} hidden />
+//                   </label>
+//                   <button onClick={() => handleSaveImage(homeImage4, "Breaking-News")} className="save-btn">
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsBooksOpen(!isBooksOpen)}>
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage || "/placeholder.svg"} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setBooksImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}>
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img src={aboutYahwehImage || "/placeholder.svg"} alt="About Yahweh" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehImage, "About-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}>
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage || "/placeholder.svg"}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehBenImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehBenImage, "About-Yahweh-Ben-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsFollowersOpen(!isFollowersOpen)}>
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img src={followersImage || "/placeholder.svg"} alt="Followers" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsCulturalOpen(!isCulturalOpen)}>
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img src={culturalImage || "/placeholder.svg"} alt="Cultural Attire" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setCulturalImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(culturalImage, "Cultural-Attire")}
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default HomeTab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client"
+
+// import type React from "react"
+// import { useState, useEffect } from "react"
+// import { Upload, Save, ImageIcon, ChevronUp, ChevronDown, Loader2 } from "lucide-react"
+// import homeImagesData from "../../../../data/images-home.json"
+// import buttonsData from "../../../../data/bouton-img.json"
+// import backgroundImagesData from "../../../../data/img/about-images.json"
+// import "./style/HomeTab.css"
+
+// interface ImageData {
+//   id?: number
+//   path: string
+//   alt: string
+// }
+
+// interface BannerData {
+//   id: number
+//   path: string
+//   alt: string | null
+//   position: number
+//   created_at: string
+//   updated_at: string
+// }
+
+// interface HomeImagesData {
+//   banners: ImageData[]
+//   bookOfTheMonth: ImageData
+//   buttons: {
+//     readMore: ImageData
+//     orderNow: ImageData
+//   }
+//   videoPoster: {
+//     pageBanner: ImageData
+//     goodNews: ImageData
+//     eternalLife: ImageData
+//   }
+//   breakingNews: ImageData
+// }
+
+// interface ButtonData {
+//   id: number
+//   path: string
+//   alt: string
+// }
+
+// interface BackgroundImages {
+//   pageBanner_About_Yahweh: string
+//   pageBannerAbout_Yahweh_Ben_Yahweh: string
+//   pageBannerAbout_The_Followers: string
+//   pageBannerAbout_Cultural_Attire: string
+//   pageBannerAbout_Books_for_the_Year: string
+// }
+
+// // Fonction pour construire l'URL complète des images
+// const getImageUrl = (path: string): string => {
+//   if (!path) return "/placeholder.svg"
+//   // Si le path commence par http, c'est déjà une URL complète
+//   if (path.startsWith("http")) return path
+//   // Sinon, ajouter l'URL du serveur backend
+//   return `http://localhost:5000${path}`
+// }
+
+// const HomeTab: React.FC = () => {
+//   // États de chargement et d'erreur
+//   const [loading, setLoading] = useState(true)
+//   const [error, setError] = useState<string | null>(null)
+
+//   // Données des banners depuis l'API
+//   const [banners, setBanners] = useState<BannerData[]>([])
+
+//   // Chargement initial des images depuis le JSON (fallback)
+//   const [defaultImages, setDefaultImages] = useState<HomeImagesData>(homeImagesData)
+
+//   // États pour les images modifiables
+//   const [homeImages1, setHomeImages1] = useState<string[]>([])
+//   const [homeImages2, setHomeImages2] = useState<string[]>(() =>
+//     buttonsData.boutons.map((bouton: ButtonData) => bouton.path),
+//   )
+//   const [homeImage3, setHomeImage3] = useState("")
+//   const [homeImage4, setHomeImage4] = useState("")
+
+//   // États pour les images de background
+//   const [booksImage, setBooksImage] = useState(backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year)
+//   const [aboutYahwehImage, setAboutYahwehImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBanner_About_Yahweh,
+//   )
+//   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh,
+//   )
+//   const [followersImage, setFollowersImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers,
+//   )
+//   const [culturalImage, setCulturalImage] = useState(
+//     backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire,
+//   )
+
+//   // États pour les sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true)
+//   const [isBooksOpen, setIsBooksOpen] = useState(true)
+//   const [isAboutYahwehOpen, setIsAboutYahwehOpen] = useState(true)
+//   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true)
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true)
+//   const [isCulturalOpen, setIsCulturalOpen] = useState(true)
+
+//   // Fonction pour récupérer les banners depuis l'API
+//   const fetchBanners = async () => {
+//     try {
+//       setLoading(true)
+//       setError(null)
+
+//       console.log("🚀 Début de la récupération des banners...")
+
+//       const response = await fetch("http://localhost:5000/api/home/banners", {
+//         method: "GET",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//       })
+
+//       console.log("📡 Réponse de l'API:", response)
+//       console.log("📊 Status de la réponse:", response.status)
+//       console.log("✅ Réponse OK:", response.ok)
+
+//       if (!response.ok) {
+//         throw new Error(`Erreur HTTP: ${response.status}`)
+//       }
+
+//       const data: BannerData[] = await response.json()
+//       console.log("📦 Données brutes reçues:", data)
+//       console.log("🔢 Nombre de banners reçues:", data.length)
+
+//       setBanners(data)
+
+//       // Trier les banners par ID pour avoir un ordre cohérent
+//       const sortedBanners = data.sort((a, b) => a.id - b.id)
+//       console.log("🔄 Banners triées par ID:", sortedBanners)
+
+//       // Mettre à jour les images selon les IDs
+//       // IDs 1, 2, 3 pour les bannières principales
+//       const mainBanners = sortedBanners
+//         .filter((banner) => [1, 2, 3].includes(banner.id))
+//         .sort((a, b) => a.id - b.id)
+//         .map((banner) => getImageUrl(banner.path))
+
+//       console.log("🎯 Banners principales (IDs 1,2,3):", mainBanners)
+//       console.log("🎯 URLs complètes des banners principales:", mainBanners)
+
+//       // Compléter avec des images par défaut si nécessaire
+//       while (mainBanners.length < 3) {
+//         mainBanners.push(defaultImages.banners[mainBanners.length]?.path || "")
+//       }
+
+//       console.log("🎯 Banners principales finales:", mainBanners)
+//       setHomeImages1(mainBanners)
+
+//       // ID 4 pour le livre du mois
+//       const bookBanner = sortedBanners.find((banner) => banner.id === 4)
+//       console.log("📚 Banner livre du mois (ID 4):", bookBanner)
+//       if (bookBanner) {
+//         console.log("📚 Path du livre du mois:", bookBanner.path)
+//         setHomeImage3(getImageUrl(bookBanner.path))
+//         console.log("📚 URL complète du livre du mois:", getImageUrl(bookBanner.path))
+//       } else {
+//         console.log("📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut")
+//         setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       }
+
+//       // ID 5 pour breaking news
+//       const newsBanner = sortedBanners.find((banner) => banner.id === 5)
+//       console.log("📰 Banner breaking news (ID 5):", newsBanner)
+//       if (newsBanner) {
+//         console.log("📰 Path du breaking news:", newsBanner.path)
+//         setHomeImage4(getImageUrl(newsBanner.path))
+//         console.log("📰 URL complète du breaking news:", getImageUrl(newsBanner.path))
+//       } else {
+//         console.log("📰 Aucune banner ID 5 trouvée, utilisation de l'image par défaut")
+//         setHomeImage4(defaultImages.breakingNews.path)
+//       }
+
+//       console.log("✅ Mise à jour des états terminée")
+//     } catch (err) {
+//       console.error("❌ Erreur lors de la récupération des banners:", err)
+//       setError(err instanceof Error ? err.message : "Erreur inconnue")
+
+//       // Utiliser les images par défaut en cas d'erreur
+//       console.log("🔄 Utilisation des images par défaut en cas d'erreur")
+//       setHomeImages1(defaultImages.banners.slice(0, 3).map((banner) => banner.path))
+//       setHomeImage3(defaultImages.bookOfTheMonth.path)
+//       setHomeImage4(defaultImages.breakingNews.path)
+//     } finally {
+//       setLoading(false)
+//       console.log("🏁 Fin de la récupération des banners")
+//     }
+//   }
+
+//   // Effet pour charger les banners au montage du composant
+//   useEffect(() => {
+//     console.log("🔄 useEffect déclenché - Appel de fetchBanners")
+//     fetchBanners()
+//   }, [])
+
+//   // Gestion du téléchargement d'images
+//   const handleImageUpload = (
+//     e: React.ChangeEvent<HTMLInputElement>,
+//     setter: React.Dispatch<React.SetStateAction<string>> | React.Dispatch<React.SetStateAction<string[]>>,
+//     index?: number,
+//   ) => {
+//     const file = e.target.files?.[0]
+//     if (!file) return
+
+//     const reader = new FileReader()
+//     reader.onload = () => {
+//       const result = reader.result as string
+//       if (index !== undefined) {
+//         // Cas des tableaux (homeImages1 et homeImages2)
+//         if (setter === setHomeImages1 || setter === setHomeImages2) {
+//           setter((prev: string[]) => {
+//             const newImages = [...prev]
+//             newImages[index] = result
+//             return newImages
+//           })
+//         }
+//       } else {
+//         // Cas des images uniques
+//         if (typeof setter === "function") {
+//           ;(setter as React.Dispatch<React.SetStateAction<string>>)(result)
+//         }
+//       }
+//     }
+//     reader.readAsDataURL(file)
+//   }
+
+//   // Ajouter une fonction pour sauvegarder une banner via l'API
+//   const saveBanner = async (id: number, imageData: string, alt?: string) => {
+//     try {
+//       console.log(`💾 Début de la sauvegarde de la banner ID ${id}`)
+
+//       // Si l'image est en base64 (uploadée localement), on doit la convertir
+//       let imageToSend = imageData
+
+//       // Vérifier si c'est une image base64 (uploadée localement)
+//       if (imageData.startsWith("data:image/")) {
+//         console.log(`📤 Image base64 détectée pour ID ${id}, conversion nécessaire`)
+//         // Pour l'instant, on garde le base64, mais vous pourriez vouloir l'envoyer différemment
+//         imageToSend = imageData
+//       }
+
+//       const response = await fetch(`http://localhost:5000/api/home/banners/${id}`, {
+//         method: "PUT",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//           path: imageToSend,
+//           alt: alt || "Updated Banner",
+//         }),
+//       })
+
+//       console.log(`📡 Réponse de sauvegarde pour ID ${id}:`, response)
+
+//       if (!response.ok) {
+//         throw new Error(`Erreur HTTP: ${response.status}`)
+//       }
+
+//       const result = await response.json()
+//       console.log(`✅ Banner ID ${id} sauvegardée avec succès:`, result)
+
+//       return result
+//     } catch (error) {
+//       console.error(`❌ Erreur lors de la sauvegarde de la banner ID ${id}:`, error)
+//       throw error
+//     }
+//   }
+
+//   // Remplacer la fonction handleSaveImage existante par cette nouvelle version
+//   const handleSaveImage = async (imageData: string | string[], section: string, bannerId?: number) => {
+//     try {
+//       console.log(`💾 Sauvegarde demandée pour ${section}:`, { imageData, bannerId })
+
+//       if (bannerId && typeof imageData === "string") {
+//         // Sauvegarder via l'API
+//         await saveBanner(bannerId, imageData)
+//         alert(`✅ Image ${section} sauvegardée avec succès!`)
+
+//         // Recharger les données pour avoir les dernières informations
+//         await fetchBanners()
+//       } else {
+//         // Ancienne logique pour les autres sections
+//         console.log(`Image sauvegardée pour ${section}:`, imageData)
+//         alert(`⚠️ Sauvegarde locale pour ${section} (pas d'API configurée)`)
+//       }
+//     } catch (error) {
+//       console.error("Erreur lors de la sauvegarde:", error)
+//       alert(`❌ Erreur lors de la sauvegarde: ${error instanceof Error ? error.message : "Erreur inconnue"}`)
+//     }
+//   }
+
+//   // Fonction pour rafraîchir les données
+//   const handleRefresh = () => {
+//     fetchBanners()
+//   }
+
+//   // Affichage du loader pendant le chargement
+//   if (loading) {
+//     return (
+//       <div className="home-container">
+//         <div
+//           className="loading-container"
+//           style={{
+//             display: "flex",
+//             justifyContent: "center",
+//             alignItems: "center",
+//             height: "200px",
+//             flexDirection: "column",
+//             gap: "16px",
+//           }}
+//         >
+//           <Loader2 className="animate-spin" size={32} />
+//           <p>Chargement des images...</p>
+//         </div>
+//       </div>
+//     )
+//   }
+
+//   // Rendu du composant
+//   return (
+//     <div className="home-container">
+//       {/* Affichage d'erreur si nécessaire */}
+//       {error && (
+//         <div
+//           className="error-container"
+//           style={{
+//             backgroundColor: "#fee2e2",
+//             border: "1px solid #fecaca",
+//             borderRadius: "8px",
+//             padding: "12px",
+//             marginBottom: "16px",
+//             color: "#dc2626",
+//           }}
+//         >
+//           <p>Erreur lors du chargement: {error}</p>
+//           <button
+//             onClick={handleRefresh}
+//             style={{
+//               marginTop: "8px",
+//               padding: "4px 8px",
+//               backgroundColor: "#dc2626",
+//               color: "white",
+//               border: "none",
+//               borderRadius: "4px",
+//               cursor: "pointer",
+//             }}
+//           >
+//             Réessayer
+//           </button>
+//         </div>
+//       )}
+
+//       {/* Section Home */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsHomeOpen(!isHomeOpen)}>
+//           <h1 className="section-title">Home {banners.length > 0 && `(${banners.length} banners chargées)`}</h1>
+//           <button className="toggle-section">{isHomeOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}</button>
+//         </div>
+//         {isHomeOpen && (
+//           <div className="section-content">
+//             {/* 3 bannières principales */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Bannières principales (3) - IDs: 1, 2, 3</h3>
+//               <div className="images-row-3">
+//                 {homeImages1.map((image, index) => {
+//                   const bannerId = index + 1
+//                   const bannerData = banners.find((b) => b.id === bannerId)
+//                   return (
+//                     <div key={index} className="image-upload-container">
+//                       <div className="image-preview">
+//                         <img
+//                           src={image || "/placeholder.svg"}
+//                           alt={bannerData?.alt || `Banner ${index + 1}`}
+//                           className="preview-image"
+//                         />
+//                         {bannerData && (
+//                           <div
+//                             className="image-info"
+//                             style={{
+//                               position: "absolute",
+//                               bottom: "4px",
+//                               left: "4px",
+//                               backgroundColor: "rgba(0,0,0,0.7)",
+//                               color: "white",
+//                               padding: "2px 6px",
+//                               borderRadius: "4px",
+//                               fontSize: "12px",
+//                             }}
+//                           >
+//                             ID: {bannerData.id}
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn">
+//                           <Upload size={16} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => handleImageUpload(e, setHomeImages1, index)}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(homeImages1[index], `Banner-${index + 1}`, bannerId)}
+//                           className="save-btn"
+//                           disabled={!image}
+//                         >
+//                           <Save size={16} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* 12 images galerie */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Galerie (12 images)</h3>
+//               <div className="images-row-12">
+//                 {homeImages2.map((image, index) => {
+//                   const bouton = buttonsData.boutons[index]
+//                   return (
+//                     <div key={bouton.id} className="image-upload-container small">
+//                       <div className="image-preview">
+//                         {image ? (
+//                           <>
+//                             <img src={image || "/placeholder.svg"} alt={bouton.alt} className="preview-image" />
+//                             <div className="image-alt-text">{bouton.alt}</div>
+//                           </>
+//                         ) : (
+//                           <div className="image-placeholder">
+//                             <ImageIcon size={20} />
+//                           </div>
+//                         )}
+//                       </div>
+//                       <div className="image-controls">
+//                         <label className="upload-btn small">
+//                           <Upload size={12} />
+//                           <input
+//                             type="file"
+//                             accept="image/*"
+//                             onChange={(e) => {
+//                               handleImageUpload(e, setHomeImages2, index)
+//                             }}
+//                             hidden
+//                           />
+//                         </label>
+//                         <button
+//                           onClick={() => handleSaveImage(image, `Gallery-${bouton.id}`)}
+//                           className="save-btn small"
+//                           disabled={!image}
+//                         >
+//                           <Save size={12} />
+//                         </button>
+//                       </div>
+//                     </div>
+//                   )
+//                 })}
+//               </div>
+//             </div>
+
+//             {/* Livre du mois */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Livre du mois - ID: 4</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage3 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 4)?.alt || "Book of the Month"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 4) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 4
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage3)} hidden />
+//                   </label>
+//                   <button
+//                     onClick={() => handleSaveImage(homeImage3, "Book-of-the-Month", 4)}
+//                     className="save-btn"
+//                     disabled={!homeImage3}
+//                   >
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+
+//             {/* Breaking News */}
+//             <div className="image-group">
+//               <h3 className="image-group-title">Breaking News - ID: 5</h3>
+//               <div className="single-image-container">
+//                 <div className="image-preview large">
+//                   <img
+//                     src={homeImage4 || "/placeholder.svg"}
+//                     alt={banners.find((b) => b.id === 5)?.alt || "Breaking News"}
+//                     className="preview-image"
+//                   />
+//                   {banners.find((b) => b.id === 5) && (
+//                     <div
+//                       className="image-info"
+//                       style={{
+//                         position: "absolute",
+//                         bottom: "8px",
+//                         left: "8px",
+//                         backgroundColor: "rgba(0,0,0,0.7)",
+//                         color: "white",
+//                         padding: "4px 8px",
+//                         borderRadius: "4px",
+//                         fontSize: "14px",
+//                       }}
+//                     >
+//                       ID: 5
+//                     </div>
+//                   )}
+//                 </div>
+//                 <div className="image-controls">
+//                   <label className="upload-btn">
+//                     <Upload size={16} />
+//                     <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setHomeImage4)} hidden />
+//                   </label>
+//                   <button
+//                     onClick={() => handleSaveImage(homeImage4, "Breaking-News", 5)}
+//                     className="save-btn"
+//                     disabled={!homeImage4}
+//                   >
+//                     <Save size={16} />
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 2: Books for the Year */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsBooksOpen(!isBooksOpen)}>
+//           <h1 className="section-title">Books for the Year</h1>
+//           <button className="toggle-section">
+//             {isBooksOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBooksOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {booksImage ? (
+//                   <img src={booksImage || "/placeholder.svg"} alt="Books" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des livres</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setBooksImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(booksImage, "Books")}
+//                   className="save-btn"
+//                   disabled={!booksImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 3: About Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehOpen(!isAboutYahwehOpen)}>
+//           <h1 className="section-title">About Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehImage ? (
+//                   <img src={aboutYahwehImage || "/placeholder.svg"} alt="About Yahweh" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehImage, "About-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 4: About Yahweh Ben Yahweh */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsAboutYahwehBenOpen(!isAboutYahwehBenOpen)}>
+//           <h1 className="section-title">About Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isAboutYahwehBenOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isAboutYahwehBenOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {aboutYahwehBenImage ? (
+//                   <img
+//                     src={aboutYahwehBenImage || "/placeholder.svg"}
+//                     alt="About Yahweh Ben Yahweh"
+//                     className="preview-image"
+//                   />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image About Yahweh Ben Yahweh</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setAboutYahwehBenImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(aboutYahwehBenImage, "About-Yahweh-Ben-Yahweh")}
+//                   className="save-btn"
+//                   disabled={!aboutYahwehBenImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 5: The Followers of Yahweh Ben Yahweh */}
+//       <section className="home-section fade-in">
+//         <div className="section-header" onClick={() => setIsFollowersOpen(!isFollowersOpen)}>
+//           <h1 className="section-title">The Followers of Yahweh Ben Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFollowersOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isFollowersOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {followersImage ? (
+//                   <img src={followersImage || "/placeholder.svg"} alt="Followers" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image des Followers</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input
+//                     type="file"
+//                     accept="image/*"
+//                     onChange={(e) => handleImageUpload(e, setFollowersImage)}
+//                     hidden
+//                   />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(followersImage, "Followers")}
+//                   className="save-btn"
+//                   disabled={!followersImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section 6: Cultural Attire */}
+//       <section className="home-section slide-in">
+//         <div className="section-header" onClick={() => setIsCulturalOpen(!isCulturalOpen)}>
+//           <h1 className="section-title">Cultural Attire</h1>
+//           <button className="toggle-section">
+//             {isCulturalOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isCulturalOpen && (
+//           <div className="section-content">
+//             <div className="single-image-container">
+//               <div className="image-preview large">
+//                 {culturalImage ? (
+//                   <img src={culturalImage || "/placeholder.svg"} alt="Cultural Attire" className="preview-image" />
+//                 ) : (
+//                   <div className="image-placeholder">
+//                     <ImageIcon size={48} />
+//                     <span>Image Cultural Attire</span>
+//                   </div>
+//                 )}
+//               </div>
+//               <div className="image-controls">
+//                 <label className="upload-btn">
+//                   <Upload size={16} />
+//                   Télécharger
+//                   <input type="file" accept="image/*" onChange={(e) => handleImageUpload(e, setCulturalImage)} hidden />
+//                 </label>
+//                 <button
+//                   onClick={() => handleSaveImage(culturalImage, "Cultural-Attire")}
+//                   className="save-btn"
+//                   disabled={!culturalImage}
+//                 >
+//                   <Save size={16} />
+//                   Sauvegarder
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default HomeTab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
