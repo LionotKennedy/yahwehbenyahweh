@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, Upload, Save } from "lucide-react";
+import { ChevronDown, ChevronUp, Upload, Save, Loader2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import "./style/HomeTab.css";
 
@@ -110,14 +110,172 @@ const ContactTab: React.FC = () => {
     };
     reader.readAsDataURL(file);
   };
-  const handleSaveImage = () => {
-    if (contactImage) {
-      console.log("Image de contact sauvegardée:", contactImage);
+
+  const base64ToFile = (base64String: string, filename: string): File => {
+    const arr = base64String.split(",");
+    const mime = arr[0].match(/:(.*?);/)?.[1] || "image/jpeg";
+    const bstr = atob(arr[1]);
+    let n = bstr.length;
+    const u8arr = new Uint8Array(n);
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new File([u8arr], filename, { type: mime });
+  };
+
+  const saveContact = async (id: number, imageData: string, alt?: string) => {
+    try {
+      console.log(`💾 Début de la sauvegarde de la banner ID ${id}`);
+
+      let body: FormData | string;
+      const headers: Record<string, string> = {};
+
+      // Vérifier si c'est une image base64 (uploadée localement)
+      if (imageData.startsWith("data:image/")) {
+        console.log(
+          `📤 Image base64 détectée pour ID ${id}, conversion en FormData`
+        );
+
+        // Convertir base64 en File
+        const file = base64ToFile(imageData, `banner-${id}.jpg`);
+
+        // Créer FormData
+        const formData = new FormData();
+        formData.append("image", file);
+        formData.append("alt", alt || "Updated Contact");
+
+        body = formData;
+        // Ne pas définir Content-Type pour FormData, le navigateur le fait automatiquement
+      } else {
+        console.log(`📤 URL d'image existante pour ID ${id}, envoi en JSON`);
+        // Image existante, envoyer en JSON
+        headers["Content-Type"] = "application/json";
+        body = JSON.stringify({
+          path: imageData,
+          alt: alt || "Updated Contact",
+        });
+      }
+
+      const response = await fetch(`http://localhost:5000/api/contact/${id}`, {
+        method: "PUT",
+        headers: headers,
+        body: body,
+      });
+
+      console.log(`📡 Réponse de sauvegarde pour ID ${id}:`, response);
+
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log(`✅ Contact ID ${id} sauvegardée avec succès:`, result);
+
+      return result;
+    } catch (error) {
+      console.error(
+        `❌ Erreur lors de la sauvegarde de la Contact ID ${id}:`,
+        error
+      );
+      throw error;
     }
   };
+  // const handleSaveImage = () => {
+  //   if (contactImage) {
+  //     console.log("Image de contact sauvegardée:", contactImage);
+  //   }
+  // };
+  const handleSaveImage = async (
+    imageData: string | string[],
+    section: string,
+    bannerId?: number
+  ) => {
+    try {
+      console.log(`💾 Sauvegarde demandée pour ${section}:`, {
+        imageData,
+        bannerId,
+      });
+
+      if (bannerId && typeof imageData === "string") {
+        // Sauvegarder via l'API
+        await saveContact(bannerId, imageData);
+        alert(`✅ Image ${section} sauvegardée avec succès!`);
+
+        // Recharger les données pour avoir les dernières informations
+        await fetchContact();
+      } else {
+        // Ancienne logique pour les autres sections
+        console.log(`Image sauvegardée pour ${section}:`, imageData);
+        alert(`⚠️ Sauvegarde locale pour ${section} (pas d'API configurée)`);
+      }
+    } catch (error) {
+      console.error("Erreur lors de la sauvegarde:", error);
+      alert(
+        `❌ Erreur lors de la sauvegarde: ${
+          error instanceof Error ? error.message : "Erreur inconnue"
+        }`
+      );
+    }
+  };
+  const handleRefresh = () => {
+    fetchContact();
+  };
+
+  // Affichage du loader pendant le chargement
+  if (loading) {
+    return (
+      <div className="home-container">
+        <div
+          className="loading-container"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "200px",
+            flexDirection: "column",
+            gap: "16px",
+          }}
+        >
+          <Loader2 className="animate-spin" size={32} />
+          <p>Chargement des images...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="home-container">
+      {/* Affichage d'erreur si nécessaire */}
+      {error && (
+        <div
+          className="error-container"
+          style={{
+            backgroundColor: "#fee2e2",
+            border: "1px solid #fecaca",
+            borderRadius: "8px",
+            padding: "12px",
+            marginBottom: "16px",
+            color: "#dc2626",
+          }}
+        >
+          <p>Erreur lors du chargement: {error}</p>
+          <button
+            onClick={handleRefresh}
+            style={{
+              marginTop: "8px",
+              padding: "4px 8px",
+              backgroundColor: "#dc2626",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+            }}
+          >
+            Réessayer
+          </button>
+        </div>
+      )}
+
       {/* Section Contact */}
       <section className="home-section">
         <div
@@ -172,7 +330,9 @@ const ContactTab: React.FC = () => {
                   />
                 </label>
                 <button
-                  onClick={handleSaveImage}
+                  onClick={() =>
+                    handleSaveImage(contactsImages, "About-Contact", 1)
+                  }
                   className="save-btn"
                   disabled={!contactImage}
                 >

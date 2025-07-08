@@ -26,3 +26,17 @@ add 12 image
 ts tiako hatao forcé valeur id reny bro
 
 description halatsak am backend
+
+
+  const [tetragrammatonImage, setTetragrammatonImage] = useState("");
+  const [nationImage, setNationImage] = useState("");
+  const [universeImage, setUniverseImage] = useState("");
+  const [feastsImage, setFeastsImage] = useState("");
+  const [goodNewsImage, setGoodNewsImage] = useState("");
+  const [crucifixionImage, setCrucifixionImage] = useState("");
+  const [revelationsImage, setRevelationsImage] = useState("");
+  const [sabbathImage, setSabbathImage] = useState("");
+  const [erosionImage, setErosionImage] = useState("");
+  const [operationImage1, setOperationImage1] = useState("");
+  const [operationImage2, setOperationImage2] = useState("");
+  const [balanceImage, setBalanceImage] = useState("");
