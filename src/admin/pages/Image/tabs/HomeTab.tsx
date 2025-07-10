@@ -1,3 +1,4 @@
+
 "use client";
 
 import type React from "react";
@@ -20,6 +21,7 @@ interface ImageData {
   path: string;
   alt: string;
 }
+
 // ****** From database *******//
 interface BannerData {
   id: number;
@@ -34,6 +36,15 @@ interface SectionData {
   id: number;
   section_name: string | null;
   path: string;
+  created_at: string;
+  updated_at: string;
+}
+
+// Interface pour les images de galerie
+interface GalleryImage {
+  id: number;
+  path: string;
+  alt: string;
   created_at: string;
   updated_at: string;
 }
@@ -60,14 +71,6 @@ interface ButtonData {
   alt: string;
 }
 
-// interface BackgroundImages {
-//   pageBanner_About_Yahweh: string;
-//   pageBannerAbout_Yahweh_Ben_Yahweh: string;
-//   pageBannerAbout_The_Followers: string;
-//   pageBannerAbout_Cultural_Attire: string;
-//   pageBannerAbout_Books_for_the_Year: string;
-// }
-
 // Fonction pour construire l'URL complète des images
 const getImageUrl = (path: string): string => {
   if (!path) return "/placeholder.svg";
@@ -85,6 +88,9 @@ const HomeTab: React.FC = () => {
   // Données des banners depuis l'API
   const [banners, setBanners] = useState<BannerData[]>([]);
   const [sectionbg, setSectionBg] = useState<SectionData[]>([]);
+  
+  // État pour les images de galerie depuis l'API
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([]);
 
   // Chargement initial des images depuis le JSON (fallback)
   const [defaultImages, setDefaultImages] =
@@ -100,25 +106,10 @@ const HomeTab: React.FC = () => {
 
   // États pour les images de background
   const [booksImage, setBooksImage] = useState("");
-  // const [booksImage, setBooksImage] = useState(
-  //   backgroundImagesData.backgroundImages.pageBannerAbout_Books_for_the_Year
-  // );
   const [aboutYahwehImage, setAboutYahwehImage] = useState("");
-  // const [aboutYahwehImage, setAboutYahwehImage] = useState(
-  //   backgroundImagesData.backgroundImages.pageBanner_About_Yahweh
-  // );
   const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState("");
-  // const [aboutYahwehBenImage, setAboutYahwehBenImage] = useState(
-  //   backgroundImagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh
-  // );
   const [followersImage, setFollowersImage] = useState("");
-  // const [followersImage, setFollowersImage] = useState(
-  //   backgroundImagesData.backgroundImages.pageBannerAbout_The_Followers
-  // );
   const [culturalImage, setCulturalImage] = useState("");
-  // const [culturalImage, setCulturalImage] = useState(
-  //   backgroundImagesData.backgroundImages.pageBannerAbout_Cultural_Attire
-  // );
 
   // États pour les sections
   const [isHomeOpen, setIsHomeOpen] = useState(true);
@@ -127,6 +118,48 @@ const HomeTab: React.FC = () => {
   const [isAboutYahwehBenOpen, setIsAboutYahwehBenOpen] = useState(true);
   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
   const [isCulturalOpen, setIsCulturalOpen] = useState(true);
+
+  // Fonction pour récupérer les images de galerie depuis l'API
+  const fetchGalleryImages = async () => {
+    try {
+      console.log("🖼️ Récupération des images de galerie...");
+      
+      const response = await fetch("http://localhost:5000/api/gallery", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP: ${response.status}`);
+      }
+
+      const data: GalleryImage[] = await response.json();
+      console.log("📸 Images de galerie reçues:", data);
+      console.log("🔢 Nombre d'images de galerie:", data.length);
+
+      // Trier les images par ID pour avoir un ordre cohérent
+      const sortedGallery = data.sort((a, b) => a.id - b.id);
+      setGalleryImages(sortedGallery);
+
+      // Mettre à jour homeImages2 avec les images de galerie
+      const galleryPaths = sortedGallery.map(img => getImageUrl(img.path));
+      
+      // Compléter avec des images vides si moins de 12 images
+      while (galleryPaths.length < 12) {
+        galleryPaths.push("");
+      }
+      
+      setHomeImages2(galleryPaths.slice(0, 12));
+      
+      console.log("✅ Images de galerie mises à jour:", galleryPaths);
+    } catch (err) {
+      console.error("❌ Erreur lors de la récupération des images de galerie:", err);
+      // En cas d'erreur, garder les images par défaut du JSON
+      setHomeImages2(buttonsData.boutons.map((bouton: ButtonData) => bouton.path));
+    }
+  };
 
   // Fonction pour récupérer les banners depuis l'API
   const fetchBanners = async () => {
@@ -143,73 +176,49 @@ const HomeTab: React.FC = () => {
         },
       });
 
-      // console.log("📡 Réponse de l'API:", response)
-      // console.log("📊 Status de la réponse:", response.status)
-      // console.log("✅ Réponse OK:", response.ok)
-
       if (!response.ok) {
         throw new Error(`Erreur HTTP: ${response.status}`);
       }
 
       const data: BannerData[] = await response.json();
-      // console.log("📦 Données brutes reçues:", data)
-      // console.log("🔢 Nombre de banners reçues:", data.length)
-
       setBanners(data);
 
       // Trier les banners par ID pour avoir un ordre cohérent
       const sortedBanners = data.sort((a, b) => a.id - b.id);
-      // console.log("🔄 Banners triées par ID:", sortedBanners)
 
-      // Mettre à jour les images selon les IDs
       // IDs 1, 2, 3 pour les bannières principales
       const mainBanners = sortedBanners
         .filter((banner) => [1, 2, 3].includes(banner.id))
         .sort((a, b) => a.id - b.id)
         .map((banner) => getImageUrl(banner.path));
 
-      // console.log("🎯 Banners principales (IDs 1,2,3):", mainBanners)
-      // console.log("🎯 URLs complètes des banners principales:", mainBanners)
-
       // Compléter avec des images par défaut si nécessaire
       while (mainBanners.length < 3) {
         mainBanners.push(defaultImages.banners[mainBanners.length]?.path || "");
       }
 
-      // console.log("🎯 Banners principales finales:", mainBanners)
       setHomeImages1(mainBanners);
 
       // ID 4 pour le livre du mois
       const bookBanner = sortedBanners.find((banner) => banner.id === 4);
-      console.log("📚 Banner livre du mois (ID 4):", bookBanner);
       if (bookBanner) {
-        // console.log("📚 Path du livre du mois:", bookBanner.path)
         setHomeImage3(getImageUrl(bookBanner.path));
-        // console.log("📚 URL complète du livre du mois:", getImageUrl(bookBanner.path))
       } else {
-        // console.log("📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut")
         setHomeImage3(defaultImages.bookOfTheMonth.path);
       }
 
       // ID 5 pour breaking news
       const newsBanner = sortedBanners.find((banner) => banner.id === 5);
-      // console.log("📰 Banner breaking news (ID 5):", newsBanner)
       if (newsBanner) {
-        // console.log("📰 Path du breaking news:", newsBanner.path)
         setHomeImage4(getImageUrl(newsBanner.path));
-        // console.log("📰 URL complète du breaking news:", getImageUrl(newsBanner.path))
       } else {
-        // console.log("📰 Aucune banner ID 5 trouvée, utilisation de l'image par défaut")
         setHomeImage4(defaultImages.breakingNews.path);
       }
 
-      // console.log("✅ Mise à jour des états terminée")
     } catch (err) {
-      // console.error("❌ Erreur lors de la récupération des banners:", err)
       setError(err instanceof Error ? err.message : "Erreur inconnue");
 
       // Utiliser les images par défaut en cas d'erreur
-      // console.log("🔄 Utilisation des images par défaut en cas d'erreur")
       setHomeImages1(
         defaultImages.banners.slice(0, 3).map((banner) => banner.path)
       );
@@ -217,7 +226,6 @@ const HomeTab: React.FC = () => {
       setHomeImage4(defaultImages.breakingNews.path);
     } finally {
       setLoading(false);
-      // console.log("🏁 Fin de la récupération des banners")
     }
   };
 
@@ -236,132 +244,72 @@ const HomeTab: React.FC = () => {
         },
       });
 
-      console.log("📡 Réponse de l'API:", response);
-      console.log("📊 Status de la réponse:", response.status);
-      console.log("✅ Réponse OK:", response.ok);
-
       if (!response.ok) {
         throw new Error(`Erreur HTTP: ${response.status}`);
       }
 
       const data: SectionData[] = await response.json();
-      console.log("📦 Données brutes reçues:", data);
-      console.log("🔢 Nombre de Section reçues:", data.length);
-
       setSectionBg(data);
 
       // Trier les banners par ID pour avoir un ordre cohérent
       const sortedSectionbg = data.sort((a, b) => a.id - b.id);
-      console.log("🔄 Sections triées par ID:", sortedSectionbg);
-      // ID 4 pour le livre du mois
+      
+      // ID 1 pour about_yahweh
       const about_yahweh = sortedSectionbg.find(
         (banner) => banner.id === 1 || banner.section_name === "about_yahweh"
       );
-      console.log("📚 Banner livre du mois (ID 1):", about_yahweh);
       if (about_yahweh) {
-        console.log("📚 Path du livre du mois:", about_yahweh.path);
         setAboutYahwehImage(getImageUrl(about_yahweh.path));
-        console.log(
-          "📚 URL complète du livre du mois:",
-          getImageUrl(about_yahweh.path)
-        );
-      } else {
-        console.log(
-          "📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut"
-        );
       }
+      
+      // ID 2 pour about_yahweh_ben
       const about_yahweh_ben = sortedSectionbg.find(
         (banner) =>
           banner.id === 2 || banner.section_name === "about_yahweh_ben"
       );
-      console.log("📚 Banner livre du mois (ID 2):", about_yahweh_ben);
       if (about_yahweh_ben) {
-        console.log("📚 Path du livre du mois:", about_yahweh_ben.path);
         setAboutYahwehBenImage(getImageUrl(about_yahweh_ben.path));
-        console.log(
-          "📚 URL complète du livre du mois:",
-          getImageUrl(about_yahweh_ben.path)
-        );
-      } else {
-        console.log(
-          "📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut"
-        );
       }
+      
+      // ID 3 pour followers
       const followers = sortedSectionbg.find(
         (banner) => banner.id === 3 || banner.section_name === "followers"
       );
-      console.log("📚 Banner livre du mois (ID 3):", followers);
       if (followers) {
-        console.log("📚 Path du livre du mois:", followers.path);
         setFollowersImage(getImageUrl(followers.path));
-        console.log(
-          "📚 URL complète du livre du mois:",
-          getImageUrl(followers.path)
-        );
-      } else {
-        console.log(
-          "📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut"
-        );
       }
+      
+      // ID 4 pour cultural
       const cultural = sortedSectionbg.find(
         (banner) => banner.id === 4 || banner.section_name === "cultural"
       );
-      console.log("📚 Banner livre du mois (ID 4):", cultural);
       if (cultural) {
-        console.log("📚 Path du livre du mois:", cultural.path);
         setCulturalImage(getImageUrl(cultural.path));
-        console.log(
-          "📚 URL complète du livre du mois:",
-          getImageUrl(cultural.path)
-        );
-      } else {
-        console.log(
-          "📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut"
-        );
       }
 
+      // ID 5 pour books
       const books = sortedSectionbg.find(
         (banner) => banner.id === 5 || banner.section_name === "books"
       );
-      console.log("📚 Banner livre du mois (ID 4):", books);
       if (books) {
-        console.log("📚 Path du livre du mois:", books.path);
         setBooksImage(getImageUrl(books.path));
-        console.log(
-          "📚 URL complète du livre du mois:",
-          getImageUrl(books.path)
-        );
-      } else {
-        console.log(
-          "📚 Aucune banner ID 4 trouvée, utilisation de l'image par défaut"
-        );
       }
 
-      console.log("✅ Mise à jour des états terminée");
     } catch (err) {
-      console.error("❌ Erreur lors de la récupération des banners:", err);
+      console.error("❌ Erreur lors de la récupération des sections:", err);
       setError(err instanceof Error ? err.message : "Erreur inconnue");
-
-      // Utiliser les images par défaut en cas d'erreur
-      console.log("🔄 Utilisation des images par défaut en cas d'erreur");
-      setHomeImages1(
-        defaultImages.banners.slice(0, 3).map((banner) => banner.path)
-      );
-      setHomeImage3(defaultImages.bookOfTheMonth.path);
-      setHomeImage4(defaultImages.breakingNews.path);
     } finally {
       setLoading(false);
-      console.log("🏁 Fin de la récupération des banners");
     }
   };
   // ******** ENDING *************//
 
-  // Effet pour charger les banners au montage du composant
+  // Effet pour charger les données au montage du composant
   useEffect(() => {
-    console.log("🔄 useEffect déclenché - Appel de fetchBanners");
+    console.log("🔄 useEffect déclenché - Chargement des données");
     fetchBanners();
-    console.log("🔄 useEffect déclenché - Appel de fetchSectionBackground");
     fetchSectionBackground();
+    fetchGalleryImages(); // Ajouter le chargement des images de galerie
   }, []);
 
   // Gestion du téléchargement d'images
@@ -410,7 +358,68 @@ const HomeTab: React.FC = () => {
     return new File([u8arr], filename, { type: mime });
   };
 
-  // Remplacer la fonction saveBanner existante
+  // Fonction pour sauvegarder une image de galerie
+  const saveGalleryImage = async (id: number, imageData: string, alt?: string) => {
+    try {
+      console.log(`💾 Début de la sauvegarde de l'image galerie ID ${id}`);
+
+      let body: FormData | string;
+      const headers: Record<string, string> = {};
+
+      // Vérifier si c'est une image base64 (uploadée localement)
+      if (imageData.startsWith("data:image/")) {
+        console.log(
+          `📤 Image base64 détectée pour ID ${id}, conversion en FormData`
+        );
+
+        // Convertir base64 en File
+        const file = base64ToFile(imageData, `gallery-${id}.jpg`);
+
+        // Créer FormData
+        const formData = new FormData();
+        formData.append("image", file);
+        formData.append("alt", alt || "New Gallery Image");
+
+        body = formData;
+      } else {
+        console.log(`📤 URL d'image existante pour ID ${id}, envoi en JSON`);
+        // Image existante, envoyer en JSON
+        headers["Content-Type"] = "application/json";
+        body = JSON.stringify({
+          path: imageData,
+          alt: alt || "Updated Gallery Image",
+        });
+      }
+
+      const response = await fetch(
+        `http://localhost:5000/api/gallery/${id}`,
+        {
+          method: "PUT",
+          headers: headers,
+          body: body,
+        }
+      );
+
+      console.log(`📡 Réponse de sauvegarde pour galerie ID ${id}:`, response);
+
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log(`✅ Image galerie ID ${id} sauvegardée avec succès:`, result);
+
+      return result;
+    } catch (error) {
+      console.error(
+        `❌ Erreur lors de la sauvegarde de l'image galerie ID ${id}:`,
+        error
+      );
+      throw error;
+    }
+  };
+
+  // Fonction pour sauvegarder une bannière
   const saveBanner = async (id: number, imageData: string, alt?: string) => {
     try {
       console.log(`💾 Début de la sauvegarde de la banner ID ${id}`);
@@ -433,7 +442,6 @@ const HomeTab: React.FC = () => {
         formData.append("alt", alt || "Updated Banner");
 
         body = formData;
-        // Ne pas définir Content-Type pour FormData, le navigateur le fait automatiquement
       } else {
         console.log(`📤 URL d'image existante pour ID ${id}, envoi en JSON`);
         // Image existante, envoyer en JSON
@@ -472,20 +480,30 @@ const HomeTab: React.FC = () => {
     }
   };
 
-  // Remplacer la fonction handleSaveImage existante par cette nouvelle version
+  // Fonction pour gérer la sauvegarde des images
   const handleSaveImage = async (
     imageData: string | string[],
     section: string,
-    bannerId?: number
+    bannerId?: number,
+    galleryIndex?: number
   ) => {
     try {
       console.log(`💾 Sauvegarde demandée pour ${section}:`, {
         imageData,
         bannerId,
+        galleryIndex,
       });
 
-      if (bannerId && typeof imageData === "string") {
-        // Sauvegarder via l'API
+      // Si c'est une image de galerie
+      if (galleryIndex !== undefined && typeof imageData === "string") {
+        const galleryId = galleryIndex + 1; // Les IDs de galerie commencent à 1
+        await saveGalleryImage(galleryId, imageData);
+        alert(`✅ Image galerie ${galleryId} sauvegardée avec succès!`);
+        
+        // Recharger les images de galerie
+        await fetchGalleryImages();
+      } else if (bannerId && typeof imageData === "string") {
+        // Sauvegarder via l'API des bannières
         await saveBanner(bannerId, imageData);
         alert(`✅ Image ${section} sauvegardée avec succès!`);
 
@@ -506,9 +524,9 @@ const HomeTab: React.FC = () => {
     }
   };
 
-    const saveSectionBG = async (id: number, imageDataBG: string, section_name?: string) => {
+  const saveSectionBG = async (id: number, imageDataBG: string, section_name?: string) => {
     try {
-      console.log(`💾 Début de la sauvegarde de la banner ID ${id}`);
+      console.log(`💾 Début de la sauvegarde de la section ID ${id}`);
 
       let body: FormData | string;
       const headers: Record<string, string> = {};
@@ -520,7 +538,7 @@ const HomeTab: React.FC = () => {
         );
 
         // Convertir base64 en File
-        const file = base64ToFile(imageDataBG, `banner-${id}.jpg`);
+        const file = base64ToFile(imageDataBG, `section-${id}.jpg`);
 
         // Créer FormData
         const formData = new FormData();
@@ -528,7 +546,6 @@ const HomeTab: React.FC = () => {
         formData.append("section_name", section_name || "Updated Section background");
 
         body = formData;
-        // Ne pas définir Content-Type pour FormData, le navigateur le fait automatiquement
       } else {
         console.log(`📤 URL d'image existante pour ID ${id}, envoi en JSON`);
         // Image existante, envoyer en JSON
@@ -555,18 +572,19 @@ const HomeTab: React.FC = () => {
       }
 
       const result = await response.json();
-      console.log(`✅ Banner ID ${id} sauvegardée avec succès:`, result);
+      console.log(`✅ Section ID ${id} sauvegardée avec succès:`, result);
 
       return result;
     } catch (error) {
       console.error(
-        `❌ Erreur lors de la sauvegarde de la banner ID ${id}:`,
+        `❌ Erreur lors de la sauvegarde de la section ID ${id}:`,
         error
       );
       throw error;
     }
   };
-  // Remplacer la fonction handleSaveImage existante par cette nouvelle version
+
+  // Fonction pour sauvegarder les sections background
   const handleSaveImageSecionBG = async (
     imageDataBG: string | string[],
     section_name: string,
@@ -599,10 +617,12 @@ const HomeTab: React.FC = () => {
       );
     }
   };
+
   // Fonction pour rafraîchir les données
   const handleRefresh = () => {
     fetchBanners();
     fetchSectionBackground();
+    fetchGalleryImages();
   };
 
   // Affichage du loader pendant le chargement
@@ -626,7 +646,6 @@ const HomeTab: React.FC = () => {
       </div>
     );
   }
-  // ************* ENDING *****************//
 
   // Rendu du composant
   return (
@@ -746,13 +765,16 @@ const HomeTab: React.FC = () => {
 
             {/* 12 images galerie */}
             <div className="image-group">
-              <h3 className="image-group-title">Galerie (12 images)</h3>
+              <h3 className="image-group-title">
+                Galerie (12 images) - IDs: 1-12 {galleryImages.length > 0 && `(${galleryImages.length} images chargées)`}
+              </h3>
               <div className="images-row-12">
-                {homeImages2.map((image, index) => {
-                  const bouton = buttonsData.boutons[index];
+                {homeImages2.slice(0, 12).map((image, index) => {
+                  const galleryImage = galleryImages[index];
+                  const galleryId = index + 1;
                   return (
                     <div
-                      key={bouton.id}
+                      key={galleryId}
                       className="image-upload-container small"
                     >
                       <div className="image-preview">
@@ -760,14 +782,34 @@ const HomeTab: React.FC = () => {
                           <>
                             <img
                               src={image || "/placeholder.svg"}
-                              alt={bouton.alt}
+                              alt={galleryImage?.alt || `Gallery ${galleryId}`}
                               className="preview-image"
                             />
-                            <div className="image-alt-text">{bouton.alt}</div>
+                            <div 
+                              className="image-info"
+                              style={{
+                                position: "absolute",
+                                bottom: "2px",
+                                left: "2px",
+                                backgroundColor: "rgba(0,0,0,0.7)",
+                                color: "white",
+                                padding: "1px 4px",
+                                borderRadius: "2px",
+                                fontSize: "10px",
+                              }}
+                            >
+                              ID: {galleryId}
+                            </div>
+                            <div className="image-alt-text" style={{ fontSize: "10px", marginTop: "2px" }}>
+                              {galleryImage?.alt || `Gallery ${galleryId}`}
+                            </div>
                           </>
                         ) : (
                           <div className="image-placeholder">
                             <ImageIcon size={20} />
+                            <div style={{ fontSize: "10px", marginTop: "4px" }}>
+                              Gallery {galleryId}
+                            </div>
                           </div>
                         )}
                       </div>
@@ -785,7 +827,12 @@ const HomeTab: React.FC = () => {
                         </label>
                         <button
                           onClick={() =>
-                            handleSaveImage(image, `Gallery-${bouton.id}`)
+                            handleSaveImage(
+                              image, 
+                              `Gallery-${galleryId}`, 
+                              undefined, 
+                              index
+                            )
                           }
                           className="save-btn small"
                           disabled={!image}
@@ -1252,7 +1299,7 @@ const HomeTab: React.FC = () => {
                 </label>
                 <button
                   onClick={() =>
-                    handleSaveImageSecionBG(culturalImage, "cultural", 5)
+                    handleSaveImageSecionBG(culturalImage, "cultural", 4)
                   }
                   className="save-btn"
                   disabled={!culturalImage}
