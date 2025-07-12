@@ -1,0 +1,286 @@
+
+// "use client"
+
+// import { ChevronDown, ChevronUp, FileText, Save, Type } from "lucide-react"
+// import type React from "react"
+// import { useState, useEffect } from "react"
+
+// // Configuration de l'API
+// const API_BASE_URL = "http://localhost:5000/api"
+
+// // Fonctions API
+// const fetchData = async (endpoint: string) => {
+//   try {
+//     const response = await fetch(`${API_BASE_URL}/${endpoint}`)
+//     if (!response.ok) throw new Error('Erreur réseau')
+//     return await response.json()
+//   } catch (error) {
+//     console.error('Erreur lors de la récupération des données:', error)
+//     throw error
+//   }
+// }
+
+// const updateData = async (endpoint: string, id: number, data: any) => {
+//   try {
+//     const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
+//       method: 'PUT',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(data),
+//     })
+//     if (!response.ok) throw new Error('Erreur réseau')
+//     return await response.json()
+//   } catch (error) {
+//     console.error('Erreur lors de la mise à jour des données:', error)
+//     throw error
+//   }
+// }
+
+// const MenuTab: React.FC = () => {
+//   // Tetragrama states
+//   const [title, setTitle] = useState("")
+//   const [description, setDescription] = useState("")
+//   const [description2, setDescription2] = useState("")
+
+//   // Nation states
+//   const [titleNation, setTitleNation] = useState("")
+//   const [descriptionNation, setDescriptionNation] = useState("")
+//   const [descriptionNation2, setDescriptionNation2] = useState("")
+//   const [descriptionNation3, setDescriptionNation3] = useState("")
+
+//   // Universe states
+//   const [descriptionUniverse1, setDescriptionUniverse1] = useState("")
+//   const [descriptionUniverse2, setDescriptionUniverse2] = useState("")
+//   const [descriptionUniverse3, setDescriptionUniverse3] = useState("")
+//   const [descriptionUniverse4, setDescriptionUniverse4] = useState("")
+//   const [videoLinkUniverse, setVideoLinkUniverse] = useState("")
+
+//   // Feasts states
+//   const [titleFeasts, setTitleFeasts] = useState("")
+//   const [titleFeasts2, setTitleFeasts2] = useState("")
+//   const [fieldFeasts2, setFieldFeasts2] = useState("")
+//   const [titleFeasts3, setTitleFeasts3] = useState("")
+//   const [fieldFeasts3, setFieldFeasts3] = useState("")
+//   const [titleFeasts4, setTitleFeasts4] = useState("")
+//   const [fieldFeasts4, setFieldFeasts4] = useState("")
+//   const [descriptionFeasts4, setDescriptionFeasts4] = useState("")
+//   const [videoFeasts4, setVideoFeasts4] = useState("")
+//   const [titleFeasts5, setTitleFeasts5] = useState("")
+//   const [fieldFeasts5, setFieldFeasts5] = useState("")
+//   const [descriptionFeasts5, setDescriptionFeasts5] = useState("")
+//   const [videoFeasts5, setVideoFeasts5] = useState("")
+//   const [titleFeasts6, setTitleFeasts6] = useState("")
+//   const [fieldFeasts6a, setFieldFeasts6a] = useState("")
+//   const [fieldFeasts6b, setFieldFeasts6b] = useState("")
+
+//   // Crucifixion states
+//   const [titleCrucifixion, setTitleCrucifixion] = useState("")
+//   const [descriptionCrucifixion1, setDescriptionCrucifixion1] = useState("")
+//   const [descriptionCrucifixion2, setDescriptionCrucifixion2] = useState("")
+//   const [descriptionCrucifixion3, setDescriptionCrucifixion3] = useState("")
+//   const [descriptionCrucifixion4, setDescriptionCrucifixion4] = useState("")
+//   const [descriptionCrucifixion5, setDescriptionCrucifixion5] = useState("")
+//   const [descriptionCrucifixion6, setDescriptionCrucifixion6] = useState("")
+//   const [descriptionCrucifixion7, setDescriptionCrucifixion7] = useState("")
+//   const [descriptionCrucifixion8, setDescriptionCrucifixion8] = useState("")
+//   const [descriptionCrucifixion9, setDescriptionCrucifixion9] = useState("")
+//   const [descriptionCrucifixion10, setDescriptionCrucifixion10] = useState("")
+//   const [descriptionCrucifixion11, setDescriptionCrucifixion11] = useState("")
+
+//   // Sabbath states
+//   const [titleSabbath, setTitleSabbath] = useState("")
+//   const [descriptionSabbath1, setDescriptionSabbath1] = useState("")
+//   const [descriptionSabbath2, setDescriptionSabbath2] = useState("")
+//   const [descriptionSabbath3, setDescriptionSabbath3] = useState("")
+//   const [descriptionSabbath4, setDescriptionSabbath4] = useState("")
+//   const [descriptionSabbath5, setDescriptionSabbath5] = useState("")
+
+//   // Erosion states
+//   const [descriptionErosion, setDescriptionErosion] = useState("")
+
+//   // Operation states
+//   const [descriptionOperation1, setDescriptionOperation1] = useState("")
+//   const [descriptionOperation2, setDescriptionOperation2] = useState("")
+//   const [descriptionOperation3, setDescriptionOperation3] = useState("")
+//   const [descriptionOperation4, setDescriptionOperation4] = useState("")
+
+//   // Balance states
+//   const [titleBalance, setTitleBalance] = useState("")
+//   const [descriptionBalance1, setDescriptionBalance1] = useState("")
+//   const [descriptionBalance2, setDescriptionBalance2] = useState("")
+//   const [descriptionBalance3, setDescriptionBalance3] = useState("")
+//   const [descriptionBalance4, setDescriptionBalance4] = useState("")
+
+//   // Section toggle states
+//   const [isTetragramaOpen, setIsTetragramaOpen] = useState(true)
+//   const [isNationOpen, setIsNationOpen] = useState(true)
+//   const [isUniverseOpen, setIsUniverseOpen] = useState(true)
+//   const [isFeastsOpen, setIsFeastsOpen] = useState(true)
+//   const [isCrucifixionOpen, setIsCrucifixionOpen] = useState(true)
+//   const [isSabbathOpen, setIsSabbathOpen] = useState(true)
+//   const [isErosionOpen, setIsErosionOpen] = useState(true)
+//   const [isOperationOpen, setIsOperationOpen] = useState(true)
+//   const [isBalanceOpen, setIsBalanceOpen] = useState(true)
+
+//   // Load data from API on component mount
+//   useEffect(() => {
+//     const loadAllData = async () => {
+//       try {
+//         // Load Tetragrama data
+//         const tetragramaRes = await fetchData("tetragrama")
+//         if (tetragramaRes.success && tetragramaRes.data.length > 0) {
+//           const data = tetragramaRes.data[0]
+//           setTitle(data.title || "")
+//           setDescription(data.description || "")
+//           setDescription2(data.description2 || "")
+//         }
+
+//         // Load Nation data
+//         const nationRes = await fetchData("nation")
+//         if (nationRes.success && nationRes.data.length > 0) {
+//           const data = nationRes.data[0]
+//           setTitleNation(data.titlenation || "")
+//           setDescriptionNation(data.descriptionnation || "")
+//           setDescriptionNation2(data.descriptionnation2 || "")
+//           setDescriptionNation3(data.descriptionnation3 || "")
+//         }
+
+//         // Load Universe data
+//         const universeRes = await fetchData("universe")
+//         if (universeRes.success && universeRes.data.length > 0) {
+//           const data = universeRes.data[0]
+//           setDescriptionUniverse1(data.descriptionuniverse1 || "")
+//           setDescriptionUniverse2(data.descriptionuniverse2 || "")
+//           setDescriptionUniverse3(data.descriptionuniverse3 || "")
+//           setDescriptionUniverse4(data.descriptionuniverse4 || "")
+//           setVideoLinkUniverse(data.videolinkuniverse || "")
+//         }
+
+//         // Load Crucifixion data
+//         const crucifixionRes = await fetchData("crucifixion")
+//         if (crucifixionRes.success && crucifixionRes.data.length > 0) {
+//           const data = crucifixionRes.data[0]
+//           setTitleCrucifixion(data.titlecrucifixion || "")
+//           setDescriptionCrucifixion1(data.descriptioncrucifixion1 || "")
+//           setDescriptionCrucifixion2(data.descriptioncrucifixion2 || "")
+//           setDescriptionCrucifixion3(data.descriptioncrucifixion3 || "")
+//           setDescriptionCrucifixion4(data.descriptioncrucifixion4 || "")
+//           setDescriptionCrucifixion5(data.descriptioncrucifixion5 || "")
+//           setDescriptionCrucifixion6(data.descriptioncrucifixion6 || "")
+//           setDescriptionCrucifixion7(data.descriptioncrucifixion7 || "")
+//           setDescriptionCrucifixion8(data.descriptioncrucifixion8 || "")
+//           setDescriptionCrucifixion9(data.descriptioncrucifixion9 || "")
+//           // ... set all other crucifixion fields
+//         }
+
+//         // Load Crucifixion data
+//         const SabbathRes = await fetchData("sabbath")
+//         if (SabbathRes.success && SabbathRes.data.length > 0) {
+//           const data = SabbathRes.data[0]
+//           setTitleCrucifixion(data.titlecrucifixion || "")
+//           setDescriptionCrucifixion1(data.descriptioncrucifixion1 || "")
+//           setDescriptionCrucifixion2(data.descriptioncrucifixion2 || "")
+//           setDescriptionCrucifixion3(data.descriptioncrucifixion3 || "")
+//           setDescriptionCrucifixion4(data.descriptioncrucifixion4 || "")
+//           setDescriptionCrucifixion5(data.descriptioncrucifixion5 || "")
+//           setDescriptionCrucifixion6(data.descriptioncrucifixion6 || "")
+//           setDescriptionCrucifixion7(data.descriptioncrucifixion7 || "")
+//           setDescriptionCrucifixion8(data.descriptioncrucifixion8 || "")
+//           setDescriptionCrucifixion9(data.descriptioncrucifixion9 || "")
+//           // ... set all other crucifixion fields
+//         }
+
+//         // Load other sections similarly...
+//         // Sabbath, Erosion, Operation, Balance...
+
+//       } catch (error) {
+//         console.error("Failed to load data:", error)
+//       }
+//     }
+
+//     loadAllData()
+//   }, [])
+
+//   // Handlers for saving data
+//   const handleSaveTetragrama = async (field: string, value: string) => {
+//     try {
+//       await updateData("tetragrama", 1, { [field]: value })
+//       console.log(`${field} updated successfully`)
+//     } catch (error) {
+//       console.error(`Failed to update ${field}:`, error)
+//     }
+//   }
+
+//   const handleSaveNation = async (field: string, value: string) => {
+//     try {
+//       await updateData("nation", 1, { [field]: value })
+//       console.log(`${field} updated successfully`)
+//     } catch (error) {
+//       console.error(`Failed to update ${field}:`, error)
+//     }
+//   }
+
+//   const handleSaveUniverse = async (field: string, value: string) => {
+//     try {
+//       await updateData("universe", 1, { [field]: value })
+//       console.log(`${field} updated successfully`)
+//     } catch (error) {
+//       console.error(`Failed to update ${field}:`, error)
+//     }
+//   }
+
+//   const handleSaveCrucifixion = async (field: string, value: string) => {
+//     try {
+//       await updateData("crucifixion", 1, { [field]: value })
+//       console.log(`${field} updated successfully`)
+//     } catch (error) {
+//       console.error(`Failed to update ${field}:`, error)
+//     }
+//   }
+
+//   const handleSaveSabbath = async (field: string, value: string) => {
+//     try {
+//       await updateData("sabbath", 1, { [field]: value })
+//       console.log(`${field} updated successfully`)
+//     } catch (error) {
+//       console.error(`Failed to update ${field}:`, error)
+//     }
+//   }
+
+//   const handleSaveErosion = async () => {
+//     try {
+//       await updateData("erosion", 1, { descriptionerosion: descriptionErosion })
+//       console.log("Erosion updated successfully")
+//     } catch (error) {
+//       console.error("Failed to update erosion:", error)
+//     }
+//   }
+
+//   const handleSaveOperation = async (field: string, value: string) => {
+//     try {
+//       await updateData("operation", 1, { [field]: value })
+//       console.log(`${field} updated successfully`)
+//     } catch (error) {
+//       console.error(`Failed to update ${field}:`, error)
+//     }
+//   }
+
+//   const handleSaveBalance = async (field: string, value: string) => {
+//     try {
+//       await updateData("balance", 1, { [field]: value })
+//       console.log(`${field} updated successfully`)
+//     } catch (error) {
+//       console.error(`Failed to update ${field}:`, error)
+//     }
+//   }
+
+//   // Specific handlers for each field
+//   const handleSaveTitle = () => handleSaveTetragrama("title", title)
+//   const handleSaveDescription = () => handleSaveTetragrama("description", description)
+//   const handleSaveDescription2 = () => handleSaveTetragrama("description2", description2)
+
+//   const handleSaveTitleNation = () => handleSaveNation("titlenation", titleNation)
+//   const handleSaveDescriptionNation = () => handleSaveNation("descriptionnation", descriptionNation)
+//   const handleSaveDescriptionNation2 = () => handleSaveNation("descriptionnation2", descriptionNation2)
+//   const handleSaveDescriptionNation3 = () => handleSaveNation("descriptionnation3", descriptionNation3)

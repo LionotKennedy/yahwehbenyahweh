@@ -1,0 +1,476 @@
+
+
+
+
+
+"use client"
+
+import { ChevronDown, ChevronUp, FileText, Save, Type } from "lucide-react"
+import { useState, useEffect } from "react"
+
+// Configuration de l'API
+const API_BASE_URL = "http://localhost:5000/api"
+
+// Fonctions API
+const fetchApiData = async (endpoint: string) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/${endpoint}`)
+    if (!response.ok) throw new Error('Erreur réseau')
+    return await response.json()
+  } catch (error) {
+    console.error(`Erreur lors de la récupération des données (${endpoint}):`, error)
+    throw error
+  }
+}
+
+const updateApiData = async (endpoint: string, id: number, data: any) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    if (!response.ok) throw new Error('Erreur réseau')
+    return await response.json()
+  } catch (error) {
+    console.error(`Erreur lors de la mise à jour des données (${endpoint}):`, error)
+    throw error
+  }
+}
+
+const MenuTab = () => {
+  // States pour chaque section
+  const [tetragrama, setTetragrama] = useState({
+    title: "",
+    description: "",
+    description2: ""
+  })
+
+  const [nation, setNation] = useState({
+    title: "",
+    description: "",
+    description2: "",
+    description3: ""
+  })
+
+  const [universe, setUniverse] = useState({
+    description1: "",
+    description2: "",
+    description3: "",
+    description4: "",
+    videoLink: ""
+  })
+
+  const [crucifixion, setCrucifixion] = useState({
+    title: "",
+    description1: "",
+    description2: "",
+    description3: "",
+    description4: "",
+    description5: "",
+    description6: "",
+    description7: "",
+    description8: "",
+    description9: "",
+    description10: "",
+    description11: ""
+  })
+
+  const [sabbath, setSabbath] = useState({
+    title: "",
+    description1: "",
+    description2: "",
+    description3: "",
+    description4: "",
+    description5: ""
+  })
+
+  const [erosion, setErosion] = useState({
+    description: ""
+  })
+
+  const [operation, setOperation] = useState({
+    description1: "",
+    description2: "",
+    description3: "",
+    description4: ""
+  })
+
+  const [balance, setBalance] = useState({
+    title: "",
+    description1: "",
+    description2: "",
+    description3: "",
+    description4: ""
+  })
+
+  // États pour l'ouverture/fermeture des sections
+  const [openSections, setOpenSections] = useState({
+    tetragrama: true,
+    nation: true,
+    universe: true,
+    crucifixion: true,
+    sabbath: true,
+    erosion: true,
+    operation: true,
+    balance: true
+  })
+
+  // Chargement des données initiales
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        // Chargement des données pour chaque section
+        const [
+          tetragramaRes,
+          nationRes,
+          universeRes,
+          crucifixionRes,
+          sabbathRes,
+          erosionRes,
+          operationRes,
+          balanceRes
+        ] = await Promise.all([
+          fetchApiData('tetragrama'),
+          fetchApiData('nation'),
+          fetchApiData('universe'),
+          fetchApiData('crucifixion'),
+          fetchApiData('sabbath'),
+          fetchApiData('erosion'),
+          fetchApiData('operation'),
+          fetchApiData('balance')
+        ])
+
+        if (tetragramaRes.success && tetragramaRes.data[0]) {
+          setTetragrama({
+            title: tetragramaRes.data[0].title || "",
+            description: tetragramaRes.data[0].description || "",
+            description2: tetragramaRes.data[0].description2 || ""
+          })
+        }
+
+        if (nationRes.success && nationRes.data[0]) {
+          setNation({
+            title: nationRes.data[0].titlenation || "",
+            description: nationRes.data[0].descriptionnation || "",
+            description2: nationRes.data[0].descriptionnation2 || "",
+            description3: nationRes.data[0].descriptionnation3 || ""
+          })
+        }
+
+        if (universeRes.success && universeRes.data[0]) {
+          setUniverse({
+            description1: universeRes.data[0].descriptionuniverse1 || "",
+            description2: universeRes.data[0].descriptionuniverse2 || "",
+            description3: universeRes.data[0].descriptionuniverse3 || "",
+            description4: universeRes.data[0].descriptionuniverse4 || "",
+            videoLink: universeRes.data[0].videolinkuniverse || ""
+          })
+        }
+
+        if (crucifixionRes.success && crucifixionRes.data[0]) {
+          setCrucifixion({
+            title: crucifixionRes.data[0].titlecrucifixion || "",
+            description1: crucifixionRes.data[0].descriptioncrucifixion1 || "",
+            description2: crucifixionRes.data[0].descriptioncrucifixion2 || "",
+            description3: crucifixionRes.data[0].descriptioncrucifixion3 || "",
+            description4: crucifixionRes.data[0].descriptioncrucifixion4 || "",
+            description5: crucifixionRes.data[0].descriptioncrucifixion5 || "",
+            description6: crucifixionRes.data[0].descriptioncrucifixion6 || "",
+            description7: crucifixionRes.data[0].descriptioncrucifixion7 || "",
+            description8: crucifixionRes.data[0].descriptioncrucifixion8 || "",
+            description9: crucifixionRes.data[0].descriptioncrucifixion9 || "",
+            description10: crucifixionRes.data[0].descriptioncrucifixion10 || "",
+            description11: crucifixionRes.data[0].descriptioncrucifixion11 || ""
+          })
+        }
+
+        if (sabbathRes.success && sabbathRes.data[0]) {
+          setSabbath({
+            title: sabbathRes.data[0].titlesabbath || "",
+            description1: sabbathRes.data[0].descriptionsabbath1 || "",
+            description2: sabbathRes.data[0].descriptionsabbath2 || "",
+            description3: sabbathRes.data[0].descriptionsabbath3 || "",
+            description4: sabbathRes.data[0].descriptionsabbath4 || "",
+            description5: sabbathRes.data[0].descriptionsabbath5 || ""
+          })
+        }
+
+        if (erosionRes.success && erosionRes.data[0]) {
+          setErosion({
+            description: erosionRes.data[0].descriptionerosion || ""
+          })
+        }
+
+        if (operationRes.success && operationRes.data[0]) {
+          setOperation({
+            description1: operationRes.data[0].descriptionoperation1 || "",
+            description2: operationRes.data[0].descriptionoperation2 || "",
+            description3: operationRes.data[0].descriptionoperation3 || "",
+            description4: operationRes.data[0].descriptionoperation4 || ""
+          })
+        }
+
+        if (balanceRes.success && balanceRes.data[0]) {
+          setBalance({
+            title: balanceRes.data[0].titlebalance || "",
+            description1: balanceRes.data[0].descriptionbalance1 || "",
+            description2: balanceRes.data[0].descriptionbalance2 || "",
+            description3: balanceRes.data[0].descriptionbalance3 || "",
+            description4: balanceRes.data[0].descriptionbalance4 || ""
+          })
+        }
+
+      } catch (error) {
+        console.error("Erreur lors du chargement des données:", error)
+      }
+    }
+
+    loadData()
+  }, [])
+
+  // Fonction générique pour gérer les changements
+  const handleChange = (section: string, field: string, value: string) => {
+    switch (section) {
+      case 'tetragrama':
+        setTetragrama(prev => ({ ...prev, [field]: value }))
+        break
+      case 'nation':
+        setNation(prev => ({ ...prev, [field]: value }))
+        break
+      case 'universe':
+        setUniverse(prev => ({ ...prev, [field]: value }))
+        break
+      case 'crucifixion':
+        setCrucifixion(prev => ({ ...prev, [field]: value }))
+        break
+      case 'sabbath':
+        setSabbath(prev => ({ ...prev, [field]: value }))
+        break
+      case 'erosion':
+        setErosion(prev => ({ ...prev, [field]: value }))
+        break
+      case 'operation':
+        setOperation(prev => ({ ...prev, [field]: value }))
+        break
+      case 'balance':
+        setBalance(prev => ({ ...prev, [field]: value }))
+        break
+      default:
+        break
+    }
+  }
+
+  // Fonction pour sauvegarder les modifications
+  const handleSave = async (section: string, field: string, value: string) => {
+    try {
+      const dataToUpdate = { [field]: value }
+      await updateApiData(section, 1, dataToUpdate)
+      console.log(`${section}.${field} mis à jour avec succès`)
+    } catch (error) {
+      console.error(`Erreur lors de la mise à jour de ${section}.${field}:`, error)
+    }
+  }
+
+  // Fonction pour basculer les sections
+  const toggleSection = (section: string) => {
+    setOpenSections(prev => ({
+      ...prev,
+      [section]: !prev[section as keyof typeof prev]
+    }))
+  }
+
+  // Fonction pour rendre les champs d'une section
+  const renderSectionFields = (section: string, data: any, fields: {name: string, label: string, type?: string}[]) => {
+    return (
+      <div className="section-content">
+        <div className="admin-controls">
+          <h3 className="admin-title">Administration des contenus</h3>
+          {fields.map((field) => (
+            <div key={field.name} className="input-group">
+              <label className="input-label">
+                {field.type === 'text' ? (
+                  <Type className="label-icon" size={16} />
+                ) : (
+                  <FileText className="label-icon" size={16} />
+                )}
+                {field.label}
+              </label>
+              <div className="input-wrapper">
+                {field.type === 'text' ? (
+                  <input
+                    type="text"
+                    value={data[field.name] || ""}
+                    onChange={(e) => handleChange(section, field.name, e.target.value)}
+                    placeholder={`Entrez ${field.label.toLowerCase()}...`}
+                    className="custom-input"
+                  />
+                ) : (
+                  <textarea
+                    value={data[field.name] || ""}
+                    onChange={(e) => handleChange(section, field.name, e.target.value)}
+                    placeholder={`Entrez ${field.label.toLowerCase()}...`}
+                    className="custom-textarea"
+                    rows={3}
+                  />
+                )}
+                <button
+                  onClick={() => handleSave(section, field.name, data[field.name])}
+                  className="save-button"
+                  disabled={!data[field.name]?.trim()}
+                >
+                  <Save size={14} />
+                  Sauvegarder
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="tab-content fade-in">
+      {/* Section Tetragrama */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('tetragrama')}>
+          <h1 className="section-title">Tetragrama</h1>
+          <button className="toggle-section">
+            {openSections.tetragrama ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.tetragrama && renderSectionFields('tetragrama', tetragrama, [
+          { name: 'title', label: 'Titre', type: 'text' },
+          { name: 'description', label: 'Description' },
+          { name: 'description2', label: 'Description 2' }
+        ])}
+      </section>
+
+      {/* Section Nation */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('nation')}>
+          <h1 className="section-title">The Nation of Yahweh</h1>
+          <button className="toggle-section">
+            {openSections.nation ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.nation && renderSectionFields('nation', nation, [
+          { name: 'title', label: 'Titre', type: 'text' },
+          { name: 'description', label: 'Description' },
+          { name: 'description2', label: 'Description 2' },
+          { name: 'description3', label: 'Description 3' }
+        ])}
+      </section>
+
+      {/* Section Universe */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('universe')}>
+          <h1 className="section-title">The Universe of Yahweh</h1>
+          <button className="toggle-section">
+            {openSections.universe ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.universe && renderSectionFields('universe', universe, [
+          { name: 'description1', label: 'Description 1' },
+          { name: 'description2', label: 'Description 2' },
+          { name: 'description3', label: 'Description 3' },
+          { name: 'description4', label: 'Description 4' },
+          { name: 'videoLink', label: 'Lien Vidéo', type: 'text' }
+        ])}
+      </section>
+
+      {/* Section Crucifixion */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('crucifixion')}>
+          <h1 className="section-title">The Crucifixion</h1>
+          <button className="toggle-section">
+            {openSections.crucifixion ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.crucifixion && renderSectionFields('crucifixion', crucifixion, [
+          { name: 'title', label: 'Titre', type: 'text' },
+          { name: 'description1', label: 'Description 1' },
+          { name: 'description2', label: 'Description 2' },
+          { name: 'description3', label: 'Description 3' },
+          { name: 'description4', label: 'Description 4' },
+          { name: 'description5', label: 'Description 5' },
+          { name: 'description6', label: 'Description 6' },
+          { name: 'description7', label: 'Description 7' },
+          { name: 'description8', label: 'Description 8' },
+          { name: 'description9', label: 'Description 9' },
+          { name: 'description10', label: 'Description 10' },
+          { name: 'description11', label: 'Description 11' }
+        ])}
+      </section>
+
+      {/* Section Sabbath */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('sabbath')}>
+          <h1 className="section-title">The Sabbath</h1>
+          <button className="toggle-section">
+            {openSections.sabbath ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.sabbath && renderSectionFields('sabbath', sabbath, [
+          { name: 'title', label: 'Titre', type: 'text' },
+          { name: 'description1', label: 'Description 1' },
+          { name: 'description2', label: 'Description 2' },
+          { name: 'description3', label: 'Description 3' },
+          { name: 'description4', label: 'Description 4' },
+          { name: 'description5', label: 'Description 5' }
+        ])}
+      </section>
+
+      {/* Section Erosion */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('erosion')}>
+          <h1 className="section-title">Erosion of The Constitution</h1>
+          <button className="toggle-section">
+            {openSections.erosion ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.erosion && renderSectionFields('erosion', erosion, [
+          { name: 'description', label: 'Description' }
+        ])}
+      </section>
+
+      {/* Section Operation */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('operation')}>
+          <h1 className="section-title">Operation Word War</h1>
+          <button className="toggle-section">
+            {openSections.operation ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.operation && renderSectionFields('operation', operation, [
+          { name: 'description1', label: 'Description 1' },
+          { name: 'description2', label: 'Description 2' },
+          { name: 'description3', label: 'Description 3' },
+          { name: 'description4', label: 'Description 4' }
+        ])}
+      </section>
+
+      {/* Section Balance */}
+      <section className="home-section">
+        <div className="section-header" onClick={() => toggleSection('balance')}>
+          <h1 className="section-title">Balance Justice</h1>
+          <button className="toggle-section">
+            {openSections.balance ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+          </button>
+        </div>
+        {openSections.balance && renderSectionFields('balance', balance, [
+          { name: 'title', label: 'Titre', type: 'text' },
+          { name: 'description1', label: 'Description 1' },
+          { name: 'description2', label: 'Description 2' },
+          { name: 'description3', label: 'Description 3' },
+          { name: 'description4', label: 'Description 4' }
+        ])}
+      </section>
+    </div>
+  )
+}
+
+export default MenuTab

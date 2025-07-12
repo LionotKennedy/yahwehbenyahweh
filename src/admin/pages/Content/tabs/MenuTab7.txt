@@ -1,0 +1,2366 @@
+
+// "use client"
+
+// import { ChevronDown, ChevronUp, FileText, Save, Type } from "lucide-react"
+// import type React from "react"
+// import { useState, useEffect } from "react"
+
+// // Import des données JSON
+// import tetragramaData from "../../../../data/menu/data/tetragrama.json"
+// import nationData from "../../../../data/menu/data/nation.json"
+// import universeData from "../../../../data/menu/data/universe.json"
+// import feastsData from "../../../../data/menu/data/feasts.json"
+// import crucifixionData from "../../../../data/menu/data/crucifixion.json"
+// import sabbathData from "../../../../data/menu/data/sabbath.json"
+// import erosionData from "../../../../data/menu/data/erosion.json"
+// import operationData from "../../../../data/menu/data/operation.json"
+// import balanceData from "../../../../data/menu/data/balance.json"
+
+// const MenuTab: React.FC = () => {
+//   // Tetragrama states
+//   const [title, setTitle] = useState("")
+//   const [description, setDescription] = useState("")
+//   const [description2, setDescription2] = useState("")
+
+//   // Nation states
+//   const [titleNation, setTitleNation] = useState("")
+//   const [descriptionNation, setDescriptionNation] = useState("")
+//   const [descriptionNation2, setDescriptionNation2] = useState("")
+//   const [descriptionNation3, setDescriptionNation3] = useState("")
+
+//   // Universe states
+//   const [descriptionUniverse1, setDescriptionUniverse1] = useState("")
+//   const [descriptionUniverse2, setDescriptionUniverse2] = useState("")
+//   const [descriptionUniverse3, setDescriptionUniverse3] = useState("")
+//   const [descriptionUniverse4, setDescriptionUniverse4] = useState("")
+//   const [videoLinkUniverse, setVideoLinkUniverse] = useState("")
+
+//   // Feasts states
+//   const [titleFeasts, setTitleFeasts] = useState("")
+//   const [titleFeasts2, setTitleFeasts2] = useState("")
+//   const [fieldFeasts2, setFieldFeasts2] = useState("")
+//   const [titleFeasts3, setTitleFeasts3] = useState("")
+//   const [fieldFeasts3, setFieldFeasts3] = useState("")
+//   const [titleFeasts4, setTitleFeasts4] = useState("")
+//   const [fieldFeasts4, setFieldFeasts4] = useState("")
+//   const [descriptionFeasts4, setDescriptionFeasts4] = useState("")
+//   const [videoFeasts4, setVideoFeasts4] = useState("")
+//   const [titleFeasts5, setTitleFeasts5] = useState("")
+//   const [fieldFeasts5, setFieldFeasts5] = useState("")
+//   const [descriptionFeasts5, setDescriptionFeasts5] = useState("")
+//   const [videoFeasts5, setVideoFeasts5] = useState("")
+//   const [titleFeasts6, setTitleFeasts6] = useState("")
+//   const [fieldFeasts6a, setFieldFeasts6a] = useState("")
+//   const [fieldFeasts6b, setFieldFeasts6b] = useState("")
+
+//   // Crucifixion states
+//   const [titleCrucifixion, setTitleCrucifixion] = useState("")
+//   const [descriptionCrucifixion1, setDescriptionCrucifixion1] = useState("")
+//   const [descriptionCrucifixion2, setDescriptionCrucifixion2] = useState("")
+//   const [descriptionCrucifixion3, setDescriptionCrucifixion3] = useState("")
+//   const [descriptionCrucifixion4, setDescriptionCrucifixion4] = useState("")
+//   const [descriptionCrucifixion5, setDescriptionCrucifixion5] = useState("")
+//   const [descriptionCrucifixion6, setDescriptionCrucifixion6] = useState("")
+//   const [descriptionCrucifixion7, setDescriptionCrucifixion7] = useState("")
+//   const [descriptionCrucifixion8, setDescriptionCrucifixion8] = useState("")
+//   const [descriptionCrucifixion9, setDescriptionCrucifixion9] = useState("")
+//   const [descriptionCrucifixion10, setDescriptionCrucifixion10] = useState("")
+//   const [descriptionCrucifixion11, setDescriptionCrucifixion11] = useState("")
+
+//   // Sabbath states
+//   const [titleSabbath, setTitleSabbath] = useState("")
+//   const [descriptionSabbath1, setDescriptionSabbath1] = useState("")
+//   const [descriptionSabbath2, setDescriptionSabbath2] = useState("")
+//   const [descriptionSabbath3, setDescriptionSabbath3] = useState("")
+//   const [descriptionSabbath4, setDescriptionSabbath4] = useState("")
+//   const [descriptionSabbath5, setDescriptionSabbath5] = useState("")
+
+//   // Erosion states
+//   const [descriptionErosion, setDescriptionErosion] = useState("")
+
+//   // Operation states
+//   const [descriptionOperation1, setDescriptionOperation1] = useState("")
+//   const [descriptionOperation2, setDescriptionOperation2] = useState("")
+//   const [descriptionOperation3, setDescriptionOperation3] = useState("")
+//   const [descriptionOperation4, setDescriptionOperation4] = useState("")
+
+//   // Balance states
+//   const [titleBalance, setTitleBalance] = useState("")
+//   const [descriptionBalance1, setDescriptionBalance1] = useState("")
+//   const [descriptionBalance2, setDescriptionBalance2] = useState("")
+//   const [descriptionBalance3, setDescriptionBalance3] = useState("")
+//   const [descriptionBalance4, setDescriptionBalance4] = useState("")
+
+//   // Section toggle states
+//   const [isTetragramaOpen, setIsTetragramaOpen] = useState(true)
+//   const [isNationOpen, setIsNationOpen] = useState(true)
+//   const [isUniverseOpen, setIsUniverseOpen] = useState(true)
+//   const [isFeastsOpen, setIsFeastsOpen] = useState(true)
+//   const [isCrucifixionOpen, setIsCrucifixionOpen] = useState(true)
+//   const [isSabbathOpen, setIsSabbathOpen] = useState(true)
+//   const [isErosionOpen, setIsErosionOpen] = useState(true)
+//   const [isOperationOpen, setIsOperationOpen] = useState(true)
+//   const [isBalanceOpen, setIsBalanceOpen] = useState(true)
+
+//   // Load data from JSON files on component mount
+//   useEffect(() => {
+//     // Load Tetragrama data
+//     setTitle(tetragramaData.title)
+//     setDescription(tetragramaData.description)
+//     setDescription2(tetragramaData.description2)
+
+//     // Load Nation data
+//     setTitleNation(nationData.titleNation)
+//     setDescriptionNation(nationData.descriptionNation)
+//     setDescriptionNation2(nationData.descriptionNation2)
+//     setDescriptionNation3(nationData.descriptionNation3)
+
+//     // Load Universe data
+//     setDescriptionUniverse1(universeData.descriptionUniverse1)
+//     setDescriptionUniverse2(universeData.descriptionUniverse2)
+//     setDescriptionUniverse3(universeData.descriptionUniverse3)
+//     setDescriptionUniverse4(universeData.descriptionUniverse4)
+//     setVideoLinkUniverse(universeData.videoLinkUniverse)
+
+//     // Load Feasts data
+//     setTitleFeasts(feastsData.titleFeasts)
+//     setTitleFeasts2(feastsData.titleFeasts2)
+//     setFieldFeasts2(feastsData.fieldFeasts2)
+//     setTitleFeasts3(feastsData.titleFeasts3)
+//     setFieldFeasts3(feastsData.fieldFeasts3)
+//     setTitleFeasts4(feastsData.titleFeasts4)
+//     setFieldFeasts4(feastsData.fieldFeasts4)
+//     setDescriptionFeasts4(feastsData.descriptionFeasts4)
+//     setVideoFeasts4(feastsData.videoFeasts4)
+//     setTitleFeasts5(feastsData.titleFeasts5)
+//     setFieldFeasts5(feastsData.fieldFeasts5)
+//     setDescriptionFeasts5(feastsData.descriptionFeasts5)
+//     setVideoFeasts5(feastsData.videoFeasts5)
+//     setTitleFeasts6(feastsData.titleFeasts6)
+//     setFieldFeasts6a(feastsData.fieldFeasts6a)
+//     setFieldFeasts6b(feastsData.fieldFeasts6b)
+
+//     // Load Crucifixion data
+//     setTitleCrucifixion(crucifixionData.titleCrucifixion)
+//     setDescriptionCrucifixion1(crucifixionData.descriptionCrucifixion1)
+//     setDescriptionCrucifixion2(crucifixionData.descriptionCrucifixion2)
+//     setDescriptionCrucifixion3(crucifixionData.descriptionCrucifixion3)
+//     setDescriptionCrucifixion4(crucifixionData.descriptionCrucifixion4)
+//     setDescriptionCrucifixion5(crucifixionData.descriptionCrucifixion5)
+//     setDescriptionCrucifixion6(crucifixionData.descriptionCrucifixion6)
+//     setDescriptionCrucifixion7(crucifixionData.descriptionCrucifixion7)
+//     setDescriptionCrucifixion8(crucifixionData.descriptionCrucifixion8)
+//     setDescriptionCrucifixion9(crucifixionData.descriptionCrucifixion9)
+//     setDescriptionCrucifixion10(crucifixionData.descriptionCrucifixion10)
+//     setDescriptionCrucifixion11(crucifixionData.descriptionCrucifixion11)
+
+//     // Load Sabbath data
+//     setTitleSabbath(sabbathData.titleSabbath)
+//     setDescriptionSabbath1(sabbathData.descriptionSabbath1)
+//     setDescriptionSabbath2(sabbathData.descriptionSabbath2)
+//     setDescriptionSabbath3(sabbathData.descriptionSabbath3)
+//     setDescriptionSabbath4(sabbathData.descriptionSabbath4)
+//     setDescriptionSabbath5(sabbathData.descriptionSabbath5)
+
+//     // Load Erosion data
+//     setDescriptionErosion(erosionData.descriptionErosion)
+
+//     // Load Operation data
+//     setDescriptionOperation1(operationData.descriptionOperation1)
+//     setDescriptionOperation2(operationData.descriptionOperation2)
+//     setDescriptionOperation3(operationData.descriptionOperation3)
+//     setDescriptionOperation4(operationData.descriptionOperation4)
+
+//     // Load Balance data
+//     setTitleBalance(balanceData.titleBalance)
+//     setDescriptionBalance1(balanceData.descriptionBalance1)
+//     setDescriptionBalance2(balanceData.descriptionBalance2)
+//     setDescriptionBalance3(balanceData.descriptionBalance3)
+//     setDescriptionBalance4(balanceData.descriptionBalance4)
+//   }, [])
+
+//   // Handler functions
+//   const handleSaveTitle = () => {
+//     console.log("Titre sauvegardé:", title)
+//   }
+
+//   const handleSaveDescription = () => {
+//     console.log("Description saved:", description)
+//   }
+
+//   const handleSaveDescription2 = () => {
+//     console.log("Description saved:", description2)
+//   }
+
+//   // Nation handlers
+//   const handleSaveTitleNation = () => {
+//     console.log("Titre sauvegardé:", titleNation)
+//   }
+
+//   const handleSaveDescriptionNation = () => {
+//     console.log("Description saved:", descriptionNation)
+//   }
+
+//   const handleSaveDescriptionNation2 = () => {
+//     console.log("Description saved:", descriptionNation2)
+//   }
+
+//   const handleSaveDescriptionNation3 = () => {
+//     console.log("Description saved:", descriptionNation3)
+//   }
+
+//   // Universe handlers
+//   const handleSaveDescriptionUniverse = (field: string, value: string) => {
+//     console.log(`Universe ${field} saved:`, value)
+//   }
+
+//   // Feasts handlers
+//   const handleSaveFeasts = (field: string, value: string) => {
+//     console.log(`Feasts ${field} saved:`, value)
+//   }
+
+//   // Crucifixion handlers
+//   const handleSaveCrucifixion = (field: string, value: string) => {
+//     console.log(`Crucifixion ${field} saved:`, value)
+//   }
+
+//   // Sabbath handlers
+//   const handleSaveSabbath = (field: string, value: string) => {
+//     console.log(`Sabbath ${field} saved:`, value)
+//   }
+
+//   // Erosion handlers
+//   const handleSaveErosion = () => {
+//     console.log("Erosion description saved:", descriptionErosion)
+//   }
+
+//   // Operation handlers
+//   const handleSaveOperation = (field: string, value: string) => {
+//     console.log(`Operation ${field} saved:`, value)
+//   }
+
+//   // Balance handlers
+//   const handleSaveBalance = (field: string, value: string) => {
+//     console.log(`Balance ${field} saved:`, value)
+//   }
+
+//   return (
+//     <div className="tab-content fade-in">
+//       {/* Section Tetragrama */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsTetragramaOpen(!isTetragramaOpen)}>
+//           <h1 className="section-title">Tetragrama</h1>
+//           <button className="toggle-section">
+//             {isTetragramaOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isTetragramaOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={title}
+//                     onChange={(e) => setTitle(e.target.value)}
+//                     placeholder="Entrez le titre..."
+//                     className="custom-input"
+//                   />
+//                   <button onClick={handleSaveTitle} className="save-button title-save" disabled={!title.trim()}>
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={description}
+//                     onChange={(e) => setDescription(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={handleSaveDescription}
+//                     className="save-button description-save"
+//                     disabled={!description.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description 2
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={description2}
+//                     onChange={(e) => setDescription2(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={handleSaveDescription2}
+//                     className="save-button description-save"
+//                     disabled={!description2.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Nation */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsNationOpen(!isNationOpen)}>
+//           <h1 className="section-title">The Nation of Yahweh</h1>
+//           <button className="toggle-section">
+//             {isNationOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isNationOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleNation}
+//                     onChange={(e) => setTitleNation(e.target.value)}
+//                     placeholder="Entrez le titre..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={handleSaveTitleNation}
+//                     className="save-button title-save"
+//                     disabled={!titleNation.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={descriptionNation}
+//                     onChange={(e) => setDescriptionNation(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={handleSaveDescriptionNation}
+//                     className="save-button description-save"
+//                     disabled={!descriptionNation.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description 2
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={descriptionNation2}
+//                     onChange={(e) => setDescriptionNation2(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={handleSaveDescriptionNation2}
+//                     className="save-button description-save"
+//                     disabled={!descriptionNation2.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description 3
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={descriptionNation3}
+//                     onChange={(e) => setDescriptionNation3(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={handleSaveDescriptionNation3}
+//                     className="save-button description-save"
+//                     disabled={!descriptionNation3.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section The Universe of Yahweh */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsUniverseOpen(!isUniverseOpen)}>
+//           <h1 className="section-title">The Universe of Yahweh</h1>
+//           <button className="toggle-section">
+//             {isUniverseOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isUniverseOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               {/* 4 champs description */}
+//               {[1, 2, 3, 4].map((num) => (
+//                 <div key={num} className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description {num}
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={
+//                         num === 1
+//                           ? descriptionUniverse1
+//                           : num === 2
+//                             ? descriptionUniverse2
+//                             : num === 3
+//                               ? descriptionUniverse3
+//                               : descriptionUniverse4
+//                       }
+//                       onChange={(e) => {
+//                         if (num === 1) setDescriptionUniverse1(e.target.value)
+//                         else if (num === 2) setDescriptionUniverse2(e.target.value)
+//                         else if (num === 3) setDescriptionUniverse3(e.target.value)
+//                         else setDescriptionUniverse4(e.target.value)
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() =>
+//                         handleSaveDescriptionUniverse(
+//                           `description${num}`,
+//                           num === 1
+//                             ? descriptionUniverse1
+//                             : num === 2
+//                               ? descriptionUniverse2
+//                               : num === 3
+//                                 ? descriptionUniverse3
+//                                 : descriptionUniverse4,
+//                         )
+//                       }
+//                       className="save-button description-save"
+//                       disabled={
+//                         !(num === 1
+//                           ? descriptionUniverse1.trim()
+//                           : num === 2
+//                             ? descriptionUniverse2.trim()
+//                             : num === 3
+//                               ? descriptionUniverse3.trim()
+//                               : descriptionUniverse4.trim())
+//                       }
+//                     >
+//                       <Save size={14} />
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               ))}
+//               {/* Champ lien vidéo */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Lien Vidéo
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="url"
+//                     value={videoLinkUniverse}
+//                     onChange={(e) => setVideoLinkUniverse(e.target.value)}
+//                     placeholder="Entrez le lien vidéo..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveDescriptionUniverse("videoLink", videoLinkUniverse)}
+//                     className="save-button title-save"
+//                     disabled={!videoLinkUniverse.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section The Feasts of Yahweh */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsFeastsOpen(!isFeastsOpen)}>
+//           <h1 className="section-title">The Feasts of Yahweh</h1>
+//           <button className="toggle-section">
+//             {isFeastsOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isFeastsOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               {/* Titre principal */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleFeasts}
+//                     onChange={(e) => setTitleFeasts(e.target.value)}
+//                     placeholder="Entrez le titre..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("title", titleFeasts)}
+//                     className="save-button title-save"
+//                     disabled={!titleFeasts.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* Titre 2 avec champ */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre 2
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleFeasts2}
+//                     onChange={(e) => setTitleFeasts2(e.target.value)}
+//                     placeholder="Entrez le titre 2..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("title2", titleFeasts2)}
+//                     className="save-button title-save"
+//                     disabled={!titleFeasts2.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Champ Titre 2
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={fieldFeasts2}
+//                     onChange={(e) => setFieldFeasts2(e.target.value)}
+//                     placeholder="Entrez le contenu..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("field2", fieldFeasts2)}
+//                     className="save-button description-save"
+//                     disabled={!fieldFeasts2.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* Titre 3 avec champ */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre 3
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleFeasts3}
+//                     onChange={(e) => setTitleFeasts3(e.target.value)}
+//                     placeholder="Entrez le titre 3..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("title3", titleFeasts3)}
+//                     className="save-button title-save"
+//                     disabled={!titleFeasts3.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Champ Titre 3
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={fieldFeasts3}
+//                     onChange={(e) => setFieldFeasts3(e.target.value)}
+//                     placeholder="Entrez le contenu..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("field3", fieldFeasts3)}
+//                     className="save-button description-save"
+//                     disabled={!fieldFeasts3.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* Titre 4 avec champ, description et vidéo */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre 4
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleFeasts4}
+//                     onChange={(e) => setTitleFeasts4(e.target.value)}
+//                     placeholder="Entrez le titre 4..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("title4", titleFeasts4)}
+//                     className="save-button title-save"
+//                     disabled={!titleFeasts4.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Champ Titre 4
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={fieldFeasts4}
+//                     onChange={(e) => setFieldFeasts4(e.target.value)}
+//                     placeholder="Entrez le contenu..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("field4", fieldFeasts4)}
+//                     className="save-button description-save"
+//                     disabled={!fieldFeasts4.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description Titre 4
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={descriptionFeasts4}
+//                     onChange={(e) => setDescriptionFeasts4(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("description4", descriptionFeasts4)}
+//                     className="save-button description-save"
+//                     disabled={!descriptionFeasts4.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Vidéo Titre 4
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="url"
+//                     value={videoFeasts4}
+//                     onChange={(e) => setVideoFeasts4(e.target.value)}
+//                     placeholder="Entrez le lien vidéo..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("video4", videoFeasts4)}
+//                     className="save-button title-save"
+//                     disabled={!videoFeasts4.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* Titre 5 avec champ, description et vidéo */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre 5
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleFeasts5}
+//                     onChange={(e) => setTitleFeasts5(e.target.value)}
+//                     placeholder="Entrez le titre 5..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("title5", titleFeasts5)}
+//                     className="save-button title-save"
+//                     disabled={!titleFeasts5.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Champ Titre 5
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={fieldFeasts5}
+//                     onChange={(e) => setFieldFeasts5(e.target.value)}
+//                     placeholder="Entrez le contenu..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("field5", fieldFeasts5)}
+//                     className="save-button description-save"
+//                     disabled={!fieldFeasts5.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description Titre 5
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={descriptionFeasts5}
+//                     onChange={(e) => setDescriptionFeasts5(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("description5", descriptionFeasts5)}
+//                     className="save-button description-save"
+//                     disabled={!descriptionFeasts5.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Vidéo Titre 5
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="url"
+//                     value={videoFeasts5}
+//                     onChange={(e) => setVideoFeasts5(e.target.value)}
+//                     placeholder="Entrez le lien vidéo..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("video5", videoFeasts5)}
+//                     className="save-button title-save"
+//                     disabled={!videoFeasts5.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* Titre 6 avec 2 champs */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre 6
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleFeasts6}
+//                     onChange={(e) => setTitleFeasts6(e.target.value)}
+//                     placeholder="Entrez le titre 6..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("title6", titleFeasts6)}
+//                     className="save-button title-save"
+//                     disabled={!titleFeasts6.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Champ A Titre 6
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={fieldFeasts6a}
+//                     onChange={(e) => setFieldFeasts6a(e.target.value)}
+//                     placeholder="Entrez le contenu A..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("field6a", fieldFeasts6a)}
+//                     className="save-button description-save"
+//                     disabled={!fieldFeasts6a.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Champ B Titre 6
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={fieldFeasts6b}
+//                     onChange={(e) => setFieldFeasts6b(e.target.value)}
+//                     placeholder="Entrez le contenu B..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={() => handleSaveFeasts("field6b", fieldFeasts6b)}
+//                     className="save-button description-save"
+//                     disabled={!fieldFeasts6b.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section The Crucifixion */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsCrucifixionOpen(!isCrucifixionOpen)}>
+//           <h1 className="section-title">The Crucifixion</h1>
+//           <button className="toggle-section">
+//             {isCrucifixionOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isCrucifixionOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               {/* Titre */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleCrucifixion}
+//                     onChange={(e) => setTitleCrucifixion(e.target.value)}
+//                     placeholder="Entrez le titre..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveCrucifixion("title", titleCrucifixion)}
+//                     className="save-button title-save"
+//                     disabled={!titleCrucifixion.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* 11 champs description */}
+//               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num) => (
+//                 <div key={num} className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description {num}
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={
+//                         num === 1
+//                           ? descriptionCrucifixion1
+//                           : num === 2
+//                             ? descriptionCrucifixion2
+//                             : num === 3
+//                               ? descriptionCrucifixion3
+//                               : num === 4
+//                                 ? descriptionCrucifixion4
+//                                 : num === 5
+//                                   ? descriptionCrucifixion5
+//                                   : num === 6
+//                                     ? descriptionCrucifixion6
+//                                     : num === 7
+//                                       ? descriptionCrucifixion7
+//                                       : num === 8
+//                                         ? descriptionCrucifixion8
+//                                         : num === 9
+//                                           ? descriptionCrucifixion9
+//                                           : num === 10
+//                                             ? descriptionCrucifixion10
+//                                             : descriptionCrucifixion11
+//                       }
+//                       onChange={(e) => {
+//                         if (num === 1) setDescriptionCrucifixion1(e.target.value)
+//                         else if (num === 2) setDescriptionCrucifixion2(e.target.value)
+//                         else if (num === 3) setDescriptionCrucifixion3(e.target.value)
+//                         else if (num === 4) setDescriptionCrucifixion4(e.target.value)
+//                         else if (num === 5) setDescriptionCrucifixion5(e.target.value)
+//                         else if (num === 6) setDescriptionCrucifixion6(e.target.value)
+//                         else if (num === 7) setDescriptionCrucifixion7(e.target.value)
+//                         else if (num === 8) setDescriptionCrucifixion8(e.target.value)
+//                         else if (num === 9) setDescriptionCrucifixion9(e.target.value)
+//                         else if (num === 10) setDescriptionCrucifixion10(e.target.value)
+//                         else setDescriptionCrucifixion11(e.target.value)
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() =>
+//                         handleSaveCrucifixion(
+//                           `description${num}`,
+//                           num === 1
+//                             ? descriptionCrucifixion1
+//                             : num === 2
+//                               ? descriptionCrucifixion2
+//                               : num === 3
+//                                 ? descriptionCrucifixion3
+//                                 : num === 4
+//                                   ? descriptionCrucifixion4
+//                                   : num === 5
+//                                     ? descriptionCrucifixion5
+//                                     : num === 6
+//                                       ? descriptionCrucifixion6
+//                                       : num === 7
+//                                         ? descriptionCrucifixion7
+//                                         : num === 8
+//                                           ? descriptionCrucifixion8
+//                                           : num === 9
+//                                             ? descriptionCrucifixion9
+//                                             : num === 10
+//                                               ? descriptionCrucifixion10
+//                                               : descriptionCrucifixion11,
+//                         )
+//                       }
+//                       className="save-button description-save"
+//                       disabled={
+//                         !(num === 1
+//                           ? descriptionCrucifixion1.trim()
+//                           : num === 2
+//                             ? descriptionCrucifixion2.trim()
+//                             : num === 3
+//                               ? descriptionCrucifixion3.trim()
+//                               : num === 4
+//                                 ? descriptionCrucifixion4.trim()
+//                                 : num === 5
+//                                   ? descriptionCrucifixion5.trim()
+//                                   : num === 6
+//                                     ? descriptionCrucifixion6.trim()
+//                                     : num === 7
+//                                       ? descriptionCrucifixion7.trim()
+//                                       : num === 8
+//                                         ? descriptionCrucifixion8.trim()
+//                                         : num === 9
+//                                           ? descriptionCrucifixion9.trim()
+//                                           : num === 10
+//                                             ? descriptionCrucifixion10.trim()
+//                                             : descriptionCrucifixion11.trim())
+//                       }
+//                     >
+//                       <Save size={14} />
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section The Sabbath */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsSabbathOpen(!isSabbathOpen)}>
+//           <h1 className="section-title">The Sabbath</h1>
+//           <button className="toggle-section">
+//             {isSabbathOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isSabbathOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               {/* Titre */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleSabbath}
+//                     onChange={(e) => setTitleSabbath(e.target.value)}
+//                     placeholder="Entrez le titre..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveSabbath("title", titleSabbath)}
+//                     className="save-button title-save"
+//                     disabled={!titleSabbath.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* 5 champs description */}
+//               {[1, 2, 3, 4, 5].map((num) => (
+//                 <div key={num} className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description {num}
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={
+//                         num === 1
+//                           ? descriptionSabbath1
+//                           : num === 2
+//                             ? descriptionSabbath2
+//                             : num === 3
+//                               ? descriptionSabbath3
+//                               : num === 4
+//                                 ? descriptionSabbath4
+//                                 : descriptionSabbath5
+//                       }
+//                       onChange={(e) => {
+//                         if (num === 1) setDescriptionSabbath1(e.target.value)
+//                         else if (num === 2) setDescriptionSabbath2(e.target.value)
+//                         else if (num === 3) setDescriptionSabbath3(e.target.value)
+//                         else if (num === 4) setDescriptionSabbath4(e.target.value)
+//                         else setDescriptionSabbath5(e.target.value)
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() =>
+//                         handleSaveSabbath(
+//                           `description${num}`,
+//                           num === 1
+//                             ? descriptionSabbath1
+//                             : num === 2
+//                               ? descriptionSabbath2
+//                               : num === 3
+//                                 ? descriptionSabbath3
+//                                 : num === 4
+//                                   ? descriptionSabbath4
+//                                   : descriptionSabbath5,
+//                         )
+//                       }
+//                       className="save-button description-save"
+//                       disabled={
+//                         !(num === 1
+//                           ? descriptionSabbath1.trim()
+//                           : num === 2
+//                             ? descriptionSabbath2.trim()
+//                             : num === 3
+//                               ? descriptionSabbath3.trim()
+//                               : num === 4
+//                                 ? descriptionSabbath4.trim()
+//                                 : descriptionSabbath5.trim())
+//                       }
+//                     >
+//                       <Save size={14} />
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Erosion of The Constitution */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsErosionOpen(!isErosionOpen)}>
+//           <h1 className="section-title">Erosion of The Constitution</h1>
+//           <button className="toggle-section">
+//             {isErosionOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isErosionOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               {/* 1 champ description */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <FileText className="label-icon" size={16} />
+//                   Description
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <textarea
+//                     value={descriptionErosion}
+//                     onChange={(e) => setDescriptionErosion(e.target.value)}
+//                     placeholder="Entrez la description..."
+//                     className="custom-textarea"
+//                     rows={3}
+//                   />
+//                   <button
+//                     onClick={handleSaveErosion}
+//                     className="save-button description-save"
+//                     disabled={!descriptionErosion.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Operation Word War */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsOperationOpen(!isOperationOpen)}>
+//           <h1 className="section-title">Operation Word War</h1>
+//           <button className="toggle-section">
+//             {isOperationOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isOperationOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               {/* 4 champs description */}
+//               {[1, 2, 3, 4].map((num) => (
+//                 <div key={num} className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description {num}
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={
+//                         num === 1
+//                           ? descriptionOperation1
+//                           : num === 2
+//                             ? descriptionOperation2
+//                             : num === 3
+//                               ? descriptionOperation3
+//                               : descriptionOperation4
+//                       }
+//                       onChange={(e) => {
+//                         if (num === 1) setDescriptionOperation1(e.target.value)
+//                         else if (num === 2) setDescriptionOperation2(e.target.value)
+//                         else if (num === 3) setDescriptionOperation3(e.target.value)
+//                         else setDescriptionOperation4(e.target.value)
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() =>
+//                         handleSaveOperation(
+//                           `description${num}`,
+//                           num === 1
+//                             ? descriptionOperation1
+//                             : num === 2
+//                               ? descriptionOperation2
+//                               : num === 3
+//                                 ? descriptionOperation3
+//                                 : descriptionOperation4,
+//                         )
+//                       }
+//                       className="save-button description-save"
+//                       disabled={
+//                         !(num === 1
+//                           ? descriptionOperation1.trim()
+//                           : num === 2
+//                             ? descriptionOperation2.trim()
+//                             : num === 3
+//                               ? descriptionOperation3.trim()
+//                               : descriptionOperation4.trim())
+//                       }
+//                     >
+//                       <Save size={14} />
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Balance Justice */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsBalanceOpen(!isBalanceOpen)}>
+//           <h1 className="section-title">Balance Justice</h1>
+//           <button className="toggle-section">
+//             {isBalanceOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBalanceOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+//             <div className="admin-controls">
+//               <h3 className="admin-title">Administration des contenus</h3>
+//               {/* Titre */}
+//               <div className="input-group">
+//                 <label className="input-label">
+//                   <Type className="label-icon" size={16} />
+//                   Titre
+//                 </label>
+//                 <div className="input-wrapper">
+//                   <input
+//                     type="text"
+//                     value={titleBalance}
+//                     onChange={(e) => setTitleBalance(e.target.value)}
+//                     placeholder="Entrez le titre..."
+//                     className="custom-input"
+//                   />
+//                   <button
+//                     onClick={() => handleSaveBalance("title", titleBalance)}
+//                     className="save-button title-save"
+//                     disabled={!titleBalance.trim()}
+//                   >
+//                     <Save size={14} />
+//                     Sauvegarder
+//                   </button>
+//                 </div>
+//               </div>
+//               {/* 4 champs description */}
+//               {[1, 2, 3, 4].map((num) => (
+//                 <div key={num} className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description {num}
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={
+//                         num === 1
+//                           ? descriptionBalance1
+//                           : num === 2
+//                             ? descriptionBalance2
+//                             : num === 3
+//                               ? descriptionBalance3
+//                               : descriptionBalance4
+//                       }
+//                       onChange={(e) => {
+//                         if (num === 1) setDescriptionBalance1(e.target.value)
+//                         else if (num === 2) setDescriptionBalance2(e.target.value)
+//                         else if (num === 3) setDescriptionBalance3(e.target.value)
+//                         else setDescriptionBalance4(e.target.value)
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() =>
+//                         handleSaveBalance(
+//                           `description${num}`,
+//                           num === 1
+//                             ? descriptionBalance1
+//                             : num === 2
+//                               ? descriptionBalance2
+//                               : num === 3
+//                                 ? descriptionBalance3
+//                                 : descriptionBalance4,
+//                         )
+//                       }
+//                       className="save-button description-save"
+//                       disabled={
+//                         !(num === 1
+//                           ? descriptionBalance1.trim()
+//                           : num === 2
+//                             ? descriptionBalance2.trim()
+//                             : num === 3
+//                               ? descriptionBalance3.trim()
+//                               : descriptionBalance4.trim())
+//                       }
+//                     >
+//                       <Save size={14} />
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default MenuTab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client"
+
+// import { ChevronDown, ChevronUp, FileText, Save, Type, AlertCircle, Loader2 } from "lucide-react"
+// import type React from "react"
+// import { useState } from "react"
+
+// // Import des services API
+// import { useApiData } from "../../../hooks/useApiData"
+// import { tetragramaService, type TetragramaData } from "../../../services/tetragramaService"
+// import { nationService, type NationData } from "../../../services/nationService"
+// import { universeService, type UniverseData } from "../../../services/universeService"
+// import { crucifixionService, type CrucifixionData } from "../../../services/crucifixionService"
+// import { sabbathService, type SabbathData } from "../../../services/sabbathService"
+// import { erosionService, type ErosionData } from "../../../services/erosionService"
+// import { operationService, type OperationData } from "../../../services/operationService"
+// import { balanceService, type BalanceData } from "../../../services/balanceService"
+
+// const MenuTab: React.FC = () => {
+//   // Utilisation des hooks pour chaque service API
+//   const tetragrama = useApiData(tetragramaService);
+//   const nation = useApiData(nationService);
+//   const universe = useApiData(universeService);
+//   const crucifixion = useApiData(crucifixionService);
+//   const sabbath = useApiData(sabbathService);
+//   const erosion = useApiData(erosionService);
+//   const operation = useApiData(operationService);
+//   const balance = useApiData(balanceService);
+
+//   // Section toggle states
+//   const [isTetragramaOpen, setIsTetragramaOpen] = useState(true)
+//   const [isNationOpen, setIsNationOpen] = useState(true)
+//   const [isUniverseOpen, setIsUniverseOpen] = useState(true)
+//   const [isCrucifixionOpen, setIsCrucifixionOpen] = useState(true)
+//   const [isSabbathOpen, setIsSabbathOpen] = useState(true)
+//   const [isErosionOpen, setIsErosionOpen] = useState(true)
+//   const [isOperationOpen, setIsOperationOpen] = useState(true)
+//   const [isBalanceOpen, setIsBalanceOpen] = useState(true)
+
+//   // États de sauvegarde pour chaque champ
+//   const [savingStates, setSavingStates] = useState<Record<string, boolean>>({});
+
+//   // Handler générique pour la sauvegarde
+//   const handleSave = async (
+//     updateFn: (field: any, value: any) => Promise<void>,
+//     field: string,
+//     value: string,
+//     key: string
+//   ) => {
+//     if (!value.trim()) return;
+
+//     setSavingStates(prev => ({ ...prev, [key]: true }));
+    
+//     try {
+//       await updateFn(field, value);
+//       console.log(`${field} sauvegardé:`, value);
+//     } catch (error) {
+//       console.error(`Erreur lors de la sauvegarde de ${field}:`, error);
+//     } finally {
+//       setSavingStates(prev => ({ ...prev, [key]: false }));
+//     }
+//   };
+
+//   // Composant pour afficher les erreurs
+//   const ErrorMessage: React.FC<{ error: string }> = ({ error }) => (
+//     <div className="error-message">
+//       <AlertCircle size={16} />
+//       <span>Erreur: {error}</span>
+//     </div>
+//   );
+
+//   // Composant pour afficher le chargement
+//   const LoadingSpinner: React.FC = () => (
+//     <div className="loading-spinner">
+//       <Loader2 size={16} className="animate-spin" />
+//       <span>Chargement...</span>
+//     </div>
+//   );
+
+//   return (
+//     <div className="tab-content fade-in">
+//       {/* Section Tetragrama */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsTetragramaOpen(!isTetragramaOpen)}>
+//           <h1 className="section-title">Tetragrama</h1>
+//           <button className="toggle-section">
+//             {isTetragramaOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isTetragramaOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {tetragrama.loading && <LoadingSpinner />}
+//             {tetragrama.error && <ErrorMessage error={tetragrama.error} />}
+            
+//             {tetragrama.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <Type className="label-icon" size={16} />
+//                     Titre
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <input
+//                       type="text"
+//                       value={tetragrama.data.title}
+//                       onChange={(e) => {
+//                         tetragrama.data.title = e.target.value;
+//                       }}
+//                       placeholder="Entrez le titre..."
+//                       className="custom-input"
+//                     />
+//                     <button 
+//                       onClick={() => handleSave(tetragrama.updateField, 'title', tetragrama.data!.title, 'tetragrama-title')}
+//                       className="save-button title-save" 
+//                       disabled={!tetragrama.data.title.trim() || savingStates['tetragrama-title']}
+//                     >
+//                       {savingStates['tetragrama-title'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={tetragrama.data.description}
+//                       onChange={(e) => {
+//                         tetragrama.data.description = e.target.value;
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() => handleSave(tetragrama.updateField, 'description', tetragrama.data!.description, 'tetragrama-desc1')}
+//                       className="save-button description-save"
+//                       disabled={!tetragrama.data.description.trim() || savingStates['tetragrama-desc1']}
+//                     >
+//                       {savingStates['tetragrama-desc1'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description 2
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={tetragrama.data.description2}
+//                       onChange={(e) => {
+//                         tetragrama.data.description2 = e.target.value;
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() => handleSave(tetragrama.updateField, 'description2', tetragrama.data!.description2, 'tetragrama-desc2')}
+//                       className="save-button description-save"
+//                       disabled={!tetragrama.data.description2.trim() || savingStates['tetragrama-desc2']}
+//                     >
+//                       {savingStates['tetragrama-desc2'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Nation */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsNationOpen(!isNationOpen)}>
+//           <h1 className="section-title">The Nation of Yahweh</h1>
+//           <button className="toggle-section">
+//             {isNationOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isNationOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {nation.loading && <LoadingSpinner />}
+//             {nation.error && <ErrorMessage error={nation.error} />}
+            
+//             {nation.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <Type className="label-icon" size={16} />
+//                     Titre
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <input
+//                       type="text"
+//                       value={nation.data.titlenation}
+//                       onChange={(e) => {
+//                         nation.data.titlenation = e.target.value;
+//                       }}
+//                       placeholder="Entrez le titre..."
+//                       className="custom-input"
+//                     />
+//                     <button
+//                       onClick={() => handleSave(nation.updateField, 'titlenation', nation.data!.titlenation, 'nation-title')}
+//                       className="save-button title-save"
+//                       disabled={!nation.data.titlenation.trim() || savingStates['nation-title']}
+//                     >
+//                       {savingStates['nation-title'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+
+//                 {['descriptionnation', 'descriptionnation2', 'descriptionnation3'].map((field, index) => (
+//                   <div key={field} className="input-group">
+//                     <label className="input-label">
+//                       <FileText className="label-icon" size={16} />
+//                       Description {index + 1}
+//                     </label>
+//                     <div className="input-wrapper">
+//                       <textarea
+//                         value={nation.data![field as keyof NationData] as string}
+//                         onChange={(e) => {
+//                           (nation.data as any)[field] = e.target.value;
+//                         }}
+//                         placeholder="Entrez la description..."
+//                         className="custom-textarea"
+//                         rows={3}
+//                       />
+//                       <button
+//                         onClick={() => handleSave(nation.updateField, field, nation.data![field as keyof NationData] as string, `nation-${field}`)}
+//                         className="save-button description-save"
+//                         disabled={!(nation.data![field as keyof NationData] as string).trim() || savingStates[`nation-${field}`]}
+//                       >
+//                         {savingStates[`nation-${field}`] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                         Sauvegarder
+//                       </button>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section The Universe of Yahweh */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsUniverseOpen(!isUniverseOpen)}>
+//           <h1 className="section-title">The Universe of Yahweh</h1>
+//           <button className="toggle-section">
+//             {isUniverseOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isUniverseOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {universe.loading && <LoadingSpinner />}
+//             {universe.error && <ErrorMessage error={universe.error} />}
+            
+//             {universe.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 {[1, 2, 3, 4].map((num) => {
+//                   const field = `descriptionuniverse${num}` as keyof UniverseData;
+//                   return (
+//                     <div key={num} className="input-group">
+//                       <label className="input-label">
+//                         <FileText className="label-icon" size={16} />
+//                         Description {num}
+//                       </label>
+//                       <div className="input-wrapper">
+//                         <textarea
+//                           value={universe.data![field] as string}
+//                           onChange={(e) => {
+//                             (universe.data as any)[field] = e.target.value;
+//                           }}
+//                           placeholder="Entrez la description..."
+//                           className="custom-textarea"
+//                           rows={3}
+//                         />
+//                         <button
+//                           onClick={() => handleSave(universe.updateField, field, universe.data![field] as string, `universe-${field}`)}
+//                           className="save-button description-save"
+//                           disabled={!(universe.data![field] as string).trim() || savingStates[`universe-${field}`]}
+//                         >
+//                           {savingStates[`universe-${field}`] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                           Sauvegarder
+//                         </button>
+//                       </div>
+//                     </div>
+//                   );
+//                 })}
+
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <Type className="label-icon" size={16} />
+//                     Lien Vidéo
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <input
+//                       type="url"
+//                       value={universe.data.videolinkuniverse}
+//                       onChange={(e) => {
+//                         universe.data.videolinkuniverse = e.target.value;
+//                       }}
+//                       placeholder="Entrez le lien vidéo..."
+//                       className="custom-input"
+//                     />
+//                     <button
+//                       onClick={() => handleSave(universe.updateField, 'videolinkuniverse', universe.data!.videolinkuniverse, 'universe-video')}
+//                       className="save-button title-save"
+//                       disabled={!universe.data.videolinkuniverse.trim() || savingStates['universe-video']}
+//                     >
+//                       {savingStates['universe-video'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section The Crucifixion */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsCrucifixionOpen(!isCrucifixionOpen)}>
+//           <h1 className="section-title">The Crucifixion</h1>
+//           <button className="toggle-section">
+//             {isCrucifixionOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isCrucifixionOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {crucifixion.loading && <LoadingSpinner />}
+//             {crucifixion.error && <ErrorMessage error={crucifixion.error} />}
+            
+//             {crucifixion.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <Type className="label-icon" size={16} />
+//                     Titre
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <input
+//                       type="text"
+//                       value={crucifixion.data.titlecrucifixion}
+//                       onChange={(e) => {
+//                         crucifixion.data.titlecrucifixion = e.target.value;
+//                       }}
+//                       placeholder="Entrez le titre..."
+//                       className="custom-input"
+//                     />
+//                     <button
+//                       onClick={() => handleSave(crucifixion.updateField, 'titlecrucifixion', crucifixion.data!.titlecrucifixion, 'crucifixion-title')}
+//                       className="save-button title-save"
+//                       disabled={!crucifixion.data.titlecrucifixion.trim() || savingStates['crucifixion-title']}
+//                     >
+//                       {savingStates['crucifixion-title'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+
+//                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num) => {
+//                   const field = `descriptioncrucifixion${num}` as keyof CrucifixionData;
+//                   return (
+//                     <div key={num} className="input-group">
+//                       <label className="input-label">
+//                         <FileText className="label-icon" size={16} />
+//                         Description {num}
+//                       </label>
+//                       <div className="input-wrapper">
+//                         <textarea
+//                           value={crucifixion.data![field] as string}
+//                           onChange={(e) => {
+//                             (crucifixion.data as any)[field] = e.target.value;
+//                           }}
+//                           placeholder="Entrez la description..."
+//                           className="custom-textarea"
+//                           rows={3}
+//                         />
+//                         <button
+//                           onClick={() => handleSave(crucifixion.updateField, field, crucifixion.data![field] as string, `crucifixion-${field}`)}
+//                           className="save-button description-save"
+//                           disabled={!(crucifixion.data![field] as string).trim() || savingStates[`crucifixion-${field}`]}
+//                         >
+//                           {savingStates[`crucifixion-${field}`] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                           Sauvegarder
+//                         </button>
+//                       </div>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section The Sabbath */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsSabbathOpen(!isSabbathOpen)}>
+//           <h1 className="section-title">The Sabbath</h1>
+//           <button className="toggle-section">
+//             {isSabbathOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isSabbathOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {sabbath.loading && <LoadingSpinner />}
+//             {sabbath.error && <ErrorMessage error={sabbath.error} />}
+            
+//             {sabbath.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <Type className="label-icon" size={16} />
+//                     Titre
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <input
+//                       type="text"
+//                       value={sabbath.data.titlesabbath}
+//                       onChange={(e) => {
+//                         sabbath.data.titlesabbath = e.target.value;
+//                       }}
+//                       placeholder="Entrez le titre..."
+//                       className="custom-input"
+//                     />
+//                     <button
+//                       onClick={() => handleSave(sabbath.updateField, 'titlesabbath', sabbath.data!.titlesabbath, 'sabbath-title')}
+//                       className="save-button title-save"
+//                       disabled={!sabbath.data.titlesabbath.trim() || savingStates['sabbath-title']}
+//                     >
+//                       {savingStates['sabbath-title'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+
+//                 {[1, 2, 3, 4, 5].map((num) => {
+//                   const field = `descriptionsabbath${num}` as keyof SabbathData;
+//                   return (
+//                     <div key={num} className="input-group">
+//                       <label className="input-label">
+//                         <FileText className="label-icon" size={16} />
+//                         Description {num}
+//                       </label>
+//                       <div className="input-wrapper">
+//                         <textarea
+//                           value={sabbath.data![field] as string}
+//                           onChange={(e) => {
+//                             (sabbath.data as any)[field] = e.target.value;
+//                           }}
+//                           placeholder="Entrez la description..."
+//                           className="custom-textarea"
+//                           rows={3}
+//                         />
+//                         <button
+//                           onClick={() => handleSave(sabbath.updateField, field, sabbath.data![field] as string, `sabbath-${field}`)}
+//                           className="save-button description-save"
+//                           disabled={!(sabbath.data![field] as string).trim() || savingStates[`sabbath-${field}`]}
+//                         >
+//                           {savingStates[`sabbath-${field}`] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                           Sauvegarder
+//                         </button>
+//                       </div>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Erosion of The Constitution */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsErosionOpen(!isErosionOpen)}>
+//           <h1 className="section-title">Erosion of The Constitution</h1>
+//           <button className="toggle-section">
+//             {isErosionOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isErosionOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {erosion.loading && <LoadingSpinner />}
+//             {erosion.error && <ErrorMessage error={erosion.error} />}
+            
+//             {erosion.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <FileText className="label-icon" size={16} />
+//                     Description
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <textarea
+//                       value={erosion.data.descriptionerosion}
+//                       onChange={(e) => {
+//                         erosion.data.descriptionerosion = e.target.value;
+//                       }}
+//                       placeholder="Entrez la description..."
+//                       className="custom-textarea"
+//                       rows={3}
+//                     />
+//                     <button
+//                       onClick={() => handleSave(erosion.updateField, 'descriptionerosion', erosion.data!.descriptionerosion, 'erosion-desc')}
+//                       className="save-button description-save"
+//                       disabled={!erosion.data.descriptionerosion.trim() || savingStates['erosion-desc']}
+//                     >
+//                       {savingStates['erosion-desc'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Operation Word War */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsOperationOpen(!isOperationOpen)}>
+//           <h1 className="section-title">Operation Word War</h1>
+//           <button className="toggle-section">
+//             {isOperationOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isOperationOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {operation.loading && <LoadingSpinner />}
+//             {operation.error && <ErrorMessage error={operation.error} />}
+            
+//             {operation.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 {[1, 2, 3, 4].map((num) => {
+//                   const field = `descriptionoperation${num}` as keyof OperationData;
+//                   return (
+//                     <div key={num} className="input-group">
+//                       <label className="input-label">
+//                         <FileText className="label-icon" size={16} />
+//                         Description {num}
+//                       </label>
+//                       <div className="input-wrapper">
+//                         <textarea
+//                           value={operation.data![field] as string}
+//                           onChange={(e) => {
+//                             (operation.data as any)[field] = e.target.value;
+//                           }}
+//                           placeholder="Entrez la description..."
+//                           className="custom-textarea"
+//                           rows={3}
+//                         />
+//                         <button
+//                           onClick={() => handleSave(operation.updateField, field, operation.data![field] as string, `operation-${field}`)}
+//                           className="save-button description-save"
+//                           disabled={!(operation.data![field] as string).trim() || savingStates[`operation-${field}`]}
+//                         >
+//                           {savingStates[`operation-${field}`] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                           Sauvegarder
+//                         </button>
+//                       </div>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+
+//       {/* Section Balance Justice */}
+//       <section className="home-section">
+//         <div className="section-header" onClick={() => setIsBalanceOpen(!isBalanceOpen)}>
+//           <h1 className="section-title">Balance Justice</h1>
+//           <button className="toggle-section">
+//             {isBalanceOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+//           </button>
+//         </div>
+//         {isBalanceOpen && (
+//           <div className="section-content">
+//             <p>Welcome to the official website of the Yahweh Ben Yahweh community.</p>
+//             <p>This platform serves as a resource for spiritual growth and community connection.</p>
+            
+//             {balance.loading && <LoadingSpinner />}
+//             {balance.error && <ErrorMessage error={balance.error} />}
+            
+//             {balance.data && (
+//               <div className="admin-controls">
+//                 <h3 className="admin-title">Administration des contenus</h3>
+                
+//                 <div className="input-group">
+//                   <label className="input-label">
+//                     <Type className="label-icon" size={16} />
+//                     Titre
+//                   </label>
+//                   <div className="input-wrapper">
+//                     <input
+//                       type="text"
+//                       value={balance.data.titlebalance}
+//                       onChange={(e) => {
+//                         balance.data.titlebalance = e.target.value;
+//                       }}
+//                       placeholder="Entrez le titre..."
+//                       className="custom-input"
+//                     />
+//                     <button
+//                       onClick={() => handleSave(balance.updateField, 'titlebalance', balance.data!.titlebalance, 'balance-title')}
+//                       className="save-button title-save"
+//                       disabled={!balance.data.titlebalance.trim() || savingStates['balance-title']}
+//                     >
+//                       {savingStates['balance-title'] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                       Sauvegarder
+//                     </button>
+//                   </div>
+//                 </div>
+
+//                 {[1, 2, 3, 4].map((num) => {
+//                   const field = `descriptionbalance${num}` as keyof BalanceData;
+//                   return (
+//                     <div key={num} className="input-group">
+//                       <label className="input-label">
+//                         <FileText className="label-icon" size={16} />
+//                         Description {num}
+//                       </label>
+//                       <div className="input-wrapper">
+//                         <textarea
+//                           value={balance.data![field] as string}
+//                           onChange={(e) => {
+//                             (balance.data as any)[field] = e.target.value;
+//                           }}
+//                           placeholder="Entrez la description..."
+//                           className="custom-textarea"
+//                           rows={3}
+//                         />
+//                         <button
+//                           onClick={() => handleSave(balance.updateField, field, balance.data![field] as string, `balance-${field}`)}
+//                           className="save-button description-save"
+//                           disabled={!(balance.data![field] as string).trim() || savingStates[`balance-${field}`]}
+//                         >
+//                           {savingStates[`balance-${field}`] ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
+//                           Sauvegarder
+//                         </button>
+//                       </div>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+//             )}
+//           </div>
+//         )}
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default MenuTab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
