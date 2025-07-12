@@ -158,7 +158,26 @@ const MenuTab: React.FC = () => {
       setVideoLinkUniverse(data.videolinkuniverse || "")
     })
 
-    // Load Crucifixion data
+    // Load Feasts data
+    fetchData("feasts", (data) => {
+      setTitleFeasts(data.titlefeasts || "")
+      setTitleFeasts2(data.titlefeasts2 || "")
+      setFieldFeasts2(data.fieldfeasts2 || "")
+      setTitleFeasts3(data.titlefeasts3 || "")
+      setFieldFeasts3(data.fieldfeasts3 || "")
+      setTitleFeasts4(data.titlefeasts4 || "")
+      setFieldFeasts4(data.fieldfeasts4 || "")
+      setDescriptionFeasts4(data.descriptionfeasts4 || "")
+      setVideoFeasts4(data.videofeasts4 || "")
+      setTitleFeasts5(data.titlefeasts5 || "")
+      setFieldFeasts5(data.fieldfeasts5 || "")
+      setDescriptionFeasts5(data.descriptionfeasts5 || "")
+      setVideoFeasts5(data.videofeasts5 || "")
+      setTitleFeasts6(data.titlefeasts6 || "")
+      setFieldFeasts6a(data.fieldfeasts6a || "")
+      setFieldFeasts6b(data.fieldfeasts6b || "")
+    })
+
     fetchData("crucifixion", (data) => {
       setTitleCrucifixion(data.titlecrucifixion || "")
       setDescriptionCrucifixion1(data.descriptioncrucifixion1 || "")
@@ -251,27 +270,27 @@ const MenuTab: React.FC = () => {
   }
 
   const handleSaveCrucifixion = async () => {
-  try {
-    const data = {
-      titleCrucifixion: titleCrucifixion,
-      descriptionCrucifixion1: descriptionCrucifixion1,
-      descriptionCrucifixion2: descriptionCrucifixion2,
-      descriptionCrucifixion3: descriptionCrucifixion3,
-      descriptionCrucifixion4: descriptionCrucifixion4,
-      descriptionCrucifixion5: descriptionCrucifixion5,
-      descriptionCrucifixion6: descriptionCrucifixion6,
-      descriptionCrucifixion7: descriptionCrucifixion7,
-      descriptionCrucifixion8: descriptionCrucifixion8,
-      descriptionCrucifixion9: descriptionCrucifixion9,
-      descriptionCrucifixion10: descriptionCrucifixion10,
-      descriptionCrucifixion11: descriptionCrucifixion11,
+    try {
+      const data = {
+        titleCrucifixion: titleCrucifixion,
+        descriptionCrucifixion1: descriptionCrucifixion1,
+        descriptionCrucifixion2: descriptionCrucifixion2,
+        descriptionCrucifixion3: descriptionCrucifixion3,
+        descriptionCrucifixion4: descriptionCrucifixion4,
+        descriptionCrucifixion5: descriptionCrucifixion5,
+        descriptionCrucifixion6: descriptionCrucifixion6,
+        descriptionCrucifixion7: descriptionCrucifixion7,
+        descriptionCrucifixion8: descriptionCrucifixion8,
+        descriptionCrucifixion9: descriptionCrucifixion9,
+        descriptionCrucifixion10: descriptionCrucifixion10,
+        descriptionCrucifixion11: descriptionCrucifixion11,
+      }
+      console.log("Sending data:", data) // Ajoutez ce log pour vérifier
+      await updateData("crucifixion", 1, data)
+    } catch (error) {
+      console.error("Error saving Crucifixion:", error)
     }
-    console.log("Sending data:", data) // Ajoutez ce log pour vérifier
-    await updateData("crucifixion", 1, data)
-  } catch (error) {
-    console.error("Error saving Crucifixion:", error)
   }
-}
 
   const handleSaveSabbath = async () => {
     try {
@@ -328,31 +347,31 @@ const MenuTab: React.FC = () => {
       console.error("Error saving Balance:", error)
     }
   }
-const handleSaveFeasts = async () => {
-  try {
-    const data = {
-      titleFeasts: titleFeasts,
-      titleFeasts2: titleFeasts2,
-      fieldFeasts2: fieldFeasts2,
-      titleFeasts3: titleFeasts3,
-      fieldFeasts3: fieldFeasts3,
-      titleFeasts4: titleFeasts4,
-      fieldFeasts4: fieldFeasts4,
-      descriptionFeasts4: descriptionFeasts4,
-      videoFeasts4: videoFeasts4,
-      titleFeasts5: titleFeasts5,
-      fieldFeasts5: fieldFeasts5,
-      descriptionFeasts5: descriptionFeasts5,
-      videoFeasts5: videoFeasts5,
-      titleFeasts6: titleFeasts6,
-      fieldFeasts6a: fieldFeasts6a,
-      fieldFeasts6b: fieldFeasts6b
+  const handleSaveFeasts = async () => {
+    try {
+      const data = {
+        titleFeasts: titleFeasts,
+        titleFeasts2: titleFeasts2,
+        fieldFeasts2: fieldFeasts2,
+        titleFeasts3: titleFeasts3,
+        fieldFeasts3: fieldFeasts3,
+        titleFeasts4: titleFeasts4,
+        fieldFeasts4: fieldFeasts4,
+        descriptionFeasts4: descriptionFeasts4,
+        videoFeasts4: videoFeasts4,
+        titleFeasts5: titleFeasts5,
+        fieldFeasts5: fieldFeasts5,
+        descriptionFeasts5: descriptionFeasts5,
+        videoFeasts5: videoFeasts5,
+        titleFeasts6: titleFeasts6,
+        fieldFeasts6a: fieldFeasts6a,
+        fieldFeasts6b: fieldFeasts6b
+      }
+      await updateData("feasts", 1, data)
+    } catch (error) {
+      console.error("Error saving Feasts:", error)
     }
-    await updateData("feasts", 1, data)
-  } catch (error) {
-    console.error("Error saving Feasts:", error)
   }
-}
   return (
     <div className="tab-content fade-in">
       {/* Section Tetragrama */}

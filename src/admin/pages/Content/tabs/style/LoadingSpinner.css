@@ -1,0 +1,38 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Styles pour les états de chargement des boutons */
+.save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Animation pour les boutons en cours de sauvegarde */
+.save-button:disabled .animate-spin,
+.contact-save-button:disabled .animate-spin {
+  margin-right: 0.25rem;
+}

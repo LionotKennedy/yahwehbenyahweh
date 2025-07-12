@@ -193,3 +193,476 @@ export function CenterButtons() {
 }
 
 "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Feasts states
+  const [titleFeasts, setTitleFeasts] = useState("")
+  const [titleFeasts2, setTitleFeasts2] = useState("")
+  const [fieldFeasts2, setFieldFeasts2] = useState("")
+  const [titleFeasts3, setTitleFeasts3] = useState("")
+  const [fieldFeasts3, setFieldFeasts3] = useState("")
+  const [titleFeasts4, setTitleFeasts4] = useState("")
+  const [fieldFeasts4, setFieldFeasts4] = useState("")
+  const [descriptionFeasts4, setDescriptionFeasts4] = useState("")
+  const [videoFeasts4, setVideoFeasts4] = useState("")
+  const [titleFeasts5, setTitleFeasts5] = useState("")
+  const [fieldFeasts5, setFieldFeasts5] = useState("")
+  const [descriptionFeasts5, setDescriptionFeasts5] = useState("")
+  const [videoFeasts5, setVideoFeasts5] = useState("")
+  const [titleFeasts6, setTitleFeasts6] = useState("")
+  const [fieldFeasts6a, setFieldFeasts6a] = useState("")
+  const [fieldFeasts6b, setFieldFeasts6b] = useState("")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const HomeTab: React.FC = () => {
+  // États pour la section Home
+  const [videoLink1, setVideoLink1] = useState("");
+  const [videoLink2, setVideoLink2] = useState("");
+  const [videoLink3, setVideoLink3] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  // États pour la section Yahweh
+  const [yahwehTitle1, setYahwehTitle1] = useState("");
+  const [yahwehTitle2, setYahwehTitle2] = useState("");
+  const [yahwehDescription1, setYahwehDescription1] = useState("");
+  const [yahwehDescription2, setYahwehDescription2] = useState("");
+  const [yahwehDescription3, setYahwehDescription3] = useState("");
+  const [yahwehDescription4, setYahwehDescription4] = useState("");
+  const [yahwehDescription5, setYahwehDescription5] = useState("");
+  const [yahwehDescription6, setYahwehDescription6] = useState("");
+
+  // États pour la section Yahweh Ben Yahweh
+  const [yahwehBenTitle1, setYahwehBenTitle1] = useState("");
+  const [yahwehBenTitle2, setYahwehBenTitle2] = useState("");
+  const [yahwehBenDescription1, setYahwehBenDescription1] = useState("");
+  const [yahwehBenDescription2, setYahwehBenDescription2] = useState("");
+  const [yahwehBenDescription3, setYahwehBenDescription3] = useState("");
+  const [yahwehBenDescription4, setYahwehBenDescription4] = useState("");
+  const [yahwehBenDescription5, setYahwehBenDescription5] = useState("");
+  const [yahwehBenDescription6, setYahwehBenDescription6] = useState("");
+  const [yahwehBenDescription7, setYahwehBenDescription7] = useState("");
+  const [yahwehBenDescription8, setYahwehBenDescription8] = useState("");
+  const [yahwehBenDescription9, setYahwehBenDescription9] = useState("");
+
+  // États pour la section Followers
+  const [followersTitle, setFollowersTitle] = useState("");
+  const [followersDescription1, setFollowersDescription1] = useState("");
+  const [followersDescription2, setFollowersDescription2] = useState("");
+  const [followersDescription3, setFollowersDescription3] = useState("");
+  const [followersDescription4, setFollowersDescription4] = useState("");
+  const [followersDescription5, setFollowersDescription5] = useState("");
+
+  // États pour la section Cultural Attire
+  const [attireTitle, setAttireTitle] = useState("");
+  const [attireDescription1, setAttireDescription1] = useState("");
+  const [attireDescription2, setAttireDescription2] = useState("");
+  const [attireDescription3, setAttireDescription3] = useState("");
+  const [attireDescription4, setAttireDescription4] = useState("");
+  const [attireDescription5, setAttireDescription5] = useState("");
+
+  // États pour gérer l'ouverture/fermeture des sections
+  const [isHomeOpen, setIsHomeOpen] = useState(true);
+  const [isYahwehOpen, setIsYahwehOpen] = useState(true);
+  const [isYahwehBenOpen, setIsYahwehBenOpen] = useState(true);
+  const [isFollowersOpen, setIsFollowersOpen] = useState(true);
+  const [isAttireOpen, setIsAttireOpen] = useState(true);
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // const handleSaveVideoLink1 = () =>
+  //   saveDataToJson("homePage.videos[0]", "src", videoLink1);
+  // const handleSaveVideoLink2 = () =>
+  //   saveDataToJson("homePage.videos[1]", "src", videoLink2);
+  // const handleSaveVideoLink3 = () =>
+  //   saveDataToJson("homePage.videos[2]", "src", videoLink3);
+  // const handleSaveTitle = () =>
+  //   saveDataToJson("homePage.videoSection", "title", title);
+  // const handleSaveDescription = () =>
+  //   saveDataToJson("homePage.videoSection", "content", description);
+
+  // // Fonctions de sauvegarde pour Yahweh
+  // const handleSaveYahwehTitle1 = () =>
+  //   saveDataToJson("yahweh", "title1", yahwehTitle1);
+  // const handleSaveYahwehTitle2 = () =>
+  //   saveDataToJson("yahweh", "title2", yahwehTitle2);
+  // const handleSaveYahwehDescription1 = () =>
+  //   saveDataToJson("yahweh", "description1", yahwehDescription1);
+  // const handleSaveYahwehDescription2 = () =>
+  //   saveDataToJson("yahweh", "description2", yahwehDescription2);
+  // const handleSaveYahwehDescription3 = () =>
+  //   saveDataToJson("yahweh", "description3", yahwehDescription3);
+  // const handleSaveYahwehDescription4 = () =>
+  //   saveDataToJson("yahweh", "description4", yahwehDescription4);
+  // const handleSaveYahwehDescription5 = () =>
+  //   saveDataToJson("yahweh", "description5", yahwehDescription5);
+  // const handleSaveYahwehDescription6 = () =>
+  //   saveDataToJson("yahweh", "description6", yahwehDescription6);
+
+  // // Fonctions de sauvegarde pour Yahweh Ben Yahweh
+  // const handleSaveYahwehBenTitle1 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "title1", yahwehBenTitle1);
+  // const handleSaveYahwehBenTitle2 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "title2", yahwehBenTitle2);
+  // const handleSaveYahwehBenDescription1 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description1", yahwehBenDescription1);
+  // const handleSaveYahwehBenDescription2 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description2", yahwehBenDescription2);
+  // const handleSaveYahwehBenDescription3 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description3", yahwehBenDescription3);
+  // const handleSaveYahwehBenDescription4 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description4", yahwehBenDescription4);
+  // const handleSaveYahwehBenDescription5 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description5", yahwehBenDescription5);
+  // const handleSaveYahwehBenDescription6 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description6", yahwehBenDescription6);
+  // const handleSaveYahwehBenDescription7 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description7", yahwehBenDescription7);
+  // const handleSaveYahwehBenDescription8 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description8", yahwehBenDescription8);
+  // const handleSaveYahwehBenDescription9 = () =>
+  //   saveDataToJson("yahwehBenYahweh", "description9", yahwehBenDescription9);
+
+  // // Fonctions de sauvegarde pour Followers
+  // const handleSaveFollowersTitle = () =>
+  //   saveDataToJson("followers", "title", followersTitle);
+  // const handleSaveFollowersDescription1 = () =>
+  //   saveDataToJson("followers", "description1", followersDescription1);
+  // const handleSaveFollowersDescription2 = () =>
+  //   saveDataToJson("followers", "description2", followersDescription2);
+  // const handleSaveFollowersDescription3 = () =>
+  //   saveDataToJson("followers", "description3", followersDescription3);
+  // const handleSaveFollowersDescription4 = () =>
+  //   saveDataToJson("followers", "description4", followersDescription4);
+  // const handleSaveFollowersDescription5 = () =>
+  //   saveDataToJson("followers", "description5", followersDescription5);
+
+  // // Fonctions de sauvegarde pour Cultural Attire
+  // const handleSaveAttireTitle = () =>
+  //   saveDataToJson("culturalAttire", "title", attireTitle);
+  // const handleSaveAttireDescription1 = () =>
+  //   saveDataToJson("culturalAttire", "description1", attireDescription1);
+  // const handleSaveAttireDescription2 = () =>
+  //   saveDataToJson("culturalAttire", "description2", attireDescription2);
+  // const handleSaveAttireDescription3 = () =>
+  //   saveDataToJson("culturalAttire", "description3", attireDescription3);
+  // const handleSaveAttireDescription4 = () =>
+  //   saveDataToJson("culturalAttire", "description4", attireDescription4);
+  // const handleSaveAttireDescription5 = () =>
+  //   saveDataToJson("culturalAttire", "description5", attireDescription5);
+
+  // // Affichage du chargement
+  // if (isLoading) {
+  //   return (
+  //     <div className="home-tab fade-in">
+  //       <div style={{ textAlign: "center", padding: "2rem" }}>
+  //         <p>Chargement des données...</p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Fonction pour charger tous les fichiers JSON
+  // const loadAllJsonData = async () => {
+  //   try {
+  //     setIsLoading(true);
+
+  //     // Charger tous les fichiers JSON en parallèle
+  //     const [
+  //       homeResponse,
+  //       yahwehResponse,
+  //       yahwehBenResponse,
+  //       followersResponse,
+  //       attireResponse,
+  //     ] = [
+  //         contentData,
+  //         YahweData,
+  //         YahwehBenYahweh_Data,
+  //         CulturalAttire_Data,
+  //         Followers_Data,
+  //       ];
+
+  //     // Vérifier que toutes les requêtes ont réussi
+  //     if (
+  //       !homeResponse.homePage ||
+  //       !yahwehResponse.yahweh ||
+  //       !yahwehBenResponse.yahwehBenYahweh ||
+  //       !followersResponse.followers ||
+  //       !attireResponse.culturalAttire
+  //     ) {
+  //       throw new Error(
+  //         "Erreur lors du chargement d'un ou plusieurs fichiers JSON"
+  //       );
+  //     }
+
+  //     // Parser les données JSON
+  //     const homeData: HomePageData = homeResponse;
+  //     const yahwehData: YahwehData = yahwehResponse;
+  //     const yahwehBenData: YahwehBenYahwehData = yahwehBenResponse;
+  //     const followersData: FollowersData = followersResponse;
+  //     const attireData: CulturalAttireData = attireResponse;
+
+  //     // Charger les données Home
+  //     if (homeData.homePage) {
+  //       setTitle(homeData.homePage.videoSection.title || "");
+  //       setDescription(homeData.homePage.videoSection.content || "");
+  //       if (homeData.homePage.videos && homeData.homePage.videos.length > 0) {
+  //         setVideoLink1(homeData.homePage.videos[0]?.src || "");
+  //         setVideoLink2(homeData.homePage.videos[1]?.src || "");
+  //         setVideoLink3(homeData.homePage.videos[2]?.src || "");
+  //       }
+  //     }
+
+  //     // Charger les données Yahweh
+  //     if (yahwehData.yahweh) {
+  //       setYahwehTitle1(yahwehData.yahweh.title1 || "");
+  //       setYahwehTitle2(yahwehData.yahweh.title2 || "");
+  //       setYahwehDescription1(yahwehData.yahweh.description1 || "");
+  //       setYahwehDescription2(yahwehData.yahweh.description2 || "");
+  //       setYahwehDescription3(yahwehData.yahweh.description3 || "");
+  //       setYahwehDescription4(yahwehData.yahweh.description4 || "");
+  //       setYahwehDescription5(yahwehData.yahweh.description5 || "");
+  //       setYahwehDescription6(yahwehData.yahweh.description6 || "");
+  //     }
+
+  //     // Charger les données Yahweh Ben Yahweh
+  //     if (yahwehBenData.yahwehBenYahweh) {
+  //       setYahwehBenTitle1(yahwehBenData.yahwehBenYahweh.title1 || "");
+  //       setYahwehBenTitle2(yahwehBenData.yahwehBenYahweh.title2 || "");
+  //       setYahwehBenDescription1(
+  //         yahwehBenData.yahwehBenYahweh.description1 || ""
+  //       );
+  //       setYahwehBenDescription2(
+  //         yahwehBenData.yahwehBenYahweh.description2 || ""
+  //       );
+  //       setYahwehBenDescription3(
+  //         yahwehBenData.yahwehBenYahweh.description3 || ""
+  //       );
+  //       setYahwehBenDescription4(
+  //         yahwehBenData.yahwehBenYahweh.description4 || ""
+  //       );
+  //       setYahwehBenDescription5(
+  //         yahwehBenData.yahwehBenYahweh.description5 || ""
+  //       );
+  //       setYahwehBenDescription6(
+  //         yahwehBenData.yahwehBenYahweh.description6 || ""
+  //       );
+  //       setYahwehBenDescription7(
+  //         yahwehBenData.yahwehBenYahweh.description7 || ""
+  //       );
+  //       setYahwehBenDescription8(
+  //         yahwehBenData.yahwehBenYahweh.description8 || ""
+  //       );
+  //       setYahwehBenDescription9(
+  //         yahwehBenData.yahwehBenYahweh.description9 || ""
+  //       );
+  //     }
+
+  //     // Charger les données Followers
+  //     if (followersData.followers) {
+  //       setFollowersTitle(followersData.followers.title || "");
+  //       setFollowersDescription1(followersData.followers.description1 || "");
+  //       setFollowersDescription2(followersData.followers.description2 || "");
+  //       setFollowersDescription3(followersData.followers.description3 || "");
+  //       setFollowersDescription4(followersData.followers.description4 || "");
+  //       setFollowersDescription5(followersData.followers.description5 || "");
+  //     }
+
+  //     // Charger les données Cultural Attire
+  //     if (attireData.culturalAttire) {
+  //       setAttireTitle(attireData.culturalAttire.title || "");
+  //       setAttireDescription1(attireData.culturalAttire.description1 || "");
+  //       setAttireDescription2(attireData.culturalAttire.description2 || "");
+  //       setAttireDescription3(attireData.culturalAttire.description3 || "");
+  //       setAttireDescription4(attireData.culturalAttire.description4 || "");
+  //       setAttireDescription5(attireData.culturalAttire.description5 || "");
+  //     }
+
+  //     setError(null);
+  //   } catch (err) {
+  //     console.error("Erreur lors du chargement des données:", err);
+  //     setError(
+  //       "Impossible de charger les données. Vérifiez que tous les fichiers JSON existent."
+  //     );
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
+
+  // Charger les données au montage du composant
+
+  // // Fonction pour sauvegarder les données
+  // const saveDataToJson = async (
+  //   section: string,
+  //   field: string,
+  //   value: string
+  // ) => {
+  //   try {
+  //     console.log(`Sauvegarde: ${section}.${field} = ${value}`);
+  //     // Ici vous pouvez implémenter la logique pour sauvegarder dans votre backend
+  //     alert(`${field} sauvegardé avec succès!`);
+  //   } catch (err) {
+  //     console.error("Erreur lors de la sauvegarde:", err);
+  //     alert("Erreur lors de la sauvegarde");
+  //   }
+  // };
+
+  // Fonctions de sauvegarde pour Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const handleSaveYahweh = async () => {
+    try {
+      const data = {
+        title1: yahwehTitle1,
+        title2: yahwehTitle2,
+        description1: yahwehDescription1,
+        description2: yahwehDescription2,
+        description3: yahwehDescription3,
+        description4: yahwehDescription4,
+        description5: yahwehDescription5,
+        description6: yahwehDescription6,
+      }
+      await updateData("yahweh", 1, data)
+    } catch (error) {
+      console.error("Error saving yahweh:", error)
+    }
+  }
+
+  const handleSaveYahwehBen = async () => {
+    try {
+      const data = {
+        title1: yahwehBenTitle1,
+        title2: yahwehBenTitle2,
+        description1: yahwehBenDescription1,
+        description2: yahwehBenDescription2,
+        description3: yahwehBenDescription3,
+        description4: yahwehBenDescription4,
+        description5: yahwehBenDescription5,
+        description6: yahwehBenDescription6,
+        description7: yahwehBenDescription7,
+        description8: yahwehBenDescription8,
+        description9: yahwehBenDescription9,
+      }
+      await updateData("yahweh-ben", 1, data)
+    } catch (error) {
+      console.error("Error saving yahweh ben:", error)
+    }
+  }
+
+  const handleSaveFollowers = async () => {
+    try {
+      const data = {
+        title1: followersTitle,
+        description1: followersDescription1,
+        description2: followersDescription2,
+        description3: followersDescription3,
+        description4: followersDescription4,
+        description5: followersDescription5,
+      }
+      await updateData("followers", 1, data)
+    } catch (error) {
+      console.error("Error saving followers:", error)
+    }
+  }
+  
+  const handleSaveCultural = async () => {
+    try {
+      const data = {
+        title1: attireTitle,
+        description1: attireDescription1,
+        description2: attireDescription2,
+        description3: attireDescription3,
+        description4: attireDescription4,
+        description5: attireDescription5,
+      }
+      await updateData("followers", 1, data)
+    } catch (error) {
+      console.error("Error saving followers:", error)
+    }
+  }
