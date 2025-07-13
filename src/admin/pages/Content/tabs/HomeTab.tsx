@@ -87,8 +87,6 @@ const HomeTab: React.FC = () => {
     }
   }
 
-
-
   // Update data via API
   const updateData = async (endpoint: string, id: number, data: any) => {
     try {

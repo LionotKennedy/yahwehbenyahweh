@@ -1,0 +1,953 @@
+
+// import React, { useEffect, useState } from "react";
+// import { Save, Phone, Mail, FileText, Type } from "lucide-react";
+// import "./style/ContactTab.css";
+// import contact_Data from "../../../../data/contact.json";
+
+// interface contactData {
+//   contact: {
+//     title: string;
+//     description1: string;
+//     description2: string;
+//     phone: string;
+//     email: string;
+//   };
+// }
+
+// const ContactTab: React.FC = () => {
+//   // États pour les champs
+//   const [title, setTitle] = useState("");
+//   const [description1, setDescription1] = useState("");
+//   const [description2, setDescription2] = useState("");
+//   const [phone, setPhone] = useState("");
+//   const [email, setEmail] = useState("");
+
+//   const [isLoading, setIsLoading] = useState(true);
+//   const [error, setError] = useState<string | null>(null);
+
+//   const loadJsonData = async () => {
+//     try {
+//       setIsLoading(true);
+
+//       // Utilisation des données directement importées
+//       const data: contactData = contact_Data;
+
+//       // Charger les données dans les états
+//       if (data.contact) {
+//         // Section Home
+//         setTitle(data.contact.title || "");
+//         setDescription1(data.contact.description1 || "");
+//         setDescription2(data.contact.description2 || "");
+//         setPhone(data.contact.phone || "");
+//         setEmail(data.contact.email || "");
+//       }
+
+//       setError(null);
+//     } catch (err) {
+//       console.error("Erreur lors du traitement des données:", err);
+//       setError("Impossible de traiter les données.");
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
+
+//   // Charger les données au montage du composant
+//   useEffect(() => {
+//     loadJsonData();
+//   }, []);
+
+//   // Fonction pour sauvegarder les données (à adapter selon votre backend)
+//   const saveDataToJson = async (
+//     section: string,
+//     field: string,
+//     value: string
+//   ) => {
+//     try {
+//       // Ici vous pouvez implémenter la logique pour sauvegarder dans votre backend
+//       console.log(`Sauvegarde: ${section}.${field} = ${value}`);
+
+//       // Exemple d'appel API pour sauvegarder
+//       // const response = await fetch('/api/save-content', {
+//       //   method: 'POST',
+//       //   headers: { 'Content-Type': 'application/json' },
+//       //   body: JSON.stringify({ section, field, value })
+//       // });
+
+//       alert(`${field} sauvegardé avec succès!`);
+//     } catch (err) {
+//       console.error("Erreur lors de la sauvegarde:", err);
+//       alert("Erreur lors de la sauvegarde");
+//     }
+//   };
+
+//   // Fonctions de sauvegarde
+//   const handleSaveTitle = () => {
+//     saveDataToJson("contact.","title", title);
+//   };
+
+//   const handleSaveDescription1 = () => {
+//      saveDataToJson("contact.","description1", description1);
+//   };
+
+//   const handleSaveDescription2 = () => {
+//     saveDataToJson("contact.","description2", description2);
+//   };
+
+//   const handleSavePhone = () => {
+//     saveDataToJson("contact.","phone", phone);
+//   };
+
+//   const handleSaveEmail = () => {
+//      saveDataToJson("contact.","email", email);
+//   };
+//   // Affichage du chargement
+//   if (isLoading) {
+//     return (
+//       <div className="home-tab fade-in">
+//         <div style={{ textAlign: "center", padding: "2rem" }}>
+//           <p>Chargement des données...</p>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   // Affichage d'erreur
+//   if (error) {
+//     return (
+//       <div className="home-tab fade-in">
+//         <div style={{ textAlign: "center", padding: "2rem", color: "red" }}>
+//           <p>{error}</p>
+//           <button
+//             onClick={loadJsonData}
+//             style={{
+//               marginTop: "1rem",
+//               padding: "0.5rem 1rem",
+//               backgroundColor: "#007bff",
+//               color: "white",
+//               border: "none",
+//               borderRadius: "4px",
+//               cursor: "pointer",
+//             }}
+//           >
+//             Réessayer
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+//   return (
+//     <div className="contact-tab fade-in">
+//       <h1 className="contact-title">Page Contact</h1>
+
+//       <div className="contact-admin-controls">
+//         {/* Champ Titre */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <Type className="label-icon" size={16} />
+//             Titre de la page
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <input
+//               type="text"
+//               value={title}
+//               onChange={(e) => setTitle(e.target.value)}
+//               placeholder="Entrez le titre de la page contact..."
+//               className="contact-input"
+//             />
+//             <button
+//               onClick={handleSaveTitle}
+//               className="contact-save-button"
+//               disabled={!title.trim()}
+//             >
+//               <Save size={14} />
+//               Sauvegarder
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Champ Description 1 */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <FileText className="label-icon" size={16} />
+//             Première description
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <textarea
+//               value={description1}
+//               onChange={(e) => setDescription1(e.target.value)}
+//               placeholder="Entrez la première description..."
+//               className="contact-textarea"
+//               rows={3}
+//             />
+//             <button
+//               onClick={handleSaveDescription1}
+//               className="contact-save-button"
+//               disabled={!description1.trim()}
+//             >
+//               <Save size={14} />
+//               Sauvegarder
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Champ Description 2 */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <FileText className="label-icon" size={16} />
+//             Deuxième description
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <textarea
+//               value={description2}
+//               onChange={(e) => setDescription2(e.target.value)}
+//               placeholder="Entrez la deuxième description..."
+//               className="contact-textarea"
+//               rows={3}
+//             />
+//             <button
+//               onClick={handleSaveDescription2}
+//               className="contact-save-button"
+//               disabled={!description2.trim()}
+//             >
+//               <Save size={14} />
+//               Sauvegarder
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Champ Téléphone */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <Phone className="label-icon" size={16} />
+//             Numéro de téléphone
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <input
+//               type="tel"
+//               value={phone}
+//               onChange={(e) => setPhone(e.target.value)}
+//               placeholder="Entrez le numéro de téléphone..."
+//               className="contact-input"
+//             />
+//             <button
+//               onClick={handleSavePhone}
+//               className="contact-save-button"
+//               disabled={!phone.trim()}
+//             >
+//               <Save size={14} />
+//               Sauvegarder
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Champ Email */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <Mail className="label-icon" size={16} />
+//             Adresse email
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <input
+//               type="email"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//               placeholder="Entrez l'adresse email..."
+//               className="contact-input"
+//             />
+//             <button
+//               onClick={handleSaveEmail}
+//               className="contact-save-button"
+//               disabled={!email.trim()}
+//             >
+//               <Save size={14} />
+//               Sauvegarder
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ContactTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useEffect, useState } from "react";
+// import { Save, Phone, Mail, FileText, Type, Loader2 } from "lucide-react";
+// import "./style/ContactTab.css";
+// import { ApiService, type ContactData } from "../../../services/api";
+
+// const ContactTab: React.FC = () => {
+//   // États pour les champs
+//   const [title, setTitle] = useState("");
+//   const [description1, setDescription1] = useState("");
+//   const [description2, setDescription2] = useState("");
+//   const [phone, setPhone] = useState("");
+//   const [email, setEmail] = useState("");
+
+//   // États pour le chargement et les erreurs
+//   const [isLoading, setIsLoading] = useState(true);
+//   const [error, setError] = useState<string | null>(null);
+//   const [savingStates, setSavingStates] = useState<Record<string, boolean>>({});
+//   const [contactId, setContactId] = useState(1);
+
+//   const loadApiData = async () => {
+//     try {
+//       setIsLoading(true);
+//       setError(null);
+
+//       // Charger les données contact depuis l'API
+//       const contactData = await ApiService.getContacts();
+
+//       if (contactData) {
+//         setContactId(contactData.id);
+//         setTitle(contactData.title || "");
+//         setDescription1(contactData.description1 || "");
+//         setDescription2(contactData.description2 || "");
+//         setPhone(contactData.phone || "");
+//         setEmail(contactData.email || "");
+//       }
+
+//     } catch (err) {
+//       console.error("Erreur lors du chargement des données:", err);
+//       setError("Impossible de charger les données depuis l'API. Vérifiez que le serveur est en fonctionnement.");
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
+
+//   // Charger les données au montage du composant
+//   useEffect(() => {
+//     loadApiData();
+//   }, []);
+
+//   // Fonction générique pour sauvegarder avec état de chargement
+//   const saveWithLoading = async (
+//     key: string,
+//     saveFunction: () => Promise<void>
+//   ) => {
+//     try {
+//       setSavingStates(prev => ({ ...prev, [key]: true }));
+//       await saveFunction();
+//       alert("Sauvegarde réussie!");
+//     } catch (err) {
+//       console.error("Erreur lors de la sauvegarde:", err);
+//       alert("Erreur lors de la sauvegarde");
+//     } finally {
+//       setSavingStates(prev => ({ ...prev, [key]: false }));
+//     }
+//   };
+
+//   // Fonctions de sauvegarde
+//   const handleSaveTitle = () => saveWithLoading("title", async () => {
+//     await ApiService.updateContact(contactId, { title });
+//   });
+
+//   const handleSaveDescription1 = () => saveWithLoading("description1", async () => {
+//     await ApiService.updateContact(contactId, { description1 });
+//   });
+
+//   const handleSaveDescription2 = () => saveWithLoading("description2", async () => {
+//     await ApiService.updateContact(contactId, { description2 });
+//   });
+
+//   const handleSavePhone = () => saveWithLoading("phone", async () => {
+//     await ApiService.updateContact(contactId, { phone });
+//   });
+
+//   const handleSaveEmail = () => saveWithLoading("email", async () => {
+//     await ApiService.updateContact(contactId, { email });
+//   });
+
+//   // Composant de bouton de sauvegarde avec état de chargement
+//   const SaveButton: React.FC<{
+//     onClick: () => void;
+//     disabled: boolean;
+//     savingKey: string;
+//     children: React.ReactNode;
+//   }> = ({ onClick, disabled, savingKey, children }) => (
+//     <button
+//       onClick={onClick}
+//       className="contact-save-button"
+//       disabled={disabled || savingStates[savingKey]}
+//     >
+//       {savingStates[savingKey] ? (
+//         <Loader2 size={14} className="animate-spin" />
+//       ) : (
+//         <Save size={14} />
+//       )}
+//       {savingStates[savingKey] ? "Sauvegarde..." : "Sauvegarder"}
+//     </button>
+//   );
+
+//   // Affichage du chargement
+//   if (isLoading) {
+//     return (
+//       <div className="home-tab fade-in">
+//         <div style={{ textAlign: "center", padding: "2rem" }}>
+//           <Loader2 className="animate-spin mx-auto mb-4" size={32} />
+//           <p>Chargement des données depuis l'API...</p>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   // Affichage d'erreur
+//   if (error) {
+//     return (
+//       <div className="home-tab fade-in">
+//         <div style={{ textAlign: "center", padding: "2rem", color: "red" }}>
+//           <p>{error}</p>
+//           <button
+//             onClick={loadApiData}
+//             style={{
+//               marginTop: "1rem",
+//               padding: "0.5rem 1rem",
+//               backgroundColor: "#007bff",
+//               color: "white",
+//               border: "none",
+//               borderRadius: "4px",
+//               cursor: "pointer",
+//             }}
+//           >
+//             Réessayer
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className="contact-tab fade-in">
+//       <h1 className="contact-title">Page Contact</h1>
+
+//       <div className="contact-admin-controls">
+//         {/* Champ Titre */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <Type className="label-icon" size={16} />
+//             Titre de la page
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <input
+//               type="text"
+//               value={title}
+//               onChange={(e) => setTitle(e.target.value)}
+//               placeholder="Entrez le titre de la page contact..."
+//               className="contact-input"
+//             />
+//             <SaveButton
+//               onClick={handleSaveTitle}
+//               disabled={!title.trim()}
+//               savingKey="title"
+//             >
+//               Sauvegarder
+//             </SaveButton>
+//           </div>
+//         </div>
+
+//         {/* Champ Description 1 */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <FileText className="label-icon" size={16} />
+//             Première description
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <textarea
+//               value={description1}
+//               onChange={(e) => setDescription1(e.target.value)}
+//               placeholder="Entrez la première description..."
+//               className="contact-textarea"
+//               rows={3}
+//             />
+//             <SaveButton
+//               onClick={handleSaveDescription1}
+//               disabled={!description1.trim()}
+//               savingKey="description1"
+//             >
+//               Sauvegarder
+//             </SaveButton>
+//           </div>
+//         </div>
+
+//         {/* Champ Description 2 */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <FileText className="label-icon" size={16} />
+//             Deuxième description
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <textarea
+//               value={description2}
+//               onChange={(e) => setDescription2(e.target.value)}
+//               placeholder="Entrez la deuxième description..."
+//               className="contact-textarea"
+//               rows={3}
+//             />
+//             <SaveButton
+//               onClick={handleSaveDescription2}
+//               disabled={!description2.trim()}
+//               savingKey="description2"
+//             >
+//               Sauvegarder
+//             </SaveButton>
+//           </div>
+//         </div>
+
+//         {/* Champ Téléphone */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <Phone className="label-icon" size={16} />
+//             Numéro de téléphone
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <input
+//               type="tel"
+//               value={phone}
+//               onChange={(e) => setPhone(e.target.value)}
+//               placeholder="Entrez le numéro de téléphone..."
+//               className="contact-input"
+//             />
+//             <SaveButton
+//               onClick={handleSavePhone}
+//               disabled={!phone.trim()}
+//               savingKey="phone"
+//             >
+//               Sauvegarder
+//             </SaveButton>
+//           </div>
+//         </div>
+
+//         {/* Champ Email */}
+//         <div className="contact-input-group">
+//           <label className="contact-input-label">
+//             <Mail className="label-icon" size={16} />
+//             Adresse email
+//           </label>
+//           <div className="contact-input-wrapper">
+//             <input
+//               type="email"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//               placeholder="Entrez l'adresse email..."
+//               className="contact-input"
+//             />
+//             <SaveButton
+//               onClick={handleSaveEmail}
+//               disabled={!email.trim()}
+//               savingKey="email"
+//             >
+//               Sauvegarder
+//             </SaveButton>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+// export default ContactTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useEffect, useState } from "react";
+// import { Save, Phone, Mail, FileText, Type } from "lucide-react";
+// import "./style/ContactTab.css";
+
+// interface ContactData {
+//   id: number;
+//   title: string;
+//   description1: string;
+//   description2: string;
+//   phone: string;
+//   email: string;
+//   created_at: string;
+//   updated_at: string;
+// }
+
+// const ContactTab: React.FC = () => {
+//   const [contactData, setContactData] = useState<ContactData | null>(null);
+//   const [isLoading, setIsLoading] = useState(true);
+//   const [error, setError] = useState<string | null>(null);
+
+//   // Charger les données depuis l'API
+//   const fetchContactData = async () => {
+//     try {
+//       const response = await fetch("http://localhost:5000/api/home-contenu/contacts/1");
+//       if (!response.ok) {
+//         throw new Error(`Erreur HTTP: ${response.status}`);
+//       }
+//       const data = await response.json();
+//       setContactData(data.data);
+//       setError(null);
+//     } catch (err) {
+//       console.error("Erreur lors de la récupération des données de contact:", err);
+//       setError("Impossible de charger les données de contact.");
+//     } finally {
+//       setIsLoading(false);
+//     }
+//   };
+
+//   // Mettre à jour les données via l'API
+//   const updateContactData = async () => {
+//     if (!contactData) return;
+
+//     try {
+//       const response = await fetch(`http://localhost:5000/api/home-contenu/contacts/${contactData.id}`, {
+//         method: 'PUT',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//           title: contactData.title,
+//           description1: contactData.description1,
+//           description2: contactData.description2,
+//           phone: contactData.phone,
+//           email: contactData.email
+//         })
+//       });
+
+//       if (!response.ok) {
+//         throw new Error(`Erreur HTTP: ${response.status}`);
+//       }
+
+//       const data = await response.json();
+//       setContactData(data.data);
+//       alert("Données de contact sauvegardées avec succès!");
+//     } catch (err) {
+//       console.error("Erreur lors de la mise à jour des données de contact:", err);
+//       alert("Erreur lors de la sauvegarde");
+//     }
+//   };
+
+//   useEffect(() => {
+//     fetchContactData();
+//   }, []);
+
+//   if (isLoading) {
+//     return (
+//       <div className="contact-tab fade-in">
+//         <div style={{ textAlign: "center", padding: "2rem" }}>
+//           <p>Chargement des données de contact...</p>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   if (error) {
+//     return (
+//       <div className="contact-tab fade-in">
+//         <div style={{ textAlign: "center", padding: "2rem", color: "red" }}>
+//           <p>{error}</p>
+//           <button
+//             onClick={fetchContactData}
+//             style={{
+//               marginTop: "1rem",
+//               padding: "0.5rem 1rem",
+//               backgroundColor: "#007bff",
+//               color: "white",
+//               border: "none",
+//               borderRadius: "4px",
+//               cursor: "pointer",
+//             }}
+//           >
+//             Réessayer
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className="contact-tab fade-in">
+//       <h1 className="contact-title">Page Contact</h1>
+
+//       {contactData && (
+//         <div className="contact-admin-controls">
+//           {/* Champ Titre */}
+//           <div className="contact-input-group">
+//             <label className="contact-input-label">
+//               <Type className="label-icon" size={16} />
+//               Titre de la page
+//             </label>
+//             <div className="contact-input-wrapper">
+//               <input
+//                 type="text"
+//                 value={contactData.title}
+//                 onChange={(e) => setContactData({
+//                   ...contactData,
+//                   title: e.target.value
+//                 })}
+//                 className="contact-input"
+//               />
+//             </div>
+//           </div>
+
+//           {/* Champ Description 1 */}
+//           <div className="contact-input-group">
+//             <label className="contact-input-label">
+//               <FileText className="label-icon" size={16} />
+//               Première description
+//             </label>
+//             <div className="contact-input-wrapper">
+//               <textarea
+//                 value={contactData.description1}
+//                 onChange={(e) => setContactData({
+//                   ...contactData,
+//                   description1: e.target.value
+//                 })}
+//                 className="contact-textarea"
+//                 rows={3}
+//               />
+//             </div>
+//           </div>
+
+//           {/* Champ Description 2 */}
+//           <div className="contact-input-group">
+//             <label className="contact-input-label">
+//               <FileText className="label-icon" size={16} />
+//               Deuxième description
+//             </label>
+//             <div className="contact-input-wrapper">
+//               <textarea
+//                 value={contactData.description2}
+//                 onChange={(e) => setContactData({
+//                   ...contactData,
+//                   description2: e.target.value
+//                 })}
+//                 className="contact-textarea"
+//                 rows={3}
+//               />
+//             </div>
+//           </div>
+
+//           {/* Champ Téléphone */}
+//           <div className="contact-input-group">
+//             <label className="contact-input-label">
+//               <Phone className="label-icon" size={16} />
+//               Numéro de téléphone
+//             </label>
+//             <div className="contact-input-wrapper">
+//               <input
+//                 type="tel"
+//                 value={contactData.phone}
+//                 onChange={(e) => setContactData({
+//                   ...contactData,
+//                   phone: e.target.value
+//                 })}
+//                 className="contact-input"
+//               />
+//             </div>
+//           </div>
+
+//           {/* Champ Email */}
+//           <div className="contact-input-group">
+//             <label className="contact-input-label">
+//               <Mail className="label-icon" size={16} />
+//               Adresse email
+//             </label>
+//             <div className="contact-input-wrapper">
+//               <input
+//                 type="email"
+//                 value={contactData.email}
+//                 onChange={(e) => setContactData({
+//                   ...contactData,
+//                   email: e.target.value
+//                 })}
+//                 className="contact-input"
+//               />
+//             </div>
+//           </div>
+
+//           {/* Bouton de sauvegarde */}
+//           <button
+//             onClick={updateContactData}
+//             className="contact-save-button"
+//           >
+//             <Save size={14} />
+//             Sauvegarder toutes les modifications
+//           </button>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default ContactTab;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

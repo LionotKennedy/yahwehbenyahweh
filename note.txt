@@ -666,3 +666,11 @@ export function CenterButtons() {
       console.error("Error saving followers:", error)
     }
   }
+
+
+
+  const [title, setTitle] = useState("");
+  const [description1, setDescription1] = useState("");
+  const [description2, setDescription2] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
