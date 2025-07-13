@@ -33,6 +33,8 @@ const Operation_Word_War = lazy(() => import("../pages/(sous-page)/Operation_Wor
 const Balance_Justice = lazy(() => import("../pages/(sous-page)/Balance_Justice/Balance_Justice"))
 const Book_of_the_Month = lazy(() => import("../pages/(sous-page)/Book_of_the_Month/Book_of_the_Month"))
 const Books_for_the_Year = lazy(() => import("../pages/(sous-page)/Books_for_the_Year/Books_for_the_Year"))
+// SHOP
+const Shop = lazy(() => import("../pages/(sous-page)/Shop/Shop"))
 
 // Pages Shocking Revelations - Page 1
 const shockingRevelationsPage1 = {
@@ -154,6 +156,7 @@ export const routesConfig: RouteConfig[] = [
     { path: "/Balance_Justice", component: Balance_Justice },
     { path: "/Book_of_the_Month", component: Book_of_the_Month },
     { path: "/Books_for_the_Year", component: Books_for_the_Year },
+    { path: "/Shop", component: Shop },
 
     // Routes Admin (protégées)
     { path: "/admin", component: AdminDashboard, requiresAuth: true },

@@ -1,0 +1,367 @@
+.book-sales-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header-shop {
+  background: linear-gradient(90deg, #d4a574 0%, #c19956 50%, #b88a47 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-container-shop {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-btn-shop {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.menu-btn-shop:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo-section-shop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.logo-circle-shop {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.logo-text-shop {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.brand-name-shop {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle-shop {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.header-actions-shop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-btn-shop {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.search-btn-shop:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-container-shop {
+  position: relative;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.cart-container-shop:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-count-shop {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.registered-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #34495e;
+  border-bottom: 2px solid #d4a574;
+  padding-bottom: 0.5rem;
+}
+
+.section-description {
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.required {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #d4a574;
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #d4a574;
+}
+
+.checkbox-label {
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+.help-link {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+.help-link:hover {
+  text-decoration: underline;
+}
+
+.recaptcha-container {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+.recaptcha-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.recaptcha-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recaptcha-checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #d4a574;
+}
+
+.recaptcha-logo {
+  font-weight: bold;
+  color: #4285f4;
+  font-size: 0.9rem;
+}
+
+.recaptcha-links {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+.recaptcha-links a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.recaptcha-links a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background: linear-gradient(90deg, #d4a574 0%, #c19956 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #c19956 0%, #b8914a 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+}
+
+.forgot-password {
+  text-align: center;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.new-customer-section {
+  border-top: 1px solid #ecf0f1;
+  padding-top: 2rem;
+}
+
+.required-notice {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.create-account-btn {
+  background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.create-account-btn:hover {
+  background: linear-gradient(90deg, #229954 0%, #27ae60 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-url {
+  color: #d4a574;
+  font-weight: 500;
+}

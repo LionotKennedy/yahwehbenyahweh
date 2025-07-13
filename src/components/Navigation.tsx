@@ -38,7 +38,8 @@ export function Navigation() {
         <a href="/Contact_Us/">
           <strong>HIFANDRAISA AMINAY</strong>
         </a>
-        <a href="https://shop.yahwehbenyahweh.com/">
+        {/* <a href="https://shop.yahwehbenyahweh.com/"> */}
+        <a href="/Shop/">
           <strong>FIVAROTAM-BOBY AN-INTERNET</strong>
         </a>
         <div className="dropdown">
