@@ -1,0 +1,88 @@
+/* Ajouts pour les nouveaux éléments */
+.forgot-password-form,
+.reset-password-form {
+  animation: fadeIn 0.4s ease-in;
+}
+
+.forgot-password-form h2,
+.reset-password-form h2 {
+  color: rgb(36, 36, 36);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.back-to-login {
+  width: 100%;
+  padding: 0.8rem;
+  background: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.back-to-login:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Style pour le champ de téléphone */
+input[type="tel"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Style pour le bouton mot de passe oublié */
+.forgot-password {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Animation pour les transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive amélioré */
+@media (max-width: 480px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .submit-btn, .back-to-login {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .login-card {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
