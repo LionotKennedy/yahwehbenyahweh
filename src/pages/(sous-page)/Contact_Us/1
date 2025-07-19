@@ -1,0 +1,42 @@
+Je vais vous aider à remplacer l'image "To Contact Us" par un texte responsive. Voici comment modifier votre code :
+
+```jsx
+<div className="title-section">
+  <h1 className="contact-title">TO CONTACT US</h1>
+</div>
+```
+
+Et voici le CSS que vous devriez ajouter à votre fichier contact-us.css ou contact_Us.css :
+
+```css
+.contact-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #000; /* ou la couleur de votre choix */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+```
+
+Cette solution présente plusieurs avantages :
+1. Meilleure accessibilité (le texte est lisible par les lecteurs d'écran)
+2. Meilleur référencement (le texte est indexable par les moteurs de recherche)
+3. Chargement plus rapide (pas besoin de charger une image)
+4. Adaptabilité parfaite à toutes les tailles d'écran
+
+Vous pouvez bien sûr ajuster la taille de police, la couleur et les autres propriétés pour correspondre au style de votre site. Si vous voulez conserver le même style visuel que l'image originale, vous pourriez avoir besoin d'ajouter des propriétés CSS supplémentaires comme une police spécifique ou des ombres de texte.

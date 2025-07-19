@@ -5,9 +5,7 @@ const ServicesTab: React.FC = () => {
     <div className="tab-content fade-in">
       <h2>Nos Services</h2>
       <ul>
-        <li>Service 1: Développement web</li>
-        <li>Service 2: Design graphique</li>
-        <li>Service 3: Marketing digital</li>
+        <li>Service vide</li>
       </ul>
     </div>
   );

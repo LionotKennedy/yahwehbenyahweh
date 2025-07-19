@@ -1,3 +1,259 @@
+// "use client";
+
+// import type React from "react";
+// import { useState, useEffect } from "react";
+// import {
+//   Save,
+//   Video,
+//   Type,
+//   FileText,
+//   ChevronUp,
+//   ChevronDown,
+// } from "lucide-react";
+// import "./style/HomeTab.css";
+// import "./style/HomeTab3.css";
+// import "./style/HomeTab5.css";
+
+// const HomeTab: React.FC = () => {
+//   // États pour la section Home
+//   const [videoLink1, setVideoLink1] = useState("");
+//   const [videoLink2, setVideoLink2] = useState("");
+//   const [videoLink3, setVideoLink3] = useState("");
+//   const [title, setTitle] = useState("");
+//   const [description, setDescription] = useState("");
+
+//   // États pour la section Yahweh
+//   const [yahwehTitle1, setYahwehTitle1] = useState("");
+//   const [yahwehTitle2, setYahwehTitle2] = useState("");
+//   const [yahwehDescription1, setYahwehDescription1] = useState("");
+//   const [yahwehDescription2, setYahwehDescription2] = useState("");
+//   const [yahwehDescription3, setYahwehDescription3] = useState("");
+//   const [yahwehDescription4, setYahwehDescription4] = useState("");
+//   const [yahwehDescription5, setYahwehDescription5] = useState("");
+//   const [yahwehDescription6, setYahwehDescription6] = useState("");
+
+//   // États pour la section Yahweh Ben Yahweh
+//   const [yahwehBenTitle1, setYahwehBenTitle1] = useState("");
+//   const [yahwehBenTitle2, setYahwehBenTitle2] = useState("");
+//   const [yahwehBenDescription1, setYahwehBenDescription1] = useState("");
+//   const [yahwehBenDescription2, setYahwehBenDescription2] = useState("");
+//   const [yahwehBenDescription3, setYahwehBenDescription3] = useState("");
+//   const [yahwehBenDescription4, setYahwehBenDescription4] = useState("");
+//   const [yahwehBenDescription5, setYahwehBenDescription5] = useState("");
+//   const [yahwehBenDescription6, setYahwehBenDescription6] = useState("");
+//   const [yahwehBenDescription7, setYahwehBenDescription7] = useState("");
+//   const [yahwehBenDescription8, setYahwehBenDescription8] = useState("");
+//   const [yahwehBenDescription9, setYahwehBenDescription9] = useState("");
+
+//   // États pour la section Followers
+//   const [followersTitle, setFollowersTitle] = useState("");
+//   const [followersDescription1, setFollowersDescription1] = useState("");
+//   const [followersDescription2, setFollowersDescription2] = useState("");
+//   const [followersDescription3, setFollowersDescription3] = useState("");
+//   const [followersDescription4, setFollowersDescription4] = useState("");
+//   const [followersDescription5, setFollowersDescription5] = useState("");
+
+//   // États pour la section Cultural Attire
+//   const [attireTitle, setAttireTitle] = useState("");
+//   const [attireDescription1, setAttireDescription1] = useState("");
+//   const [attireDescription2, setAttireDescription2] = useState("");
+//   const [attireDescription3, setAttireDescription3] = useState("");
+//   const [attireDescription4, setAttireDescription4] = useState("");
+//   const [attireDescription5, setAttireDescription5] = useState("");
+
+//   // États pour gérer l'ouverture/fermeture des sections
+//   const [isHomeOpen, setIsHomeOpen] = useState(true);
+//   const [isYahwehOpen, setIsYahwehOpen] = useState(true);
+//   const [isYahwehBenOpen, setIsYahwehBenOpen] = useState(true);
+//   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
+//   const [isAttireOpen, setIsAttireOpen] = useState(true);
+
+//   // API base URL
+//   const API_BASE_URL = "http://localhost:5000/api/home-contenu"
+
+//   // Fetch data from API
+//   const fetchData = async (endpoint: string, setDataFunction: (data: any) => void) => {
+//     try {
+//       const response = await fetch(`${API_BASE_URL}/${endpoint}`)
+//       if (!response.ok) {
+//         throw new Error(`HTTP error! status: ${response.status}`)
+//       }
+//       const data = await response.json()
+//       if (data.success && data.data && data.data.length > 0) {
+//         setDataFunction(data.data[0])
+//       }
+//     } catch (error) {
+//       console.error(`Error fetching ${endpoint}:`, error)
+//     }
+//   } 
+
+//   // Update data via API
+//   const updateData = async (endpoint: string, id: number, data: any) => {
+//     try {
+//       const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
+//         method: "PUT",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       })
+//       if (!response.ok) {
+//         throw new Error(`HTTP error! status: ${response.status}`)
+//       }
+//       const result = await response.json()
+//       console.log(`Update successful for ${endpoint}:`, result)
+//       return result
+//     } catch (error) {
+//       console.error(`Error updating ${endpoint}:`, error)
+//       throw error
+//     }
+//   }
+
+//   useEffect(() => {
+//     // Load yahweh data
+//     fetchData("yahweh", (data) => {
+//       setYahwehTitle1(data.title1 || "")
+//       setYahwehTitle2(data.title2 || "")
+//       setYahwehDescription1(data.description1 || "")
+//       setYahwehDescription2(data.description2 || "")
+//       setYahwehDescription3(data.description3 || "")
+//       setYahwehDescription4(data.description4 || "")
+//       setYahwehDescription5(data.description5 || "")
+//       setYahwehDescription6(data.description6 || "")
+//     })
+
+//     // États pour la section Yahweh Ben Yahweh
+//     fetchData("yahweh-ben", (data) => {
+//       setYahwehBenTitle1(data.title1 || "")
+//       setYahwehBenTitle2(data.title2 || "")
+//       setYahwehBenDescription1(data.description1 || "")
+//       setYahwehBenDescription2(data.description2 || "")
+//       setYahwehBenDescription3(data.description3 || "")
+//       setYahwehBenDescription4(data.description4 || "")
+//       setYahwehBenDescription5(data.description5 || "")
+//       setYahwehBenDescription6(data.description6 || "")
+//       setYahwehBenDescription7(data.description7 || "")
+//       setYahwehBenDescription8(data.description8 || "")
+//       setYahwehBenDescription9(data.description9 || "")
+//     })
+
+//     fetchData("followers", (data) => {
+//       setFollowersTitle(data.title || "")
+//       setFollowersDescription1(data.description1 || "")
+//       setFollowersDescription2(data.description2 || "")
+//       setFollowersDescription3(data.description3 || "")
+//       setFollowersDescription4(data.description4 || "")
+//       setFollowersDescription5(data.description5 || "")
+//     })
+
+//     fetchData("cultural-attire", (data) => {
+//       setAttireTitle(data.title || "")
+//       setAttireDescription1(data.description1 || "")
+//       setAttireDescription2(data.description2 || "")
+//       setAttireDescription3(data.description3 || "")
+//       setAttireDescription4(data.description4 || "")
+//       setAttireDescription5(data.description5 || "")
+//     })
+
+//     fetchData("home", (data) => {
+//       setTitle(data.title || "")
+//       setDescription(data.description1 || "")
+//       setVideoLink1(data.src1 || "")
+//       setVideoLink2(data.src2 || "")
+//       setVideoLink3(data.src3 || "")
+//     })
+
+
+//   }, [])
+
+//   const handleSaveYahweh = async () => {
+//     try {
+//       const data = {
+//         title1: yahwehTitle1,
+//         title2: yahwehTitle2,
+//         description1: yahwehDescription1,
+//         description2: yahwehDescription2,
+//         description3: yahwehDescription3,
+//         description4: yahwehDescription4,
+//         description5: yahwehDescription5,
+//         description6: yahwehDescription6,
+//       }
+//       await updateData("yahweh", 1, data)
+//     } catch (error) {
+//       console.error("Error saving yahweh:", error)
+//     }
+//   }
+
+//   const handleSaveYahwehBen = async () => {
+//     try {
+//       const data = {
+//         title1: yahwehBenTitle1,
+//         title2: yahwehBenTitle2,
+//         description1: yahwehBenDescription1,
+//         description2: yahwehBenDescription2,
+//         description3: yahwehBenDescription3,
+//         description4: yahwehBenDescription4,
+//         description5: yahwehBenDescription5,
+//         description6: yahwehBenDescription6,
+//         description7: yahwehBenDescription7,
+//         description8: yahwehBenDescription8,
+//         description9: yahwehBenDescription9,
+//       }
+//       await updateData("yahweh-ben", 1, data)
+//     } catch (error) {
+//       console.error("Error saving yahweh ben:", error)
+//     }
+//   }
+
+//   const handleSaveFollowers = async () => {
+//     try {
+//       const data = {
+//         title: followersTitle,
+//         description1: followersDescription1,
+//         description2: followersDescription2,
+//         description3: followersDescription3,
+//         description4: followersDescription4,
+//         description5: followersDescription5,
+//       }
+//       await updateData("followers", 1, data)
+//     } catch (error) {
+//       console.error("Error saving followers:", error)
+//     }
+//   }
+
+//   const handleSaveCultural = async () => {
+//     try {
+//       const data = {
+//         title: attireTitle,
+//         description1: attireDescription1,
+//         description2: attireDescription2,
+//         description3: attireDescription3,
+//         description4: attireDescription4,
+//         description5: attireDescription5,
+//       }
+//       await updateData("followers", 1, data)
+//     } catch (error) {
+//       console.error("Error saving followers:", error)
+//     }
+//   }
+
+//   const handleSaveHome = async () => {
+//     try {
+//       const data = {
+//         src1: videoLink1,
+//         src2: videoLink2,
+//         src3: videoLink3,
+//         title: title,
+//         description1: description,
+//       }
+//       await updateData("home", 1, data)
+//     } catch (error) {
+//       console.error("Error saving home:", error)
+//     }
+//   }
+
+
+
 "use client";
 
 import type React from "react";
@@ -13,6 +269,13 @@ import {
 import "./style/HomeTab.css";
 import "./style/HomeTab3.css";
 import "./style/HomeTab5.css";
+import {
+  homeApi,
+  yahwehApi,
+  yahwehBenApi,
+  followersApi,
+  culturalAttireApi,
+} from "../../../api/api"; // Importez les fonctions API
 
 const HomeTab: React.FC = () => {
   // États pour la section Home
@@ -68,105 +331,97 @@ const HomeTab: React.FC = () => {
   const [isFollowersOpen, setIsFollowersOpen] = useState(true);
   const [isAttireOpen, setIsAttireOpen] = useState(true);
 
-  // API base URL
-  const API_BASE_URL = "http://localhost:5000/api/home-contenu"
-
-  // Fetch data from API
-  const fetchData = async (endpoint: string, setDataFunction: (data: any) => void) => {
-    try {
-      const response = await fetch(`${API_BASE_URL}/${endpoint}`)
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json()
-      if (data.success && data.data && data.data.length > 0) {
-        setDataFunction(data.data[0])
-      }
-    } catch (error) {
-      console.error(`Error fetching ${endpoint}:`, error)
-    }
-  }
-
-  // Update data via API
-  const updateData = async (endpoint: string, id: number, data: any) => {
-    try {
-      const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const result = await response.json()
-      console.log(`Update successful for ${endpoint}:`, result)
-      return result
-    } catch (error) {
-      console.error(`Error updating ${endpoint}:`, error)
-      throw error
-    }
-  }
-
   useEffect(() => {
-    // Load yahweh data
-    fetchData("yahweh", (data) => {
-      setYahwehTitle1(data.title1 || "")
-      setYahwehTitle2(data.title2 || "")
-      setYahwehDescription1(data.description1 || "")
-      setYahwehDescription2(data.description2 || "")
-      setYahwehDescription3(data.description3 || "")
-      setYahwehDescription4(data.description4 || "")
-      setYahwehDescription5(data.description5 || "")
-      setYahwehDescription6(data.description6 || "")
-    })
+    // Chargement des données
+    const loadData = async () => {
+      try {
+        // Home
+        const homeData = await homeApi.get();
+        if (homeData.success && homeData.data?.length > 0) {
+          const data = homeData.data[0];
+          setTitle(data.title || "");
+          setDescription(data.description1 || "");
+          setVideoLink1(data.src1 || "");
+          setVideoLink2(data.src2 || "");
+          setVideoLink3(data.src3 || "");
+        }
 
-    // États pour la section Yahweh Ben Yahweh
-    fetchData("yahweh-ben", (data) => {
-      setYahwehBenTitle1(data.title1 || "")
-      setYahwehBenTitle2(data.title2 || "")
-      setYahwehBenDescription1(data.description1 || "")
-      setYahwehBenDescription2(data.description2 || "")
-      setYahwehBenDescription3(data.description3 || "")
-      setYahwehBenDescription4(data.description4 || "")
-      setYahwehBenDescription5(data.description5 || "")
-      setYahwehBenDescription6(data.description6 || "")
-      setYahwehBenDescription7(data.description7 || "")
-      setYahwehBenDescription8(data.description8 || "")
-      setYahwehBenDescription9(data.description9 || "")
-    })
+        // Yahweh
+        const yahwehData = await yahwehApi.get();
+        if (yahwehData.success && yahwehData.data?.length > 0) {
+          const data = yahwehData.data[0];
+          setYahwehTitle1(data.title1 || "");
+          setYahwehTitle2(data.title2 || "");
+          setYahwehDescription1(data.description1 || "");
+          setYahwehDescription2(data.description2 || "");
+          setYahwehDescription3(data.description3 || "");
+          setYahwehDescription4(data.description4 || "");
+          setYahwehDescription5(data.description5 || "");
+          setYahwehDescription6(data.description6 || "");
+        }
 
-    fetchData("followers", (data) => {
-      setFollowersTitle(data.title || "")
-      setFollowersDescription1(data.description1 || "")
-      setFollowersDescription2(data.description2 || "")
-      setFollowersDescription3(data.description3 || "")
-      setFollowersDescription4(data.description4 || "")
-      setFollowersDescription5(data.description5 || "")
-    })
+        // Yahweh Ben Yahweh
+        const yahwehBenData = await yahwehBenApi.get();
+        if (yahwehBenData.success && yahwehBenData.data?.length > 0) {
+          const data = yahwehBenData.data[0];
+          setYahwehBenTitle1(data.title1 || "");
+          setYahwehBenTitle2(data.title2 || "");
+          setYahwehBenDescription1(data.description1 || "");
+          setYahwehBenDescription2(data.description2 || "");
+          setYahwehBenDescription3(data.description3 || "");
+          setYahwehBenDescription4(data.description4 || "");
+          setYahwehBenDescription5(data.description5 || "");
+          setYahwehBenDescription6(data.description6 || "");
+          setYahwehBenDescription7(data.description7 || "");
+          setYahwehBenDescription8(data.description8 || "");
+          setYahwehBenDescription9(data.description9 || "");
+        }
 
-    fetchData("cultural-attire", (data) => {
-      setAttireTitle(data.title || "")
-      setAttireDescription1(data.description1 || "")
-      setAttireDescription2(data.description2 || "")
-      setAttireDescription3(data.description3 || "")
-      setAttireDescription4(data.description4 || "")
-      setAttireDescription5(data.description5 || "")
-    })
+        // Followers
+        const followersData = await followersApi.get();
+        if (followersData.success && followersData.data?.length > 0) {
+          const data = followersData.data[0];
+          setFollowersTitle(data.title || "");
+          setFollowersDescription1(data.description1 || "");
+          setFollowersDescription2(data.description2 || "");
+          setFollowersDescription3(data.description3 || "");
+          setFollowersDescription4(data.description4 || "");
+          setFollowersDescription5(data.description5 || "");
+        }
 
-    fetchData("home", (data) => {
-      setTitle(data.title || "")
-      setDescription(data.description1 || "")
-      setVideoLink1(data.src1 || "")
-      setVideoLink2(data.src2 || "")
-      setVideoLink3(data.src3 || "")
-    })
+        // Cultural Attire
+        const attireData = await culturalAttireApi.get();
+        if (attireData.success && attireData.data?.length > 0) {
+          const data = attireData.data[0];
+          setAttireTitle(data.title || "");
+          setAttireDescription1(data.description1 || "");
+          setAttireDescription2(data.description2 || "");
+          setAttireDescription3(data.description3 || "");
+          setAttireDescription4(data.description4 || "");
+          setAttireDescription5(data.description5 || "");
+        }
+      } catch (error) {
+        console.error("Error loading data:", error);
+      }
+    };
 
-    // fetchData("home-page-videos", (data) => {
-    // })
+    loadData();
+  }, []);
 
-  }, [])
+  const handleSaveHome = async () => {
+    try {
+      const data = {
+        src1: videoLink1,
+        src2: videoLink2,
+        src3: videoLink3,
+        title: title,
+        description1: description,
+      };
+      await homeApi.update(1, data);
+    } catch (error) {
+      console.error("Error saving home:", error);
+    }
+  };
 
   const handleSaveYahweh = async () => {
     try {
@@ -179,12 +434,12 @@ const HomeTab: React.FC = () => {
         description4: yahwehDescription4,
         description5: yahwehDescription5,
         description6: yahwehDescription6,
-      }
-      await updateData("yahweh", 1, data)
+      };
+      await yahwehApi.update(1, data);
     } catch (error) {
-      console.error("Error saving yahweh:", error)
+      console.error("Error saving yahweh:", error);
     }
-  }
+  };
 
   const handleSaveYahwehBen = async () => {
     try {
@@ -200,12 +455,12 @@ const HomeTab: React.FC = () => {
         description7: yahwehBenDescription7,
         description8: yahwehBenDescription8,
         description9: yahwehBenDescription9,
-      }
-      await updateData("yahweh-ben", 1, data)
+      };
+      await yahwehBenApi.update(1, data);
     } catch (error) {
-      console.error("Error saving yahweh ben:", error)
+      console.error("Error saving yahweh ben:", error);
     }
-  }
+  };
 
   const handleSaveFollowers = async () => {
     try {
@@ -216,12 +471,12 @@ const HomeTab: React.FC = () => {
         description3: followersDescription3,
         description4: followersDescription4,
         description5: followersDescription5,
-      }
-      await updateData("followers", 1, data)
+      };
+      await followersApi.update(1, data);
     } catch (error) {
-      console.error("Error saving followers:", error)
+      console.error("Error saving followers:", error);
     }
-  }
+  };
 
   const handleSaveCultural = async () => {
     try {
@@ -232,27 +487,12 @@ const HomeTab: React.FC = () => {
         description3: attireDescription3,
         description4: attireDescription4,
         description5: attireDescription5,
-      }
-      await updateData("followers", 1, data)
+      };
+      await culturalAttireApi.update(1, data);
     } catch (error) {
-      console.error("Error saving followers:", error)
+      console.error("Error saving cultural attire:", error);
     }
-  }
-
-  const handleSaveHome = async () => {
-    try {
-      const data = {
-        src1: videoLink1,
-        src2: videoLink2,
-        src3: videoLink3,
-        title: title,
-        description1: description,
-      }
-      await updateData("home", 1, data)
-    } catch (error) {
-      console.error("Error saving home:", error)
-    }
-  }
+  };
 
   return (
     <div className="home-tab fade-in">

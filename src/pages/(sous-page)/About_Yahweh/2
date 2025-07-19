@@ -1,0 +1,70 @@
+Je vais vous aider à remplacer l'image "Yahweh" par un texte stylisé en jaune. Voici les modifications à apporter à votre code :
+
+1. Remplacez la section de l'image par ce texte stylisé :
+
+```jsx
+<div id="Yahweh_Ben_Yahweh" className="pg-btm-pd-mod-about">
+  <h1 id="title-text-about" className="yahweh-title">
+    THE GOD OF ISRAEL
+  </h1>
+  <h2 className="yahweh-subtitle">
+    YAHWEH
+  </h2>
+</div>
+```
+
+2. Ajoutez ce CSS dans votre fichier about_Yahweh.css :
+
+```css
+.yahweh-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #000; /* Couleur de base */
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.yahweh-subtitle {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #FFD700; /* Jaune or */
+  font-weight: bold;
+  margin: 0 0 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+  .yahweh-title {
+    font-size: 2.5rem;
+  }
+  .yahweh-subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .yahweh-title {
+    font-size: 2rem;
+  }
+  .yahweh-subtitle {
+    font-size: 1.8rem;
+  }
+}
+```
+
+Cette solution offre plusieurs avantages :
+1. Meilleure accessibilité (texte lisible par les lecteurs d'écran)
+2. Meilleur référencement (texte indexable par les moteurs de recherche)
+3. Chargement plus rapide (pas besoin de charger une image)
+4. Adaptabilité parfaite à toutes les tailles d'écran
+5. Texte en jaune comme demandé (#FFD700 est un code couleur or/jaune standard)
+
+Si vous souhaitez un jaune plus vif ou plus foncé, vous pouvez ajuster la valeur hexadécimale (#FFD700) :
+- Jaune vif : #FFFF00
+- Jaune doré foncé : #FFC000
+- Jaune moutarde : #FFDB58
+
+Vous pouvez également ajouter des effets supplémentaires comme des ombres ou des dégradés si vous le souhaitez.

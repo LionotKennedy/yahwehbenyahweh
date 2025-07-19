@@ -1,0 +1,156 @@
+/* Variables CSS */
+:root {
+    --cosmic-dark: hsl(220, 20%, 8%);
+    --cosmic-gold: hsl(45, 85%, 60%);
+    --cosmic-light: hsl(45, 50%, 95%);
+    --cosmic-glow: hsl(45, 100%, 70%);
+    --radius: 0.5rem;
+}
+
+/* Reset et styles de base */
+.shop-container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Image de fond ajustée */
+.cosmic-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-size: contain; /* Changez cette valeur */
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: var(--cosmic-dark); /* Couleur de fond */
+    display: flex;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 36, 56, 0.6);
+}
+
+/* Conteneur principal */
+.content-container {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Section image */
+.image-section {
+    flex: 1;
+    /* Vous pouvez ajouter d'autres styles si nécessaire */
+}
+
+/* Section de contenu blanc */
+.white-content-section {
+    width: 40%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+    max-width: 32rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Typographie */
+.title-section {
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    letter-spacing: 0.025em;
+    margin-bottom: 1rem;
+}
+
+.secondary-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--cosmic-dark);
+}
+
+/* Citation */
+.quote-section {
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
+.bible-quote {
+    font-size: 1.25rem;
+    color: #4b5563;
+    font-style: italic;
+    line-height: 1.75;
+}
+
+.quote-citation {
+    color: var(--cosmic-gold);
+    font-weight: 600;
+    font-size: 1.125rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Texte et bouton */
+.text-section {
+    margin-top: 1.5rem;
+}
+
+.description-text {
+    color: #4b5563;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.button-container {
+    padding-top: 1rem;
+}
+
+.discover-button {
+    background: linear-gradient(to right, var(--cosmic-gold), var(--cosmic-glow));
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.discover-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .content-container {
+        flex-direction: column;
+    }
+    
+    .white-content-section {
+        width: 100%;
+        min-height: auto;
+    }
+    
+    .image-section {
+        padding: 4rem 2rem;
+        min-height: 50vh;
+    }
+}

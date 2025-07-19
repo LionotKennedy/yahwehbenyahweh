@@ -1,0 +1,93 @@
+Je vais vous aider à remplacer l'image "Yahweh.png" par un texte responsive. Voici les modifications à apporter à votre code :
+
+1. Remplacez cette partie :
+```jsx
+<div id="Yahweh_Ben_Yahweh" className="pg-btm-pd-mod-about">
+  <img
+    id="title-img-about"
+    src={Yahweh}
+    alt="Yahweh"
+    className=""
+  />
+</div>
+```
+
+Par ceci :
+```jsx
+<div id="Yahweh_Ben_Yahweh" className="pg-btm-pd-mod-about">
+  <h1 className="yahweh-title">THE GOD OF ISRAEL</h1>
+  <h2 className="yahweh-subtitle">YAHWEH</h2>
+</div>
+```
+
+2. Ajoutez ce CSS dans votre fichier about_Yahweh.css :
+```css
+.yahweh-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #000; /* ou la couleur de votre choix */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0 10px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.yahweh-subtitle {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #000; /* ou la couleur de votre choix */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0 20px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .yahweh-title {
+    font-size: 2.5rem;
+  }
+  .yahweh-subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .yahweh-title {
+    font-size: 2rem;
+  }
+  .yahweh-subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .yahweh-title {
+    font-size: 1.8rem;
+  }
+  .yahweh-subtitle {
+    font-size: 1.5rem;
+  }
+}
+```
+
+Cette solution offre plusieurs avantages :
+1. Meilleure accessibilité pour les lecteurs d'écran
+2. Meilleur référencement (le texte est indexable)
+3. Chargement plus rapide (pas d'image à charger)
+4. Adaptation parfaite à toutes les tailles d'écran
+5. Cohérence avec le contenu textuel qui suit
+
+Vous pouvez ajuster :
+- Les couleurs pour correspondre à votre charte graphique
+- Les polices si vous voulez une typographie spécifique
+- Les espacements et marges pour s'intégrer parfaitement à votre design existant
+- Ajouter des ombres ou autres effets CSS si nécessaire
+
+Si vous voulez reproduire exactement le style visuel de l'image originale, vous pourriez avoir besoin d'ajouter des propriétés CSS supplémentaires comme :
+- Une police Google Fonts spécifique
+- Des dégradés de couleur
+- Des ombres portées
+- Des bordures décoratives
