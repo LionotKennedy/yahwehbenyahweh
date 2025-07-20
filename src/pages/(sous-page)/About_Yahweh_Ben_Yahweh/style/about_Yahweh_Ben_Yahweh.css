@@ -86,8 +86,18 @@ p {
 .style-width-y {
   width: 90%;
 }
+
 #pg-btm-media-y {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottom-media-img-y {
+    width: 100%;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }

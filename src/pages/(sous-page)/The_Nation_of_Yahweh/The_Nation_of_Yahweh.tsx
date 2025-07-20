@@ -1,31 +1,50 @@
 
 import "./style/the_Nation_of_Yahweh.css";
 import "./style/responsive.css";
-import TheNationofYahweh from "./image/The_Nation_of_Yahweh.png";
+// import TheNationofYahweh from "./image/The_Nation_of_Yahweh.png";
 import OurMottoLn from "./image/Our_Motto_Ln.png";
 import FrenchVer from "./image/French_ver.png";
 import SpanishVer from "./image/Spanish_ver.png";
 import EnglishVer from "./image/English_ver.png";
 import TheNationofYahwehInfo from "./image/The_Nation_of_Yahweh-info.png";
+import { fetchData_2 } from "../../../admin/api/api";
+import { useEffect, useState } from "react";
 
 export function The_Nation_of_Yahweh() {
+
+  const [titleNation, setTitleNation] = useState("")
+  const [descriptionNation, setDescriptionNation] = useState("")
+  const [descriptionNation2, setDescriptionNation2] = useState("")
+  const [descriptionNation3, setDescriptionNation3] = useState("")
+
+
+  useEffect(() => {
+    fetchData_2("nation").then((d) => {
+      setTitleNation(d?.titlenation || "")
+      setDescriptionNation(d?.descriptionnation || "")
+      setDescriptionNation2(d?.descriptionnation2 || "")
+      setDescriptionNation3(d?.descriptionnation3 || "")
+    })
+  }, []);
   return (
     <div className="nation-of-yahweh-page">
       <div id="pg-banner-nation" className=""></div>
       <div id="top-bar-gold-nation" className=""></div>
-      <div id="The_Nation_of_Yahweh-nation" className="">
-        <img
+      <div id="The_Nation_of_Yahweh-nation" className="title-section-fol">
+        <h1 className="te-title">{titleNation}</h1>
+        {/* <img
           // src="/public/The_Nation_of_Yahweh/image/The_Nation_of_Yahweh.png"
           src={TheNationofYahweh}
           alt="Ny Firenen'i Yahweh"
           className="width-nation"
-        />
+        /> */}
       </div>
       <div className="sec-bar-nation pg-top-pd-mod-nation"></div>
       <div className="sec-text-nation pg-text-fmt-nation">
         <p>
           <span className="pg-text-ltr-sp-nation">
-            Ny Firenen'i <span className="David-nation">יהוה</span>
+            {descriptionNation}
+            {/* Ny Firenen'i <span className="David-nation">יהוה</span>
             &nbsp;dia mino fa Andriamanitra tokana,&nbsp;
             <span className="David-nation">יהוה</span>, Ray ny olombelona rehetra. 
             Fa ny Baiboly Masina sy{" "}
@@ -39,28 +58,30 @@ export function The_Nation_of_Yahweh() {
             <span className="David-nation">יהוה</span>&nbsp;sy ny Zanany,{" "}
             <span className="David-nation">יהוה&nbsp;בּן&nbsp;יהוה</span>, 
             izay adidin'ny olona voalohany. Fa ny vavaka sy ny fifandraisana amin'i{" "}
-            <span className="David-nation">יהוה</span> dia manampy.
+            <span className="David-nation">יהוה</span> dia manampy. */}
           </span>
         </p>
         <p>
-          Ny finoana sy ny fotopampianarana rehetra izay mamorona ny Firenen'i{" "}
+          {descriptionNation2}
+          {/* Ny finoana sy ny fotopampianarana rehetra izay mamorona ny Firenen'i{" "}
           <span className="David-nation">יהוה</span> dia miorina amin'ny 
           Dikan'ny Baiboly amin'ny Mpanjaka James, ny Testamenta Taloha sy Vaovao. 
           Ny Firenen'i <span className="David-nation">יהוה</span> dia ny 
           fianakavian'i <span className="David-nation">יהוה</span> izay 
           ahitana vondron'olona mifandray amin'ny alalan'ny fifandraisana 
           avy amin'ny Razana iray, <span className="David-nation">יהוה</span>, 
-          Andriamanitry ny Fanekena ny Isiraely.
+          Andriamanitry ny Fanekena ny Isiraely. */}
         </p>
         <p>
-          Miaiky isika fa ny olona rehetra manana saina ara-pitondrantena 
+          {descriptionNation3}
+          {/* Miaiky isika fa ny olona rehetra manana saina ara-pitondrantena 
           izay manaiky hanaraka ny lalàn'i{" "}
           <span className="David-nation">יהוה</span> rehetra sy 
           ho mahatoky amin'ny Zanany, <span className="David-nation">יהוה&nbsp;בּן&nbsp;יהוה</span>, 
           dia afaka mampiditra ny Firenen'i <span className="David-nation">יהוה</span>. 
           Fantatsika fa eo ambany io fanekena io, isika rehetra dia zanakalahy sy 
           zanakavavin'i <span className="David-nation">יהוה</span> 
-          ary mpandova miaraka amin'i{" "}
+          ary mpandova miaraka amin'i{" "} */}
           <span className="David-nation">יהוה&nbsp;בּן&nbsp;יהוה</span>.
         </p>
       </div>

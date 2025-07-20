@@ -4,9 +4,45 @@ import "./style/responsive.css";
 import Yahweh from "./image/Yahweh.png";
 import bottomMedia from "./image/bottom-media.png";
 import imagesData from "../../../data/img/about-images.json";
+import { yahwehApi } from "../../../admin/api/api";
+import { useEffect, useState } from "react";
+
 
 
 export function AboutYahweh() {
+    // const [yahwehTitle1, setYahwehTitle1] = useState("");
+    const [yahwehTitle2, setYahwehTitle2] = useState("");
+    const [yahwehDescription1, setYahwehDescription1] = useState("");
+    const [yahwehDescription2, setYahwehDescription2] = useState("");
+    const [yahwehDescription3, setYahwehDescription3] = useState("");
+    const [yahwehDescription4, setYahwehDescription4] = useState("");
+    const [yahwehDescription5, setYahwehDescription5] = useState("");
+    const [yahwehDescription6, setYahwehDescription6] = useState("");
+  
+    useEffect(() => {
+      const loadYahwehData = async () => {
+        try {
+          const yahwehData = await yahwehApi.get();
+          if (yahwehData.success && yahwehData.data?.length > 0) {
+            const data = yahwehData.data[0];
+            // setYahwehTitle1(data.title1);
+            setYahwehTitle2(data.title2);
+            setYahwehDescription1(data.description1);
+            setYahwehDescription2(data.description2);
+            setYahwehDescription3(data.description3);
+            setYahwehDescription4(data.description4);
+            setYahwehDescription5(data.description5);
+            setYahwehDescription6(data.description6);
+            // console.log(data.title)
+            // console.log(data)
+          }
+        } catch (error) {
+          console.error("Error loading contact data:", error);
+        }
+      };
+  
+      loadYahwehData();
+    }, []);
   return (
     <div className="about-yahweh-page">
       <div id="pg-banner-abouty" className="page-banner" style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBanner_About_Yahweh})` }}></div>
@@ -23,11 +59,13 @@ export function AboutYahweh() {
       <div className="sec-bar-about"></div>
       <br />
       <div className="pg-link-text-about">
-        <p className="pg-top-mrgn-mod-about">YAHWEH</p>
+        <p className="pg-top-mrgn-mod-about">{yahwehTitle2}</p>
+        {/* <p className="pg-top-mrgn-mod-about">YAHWEH</p> */}
       </div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          Ny hery mandrisika ny izao rehetra izao dia tsy hery mistery, fa olona
+          {yahwehDescription1}
+          {/* Ny hery mandrisika ny izao rehetra izao dia tsy hery mistery, fa olona
           tena izy mitondra ny anarana hoe{" "}
           <span className="David-about">יהוה</span>. Ny fitsidihana ny tobin'ny
           habakabaka iraisam-pirenena, sy ny fandinihana ara-tsiansa,
@@ -37,43 +75,47 @@ export function AboutYahweh() {
           dia voarindra tsara nefa tsy misy hery iray mifehy. Ny lojika dia
           milaza fa tsy misy hery tsy manan-tsaina afaka hamorona izao karazana
           fiainana isan-karazany izao, na hanome ny fahendrena sy hery tsy
-          manam-petra hita eny amin'ny izao tontolo izao.
+          manam-petra hita eny amin'ny izao tontolo izao. */}
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          Fa izao no lazain'i <span className="David-about">יהוה</span>, Ilay
+           {yahwehDescription2}
+          {/* Fa izao no lazain'i <span className="David-about">יהוה</span>, Ilay
           nahary ny lanitra; <span className="David-about">יהוה</span> formed
           the no namorona ny tany sy nanao izy, Nisy nanorenany izy, ary tsy ho
-          an-tsininy no naha-nahary Azy (Isaia 45:18).
+          an-tsininy no naha-nahary Azy (Isaia 45:18). */}
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          Misy fitsipika vaovao izay efa voaporofo tamin'ny alalan'ny arkeolojia
+           {yahwehDescription3}
+          {/* Misy fitsipika vaovao izay efa voaporofo tamin'ny alalan'ny arkeolojia
           manerantany. Ny mpahay arkeolojia dia miara-milaza tsy misy
           fisalasalana, fa ao ambadiky ny habakabaka goavana sy ny izao tontolo
           izao, misy fototra iray: ny finoana Andriamanitra tokana, ILAY
           ANDRIAMANITRA TOKANA, izay ny anarany hatramin'izao dia noforanina,
           nosaronina, nafenina, ary natahotra. Io anarana io,{" "}
           <span className="David-about">יהוה</span>, dia atao hoe "Ny
-          Tsiambaratelo Lehibe Indrindra Etỳ An-Tany".
+          Tsiambaratelo Lehibe Indrindra Etỳ An-Tany". */}
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p className="">
-          Ao amin'ny Ohabolana 30:4 dia misy fanontaniana maromaro momba ny
+           {yahwehDescription4}
+          {/* Ao amin'ny Ohabolana 30:4 dia misy fanontaniana maromaro momba ny
           Mpahary ny Lanitra, fa ny roa tonga lafatra indrindra dia: Iza no
-          anarany, ary Iza no anaran'ny Zanany, raha hahay ny hilaza?
+          anarany, ary Iza no anaran'ny Zanany, raha hahay ny hilaza? */}
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about">
         <p>
-          I Mosesy, talohan'ny fianjeran'i Egipta, dia nahafantatra fa
+           {yahwehDescription5}
+          {/* I Mosesy, talohan'ny fianjeran'i Egipta, dia nahafantatra fa
           zava-dehibe ny miantso an'Andriamanitra amin'ny anarany manokana
           (Eksodosy 3:13), ary io toe-javatra io mbola misy hatramin'izao.
           Talohan'ny fianjeran'i Babylona, ilay tanàna lehibe...{" "}
@@ -81,20 +123,21 @@ export function AboutYahweh() {
           Zanak'i<span className="David-about">יהוה</span>, dia nahatakatra ny
           maha-zava-dehibe ny fiantsoana Azy amin'ny anarany manokana; fa tsy
           misy anarana hafa eo ambanin'ny lanitra omena ny olombelona, izay
-          ahafahana voavonjy (Jaona 5:43; 1 Timoty 2:5-6; Asa 4:12).
+          ahafahana voavonjy (Jaona 5:43; 1 Timoty 2:5-6; Asa 4:12). */}
         </p>
       </div>
       <div className="sec-bar-about"></div>
       <div className="sec-text-about pg-text-fmt-about pg-text-ltr-sp-6-about">
         <p>
-          Amin'ny fototry ny zavatra rehetra, tsy azo atao ny hiditra amin'ny
+           {yahwehDescription6}
+          {/* Amin'ny fototry ny zavatra rehetra, tsy azo atao ny hiditra amin'ny
           fifandraisana amin'i <span className="David-about">יהוה</span> raha
           tsy manaiky an'i <span className="David-about">יהוה בּן יהוה</span>,
           Ilay Zanany Tiana (Jaona 10:9, 30; Jaona 14:6; Jaona 17:11). Noho
           izany, ny fahafantarana an'i <span className="David-about">יהוה</span>{" "}
           dia mitovy amin'ny fahitana ny zava-misy amin'ny fahatokiana azo
           antoka sy ny famonjena. Ny fanambarana ny anarany sy ny anaran'ny
-          Zanany no fanalahidy hahatakarana ny finoana ara-Baiboly.
+          Zanany no fanalahidy hahatakarana ny finoana ara-Baiboly. */}
         </p>
       </div>
       <div id="pg-btm-media-about" className="">

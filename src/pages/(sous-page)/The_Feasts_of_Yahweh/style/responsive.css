@@ -102,6 +102,11 @@
     width: 100%;
     height: 44px;
   }
+    
+  .title-section-fol {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -251,6 +256,14 @@
     width: 100%;
     height: 22px;
   }
+    
+  .title-section-fol {
+    padding: 3rem 2rem;
+  }
+
+  .te-title {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 480px) {
   #pg-banner-feast {
@@ -380,6 +393,15 @@
     width: 313px;
     height: 650px;
   }
+    
+  .title-section-fol {
+    padding: 4rem 2rem;
+  }
+
+  .te-title {
+    font-size: 1.5rem;
+  }
+
   #feasts-trs-bkg-5-a {
     display: block;
     position: absolute;

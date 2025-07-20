@@ -11,6 +11,8 @@ import { VideoPlayer } from "../components/VideoPlayer"
 // Import des données JSON
 import content from "../data/home.json"
 import imagesData from "../data/images-home.json"
+import { homeApi } from "../admin/api/api";
+import { useEffect, useState } from "react"
 
 // Interfaces TypeScript
 interface VideoData {
@@ -61,9 +63,15 @@ interface SlideData {
 }
 
 const HomePage: React.FC = () => {
+
   // Récupération des données depuis les JSON avec typage
   const { videoSection, videos }: HomePageContent["homePage"] = content.homePage
   const images: ImagesData = imagesData
+ const [title, setTitle] = useState(null);
+  const [description1, setDescription1] = useState(null);
+  const [src1, setSRC1] = useState(null);
+  const [src2, setSRC2] = useState(null);
+  const [src3, setSRC3] = useState(null);
 
   // Création des slides à partir du JSON d'images
   const slides: SlideData[] = images.banners.map((banner: BannerData) => ({
@@ -71,6 +79,28 @@ const HomePage: React.FC = () => {
     image: banner.path,
     alt: banner.alt,
   }))
+
+    useEffect(() => {
+      const loadContactData = async () => {
+        try {
+          const homeData = await homeApi.get();
+          if (homeData.success && homeData.data?.length > 0) {
+            const data = homeData.data[0];
+            setTitle(data.title);
+            setDescription1(data.description1);
+            setSRC1(data.src1);
+            setSRC2(data.src2);
+            setSRC3(data.src3);
+            // console.log(description1)
+            // console.log(data.src1)
+          }
+        } catch (error) {
+          console.error("Error loading contact data:", error);
+        }
+      };
+  
+      loadContactData();
+    }, []);
 
   return (
     <div className="home-page">
@@ -114,12 +144,14 @@ const HomePage: React.FC = () => {
       <div>
         {/* Première vidéo */}
         <div className="vidPos-home">
-          <VideoPlayer src={videos[0]?.src || ""} poster={images.videoPoster.pageBanner.path} />
+          {/* <VideoPlayer src={videos[0]?.src || ""} poster={images.videoPoster.pageBanner.path} /> */}
+          <VideoPlayer src={src1 || videos[0]?.src } poster={images.videoPoster.pageBanner.path} />
         </div>
 
         {/* Deuxième vidéo */}
         <div className="vidPos-home">
-          <VideoPlayer src={videos[1]?.src || ""} poster={images.videoPoster.goodNews.path} />
+          <VideoPlayer src={src2 || videos[1]?.src } poster={images.videoPoster.goodNews.path} />
+          {/* <VideoPlayer src={videos[1]?.src || ""} poster={images.videoPoster.goodNews.path} /> */}
         </div>
 
         <div className="rmb-p-fmt">
@@ -131,13 +163,15 @@ const HomePage: React.FC = () => {
 
         {/* Troisième vidéo */}
         <div className="vidPos-home">
-          <VideoPlayer src={videos[2]?.src || ""} poster={images.videoPoster.eternalLife.path} />
+          <VideoPlayer src={src3 || videos[2]?.src } poster={images.videoPoster.eternalLife.path} />
+          {/* <VideoPlayer src={videos[2]?.src || ""} poster={images.videoPoster.eternalLife.path} /> */}
         </div>
 
         {/* Section texte dynamique */}
         <div className="rmb-p-fmt px_4">
-          <p className="bn-div-fmt-p-sz-sp-bl text_center text_xls font_bolds mb_4s">{videoSection.title}</p>
-          <p className="rmb-text-fmt pg-text-ltr-sp1">{videoSection.content}</p>
+          {/* <p className="bn-div-fmt-p-sz-sp-bl text_center text_xls font_bolds mb_4s">{videoSection.title}</p> */}
+          <p className="bn-div-fmt-p-sz-sp-bl text_center text_xls font_bolds mb_4s">{title}</p>
+          <p className="rmb-text-fmt pg-text-ltr-sp1">{description1}</p>
         </div>
 
         <div className="textCenterPt">

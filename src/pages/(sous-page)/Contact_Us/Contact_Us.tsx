@@ -2,12 +2,43 @@ import "./style/contact-us.css";
 import "./style/contact_Us.css";
 import "./style/responsive.css";
 // import "./style/news.css";
-import To_Contact_Us from "./image/To_Contact_Us.png";
+// import To_Contact_Us from "./image/To_Contact_Us.png";
 import mail from "./image/mail.png";
-import phone from "./image/phone.png";
+// import phone from "./image/phone.png";
 import bottomMedia from "./image/bottom-media.jpg";
+import { useEffect, useState } from "react";
+import { contactApi } from "../../../admin/api/api";
 
 export function ContactUs() {
+
+
+ const [title, setTitle] = useState(null);
+  const [description1, setDescription1] = useState(null);
+  const [description2, setDescription2] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const [email, setEmail] = useState(null);
+  
+
+  useEffect(() => {
+    const loadContactData = async () => {
+      try {
+        const contactData = await contactApi.get();
+        if (contactData.success && contactData.data?.length > 0) {
+          const data = contactData.data[0];
+          setTitle(data.title);
+          setDescription1(data.description1);
+          setDescription2(data.description2);
+          setPhone(data.phone);
+          setEmail(data.email);
+          // console.log(data.title)
+        }
+      } catch (error) {
+        console.error("Error loading contact data:", error);
+      }
+    };
+
+    loadContactData();
+  }, []);
   return (
     <div className="contact-container">
       {/* Header Section */}
@@ -16,12 +47,14 @@ export function ContactUs() {
 
       {/* Title Section */}
       <div className="title-section">
-        <img
+        {/* <img
           // src="/public/Contact_Us/image/To_Contact_Us.png?height=200&width=600"
           src={To_Contact_Us}
           alt="To Contact Us"
           className="title-image"
-        />
+        /> */}
+         {/* <h1 className="contact-title">TO CONTACT US</h1> */}
+         <h1 className="contact-title">{title}</h1>
       </div>
 
       {/* Contact Information Sections */}
@@ -42,11 +75,12 @@ export function ContactUs() {
                 <strong>Adiresy Ofisiny:</strong>
               </span>
               <div className="address">
-                P.E.E.S.S. Foundation
+                {/* P.E.E.S.S. Foundation
                 <br />
                 1777 NE Loop 410, Suite 600
                 <br />
-                San Antonio, TX 78217
+                San Antonio, TX 78217 */}
+                {description1}
               </div>
             </div>
           </div>
@@ -70,11 +104,12 @@ export function ContactUs() {
                 <strong>Adiresy Paositra:</strong>
               </span>
               <div className="address">
-                P.E.E.S.S. Foundation
+                {/* P.E.E.S.S. Foundation
                 <br />
                 P.O. Box 884
                 <br />
-                Seguin, TX 78156-0884
+                Seguin, TX 78156-0884 */}
+                 {description2}
               </div>
             </div>
           </div>
@@ -94,14 +129,15 @@ export function ContactUs() {
           <div className="contact-item phone-item">
             <div className="contact-text">
               <div className="phone-numbers">
-                <span className="phone-number">1-800-967-7337</span>
-                <span className="phone-number">(210) 678-3061</span>
+                <span className="phone-number">{phone}</span>
+                {/* <span className="phone-number">1-800-967-7337</span> */}
+                {/* <span className="phone-number">(210) 678-3061</span> */}
               </div>
             </div>
             <div className="icon-container">
               <img
-                // src="/public/Contact_Us/image/phone.png?height=60&width=60"
-                src={phone}
+                src="/public/Contact_Us/image/phone.png?height=60&width=60"
+                // src={phone}
                 alt="phone icon"
                 className="phone-icon"
               />
@@ -118,7 +154,8 @@ export function ContactUs() {
               </span>
               <br />
               <span>
-                <span>yahweh@yahwehbenyahweh.com</span>
+                {/* <span>yahweh@yahwehbenyahweh.com</span> */}
+                <span>{email}</span>
               </span>
             </span>
           </p>
@@ -136,4 +173,6 @@ export function ContactUs() {
   );
 }
 
+
+// export default ContactUs;
 export default ContactUs;

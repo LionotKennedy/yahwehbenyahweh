@@ -275,7 +275,7 @@
 import React, { useEffect, useState } from "react";
 import { Save, Phone, Mail, FileText, Type } from "lucide-react";
 import "./style/ContactTab.css";
-import { contactApi } from "../../../api/api"; // Importez les fonctions API
+import { contactApi } from "../../../api/api";
 
 const ContactTab: React.FC = () => {
   // États pour les champs

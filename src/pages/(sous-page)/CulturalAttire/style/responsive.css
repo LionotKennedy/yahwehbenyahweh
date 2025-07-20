@@ -19,17 +19,25 @@
     width: 85%;
     height: 12px;
   }
+
   #top-bar-gold-cul {
     background-image: url("../image/Gold_Bar_1216.jpg");
     width: 100%;
     height: 44px;
   }
+
   #pg-btm-media-cul {
     left: 0px;
     width: 100%;
   }
+
   .bottom-media-img-cul {
     width: 100%;
+  }
+
+  .title-section-fol {
+    text-align: center;
+    padding: 2rem 1rem;
   }
 }
 
@@ -42,6 +50,15 @@
     height: 0;
     padding-top: 43.99%;
   }
+
+  .title-section-fol {
+    padding: 3rem 2rem;
+  }
+
+  .followers-title {
+    font-size: 2rem;
+  }
+
   .sec-bar-cul {
     background-color: transparent;
     background-image: url("../image/Bar.png");
@@ -53,10 +70,12 @@
     width: 85%;
     height: 12px;
   }
+
   #top-bar-gold-cul {
     width: 100%;
     height: 32;
   }
+
   .sec-bar-cul {
     background-color: transparent;
     background-image: url("../image/Bar.png");
@@ -68,20 +87,24 @@
     width: 85%;
     height: 12px;
   }
+
   .pg-text-fmt-cul {
     font-size: 30px;
     text-align: justify;
     line-height: 1;
     letter-spacing: 0.1px;
   }
+
   .David-cul {
     font-family: "David Libre", serif;
     font-size: 32px;
   }
+
   #pg-btm-media-cul {
     left: 0px;
     width: 100%;
   }
+
   .bottom-media-img-cul {
     width: 100%;
   }
@@ -96,6 +119,15 @@
     height: 0;
     padding-top: 43.99%;
   }
+
+  .title-section-fol {
+    padding: 4rem 2rem;
+  }
+
+  .followers-title {
+    font-size: 1.5rem;
+  }
+
   .sec-bar-cul {
     background-color: transparent;
     background-image: url("../image/Bar.png");
@@ -109,10 +141,12 @@
     margin-top: 24px;
     margin-bottom: -9px;
   }
+
   #top-bar-gold-cul {
     width: 100%;
     height: 22px;
   }
+
   #The_Cultural_Attire_of {
     text-align: center;
     display: block;
@@ -122,23 +156,24 @@
     padding-bottom: 0px;
     position: relative;
   }
+
   .pg-text-fmt-cul {
     font-size: 22px;
     text-align: justify;
     line-height: 1;
     letter-spacing: 0.1px;
   }
+
   .David-cul {
     font-family: "David Libre", serif;
     font-size: 24px;
   }
+
   #pg-btm-media-cul {
     left: 0px;
   }
 }
 
-@media screen and (max-width: 376px) {
-}
+@media screen and (max-width: 376px) {}
 
-@media screen and (max-width: 321px) {
-}
+@media screen and (max-width: 321px) {}

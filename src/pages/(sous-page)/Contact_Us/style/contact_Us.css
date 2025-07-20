@@ -13,6 +13,7 @@
   min-height: 100%;
   z-index: -1;
 }
+
 #backdrop-contact {
   background-image: url("/src/pages/(sous-page)/The_Good_News_of_Yahweh/image/Background_Metal_1024.jpg");
   background-repeat: repeat;
@@ -55,12 +56,15 @@
 .img-size-mail {
   width: 121px;
 }
+
 .pg-btm-pd-mod-contact {
   padding-bottom: 40px !important;
 }
+
 .style-contact1 {
   width: 75%;
 }
+
 .sec-text-contact {
   width: 82%;
   font-family: "Source Sans Pro", sans-serif;
@@ -68,6 +72,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .pg-text-fmt-contact {
   font-size: 38px;
   text-align: justify;
@@ -76,6 +81,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .side-image-contact {
   display: inline-block;
   float: left;
@@ -84,19 +90,24 @@
   height: 200px;
   padding-right: 24px;
 }
+
 img {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
+
 .img-size-mail {
   width: 121px;
 }
+
 .pg-link-text-ul-contact {
   text-decoration: underline;
 }
+
 .side-clear-contact {
   clear: both;
 }
+
 .sec-bar-contact {
   background-color: transparent;
   background-image: url("../image/Bar.png");
@@ -107,19 +118,24 @@ img {
   width: 1100px;
   height: 12px;
 }
+
 .pg-top-pd-mod-contact {
   padding-top: 20px !important;
 }
+
 .side-padding-ls-contact {
   padding-left: 5%;
 }
+
 .side-padding-contact {
   padding-left: 40%;
 }
+
 .side-text-contact {
   display: inline-block;
   float: left;
 }
+
 .side-phone-contact {
   display: inline-block;
   float: left;
@@ -128,15 +144,18 @@ img {
   top: -10px;
   padding-left: 10px;
 }
+
 .img-size-phone-contact {
   width: 86px;
 }
+
 .wrapper-contact {
   display: block;
   position: relative;
   /* height: 420px; */
   width: 100%;
 }
+
 #Email_Us {
   display: block;
   position: absolute;
@@ -150,18 +169,22 @@ img {
   line-height: 1.5;
   z-index: 99;
 }
+
 #pg-btm-media-contact {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 img {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
+
 .bottom-media-img-contact {
   width: 100%;
 }
+
 .side-clear {
   clear: both;
 }
@@ -177,10 +200,23 @@ img {
   display: flex;
 }
 
+.contact-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #000;
+  /* ou la couleur de votre choix */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 0;
+}
+
+
 @media screen and (max-width: 1024px) {
   .dd {
     font-size: 32px;
   }
+
   /* .dds {
     font-size: 18px;
     text-align: center;
@@ -191,10 +227,16 @@ img {
     margin: 20px auto;
   } */
 }
+
 @media screen and (max-width: 768px) {
   .dd {
     font-size: 22px;
   }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
   /* .dds {
     font-size: 18px;
     text-align: center;
@@ -205,10 +247,16 @@ img {
     margin: 20px auto;
   } */
 }
+
 @media screen and (max-width: 480px) {
   .dd {
     font-size: 18px;
   }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
   /* .dds {
     font-size: 18px;
     text-align: center;

@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { VideoPlayer } from "../../../components/VideoPlayer";
 import "../UniverseOfYahweh/style/universeOfYahweh.css";
 import bottomMedia from "./image/bottom-media.jpg";
 // import "../UniverseOfYahweh/style/responsive.css";
+import { fetchData_2 } from "../../../admin/api/api";
 
 const UniverseOfYahweh = () => {
-   // États pour gérer la vidéo courante et la résolution
+  // États pour gérer la vidéo courante et la résolution
   const [currentVideo, setCurrentVideo] = useState<string>('180');
   const [currentResolution, setCurrentResolution] = useState<string>('480');
+
+  const [descriptionUniverse1, setDescriptionUniverse1] = useState("")
+  const [descriptionUniverse2, setDescriptionUniverse2] = useState("")
+  const [descriptionUniverse3, setDescriptionUniverse3] = useState("")
+  const [descriptionUniverse4, setDescriptionUniverse4] = useState("")
+  const [videoLinkUniverse, setVideoLinkUniverse] = useState('')
 
   // Fonction pour changer la résolution
   const changeResolution = (res: string): void => {
@@ -22,6 +29,15 @@ const UniverseOfYahweh = () => {
   // Génération de la source vidéo en fonction des états
   const videoSrc = `https://ms.yahwehbenyahweh.com/video/${currentResolution}/${currentVideo}_${currentResolution}p.mp4`;
 
+  useEffect(() => {
+    fetchData_2("universe").then((d) => {
+      setDescriptionUniverse1(d?.descriptionuniverse1 || "")
+      setDescriptionUniverse2(d?.descriptionuniverse2 || "")
+      setDescriptionUniverse3(d?.descriptionuniverse3 || "")
+      setDescriptionUniverse4(d?.descriptionuniverse4 || "")
+      setVideoLinkUniverse(d?.videolinkuniverse || "")
+    })
+  }, []);
   return (
     <div className="universe-of-yahweh-pages">
       <div
@@ -31,49 +47,53 @@ const UniverseOfYahweh = () => {
       <div id="top-bar-gold-u" className="sec-bar-u"></div>
       <div className="Body_Text p-6 max-w-4xl mx-auto">
         <p className="text-lg leading-relaxed mb-6">
-          Ary tonga ny fotoana antsoina hoe <strong>Ny Taonarivo Fahatelo</strong>,
+          {/* Ary tonga ny fotoana antsoina hoe <strong>Ny Taonarivo Fahatelo</strong>,
           fotoana izay nijalian'ny olon-tany areti-mandringana, loza, sy poizina,
           fotoana izay ny <strong>Mpiandry ny Apokalipsy</strong> no nitantana ny orinasa
           iraisam-pirenena - fotoana izay nifoha ny mponina any Amerika tamin'ny hoavy
           tsy misy vola sy tsy misy asa - fotoana izay niseho ny Lehilahy Manokana -
           Lehilahy izay tsy tian'ny mpampiasa amerikana ho hitanao na horeninao -
           Lehilahy izay nosamborina sy nafenina - <strong>Lehilahy izay ny anarany dia{' '}
-          <span className="David text-2xl">יהוה בן יהוה</span></strong>
+            <span className="David text-2xl">יהוה בן יהוה</span></strong> */}
+          {descriptionUniverse1}
         </p>
       </div>
 
       <div className="sec-bar pg-top-pd-mod"></div>
-      
+
       <div className="Body_Text">
         <p className="_italic">
-          Ity dia ny tantaran'ny lasa sy ny hoavy mbola mitohy - momba ny tsara sy ny ratsy -
+          {/* Ity dia ny tantaran'ny lasa sy ny hoavy mbola mitohy - momba ny tsara sy ny ratsy -
           momba ny ainareo sy ny ho azy. Tantara izay mamaritra ny antony <strong>nijalian'ny
-          olona mainty hoditra any Amerika nandritra ny 400 taona mahery.</strong>
+            olona mainty hoditra any Amerika nandritra ny 400 taona mahery.</strong> */}
+          {descriptionUniverse2}
         </p>
       </div>
 
       <div className="sec-bar pg-top-pd-mod"></div>
-      
+
       <div className="Body_Text">
         <p className="_italic">
-          Tantara momba ny hitranga amin'ny olona mainty hoditra raha miverina amin'ny{' '}
+          {/* Tantara momba ny hitranga amin'ny olona mainty hoditra raha miverina amin'ny{' '}
           <strong>lalàna - fitsipika - fitsarana, sy didin'Andriamanitra,{' '}
-          <span className="David text-2xl">יהוה</span>.</strong>
+            <span className="David text-2xl">יהוה</span>.</strong> */}
+          {descriptionUniverse3}
         </p>
       </div>
 
       <div className="sec-bar pg-top-pd-mod"></div>
-      
+
       <div className="Body_Text">
         <p className="">
-          <strong>Noho ny nilazany ny marina tamin'ny olona,{' '}
-          <span className="David">יהוה בן יהוה</span></strong>{' '}
-          dia nosamborina ny mpanompon'ny maizina.
+          {/* <strong>Noho ny nilazany ny marina tamin'ny olona,{' '}
+            <span className="David">יהוה בן יהוה</span></strong>{' '}
+          dia nosamborina ny mpanompon'ny maizina. */}
+          {descriptionUniverse4}
         </p>
       </div>
 
       <div className="sec-bar pg-top-pd-mod"></div>
-      
+
       <div className="Universe_Video">
         <p>
           <strong>
@@ -82,9 +102,10 @@ const UniverseOfYahweh = () => {
           <br />
           <span id="title">Ny Tontolon'i Yahweh - Fampisehoana #180</span>
         </p>
-        
-        <VideoPlayer src={videoSrc} />
-        
+
+        {/* <VideoPlayer src={videoSrc} /> */}
+        <VideoPlayer src={videoLinkUniverse || videoSrc} />
+
         <button id="lRes" type="button" onClick={() => changeResolution('480')}>
           Sary Ambany
         </button>
@@ -192,13 +213,13 @@ const UniverseOfYahweh = () => {
           </select>
         </form> */}
         <form action="#">
-          <select 
-            name="videoSelect" 
-            id="videoSelect" 
+          <select
+            name="videoSelect"
+            id="videoSelect"
             value={currentVideo}
             onChange={(e) => changeVideo(e.target.value)}
           >
-            {Array.from({length: 93}, (_, i) => i + 180).map((num) => (
+            {Array.from({ length: 93 }, (_, i) => i + 180).map((num) => (
               <option key={num} value={num}>
                 Ny Tontolon'i Yahweh - Fampisehoana #{num}
               </option>
@@ -209,7 +230,7 @@ const UniverseOfYahweh = () => {
       <br />
       <div className="py-8">
         <img
-          className="bottom-media-img mx-auto"
+          className="bottom-media-img-U"
           // src="/public/UniverseOfYahweh/image/bottom-media.jpg"
           src={bottomMedia}
           alt="Bottom Media"

@@ -1,25 +1,43 @@
 
 import "./style/tetragrammaton.css";
-import Tetragrama from "./image/Tetragrammaton.png";
+// import Tetragrama from "./image/Tetragrammaton.png";
 import Yahweh from "./image/Yahweh.png";
 import Yahweh_Ben_Yahweh from "./image/Yahweh_Ben_Yahweh.png";
 import YAHWEH from "./image/YAHWEH-.png";
 import YHWH from "./image/YHWH.png";
 import bottomMedia from "./image/bottom-media.png";
+import { fetchData_2 } from "../../../admin/api/api";
+import { useEffect, useState } from "react";
 
 export function Tetragrammaton() {
+  // ------------ États ------------
+  const [title, setTitle] = useState("")
+  const [description, setDescription] = useState("")
+  const [description2, setDescription2] = useState("")
+
+  useEffect(() => {
+    fetchData_2("tetragrama").then((d) => {
+      setTitle(d?.title || "")
+      setDescription(d?.description || "")
+      setDescription2(d?.description2 || "")
+    })
+    // console.log(title)
+  }, []);
+
   return (
     <div className="tetragrammaton-page">
       <div id="pg-banner-tetra" className=""></div>
       <div id="top-bar-gold-tetra" className=""></div>
       <div className="div-width-tetra">
-        <div id="Tetragrammaton">
-          <img
+        <div id="Tetragrammaton" className="title-section-fol">
+          {/* <img
             // src="/public/Tetragrammaton/image/Tetragrammaton.png"
             src={Tetragrama}
             alt="Tetragrammaton"
             className="width-pers1-tetra"
-          />
+          /> */}
+          {/* <h1 className="te-title">Tetragrammaton</h1> */}
+          <h1 className="te-title">{title}</h1>
         </div>
         <div id="Yahweh">
           <img
@@ -90,7 +108,8 @@ export function Tetragrammaton() {
         <div className="sec-bar-tetra"></div>
         <div>
           <p className="pg-text-fmt-lrg-tetra">
-            ARAKA NY FOMBA JIOSY, NOHO NY FANAJANA,
+            {description}
+            {/* ARAKA NY FOMBA JIOSY, NOHO NY FANAJANA,
             <br />
             TSY NATAO HANTSUININA NY ANARAN'ANDRIAMANITRA,
             <br />
@@ -102,7 +121,7 @@ export function Tetragrammaton() {
             <br />
             AMIN'NY SORATRA LEHIBE SY KELY,
             <br />
-            NY HEBREO TALOHA DIA MAMAKY
+            NY HEBREO TALOHA DIA MAMAKY */}
             <br />
             <img
               className="YHWH-img-tetra"
@@ -146,12 +165,13 @@ export function Tetragrammaton() {
             <br />
           </p>
           <p className="pg-text-fmt-lrg-tetra">
-            AMIN'NY TRANGAM-BOARY MARO DIA "TOMPO" NO ANARAM-BOSOTRA
+            {description2}
+            {/* AMIN'NY TRANGAM-BOARY MARO DIA "TOMPO" NO ANARAM-BOSOTRA
             <br />
             MANJAKA AMIN'NY FANAJANA ANDRIAMANITRA, NA
             <br />
             SOLON'NY ANARANA MANOKANA
-            <br />
+            <br /> */}
             <img
               className="YAHWEH-CAP-img-tetra"
               // src="/public/Tetragrammaton/image/YAHWEH-.png"

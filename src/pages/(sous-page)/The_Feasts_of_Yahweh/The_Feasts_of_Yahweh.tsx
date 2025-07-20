@@ -1,7 +1,7 @@
 
 import "./style/the_Feasts_of_Yahweh.css";
 import "./style/responsive.css";
-import TheFeastsofYahweh from "./image/The_Feasts_of_Yahweh.png";
+// import TheFeastsofYahweh from "./image/The_Feasts_of_Yahweh.png";
 import FeastTheme from "./image/Feast_Theme.png";
 import pkgpdfrd from "./image/dl-feast-pkg-pdf-rd.png";
 import pkghtmrd from "./image/dl-feast-pkg-htm-rd.png";
@@ -15,21 +15,61 @@ import ATONEMENT_FEAST_PAGE_CLIP from "./image/ATONEMENT_FEAST_PAGE_CLIP.jpg";
 import bookLinks from "./image/book-links.jpg";
 import feaststrsbkg3 from "./image/feasts-trs-bkg-3.png";
 // import FOP_2025 from "./html/FOP_2025.html";
+import { useState, useEffect } from 'react';
+import { fetchData_2 } from "../../../admin/api/api";
 
 
 
 export function The_Feasts_of_Yahweh() {
+    const [titleFeasts, setTitleFeasts] = useState("")
+    const [titleFeasts2, setTitleFeasts2] = useState("")
+    const [fieldFeasts2, setFieldFeasts2] = useState("")
+    const [titleFeasts3, setTitleFeasts3] = useState("")
+    const [fieldFeasts3, setFieldFeasts3] = useState("")
+    const [titleFeasts4, setTitleFeasts4] = useState("")
+    const [fieldFeasts4, setFieldFeasts4] = useState("")
+    const [descriptionFeasts4, setDescriptionFeasts4] = useState("")
+    const [videoFeasts4, setVideoFeasts4] = useState("")
+    const [titleFeasts5, setTitleFeasts5] = useState("")
+    const [fieldFeasts5, setFieldFeasts5] = useState("")
+    const [descriptionFeasts5, setDescriptionFeasts5] = useState("")
+    const [videoFeasts5, setVideoFeasts5] = useState("")
+    const [titleFeasts6, setTitleFeasts6] = useState("")
+    const [fieldFeasts6a, setFieldFeasts6a] = useState("")
+    const [fieldFeasts6b, setFieldFeasts6b] = useState("")
+
+      useEffect(() => {
+    fetchData_2("feasts").then((d) => {
+      setTitleFeasts(d?.titlefeasts || "")
+      setTitleFeasts2(d?.titlefeasts2 || "")
+      setFieldFeasts2(d?.fieldfeasts2 || "")
+      setTitleFeasts3(d?.titlefeasts3 || "")
+      setFieldFeasts3(d?.fieldfeasts3 || "")
+      setTitleFeasts4(d?.titlefeasts4 || "")
+      setFieldFeasts4(d?.fieldfeasts4 || "")
+      setDescriptionFeasts4(d?.descriptionfeasts4 || "")
+      setVideoFeasts4(d?.videofeasts4 || "")
+      setTitleFeasts5(d?.titlefeasts5 || "")
+      setFieldFeasts5(d?.fieldfeasts5 || "")
+      setDescriptionFeasts5(d?.descriptionfeasts5 || "")
+      setVideoFeasts5(d?.videofeasts5 || "")
+      setTitleFeasts6(d?.titlefeasts6 || "")
+      setFieldFeasts6a(d?.fieldfeasts6a || "")
+      setFieldFeasts6b(d?.fieldfeasts6b || "")
+    })
+  }, []);
   return (
     <div className="feasts-of-yahweh-page">
       <div id="pg-banner-feast"></div>
       <div id="top-bar-gold-feast"></div>
-      <div id="The_Feasts_of_Yahweh-feast">
-        <img
+      <div id="The_Feasts_of_Yahweh-feast" className="title-section-fol">
+         <h1 className="te-title">{titleFeasts}</h1>
+        {/* <img
           className="img-size-feast"
           // src="/public/The_Feasts_of_Yahweh/image/The_Feasts_of_Yahweh.png"
           src={TheFeastsofYahweh}
           alt="Ny Fetin'i Yahweh"
-        />
+        /> */}
       </div>
       <div className="pg-text-fmt-sm-feast">
         <p>Ny fankalazana rehetra dia manomboka amin'ny filentehan'ny masoandro amin'ny daty voalaza.</p>
@@ -38,10 +78,12 @@ export function The_Feasts_of_Yahweh() {
         <div id="feasts-trs-ctn-1">
           <p className="p-mrg">
             <span className="ctn-text-fmt-feast ctn-text-fmt-rd-feast">
-              Ny Paska sy ny Fetin'ny Mofo Tsy Misamy Lava-bolany
+              {/* Ny Paska sy ny Fetin'ny Mofo Tsy Misamy Lava-bolany */}
+              {titleFeasts2}
             </span>
             <br />
-            <span className="font-feast">1 - 8 Aprily 2025</span>
+            {/* <span className="font-feast">1 - 8 Aprily 2025</span> */}
+            <span className="font-feast">{fieldFeasts2}</span>
             <br />
           </p>
           <div>
@@ -131,10 +173,12 @@ export function The_Feasts_of_Yahweh() {
           <div className="wrapper-txt-2">
             <p className="p-mrg-feast">
               <span className="ctn-text-fmt-feast ctn-text-fmt-gr-feast p-text-fmt-nr-1-feast">
-                Fetin'ny Herinandro
+                {/* Fetin'ny Herinandro */}
+                 {titleFeasts3}
               </span>
               <br />
-              <span className="font-feast">28 Mey - 3 Jona 2025</span>
+              {/* <span className="font-feast">28 Mey - 3 Jona 2025</span> */}
+              <span className="font-feast">{fieldFeasts3}</span>
               <br />
             </p>
             <div>
@@ -228,16 +272,19 @@ export function The_Feasts_of_Yahweh() {
               <div className="p-txt-align-feast">
                 <p className="p-mrg-feast-2 p-mrg-0-feast">
                   <span className="ctn-text-fmt-feast-2 ctn-text-fmt-br-lt-feast-2">
-                    Ny Fahatsiarovana ny Fampangonan'ny Trompetra
+                    {/* Ny Fahatsiarovana ny Fampangonan'ny Trompetra */}
+                     {titleFeasts4}
                   </span>
                   <br></br>
-                  <span>15 Septambra 2025</span>
+                  {/* <span>15 Septambra 2025</span> */}
+                  <span>{fieldFeasts4}</span>
                 </p>
                 <p className="p-txt-size-28-feast">
-                  ...Amin'ny volana fahafito, amin'ny andro voalohany amin'ny volana,
+                  {descriptionFeasts4}
+                  {/* ...Amin'ny volana fahafito, amin'ny andro voalohany amin'ny volana,
                   dia hisy Sabata ho anareo, fahatsiarovana amin'ny fanangonana trompetra,
                   fivoriana masina.
-                  <span className="">(Levitikosy 23:24)</span>
+                  <span className="">(Levitikosy 23:24)</span> */}
                 </p>
                 <br></br>
               </div>
@@ -248,9 +295,11 @@ export function The_Feasts_of_Yahweh() {
                     controls
                     // poster="/public/The_Feasts_of_Yahweh/image/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.jpg"
                     poster={MEMORIAL_BLOWING_FEAST_PAGE_CLIP}
+                    // poster={videoFeasts4}
                   >
                     <source
-                      src="https://ms.yahwehbenyahweh.com/video/720/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.mp4"
+                      // src="https://ms.yahwehbenyahweh.com/video/720/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.mp4"
+                      src={videoFeasts4}
                       type="video/mp4"
                     />
                     Mampiasà navigateur manohana, ohatra (Microsoft Explorer 8 na ambony kokoa,
@@ -273,18 +322,21 @@ export function The_Feasts_of_Yahweh() {
               <div className="p-txt-align-feast">
                 <p className="p-mrg-feast-2 p-mrg-0-feast">
                   <span className="ctn-text-fmt-feast-2 ctn-text-fmt-br-feast-2">
-                    Ny Andron'ny Fanavotana
+                    {/* Ny Andron'ny Fanavotana */}
+                    {titleFeasts5}
                   </span>
                   <br />
-                  <span className="">24 Septambra 2025</span>
+                  {/* <span className="">24 Septambra 2025</span> */}
+                  <span className="">{fieldFeasts5}</span>
                   <br />
                 </p>
                 <p className="p-txt-size-28-feast p-mrg-20-feast">
-                  Ary amin'ny andro fahafolo amin'ity volana fahafito ity dia hisy
+                  {descriptionFeasts5}
+                  {/* Ary amin'ny andro fahafolo amin'ity volana fahafito ity dia hisy
                   andro fanavotana: ho fivoriana masina ho anareo izany; ary hiondrehana
                   ny fanahinareo...
                   <br />
-                  (Levitikosy 23:27)
+                  (Levitikosy 23:27) */}
                 </p>
               </div>
               <div>
@@ -296,7 +348,8 @@ export function The_Feasts_of_Yahweh() {
                     className="video-width"
                   >
                     <source
-                      src="https://ms.yahwehbenyahweh.com/video/720/ATONEMENT_FEAST_PAGE_CLIP.mp4"
+                      // src="https://ms.yahwehbenyahweh.com/video/720/ATONEMENT_FEAST_PAGE_CLIP.mp4"
+                      src={videoFeasts5}
                       type="video/mp4"
                     />
                     Mampiasà navigateur manohana, ohatra (Microsoft Explorer 8 na ambony kokoa,
@@ -416,11 +469,13 @@ export function The_Feasts_of_Yahweh() {
           <div className="wrapper-txt-1-feast">
             <p className="p-mrg-feast-5">
               <span className="ctn-text-fmt-feast-5 ctn-text-fmt-bl p-text-fmt-nr-1">
-                Fetin'ny Tabernakely sy ny Fivoriana Masina
+                {/* Fetin'ny Tabernakely sy ny Fivoriana Masina */}
+                {titleFeasts6}
               </span>
               <br />
               <span className="font-date-5">
-                29 Septambra - 6 Oktobra 2025
+                {/* 29 Septambra - 6 Oktobra 2025 */}
+                {fieldFeasts6a}
               </span>
             </p>
             <div>
@@ -438,8 +493,9 @@ export function The_Feasts_of_Yahweh() {
               </span>
             </p>
             <span className="p-text-fmt-lg-feast-5">
-              FONOSANA FISORATANA ANARANA
-              AVAILABLE JULY 2025
+              {/* FONOSANA FISORATANA ANARANA
+              AVAILABLE JULY 2025 */}
+              {fieldFeasts6b}
             </span>
           </div>
         </div>

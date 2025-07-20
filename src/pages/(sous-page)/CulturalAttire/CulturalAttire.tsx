@@ -1,28 +1,64 @@
 import "./style/culturalAttire.css";
 import "./style/responsive.css";
 // import "../../../components/css/default.css";
-import TheCulturalAttire from "./image/The_Cultural_Attire_of_Yahweh.png";
+// import TheCulturalAttire from "./image/The_Cultural_Attire_of_Yahweh.png";
 import bottomMedia from "./image/bottom-media.jpg";
 import imagesData from "../../../data/img/about-images.json";
+import { culturalAttireApi } from "../../../admin/api/api";
+import { useEffect, useState } from "react";
 
 const CulturalAttire = () => {
+
+  const [culturalTitle, setCulturalTitle] = useState("");
+  const [culturalDescription1, setCulturalDescription1] = useState("");
+  const [culturalDescription2, setCulturalDescription2] = useState("");
+  const [culturalDescription3, setCulturalDescription3] = useState("");
+  const [culturalDescription4, setCulturalDescription4] = useState("");
+  const [culturalDescription5, setCulturalDescription5] = useState("");
+
+
+  useEffect(() => {
+    const loadYahwehData = async () => {
+      try {
+        const yahwehData = await culturalAttireApi.get();
+        if (yahwehData.success && yahwehData.data?.length > 0) {
+          const data = yahwehData.data[0];
+          setCulturalTitle(data.title);
+          setCulturalDescription1(data.description1);
+          setCulturalDescription2(data.description2);
+          setCulturalDescription3(data.description3);
+          setCulturalDescription4(data.description4);
+          setCulturalDescription5(data.description5);
+          // console.log(data.title)
+          // console.log(data)
+        }
+      } catch (error) {
+        console.error("Error loading contact data:", error);
+      }
+    };
+
+    loadYahwehData();
+  }, []);
+
   return (
     <div className="cultural-attire-page">
-      <div id="pg-banner-cul" className=""  style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_Cultural_Attire})` }}></div>
+      <div id="pg-banner-cul" className="" style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_Cultural_Attire})` }}></div>
       <div id="top-bar-gold-cul" className=""></div>
-      <div id="The_Cultural_Attire_of" className="">
-        <img
+      <div id="The_Cultural_Attire_of" className="title-section-fol">
+        {/* <img
           // src="/image/The_Cultural_Attire_of_Yahweh.png"
           // src="/public/CulturalAttire/image/The_Cultural_Attire_of_Yahweh.png"
           src={TheCulturalAttire}
           className="wid-cul"
           alt="The Cultural Attire of Yahweh"
-        />
+        /> */}
+        <h1 className="followers-title">{culturalTitle}</h1>
       </div>
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="">
-          <span className="David-cul">יהוה בן יהוה</span> dia nandidy ny fomba
+          {culturalDescription1}
+          {/* <span className="David-cul">יהוה בן יהוה</span> dia nandidy ny fomba
           tokony hitafianay sy ny antony manosika anizany.
           <i>
             <strong>
@@ -43,19 +79,20 @@ const CulturalAttire = () => {
             </strong>
           </i>
           Mba ho voavonjy amin'ny faharavana dia tsy maintsy miverina amin'ny
-          kolontsain'i <span className="David-cul">יהוה</span> isika.
+          kolontsain'i <span className="David-cul">יהוה</span> isika. */}
         </p>
       </div>
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="">
-          Inona no zava-dehibe momba ny akanjon’ny fotsy masina anao?
+          {culturalDescription2}
+          {/* Inona no zava-dehibe momba ny akanjon’ny fotsy masina anao? */}
         </p>
       </div>
       <div className="sec-bar-cul pg-top-pd-mod-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="pg-text-ltr-sp-3">
-          Voalohany, izany dia kolontsain’Andriamanitra,{" "}
+          {/* Voalohany, izany dia kolontsain’Andriamanitra,{" "}
           <span className="David-cul">יהוה</span>, sy ny Zanak’Andriamanitra,{" "}
           <span className="David-cul">יהוה בן יהוה</span>. Ny Daniely 7:9 dia
           mamaritra an’i <span className="David-cul">יהוה</span>, Ilay Antitra
@@ -81,21 +118,24 @@ const CulturalAttire = () => {
                 ny masony tahaka ny lelafo afo’;
               </strong>
             </i>
-          </span>
+          </span> */}
+          {culturalDescription3}
         </p>
       </div>
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="">
-          Raha tsy fantatra amin'ny fomba hitafian'Andriamanitra ny olona iray,
+          {culturalDescription4}
+          {/* Raha tsy fantatra amin'ny fomba hitafian'Andriamanitra ny olona iray,
           dia tsy hahafantatra Azy izy rehefa avy. Noho izany, mety tsy hihaino
-          ny antsoiny izy ka very ny fitahian'ny lanitra.
+          ny antsoiny izy ka very ny fitahian'ny lanitra. */}
         </p>
       </div>
       <div className="sec-bar-cul"></div>
       <div className="sec-text-cul pg-text-fmt-cul">
         <p className="">
-          Ny fotsy dia mariky ny fahadiovana sy ny fitambarana. Ny fitafiana
+          {culturalDescription5}
+          {/* Ny fotsy dia mariky ny fahadiovana sy ny fitambarana. Ny fitafiana
           akanjo fotsy dia maneho fa misy dingana fanadiovana
           mitranga—fanesorana ny fahotana sy fiverenana amin'ny lalàn'ny
           fanekena. 'Na dia mena toy ny menamaso aza ny fahotanareo, dia ho
@@ -104,7 +144,7 @@ const CulturalAttire = () => {
           mandrakizaya, ara-batana sy ara-panahy (Mpitoriteny 9:8). Izany dia
           manambara ny fidiran'ny vanim-potoana vaovao, fenitra
           ara-pitondrantena vaovao, fanjakana tsara; ny Governemanta
-          Teôkratikan'i <span className="David-cul">יהוה</span>.
+          Teôkratikan'i <span className="David-cul">יהוה</span>. */}
         </p>
       </div>
       <div id="pg-btm-media-cul" className="">

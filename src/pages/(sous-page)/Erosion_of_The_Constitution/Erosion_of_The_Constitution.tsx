@@ -5,8 +5,14 @@ import "./style/reponsive.css";
 import TruthImage from "./image/truth.png";
 import BottomMediaImage from "./image/bottom-media.jpg";
 import GoldBarImage from "./image/Gold_Bar_1216.jpg";
+import { fetchData_2 } from "../../../admin/api/api";
+import { useEffect, useState } from "react";
 
 export function Erosion_of_The_Constitution() {
+  const [descriptionErosion, setDescriptionErosion] = useState("")
+  useEffect(() => {
+    fetchData_2("erosion").then((d) => setDescriptionErosion(d?.descriptionerosion || ""))
+  }, []);
   return (
     <>
       <div id="pg-banner-ero" className=""></div>
@@ -14,10 +20,11 @@ export function Erosion_of_The_Constitution() {
 
       <div className="sec-text-ero pg-text-ttl-fmt-ero">
         <p>
-          <i>"Ny Fahasimban'ny Lalàmpanorenana"</i> - dia faminaniana nataon'ity
+          {descriptionErosion}
+          {/* <i>"Ny Fahasimban'ny Lalàmpanorenana"</i> - dia faminaniana nataon'ity
           Tranonkala ity mihoatra ny roapolo taona lasa izay, miorina amin'ny
           zava-nitranga sy ny fijaliana tena izay niainan'ny Mesia antsika,{" "}
-          <span className="David-ero">יהוה&nbsp;בּן&nbsp;יהוה</span>.
+          <span className="David-ero">יהוה&nbsp;בּן&nbsp;יהוה</span>. */}
         </p>
       </div>
 

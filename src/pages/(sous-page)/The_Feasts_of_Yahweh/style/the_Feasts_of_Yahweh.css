@@ -380,3 +380,14 @@ figure {
   width: 1216px;
   height: 44px;
 }
+
+.te-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #000;
+  /* ou la couleur de votre choix */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 0;
+}

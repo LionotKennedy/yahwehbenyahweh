@@ -2894,7 +2894,7 @@ const HomeTab: React.FC = () => {
       setLoading(false);
     }
   };
-
+ 
   const fetchBanners = async () => {
     try {
       setLoading(true);
