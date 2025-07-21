@@ -21,14 +21,14 @@ interface SectionMenuData {
 export function Erosion_of_The_Constitution() {
   const [descriptionErosion, setDescriptionErosion] = useState("")
   const [erosionImage, setErosionImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
 
   const fetchSectionBackground = async () => {
     try {
       // setLoading(true);
       // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -40,8 +40,10 @@ export function Erosion_of_The_Constitution() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
-            b.id === section.id || b.section_name === section.name
+
+          const banner: SectionMenuData | undefined = sortedSectionbg.find(
+            (b: SectionMenuData) =>
+              b.id === section.id || b.section_name === section.name
           );
           if (banner) {
             section.setter(getImageUrl(banner.path));

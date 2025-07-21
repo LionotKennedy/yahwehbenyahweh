@@ -31,7 +31,7 @@ export function The_Crucifixion() {
   const [descriptionCrucifixion10, setDescriptionCrucifixion10] = useState("")
   const [descriptionCrucifixion11, setDescriptionCrucifixion11] = useState("")
   const [crucifixionImage, setCrucifixionImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
 
 
@@ -39,7 +39,7 @@ export function The_Crucifixion() {
     try {
       // setLoading(true);
       // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -51,8 +51,17 @@ export function The_Crucifixion() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
-            b.id === section.id || b.section_name === section.name
+          interface BannerData {
+            id: number;
+            section_name: string | null;
+            path: string;
+            created_at: string;
+            updated_at: string;
+          }
+
+          const banner: BannerData | undefined = sortedSectionbg.find(
+            (b: BannerData) =>
+              b.id === section.id || b.section_name === section.name
           );
           if (banner) {
             section.setter(getImageUrl(banner.path));
@@ -93,7 +102,7 @@ export function The_Crucifixion() {
   }, []);
   return (
     <div id="backdrop" className="crucifixion-page">
-      <div id="pg-banner-cru"  style={{ backgroundImage: `url(${crucifixionImage})` }}></div>
+      <div id="pg-banner-cru" style={{ backgroundImage: `url(${crucifixionImage})` }}></div>
       <div id="top-bar-gold-cru"></div>
       <div id="No-cru">
         <img

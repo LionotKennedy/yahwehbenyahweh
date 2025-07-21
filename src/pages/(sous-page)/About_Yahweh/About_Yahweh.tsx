@@ -62,7 +62,20 @@ export function AboutYahweh() {
         if (sectionResponse.success) {
           // console.log("Toutes les sections:", sectionResponse.data); // Affiche toutes les sections
 
-          const aboutSection = sectionResponse.data.find(section =>
+          interface Section {
+            section_name: string;
+            path: string;
+            // Add other properties if needed
+          }
+
+          interface SectionResponse {
+            success: boolean;
+            data?: Section[];
+            message?: string;
+          }
+
+          const sectionResponse: SectionResponse = await SectionAPI.fetchAll();
+          const aboutSection: Section | undefined = sectionResponse.data?.find((section: Section) =>
             section.section_name === "about_yahweh"
           );
 

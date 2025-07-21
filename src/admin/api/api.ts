@@ -1,7 +1,10 @@
 // api.ts
-const API_BASE_URL = "http://localhost:5000/api/home-contenu";
-const API_BASE_URL_2 = "http://localhost:5000/api";
+const RACI_URL = "http://localhost:5000";
 
+// const API_BASE_URL = "http://localhost:5000/api/home-contenu";
+// const API_BASE_URL_2 = "http://localhost:5000/api";
+const API_BASE_URL = `${RACI_URL}/api/home-contenu`;
+const API_BASE_URL_2 = `${RACI_URL}/api`;
 // Fonction générique pour récupérer les données
 export const fetchData = async (endpoint: string) => {
   try {

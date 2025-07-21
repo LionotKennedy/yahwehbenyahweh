@@ -3,7 +3,7 @@ import "./style/responsive.css";
 
 // Importation des images
 import DivBarImage from "./image/div-bar.png";
-import AuthenticImage from "./image/Authentic.jpg";
+// import AuthenticImage from "./image/Authentic.jpg";
 import BottomMediaImage from "./image/bottom-media.jpg";
 import { fetchData_2 } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
@@ -25,13 +25,13 @@ export function Operation_Word_War() {
   const [descriptionOperation4, setDescriptionOperation4] = useState("")
   const [operationImage1, setOperationImage1] = useState("");
   const [operationImage2, setOperationImage2] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
   const fetchSectionBackground = async () => {
     try {
       // setLoading(true);
       // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -44,7 +44,7 @@ export function Operation_Word_War() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
+          const banner: SectionMenuData | undefined = sortedSectionbg.find((b: SectionMenuData) =>
             b.id === section.id || b.section_name === section.name
           );
           if (banner) {

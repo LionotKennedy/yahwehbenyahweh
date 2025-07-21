@@ -47,13 +47,13 @@ export function The_Feasts_of_Yahweh() {
   const [fieldFeasts6a, setFieldFeasts6a] = useState("")
   const [fieldFeasts6b, setFieldFeasts6b] = useState("")
   const [feastsImage, setFeastsImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
   const fetchSectionBackground = async () => {
     try {
       // setLoading(true);
       // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -65,8 +65,11 @@ export function The_Feasts_of_Yahweh() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
-            b.id === section.id || b.section_name === section.name
+          interface SectionBg extends SectionMenuData { }
+
+          const banner: SectionBg | undefined = sortedSectionbg.find(
+            (b: SectionBg) =>
+              b.id === section.id || b.section_name === section.name
           );
           if (banner) {
             section.setter(getImageUrl(banner.path));

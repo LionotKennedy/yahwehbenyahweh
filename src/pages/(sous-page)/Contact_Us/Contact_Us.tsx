@@ -1,14 +1,12 @@
 import "./style/contact-us.css";
 import "./style/contact_Us.css";
 import "./style/responsive.css";
-// import "./style/news.css";
-// import To_Contact_Us from "./image/To_Contact_Us.png";
 import mail from "./image/mail.png";
-// import phone from "./image/phone.png";
 import bottomMedia from "./image/bottom-media.jpg";
 import { useEffect, useState } from "react";
 import { contactApi } from "../../../admin/api/api";
 import { fetchContactAPI } from "../../../admin/api/contact";
+import { URL } from "../../../admin/api/url";
 
 interface ContactData {
   id: number
@@ -20,21 +18,22 @@ interface ContactData {
 const getImageUrl = (path: string): string => {
   if (!path) return "/placeholder.svg"
   if (path.startsWith("http")) return path
-  return `http://localhost:5000${path}`
+  // return `http://localhost:5000${path}`
+  return `${URL}${path}`
 }
 
 export function ContactUs() {
 
 
- const [title, setTitle] = useState(null);
+  const [title, setTitle] = useState(null);
   const [description1, setDescription1] = useState(null);
   const [description2, setDescription2] = useState(null);
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
 
-    const [contactImage, setContactImage] = useState<ContactData[]>([])
-    const [contactsImages, setContactsImages] = useState("")
-  
+  const [, setContactImage] = useState<ContactData[]>([])
+  const [contactsImages, setContactsImages] = useState("")
+
 
   useEffect(() => {
     const loadContactData = async () => {
@@ -47,7 +46,6 @@ export function ContactUs() {
           setDescription2(data.description2);
           setPhone(data.phone);
           setEmail(data.email);
-          // console.log(data.title)
         }
       } catch (error) {
         console.error("Error loading contact data:", error);
@@ -56,27 +54,27 @@ export function ContactUs() {
 
     loadContactData();
   }, []);
-    const fetchContact = async () => {
-      try {
-       
-        const data = await fetchContactAPI()
-        setContactImage(data)
-        const sortedContact = data.sort((a: any, b: any) => a.id - b.id)
-        const about_contact = sortedContact.find((contact: any) => contact.id === 1)
-        if (about_contact) {
-          setContactsImages(getImageUrl(about_contact.path))
-        }
-      } catch (err) {
-        // setError(err instanceof Error ? err.message : "Erreur inconnue")
-      } finally {
-        // setLoading(false)
+  const fetchContact = async () => {
+    try {
+
+      const data = await fetchContactAPI()
+      setContactImage(data)
+      const sortedContact = data.sort((a: any, b: any) => a.id - b.id)
+      const about_contact = sortedContact.find((contact: any) => contact.id === 1)
+      if (about_contact) {
+        setContactsImages(getImageUrl(about_contact.path))
       }
+    } catch (err) {
+      // setError(err instanceof Error ? err.message : "Erreur inconnue")
+    } finally {
+      // setLoading(false)
     }
-  
-    useEffect(() => {
-      fetchContact()
-    }, [])
-  
+  }
+
+  useEffect(() => {
+    fetchContact()
+  }, [])
+
   return (
     <div className="contact-container">
       {/* Header Section */}
@@ -91,8 +89,7 @@ export function ContactUs() {
           alt="To Contact Us"
           className="title-image"
         /> */}
-         {/* <h1 className="contact-title">TO CONTACT US</h1> */}
-         <h1 className="contact-title">{title}</h1>
+        <h1 className="contact-title">{title}</h1>
       </div>
 
       {/* Contact Information Sections */}
@@ -147,7 +144,7 @@ export function ContactUs() {
                 P.O. Box 884
                 <br />
                 Seguin, TX 78156-0884 */}
-                 {description2}
+                {description2}
               </div>
             </div>
           </div>

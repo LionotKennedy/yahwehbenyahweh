@@ -6,7 +6,7 @@ import bottomMedia from "./image/bottom-media.png";
 import imagesData from "../../../data/img/about-images.json";
 import { yahwehBenApi } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
-import { SectionAPI, getImageUrl } from "../../../admin/api/homeImage2"; 
+import { SectionAPI, getImageUrl } from "../../../admin/api/homeImage2";
 
 export function AboutYahwehBenYahweh() {
 
@@ -68,7 +68,14 @@ export function AboutYahwehBenYahweh() {
           console.log("Toutes les sections:", sectionResponse.data);
 
           // Recherche de la section about_yahweh_ben
-          const aboutYahwehBenSection = sectionResponse.data.find(section =>
+          interface Section {
+            section_name: string;
+            path: string;
+            // Add other fields if needed
+          }
+
+
+          const aboutYahwehBenSection = (sectionResponse.data as Section[]).find((section: Section) =>
             section.section_name === "about_yahweh_ben"
           );
 
@@ -78,8 +85,10 @@ export function AboutYahwehBenYahweh() {
             console.log("URL complète de l'image:", imageUrl);
             setAboutYahwehBenBg(imageUrl);
           } else {
-            console.log("Aucune section about_yahweh_ben trouvée - noms disponibles:",
-              sectionResponse.data.map(s => s.section_name));
+            console.log(
+              "Aucune section about_yahweh_ben trouvée - noms disponibles:",
+              (sectionResponse.data as Section[]).map((s: Section) => s.section_name)
+            );
           }
         } else {
           console.error("Erreur API sections:", sectionResponse.message);

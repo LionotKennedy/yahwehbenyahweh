@@ -27,22 +27,22 @@ export function Books_for_the_Year() {
   useEffect(() => {
     const loadYahwehData = async () => {
       try {
-        // Chargez les données textuelles
-        // const yahwehData = await yahwehBenApi.get();
-        // if (yahwehData.success && yahwehData.data?.length > 0) {
-        //   const data = yahwehData.data[0];
-        //   setYahwehTitle2(data.title2);
-        //   // ... autres setters ...
-        // }
-
         // Chargez l'image de fond de la section
         const sectionResponse = await SectionAPI.fetchAll();
         if (sectionResponse.success) {
           // console.log("Toutes les sections:", sectionResponse.data);
 
           // Recherche de la section about_yahweh_ben
-          const aboutYahwehBenSection = sectionResponse.data.find(section =>
-            section.section_name === "books"
+          interface Section {
+            section_name: string;
+            path: string;
+            // Add other properties if needed
+          }
+
+
+          const sectionResponse = await SectionAPI.fetchAll();
+          const aboutYahwehBenSection: Section | undefined = sectionResponse.data?.find(
+            (section: Section) => section.section_name === "books"
           );
 
           if (aboutYahwehBenSection) {

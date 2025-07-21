@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GalleryAPI } from "../admin/api/homeImage2";   // <-- your API
 import "./styles/centerButtons.css";   // <-- keep your existing styles
+import { URL } from "../admin/api/url";
 
 interface GalleryImage {
   id: number;
@@ -25,7 +26,7 @@ const LINKS = [
   "/Shop",
   // "https://shop.yahwehbenyahweh.com/",
 ];
-
+// const URL= "http://localhost:5000";
 export function CenterButtons() {
   const [images, setImages] = useState<GalleryImage[]>([]);
 
@@ -41,21 +42,32 @@ export function CenterButtons() {
         const href = LINKS[idx];
         const isExternal = href.startsWith("http");
 
-        const El = isExternal ? "a" : Link;
-        const elProps = isExternal
-          ? { href, target: "_blank", rel: "noopener noreferrer" }
-          : { to: href };
-
         return (
           <div key={img.id} className="center-button-home">
-            <El {...elProps} aria-label={img.alt}>
-              <img
-                src={`http://localhost:5000${img.path}`}   // API URL
-                alt={img.alt}
-                className="center-button-img-home"
-                loading="lazy"
-              />
-            </El>
+            {isExternal ? (
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={img.alt}
+              >
+                <img
+                  src={`${URL}${img.path}`}   // API URL
+                  alt={img.alt}
+                  className="center-button-img-home"
+                  loading="lazy"
+                />
+              </a>
+            ) : (
+              <Link to={href} aria-label={img.alt}>
+                <img
+                  src={`${URL}${img.path}`}   // API URL
+                  alt={img.alt}
+                  className="center-button-img-home"
+                  loading="lazy"
+                />
+              </Link>
+            )}
           </div>
         );
       })}

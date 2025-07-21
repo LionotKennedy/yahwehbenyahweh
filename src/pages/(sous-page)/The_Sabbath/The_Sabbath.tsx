@@ -1,10 +1,6 @@
 
 import "./style/the_Sabbath.css";
 import "./style/responsive.css";
-
-// Importation des images
-// import SabbathRemember from "../imSabbath_Remember.png"; 
-// import SabbathRemember from "./image/Sabbath_Remember.png";
 import FrenchVer from "./image/French_ver.png";
 import SpanishVer from "./image/Spanish_ver.png";
 import EnglishVer from "./image/English_ver.png";
@@ -32,14 +28,14 @@ export function The_Sabbath() {
   const [descriptionSabbath5, setDescriptionSabbath5] = useState("")
 
   const [sabbathImage, setSabbathImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
 
   const fetchSectionBackground = async () => {
     try {
       // setLoading(true);
       // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -51,8 +47,9 @@ export function The_Sabbath() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
-            b.id === section.id || b.section_name === section.name
+          const banner: SectionMenuData | undefined = sortedSectionbg.find(
+            (b: SectionMenuData) =>
+              b.id === section.id || b.section_name === section.name
           );
           if (banner) {
             section.setter(getImageUrl(banner.path));

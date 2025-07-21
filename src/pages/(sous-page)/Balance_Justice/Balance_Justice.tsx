@@ -24,14 +24,14 @@ export function Balance_Justice() {
   const [descriptionBalance3, setDescriptionBalance3] = useState("")
   const [descriptionBalance4, setDescriptionBalance4] = useState("")
   const [balanceImage, setBalanceImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
 
   const fetchSectionBackground = async () => {
     try {
       // setLoading(true);
       // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -43,7 +43,7 @@ export function Balance_Justice() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
+          const banner = sortedSectionbg.find((b: SectionMenuData) =>
             b.id === section.id || b.section_name === section.name
           );
           if (banner) {

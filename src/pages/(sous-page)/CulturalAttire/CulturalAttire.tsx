@@ -1,7 +1,5 @@
 import "./style/culturalAttire.css";
 import "./style/responsive.css";
-// import "../../../components/css/default.css";
-// import TheCulturalAttire from "./image/The_Cultural_Attire_of_Yahweh.png";
 import bottomMedia from "./image/bottom-media.jpg";
 import imagesData from "../../../data/img/about-images.json";
 import { culturalAttireApi } from "../../../admin/api/api";
@@ -16,7 +14,7 @@ const CulturalAttire = () => {
   const [culturalDescription3, setCulturalDescription3] = useState("");
   const [culturalDescription4, setCulturalDescription4] = useState("");
   const [culturalDescription5, setCulturalDescription5] = useState("");
-    const [aboutYahwehBenBg, setAboutYahwehBenBg] = useState("");
+  const [aboutYahwehBenBg, setAboutYahwehBenBg] = useState("");
 
 
   useEffect(() => {
@@ -42,46 +40,55 @@ const CulturalAttire = () => {
     loadYahwehData();
   }, []);
 
-    useEffect(() => {
-      const loadYahwehData = async () => {
-        try {
-          // Chargez les données textuelles
-          const yahwehData = await culturalAttireApi.get();
-          if (yahwehData.success && yahwehData.data?.length > 0) {
-            const data = yahwehData.data[0];
-            setCulturalTitle(data.title);
-            // ... autres setters ...
-          }
-  
-          // Chargez l'image de fond de la section
-          const sectionResponse = await SectionAPI.fetchAll();
-          if (sectionResponse.success) {
-            console.log("Toutes les sections:", sectionResponse.data);
-  
-            // Recherche de la section about_yahweh_ben
-            const aboutYahwehBenSection = sectionResponse.data.find(section =>
-              section.section_name === "cultural"
-            );
-  
-            if (aboutYahwehBenSection) {
-              console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
-              const imageUrl = getImageUrl(aboutYahwehBenSection.path);
-              console.log("URL complète de l'image:", imageUrl);
-              setAboutYahwehBenBg(imageUrl);
-            } else {
-              console.log("Aucune section about_yahweh_ben trouvée - noms disponibles:",
-                sectionResponse.data.map(s => s.section_name));
-            }
-          } else {
-            console.error("Erreur API sections:", sectionResponse.message);
-          }
-        } catch (error) {
-          console.error("Error loading data:", error);
+  useEffect(() => {
+    const loadYahwehData = async () => {
+      try {
+        // Chargez les données textuelles
+        const yahwehData = await culturalAttireApi.get();
+        if (yahwehData.success && yahwehData.data?.length > 0) {
+          const data = yahwehData.data[0];
+          setCulturalTitle(data.title);
+          // ... autres setters ...
         }
-      };
-  
-      loadYahwehData();
-    }, [])
+
+        // Chargez l'image de fond de la section
+        const sectionResponse = await SectionAPI.fetchAll();
+        if (sectionResponse.success) {
+          console.log("Toutes les sections:", sectionResponse.data);
+
+          // Recherche de la section about_yahweh_ben
+          interface Section {
+            section_name: string;
+            path: string;
+            [key: string]: any;
+          }
+
+
+          const aboutYahwehBenSection: Section | undefined = (sectionResponse.data as Section[]).find(
+            (section: Section) => section.section_name === "cultural"
+          );
+
+          if (aboutYahwehBenSection) {
+            console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
+            const imageUrl = getImageUrl(aboutYahwehBenSection.path);
+            console.log("URL complète de l'image:", imageUrl);
+            setAboutYahwehBenBg(imageUrl);
+          } else {
+            console.log(
+              "Aucune section about_yahweh_ben trouvée - noms disponibles:",
+              (sectionResponse.data as { section_name: string }[]).map((s: { section_name: string }) => s.section_name)
+            );
+          }
+        } else {
+          console.error("Erreur API sections:", sectionResponse.message);
+        }
+      } catch (error) {
+        console.error("Error loading data:", error);
+      }
+    };
+
+    loadYahwehData();
+  }, [])
 
   return (
     <div className="cultural-attire-page">

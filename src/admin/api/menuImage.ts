@@ -1,13 +1,7 @@
 // api/menuApi.ts
-import { toast } from 'react-hot-toast';
+import { toast } from "react-hot-toast";
 
-interface SectionMenuData {
-  id: number;
-  section_name: string | null;
-  path: string;
-  created_at: string;
-  updated_at: string;
-}
+const RACI_URL = "http://localhost:5000";
 
 interface ApiResponse {
   success: boolean;
@@ -19,7 +13,7 @@ interface ApiResponse {
 export const getImageUrl = (path: string): string => {
   if (!path) return "/placeholder.svg";
   if (path.startsWith("http")) return path;
-  return `http://localhost:5000${path}`;
+  return `${RACI_URL}${path}`;
 };
 
 const base64ToFile = (base64String: string, filename: string): File => {
@@ -35,9 +29,9 @@ const base64ToFile = (base64String: string, filename: string): File => {
 };
 
 export const MenuAPI = {
-  fetchAll: async (): Promise<ApiResponse> => { 
+  fetchAll: async (): Promise<ApiResponse> => {
     try {
-      const response = await fetch("http://localhost:5000/api/menu", {
+      const response = await fetch(`${RACI_URL}/api/menu`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -51,14 +45,18 @@ export const MenuAPI = {
     } catch (error) {
       console.error("Erreur lors de la récupération des sections:", error);
       toast.error("Erreur lors du chargement des sections");
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
   },
 
-  update: async (id: number, imageData: string, section_name?: string): Promise<ApiResponse> => {
+  update: async (
+    id: number,
+    imageData: string,
+    section_name?: string
+  ): Promise<ApiResponse> => {
     const toastId = toast.loading(`Mise à jour de la section ${id}...`);
     try {
       let body: FormData | string;
@@ -72,13 +70,13 @@ export const MenuAPI = {
         body = formData;
       } else {
         headers["Content-Type"] = "application/json";
-        body = JSON.stringify({ 
-          path: imageData, 
-          section_name: section_name || "Updated Section" 
+        body = JSON.stringify({
+          path: imageData,
+          section_name: section_name || "Updated Section",
         });
       }
 
-      const response = await fetch(`http://localhost:5000/api/menu/id/${id}`, {
+      const response = await fetch(`${RACI_URL}/api/menu/id/${id}`, {
         method: "PUT",
         headers,
         body,
@@ -89,15 +87,20 @@ export const MenuAPI = {
       }
 
       const data = await response.json();
-      toast.success(`Section ${section_name || id} mise à jour avec succès!`, { id: toastId });
+      toast.success(`Section ${section_name || id} mise à jour avec succès!`, {
+        id: toastId,
+      });
       return { success: true, data };
     } catch (error) {
-      console.error(`Erreur lors de la mise à jour de la section ${id}:`, error);
+      console.error(
+        `Erreur lors de la mise à jour de la section ${id}:`,
+        error
+      );
       toast.error(`Échec de la mise à jour de la section`, { id: toastId });
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
-  }
+  },
 };

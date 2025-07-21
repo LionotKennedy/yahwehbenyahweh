@@ -27,15 +27,15 @@ const UniverseOfYahweh = () => {
   const [descriptionUniverse4, setDescriptionUniverse4] = useState("")
   const [videoLinkUniverse, setVideoLinkUniverse] = useState('')
   const [universeImage, setUniverseImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  // Removed unused state: sectionMenubg
+
 
 
   const fetchSectionBackground = async () => {
     try {
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
-        setSectionMenuBg(data);
         const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
 
         // Mise à jour des images pour chaque section
@@ -44,8 +44,9 @@ const UniverseOfYahweh = () => {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
-            b.id === section.id || b.section_name === section.name
+          const banner: SectionMenuData | undefined = sortedSectionbg.find(
+            (b: SectionMenuData) =>
+              b.id === section.id || b.section_name === section.name
           );
           if (banner) {
             section.setter(getImageUrl(banner.path));

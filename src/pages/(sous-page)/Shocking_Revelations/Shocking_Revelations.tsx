@@ -29,12 +29,10 @@ interface SectionMenuData {
 
 export function Shocking_Revelations() {
   const [revelationsImage, setRevelationsImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
   const fetchSectionBackground = async () => {
     try {
-      // setLoading(true);
-      // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -46,20 +44,18 @@ export function Shocking_Revelations() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
-            b.id === section.id || b.section_name === section.name
+          const banner: SectionMenuData | undefined = sortedSectionbg.find(
+            (b: SectionMenuData) =>
+              b.id === section.id || b.section_name === section.name
           );
           if (banner) {
             section.setter(getImageUrl(banner.path));
           }
         });
       } else {
-        // if (message) toast.error(message);
       }
     } catch (err) {
       console.error("Erreur lors de la récupération des sections:", err);
-      // setError(err instanceof Error ? err.message : "Erreur inconnue");
-      // toast.error("Erreur lors du chargement des sections");
     } finally {
       // setLoading(false);
     }

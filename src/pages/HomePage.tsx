@@ -67,7 +67,7 @@ interface SlideData {
 const HomePage: React.FC = () => {
   const [banners, setBanners] = useState<BannerData[]>([]);
   // Récupération des données depuis les JSON avec typage
-  const { videoSection, videos }: HomePageContent["homePage"] = content.homePage
+  const { videos }: HomePageContent["homePage"] = content.homePage
   const images: ImagesData = imagesData
   const [title, setTitle] = useState(null);
   const [description1, setDescription1] = useState(null);
@@ -75,48 +75,6 @@ const HomePage: React.FC = () => {
   const [src2, setSRC2] = useState(null);
   const [src3, setSRC3] = useState(null);
 
-
-
-  // Création des slides à partir du JSON d'images
-  // const slides: SlideData[] = images.banners.map((banner: BannerData) => ({
-  //   id: banner.id,
-  //   image: banner.path,
-  //   alt: banner.alt,
-  // }))
-
-  // useEffect(() => {
-  //   const loadContactData = async () => {
-  //     try {
-  //       const homeData = await homeApi.get();
-  //       if (homeData.success && homeData.data?.length > 0) {
-  //         const data = homeData.data[0];
-  //         setTitle(data.title);
-  //         setDescription1(data.description1);
-  //         setSRC1(data.src1);
-  //         setSRC2(data.src2);
-  //         setSRC3(data.src3);
-  //         // console.log(description1)
-  //         // console.log(data.src1)
-  //       }
-  //     } catch (error) {
-  //       console.error("Error loading contact data:", error);
-  //     }
-  //   };
-
-  //   loadContactData();
-  // }, []);
-
-  // const slides: SlideData[] = (banners.length > 0 ? banners : images.banners).map((banner: BannerData) => ({
-  //   id: banner.id,
-  //   image: banner.path,
-  //   alt: banner.alt,
-  // }));
-
-  //   const slides: SlideData[] = (banners.length > 0 ? banners : images.banners).map((banner: BannerData) => ({
-  //   id: banner.id,
-  //   image: getImageUrl(banner.path), // Utilisez getImageUrl ici
-  //   alt: banner.alt,
-  // }));
   let displayedBanners = banners.length > 0 ? banners : images.banners;
 
   // Filtrez pour ne garder que les IDs 1, 2, 3 (ou les 3 premiers si fallback)
@@ -196,16 +154,16 @@ const HomePage: React.FC = () => {
             alt={bookOfTheMonthImage.alt}
           />
         </Link> */}
-        <Link 
-  to="/Book_of_the_Month" 
-  state={{ banners: banners }} // Passez explicitement les banners
->
-  <img
-    className="botm-image-home"
-    src={getImageUrl(bookOfTheMonthImage.path)}
-    alt={bookOfTheMonthImage.alt}
-  />
-</Link>
+        <Link
+          to="/Book_of_the_Month"
+          state={{ banners: banners }} // Passez explicitement les banners
+        >
+          <img
+            className="botm-image-home"
+            src={getImageUrl(bookOfTheMonthImage.path)}
+            alt={bookOfTheMonthImage.alt}
+          />
+        </Link>
       </div>
       <div className="style-home">
         <Link to="/Book_of_the_Month">

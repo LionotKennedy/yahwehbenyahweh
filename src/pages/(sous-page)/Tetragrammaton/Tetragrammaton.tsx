@@ -1,6 +1,5 @@
 
 import "./style/tetragrammaton.css";
-// import Tetragrama from "./image/Tetragrammaton.png";
 import Yahweh from "./image/Yahweh.png";
 import Yahweh_Ben_Yahweh from "./image/Yahweh_Ben_Yahweh.png";
 import YAHWEH from "./image/YAHWEH-.png";
@@ -24,13 +23,13 @@ export function Tetragrammaton() {
   const [description, setDescription] = useState("")
   const [description2, setDescription2] = useState("")
   const [tetragrammatonImage, setTetragrammatonImage] = useState("");
-  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+  const [, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
   const fetchSectionBackground = async () => {
     try {
       // setLoading(true);
       // setError(null);
-      const { success, data, message } = await MenuAPI.fetchAll();
+      const { success, data } = await MenuAPI.fetchAll();
 
       if (success && data) {
         setSectionMenuBg(data);
@@ -42,7 +41,7 @@ export function Tetragrammaton() {
         ];
 
         sections.forEach(section => {
-          const banner = sortedSectionbg.find(b =>
+          const banner = sortedSectionbg.find((b: SectionMenuData) =>
             b.id === section.id || b.section_name === section.name
           );
           if (banner) {
@@ -50,12 +49,9 @@ export function Tetragrammaton() {
           }
         });
       } else {
-        // if (message) toast.error(message);
       }
     } catch (err) {
       console.error("Erreur lors de la récupération des sections:", err);
-      // setError(err instanceof Error ? err.message : "Erreur inconnue");
-      // toast.error("Erreur lors du chargement des sections");
     } finally {
       // setLoading(false);
     }

@@ -1,11 +1,14 @@
 // api.ts
-import { toast } from 'react-hot-toast';
+import { toast } from "react-hot-toast";
+
+const RACI_URL = "http://localhost:5000";
 
 // Fonction pour construire l'URL complète des images
 export const getImageUrl = (path: string): string => {
   if (!path) return "/placeholder.svg";
   if (path.startsWith("http")) return path;
-  return `http://localhost:5000${path}`;
+  // return `http://localhost:5000${path}`;
+  return `${RACI_URL}${path}`;
 };
 
 // Fonction pour convertir base64 en File
@@ -32,7 +35,8 @@ interface ApiResponse {
 export const BannerAPI = {
   fetchAll: async (): Promise<ApiResponse> => {
     try {
-      const response = await fetch("http://localhost:5000/api/home/banners", {
+      // const response = await fetch("http://localhost:5000/api/home/banners", {
+      const response = await fetch(`${RACI_URL}/api/home/banners`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -45,14 +49,18 @@ export const BannerAPI = {
       return { success: true, data };
     } catch (error) {
       console.error("Erreur lors de la récupération des bannières:", error);
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
   },
 
-  update: async (id: number, imageData: string, alt?: string): Promise<ApiResponse> => {
+  update: async (
+    id: number,
+    imageData: string,
+    alt?: string
+  ): Promise<ApiResponse> => {
     try {
       let body: FormData | string;
       const headers: Record<string, string> = {};
@@ -65,10 +73,14 @@ export const BannerAPI = {
         body = formData;
       } else {
         headers["Content-Type"] = "application/json";
-        body = JSON.stringify({ path: imageData, alt: alt || "Updated Banner" });
+        body = JSON.stringify({
+          path: imageData,
+          alt: alt || "Updated Banner",
+        });
       }
 
-      const response = await fetch(`http://localhost:5000/api/home/banners/${id}`, {
+      // const response = await fetch(`http://localhost:5000/api/home/banners/${id}`, {
+      const response = await fetch(`${RACI_URL}/api/home/banners/${id}`, {
         method: "PUT",
         headers,
         body,
@@ -82,21 +94,25 @@ export const BannerAPI = {
       toast.success(`Bannière ${id} mise à jour avec succès!`);
       return { success: true, data };
     } catch (error) {
-      console.error(`Erreur lors de la mise à jour de la bannière ${id}:`, error);
+      console.error(
+        `Erreur lors de la mise à jour de la bannière ${id}:`,
+        error
+      );
       toast.error(`Échec de la mise à jour de la bannière ${id}`);
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
-  }
+  },
 };
 
 // Fonctions API pour les sections
 export const SectionAPI = {
   fetchAll: async (): Promise<ApiResponse> => {
     try {
-      const response = await fetch("http://localhost:5000/api/sections", {
+      // const response = await fetch("http://localhost:5000/api/sections", {
+      const response = await fetch(`${RACI_URL}/api/sections`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -109,14 +125,18 @@ export const SectionAPI = {
       return { success: true, data };
     } catch (error) {
       console.error("Erreur lors de la récupération des sections:", error);
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
   },
 
-  update: async (id: number, imageData: string, section_name?: string): Promise<ApiResponse> => {
+  update: async (
+    id: number,
+    imageData: string,
+    section_name?: string
+  ): Promise<ApiResponse> => {
     try {
       let body: FormData | string;
       const headers: Record<string, string> = {};
@@ -125,18 +145,25 @@ export const SectionAPI = {
         const file = base64ToFile(imageData, `section-${id}.jpg`);
         const formData = new FormData();
         formData.append("image", file);
-        formData.append("section_name", section_name || "Updated Section background");
+        formData.append(
+          "section_name",
+          section_name || "Updated Section background"
+        );
         body = formData;
       } else {
         headers["Content-Type"] = "application/json";
         body = JSON.stringify({ path: imageData, section_name });
       }
 
-      const response = await fetch(`http://localhost:5000/api/sections/id/${id}`, {
-        method: "PUT",
-        headers,
-        body,
-      });
+      const response = await fetch(
+        // `http://localhost:5000/api/sections/id/${id}`,
+        `${RACI_URL}/api/sections/id/${id}`,
+        {
+          method: "PUT",
+          headers,
+          body,
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Erreur HTTP: ${response.status}`);
@@ -146,21 +173,25 @@ export const SectionAPI = {
       toast.success(`Section ${section_name} mise à jour avec succès!`);
       return { success: true, data };
     } catch (error) {
-      console.error(`Erreur lors de la mise à jour de la section ${id}:`, error);
+      console.error(
+        `Erreur lors de la mise à jour de la section ${id}:`,
+        error
+      );
       toast.error(`Échec de la mise à jour de la section`);
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
-  }
+  },
 };
 
 // Fonctions API pour la galerie
 export const GalleryAPI = {
   fetchAll: async (): Promise<ApiResponse> => {
     try {
-      const response = await fetch("http://localhost:5000/api/gallery", {
+      // const response = await fetch("http://localhost:5000/api/gallery", {
+      const response = await fetch(`${RACI_URL}/api/gallery`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
@@ -172,15 +203,22 @@ export const GalleryAPI = {
       const data = await response.json();
       return { success: true, data };
     } catch (error) {
-      console.error("Erreur lors de la récupération des images de galerie:", error);
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      console.error(
+        "Erreur lors de la récupération des images de galerie:",
+        error
+      );
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
   },
 
-  update: async (id: number, imageData: string, alt?: string): Promise<ApiResponse> => {
+  update: async (
+    id: number,
+    imageData: string,
+    alt?: string
+  ): Promise<ApiResponse> => {
     try {
       let body: FormData | string;
       const headers: Record<string, string> = {};
@@ -193,10 +231,14 @@ export const GalleryAPI = {
         body = formData;
       } else {
         headers["Content-Type"] = "application/json";
-        body = JSON.stringify({ path: imageData, alt: alt || "Updated Gallery Image" });
+        body = JSON.stringify({
+          path: imageData,
+          alt: alt || "Updated Gallery Image",
+        });
       }
 
-      const response = await fetch(`http://localhost:5000/api/gallery/${id}`, {
+      // const response = await fetch(`http://localhost:5000/api/gallery/${id}`, {
+      const response = await fetch(`${RACI_URL}/api/gallery/${id}`, {
         method: "PUT",
         headers,
         body,
@@ -210,12 +252,15 @@ export const GalleryAPI = {
       toast.success(`Image galerie ${id} mise à jour avec succès!`);
       return { success: true, data };
     } catch (error) {
-      console.error(`Erreur lors de la mise à jour de l'image galerie ${id}:`, error);
+      console.error(
+        `Erreur lors de la mise à jour de l'image galerie ${id}:`,
+        error
+      );
       toast.error(`Échec de la mise à jour de l'image galerie`);
-      return { 
-        success: false, 
-        message: error instanceof Error ? error.message : "Erreur inconnue" 
+      return {
+        success: false,
+        message: error instanceof Error ? error.message : "Erreur inconnue",
       };
     }
-  }
+  },
 };
