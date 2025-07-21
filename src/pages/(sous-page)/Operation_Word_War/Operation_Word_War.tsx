@@ -7,12 +7,65 @@ import AuthenticImage from "./image/Authentic.jpg";
 import BottomMediaImage from "./image/bottom-media.jpg";
 import { fetchData_2 } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
+
 
 export function Operation_Word_War() {
   const [descriptionOperation1, setDescriptionOperation1] = useState("")
   const [descriptionOperation2, setDescriptionOperation2] = useState("")
   const [descriptionOperation3, setDescriptionOperation3] = useState("")
   const [descriptionOperation4, setDescriptionOperation4] = useState("")
+  const [operationImage1, setOperationImage1] = useState("");
+  const [operationImage2, setOperationImage2] = useState("");
+  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+
+  const fetchSectionBackground = async () => {
+    try {
+      // setLoading(true);
+      // setError(null);
+      const { success, data, message } = await MenuAPI.fetchAll();
+
+      if (success && data) {
+        setSectionMenuBg(data);
+        const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+
+        // Mise à jour des images pour chaque section
+        const sections = [
+          { id: 10, name: "Operation_Word_War", setter: setOperationImage1 },
+          { id: 11, name: "Operation_Word_War_2", setter: setOperationImage2 }
+        ];
+
+        sections.forEach(section => {
+          const banner = sortedSectionbg.find(b =>
+            b.id === section.id || b.section_name === section.name
+          );
+          if (banner) {
+            section.setter(getImageUrl(banner.path));
+          }
+        });
+      } else {
+        // if (message) toast.error(message);
+      }
+    } catch (err) {
+      console.error("Erreur lors de la récupération des sections:", err);
+      // setError(err instanceof Error ? err.message : "Erreur inconnue");
+      // toast.error("Erreur lors du chargement des sections");
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionBackground();
+  }, []);
 
   useEffect(() => {
     fetchData_2("operation").then((d) => {
@@ -24,7 +77,7 @@ export function Operation_Word_War() {
   }, []);
   return (
     <>
-      <div id="pg-banner-ope"></div>
+      <div id="pg-banner-ope" style={{ backgroundImage: `url(${operationImage1})` }}></div>
       <div id="top-bar-gold-ope"></div>
 
       <div className="sec-text-ope pg-text-ttl-fmt-ope">
@@ -117,7 +170,8 @@ export function Operation_Word_War() {
         >
           <img
             className="img-size-ope"
-            src={AuthenticImage}
+            // src={AuthenticImage}
+            src={operationImage2}
             alt="Rakitra marina momba ny Operation Word War"
           />
         </a>

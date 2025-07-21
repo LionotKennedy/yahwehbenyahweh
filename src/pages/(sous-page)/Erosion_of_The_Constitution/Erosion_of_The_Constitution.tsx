@@ -7,15 +7,69 @@ import BottomMediaImage from "./image/bottom-media.jpg";
 import GoldBarImage from "./image/Gold_Bar_1216.jpg";
 import { fetchData_2 } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
+
 
 export function Erosion_of_The_Constitution() {
   const [descriptionErosion, setDescriptionErosion] = useState("")
+  const [erosionImage, setErosionImage] = useState("");
+  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+
+
+  const fetchSectionBackground = async () => {
+    try {
+      // setLoading(true);
+      // setError(null);
+      const { success, data, message } = await MenuAPI.fetchAll();
+
+      if (success && data) {
+        setSectionMenuBg(data);
+        const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+
+        // Mise à jour des images pour chaque section
+        const sections = [
+          { id: 9, name: "Erosion_of_The_Constitution", setter: setErosionImage }
+        ];
+
+        sections.forEach(section => {
+          const banner = sortedSectionbg.find(b =>
+            b.id === section.id || b.section_name === section.name
+          );
+          if (banner) {
+            section.setter(getImageUrl(banner.path));
+          }
+        });
+      } else {
+        // if (message) toast.error(message);
+      }
+    } catch (err) {
+      console.error("Erreur lors de la récupération des sections:", err);
+      // setError(err instanceof Error ? err.message : "Erreur inconnue");
+      // toast.error("Erreur lors du chargement des sections");
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionBackground();
+  }, []);
+
+
   useEffect(() => {
     fetchData_2("erosion").then((d) => setDescriptionErosion(d?.descriptionerosion || ""))
   }, []);
   return (
     <>
-      <div id="pg-banner-ero" className=""></div>
+      <div id="pg-banner-ero" className="" style={{ backgroundImage: `url(${erosionImage})` }}></div>
       <div id="top-bar-gold-ero"></div>
 
       <div className="sec-text-ero pg-text-ttl-fmt-ero">

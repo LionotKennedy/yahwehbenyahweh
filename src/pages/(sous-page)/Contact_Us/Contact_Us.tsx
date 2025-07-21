@@ -8,6 +8,20 @@ import mail from "./image/mail.png";
 import bottomMedia from "./image/bottom-media.jpg";
 import { useEffect, useState } from "react";
 import { contactApi } from "../../../admin/api/api";
+import { fetchContactAPI } from "../../../admin/api/contact";
+
+interface ContactData {
+  id: number
+  path: string
+  alt: string | null
+  created_at: string
+  updated_at: string
+}
+const getImageUrl = (path: string): string => {
+  if (!path) return "/placeholder.svg"
+  if (path.startsWith("http")) return path
+  return `http://localhost:5000${path}`
+}
 
 export function ContactUs() {
 
@@ -17,6 +31,9 @@ export function ContactUs() {
   const [description2, setDescription2] = useState(null);
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
+
+    const [contactImage, setContactImage] = useState<ContactData[]>([])
+    const [contactsImages, setContactsImages] = useState("")
   
 
   useEffect(() => {
@@ -39,10 +56,31 @@ export function ContactUs() {
 
     loadContactData();
   }, []);
+    const fetchContact = async () => {
+      try {
+       
+        const data = await fetchContactAPI()
+        setContactImage(data)
+        const sortedContact = data.sort((a: any, b: any) => a.id - b.id)
+        const about_contact = sortedContact.find((contact: any) => contact.id === 1)
+        if (about_contact) {
+          setContactsImages(getImageUrl(about_contact.path))
+        }
+      } catch (err) {
+        // setError(err instanceof Error ? err.message : "Erreur inconnue")
+      } finally {
+        // setLoading(false)
+      }
+    }
+  
+    useEffect(() => {
+      fetchContact()
+    }, [])
+  
   return (
     <div className="contact-container">
       {/* Header Section */}
-      <div className="contact-banner"></div>
+      <div className="contact-banner" style={{ backgroundImage: `url(${contactsImages})` }}></div>
       <div className="gold-bar"></div>
 
       {/* Title Section */}

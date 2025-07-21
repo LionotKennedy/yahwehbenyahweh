@@ -1825,7 +1825,7 @@ import { toast } from 'react-hot-toast';
 import { MenuAPI, getImageUrl } from "../../../api/menuImage";
 import "./style/HomeTab.css";
 
-interface SectionMenuData {
+interface SectionMenuData { 
   id: number;
   section_name: string | null;
   path: string;

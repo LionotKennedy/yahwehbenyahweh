@@ -5,6 +5,7 @@ import bottomMedia from "./image/bottom-media.jpg";
 import imagesData from "../../../data/img/about-images.json";
 import { followersApi } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
+import { SectionAPI, getImageUrl } from "../../../admin/api/homeImage2";
 
 
 
@@ -16,6 +17,7 @@ export function The_Followers_of_Yahweh_Ben_Yahweh() {
   const [followersDescription4, setFollowersDescription4] = useState("");
   const [followersDescription5, setFollowersDescription5] = useState("");
   // const [followersDescription6, setFollowersDescription6] = useState("");
+    const [aboutYahwehBenBg, setAboutYahwehBenBg] = useState("");
 
   useEffect(() => {
     const loadYahwehData = async () => {
@@ -39,9 +41,50 @@ export function The_Followers_of_Yahweh_Ben_Yahweh() {
     loadYahwehData();
   }, []);
 
+    useEffect(() => {
+      const loadYahwehData = async () => {
+        try {
+          // Chargez les données textuelles
+          const yahwehData = await followersApi.get();
+          if (yahwehData.success && yahwehData.data?.length > 0) {
+            const data = yahwehData.data[0];
+            setFollowersTitle(data.title);
+            // ... autres setters ...
+          }
+  
+          // Chargez l'image de fond de la section
+          const sectionResponse = await SectionAPI.fetchAll();
+          if (sectionResponse.success) {
+            // console.log("Toutes les sections:", sectionResponse.data);
+  
+            // Recherche de la section about_yahweh_ben
+            const aboutYahwehBenSection = sectionResponse.data.find(section =>
+              section.section_name === "followers"
+            );
+  
+            if (aboutYahwehBenSection) {
+              console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
+              const imageUrl = getImageUrl(aboutYahwehBenSection.path);
+              // console.log("URL complète de l'image:", imageUrl);
+              setAboutYahwehBenBg(imageUrl);
+            } else {
+              // console.log("Aucune section about_yahweh_ben trouvée - noms disponibles:",
+              //   sectionResponse.data.map(s => s.section_name));
+            }
+          } else {
+            // console.error("Erreur API sections:", sectionResponse.message);
+          }
+        } catch (error) {
+          // console.error("Error loading data:", error);
+        }
+      };
+  
+      loadYahwehData();
+    }, [])
+
   return (
     <div className="followers-page">
-      <div id="pg-banner-fol" className="" style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_The_Followers})` }}></div>
+      <div id="pg-banner-fol" className="" style={{ backgroundImage: `url(${aboutYahwehBenBg || imagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh})` }}></div>
       <div id="top-bar-gold-fol" className=""></div>
       <div id="The_Followers_of_Yahweh_Ben_Yahweh" className="title-section-fol">
         {/* <img

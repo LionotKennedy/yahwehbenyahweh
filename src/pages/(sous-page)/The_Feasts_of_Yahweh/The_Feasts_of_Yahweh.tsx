@@ -17,28 +17,78 @@ import feaststrsbkg3 from "./image/feasts-trs-bkg-3.png";
 // import FOP_2025 from "./html/FOP_2025.html";
 import { useState, useEffect } from 'react';
 import { fetchData_2 } from "../../../admin/api/api";
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
 
 
 
 export function The_Feasts_of_Yahweh() {
-    const [titleFeasts, setTitleFeasts] = useState("")
-    const [titleFeasts2, setTitleFeasts2] = useState("")
-    const [fieldFeasts2, setFieldFeasts2] = useState("")
-    const [titleFeasts3, setTitleFeasts3] = useState("")
-    const [fieldFeasts3, setFieldFeasts3] = useState("")
-    const [titleFeasts4, setTitleFeasts4] = useState("")
-    const [fieldFeasts4, setFieldFeasts4] = useState("")
-    const [descriptionFeasts4, setDescriptionFeasts4] = useState("")
-    const [videoFeasts4, setVideoFeasts4] = useState("")
-    const [titleFeasts5, setTitleFeasts5] = useState("")
-    const [fieldFeasts5, setFieldFeasts5] = useState("")
-    const [descriptionFeasts5, setDescriptionFeasts5] = useState("")
-    const [videoFeasts5, setVideoFeasts5] = useState("")
-    const [titleFeasts6, setTitleFeasts6] = useState("")
-    const [fieldFeasts6a, setFieldFeasts6a] = useState("")
-    const [fieldFeasts6b, setFieldFeasts6b] = useState("")
+  const [titleFeasts, setTitleFeasts] = useState("")
+  const [titleFeasts2, setTitleFeasts2] = useState("")
+  const [fieldFeasts2, setFieldFeasts2] = useState("")
+  const [titleFeasts3, setTitleFeasts3] = useState("")
+  const [fieldFeasts3, setFieldFeasts3] = useState("")
+  const [titleFeasts4, setTitleFeasts4] = useState("")
+  const [fieldFeasts4, setFieldFeasts4] = useState("")
+  const [descriptionFeasts4, setDescriptionFeasts4] = useState("")
+  const [videoFeasts4, setVideoFeasts4] = useState("")
+  const [titleFeasts5, setTitleFeasts5] = useState("")
+  const [fieldFeasts5, setFieldFeasts5] = useState("")
+  const [descriptionFeasts5, setDescriptionFeasts5] = useState("")
+  const [videoFeasts5, setVideoFeasts5] = useState("")
+  const [titleFeasts6, setTitleFeasts6] = useState("")
+  const [fieldFeasts6a, setFieldFeasts6a] = useState("")
+  const [fieldFeasts6b, setFieldFeasts6b] = useState("")
+  const [feastsImage, setFeastsImage] = useState("");
+  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
-      useEffect(() => {
+  const fetchSectionBackground = async () => {
+    try {
+      // setLoading(true);
+      // setError(null);
+      const { success, data, message } = await MenuAPI.fetchAll();
+
+      if (success && data) {
+        setSectionMenuBg(data);
+        const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+
+        // Mise à jour des images pour chaque section
+        const sections = [
+          { id: 4, name: "The_Feasts_of_Yahweh", setter: setFeastsImage }
+        ];
+
+        sections.forEach(section => {
+          const banner = sortedSectionbg.find(b =>
+            b.id === section.id || b.section_name === section.name
+          );
+          if (banner) {
+            section.setter(getImageUrl(banner.path));
+          }
+        });
+      } else {
+        // if (message) toast.error(message);
+      }
+    } catch (err) {
+      console.error("Erreur lors de la récupération des sections:", err);
+      // setError(err instanceof Error ? err.message : "Erreur inconnue");
+      // toast.error("Erreur lors du chargement des sections");
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionBackground();
+  }, []);
+
+  useEffect(() => {
     fetchData_2("feasts").then((d) => {
       setTitleFeasts(d?.titlefeasts || "")
       setTitleFeasts2(d?.titlefeasts2 || "")
@@ -60,10 +110,10 @@ export function The_Feasts_of_Yahweh() {
   }, []);
   return (
     <div className="feasts-of-yahweh-page">
-      <div id="pg-banner-feast"></div>
+      <div id="pg-banner-feast" style={{ backgroundImage: `url(${feastsImage})` }}></div>
       <div id="top-bar-gold-feast"></div>
       <div id="The_Feasts_of_Yahweh-feast" className="title-section-fol">
-         <h1 className="te-title">{titleFeasts}</h1>
+        <h1 className="te-title">{titleFeasts}</h1>
         {/* <img
           className="img-size-feast"
           // src="/public/The_Feasts_of_Yahweh/image/The_Feasts_of_Yahweh.png"
@@ -174,7 +224,7 @@ export function The_Feasts_of_Yahweh() {
             <p className="p-mrg-feast">
               <span className="ctn-text-fmt-feast ctn-text-fmt-gr-feast p-text-fmt-nr-1-feast">
                 {/* Fetin'ny Herinandro */}
-                 {titleFeasts3}
+                {titleFeasts3}
               </span>
               <br />
               {/* <span className="font-feast">28 Mey - 3 Jona 2025</span> */}
@@ -184,7 +234,7 @@ export function The_Feasts_of_Yahweh() {
             <div>
               <img
                 // src="/public/The_Feasts_of_Yahweh/image/Feast_Theme.png"
-                 src={FeastTheme}
+                src={FeastTheme}
                 className="width-feast"
               />
             </div>
@@ -273,7 +323,7 @@ export function The_Feasts_of_Yahweh() {
                 <p className="p-mrg-feast-2 p-mrg-0-feast">
                   <span className="ctn-text-fmt-feast-2 ctn-text-fmt-br-lt-feast-2">
                     {/* Ny Fahatsiarovana ny Fampangonan'ny Trompetra */}
-                     {titleFeasts4}
+                    {titleFeasts4}
                   </span>
                   <br></br>
                   {/* <span>15 Septambra 2025</span> */}
@@ -295,7 +345,7 @@ export function The_Feasts_of_Yahweh() {
                     controls
                     // poster="/public/The_Feasts_of_Yahweh/image/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.jpg"
                     poster={MEMORIAL_BLOWING_FEAST_PAGE_CLIP}
-                    // poster={videoFeasts4}
+                  // poster={videoFeasts4}
                   >
                     <source
                       // src="https://ms.yahwehbenyahweh.com/video/720/MEMORIAL_BLOWING_FEAST_PAGE_CLIP.mp4"

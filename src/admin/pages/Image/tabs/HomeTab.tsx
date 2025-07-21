@@ -2941,7 +2941,7 @@ const HomeTab: React.FC = () => {
       
       if (success && data) {
         setSectionBg(data);
-        const sortedSectionbg = data.sort((a: SectionData, b: SectionData) => a.id - b.id);
+        const sortedSectionbg = data.sort((a: SectionData, b: SectionData) => a.id - b.id); 
         
         const about_yahweh = sortedSectionbg.find(
           (banner) => banner.id === 1 || banner.section_name === "about_yahweh"

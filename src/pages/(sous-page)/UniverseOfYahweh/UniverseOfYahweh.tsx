@@ -5,6 +5,17 @@ import bottomMedia from "./image/bottom-media.jpg";
 // import "../UniverseOfYahweh/style/responsive.css";
 import { fetchData_2 } from "../../../admin/api/api";
 
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
+
+
 const UniverseOfYahweh = () => {
   // États pour gérer la vidéo courante et la résolution
   const [currentVideo, setCurrentVideo] = useState<string>('180');
@@ -15,7 +26,42 @@ const UniverseOfYahweh = () => {
   const [descriptionUniverse3, setDescriptionUniverse3] = useState("")
   const [descriptionUniverse4, setDescriptionUniverse4] = useState("")
   const [videoLinkUniverse, setVideoLinkUniverse] = useState('')
+  const [universeImage, setUniverseImage] = useState("");
+  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
 
+
+  const fetchSectionBackground = async () => {
+    try {
+      const { success, data, message } = await MenuAPI.fetchAll();
+
+      if (success && data) {
+        setSectionMenuBg(data);
+        const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+
+        // Mise à jour des images pour chaque section
+        const sections = [
+          { id: 1, name: "Tetragrammaton", setter: setUniverseImage }
+        ];
+
+        sections.forEach(section => {
+          const banner = sortedSectionbg.find(b =>
+            b.id === section.id || b.section_name === section.name
+          );
+          if (banner) {
+            section.setter(getImageUrl(banner.path));
+          }
+        });
+      } else {
+      }
+    } catch (err) {
+      console.error("Erreur lors de la récupération des sections:", err);
+    } finally {
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionBackground();
+  }, []);
   // Fonction pour changer la résolution
   const changeResolution = (res: string): void => {
     setCurrentResolution(res);
@@ -43,7 +89,7 @@ const UniverseOfYahweh = () => {
       <div
         id="pg-banner-u"
         className="page-banner bg-cover bg-center h-48"
-      ></div>
+        style={{ backgroundImage: `url(${universeImage})` }} ></div>
       <div id="top-bar-gold-u" className="sec-bar-u"></div>
       <div className="Body_Text p-6 max-w-4xl mx-auto">
         <p className="text-lg leading-relaxed mb-6">

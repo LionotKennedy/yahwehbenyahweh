@@ -1,14 +1,52 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import BookImage from "./image/Book_of_The_Month.png";
 import OrderNowImage from "./image/Order_Now.png";
 import BottomMediaImage from "./image/bottom-media.jpg";
 import "./style/book_of_the_Month.css";
-import "./style/responsive.css";
+import "./style/responsive.css"; 
+import { useEffect, useState } from "react";
+import { getImageUrl } from "../../../admin/api/homeImage2";
 
 export function Book_of_the_Month() {
+//  const location = useLocation();
+//   const banners = location.state?.banners || [];
+//   // Ajoutez ce useEffect après votre autre useEffect existant
+// useEffect(() => {
+//   if (banners.length > 0) {
+//     const imageWithId4 = banners.find(banner => banner.id === 4);
+//     if (imageWithId4) {
+//       console.log("Image avec ID 4:", imageWithId4);
+//       console.log("URL de l'image:", getImageUrl(imageWithId4.path));
+//     } else {
+//       console.log("Aucune image trouvée avec l'ID 4 dans les bannières");
+//     }
+//   }
+// }, [banners]); // Déclenché quand 'banners' change
+//  // Définissez un fallback si imagesData n'est pas disponible
+//   // const backgroundFallback = imageWithId4 || "";
+
+
+  const location = useLocation();
+  const banners = location.state?.banners || [];
+  const [backgroundImage, setBackgroundImage] = useState(null);
+
+  useEffect(() => {
+    if (banners.length > 0) {
+      const imageWithId4 = banners.find(banner => banner.id === 4);
+      if (imageWithId4) {
+        // console.log("Image avec ID 4:", imageWithId4);
+        const imageUrl = getImageUrl(imageWithId4.path);
+        // console.log("URL de l'image:", imageUrl);
+        setBackgroundImage(imageUrl); // Stocke l'URL de l'image dans l'état
+      } else {
+        console.log("Aucune image trouvée avec l'ID 4 dans les bannières");
+      }
+    }
+  }, [banners]);
+  
   return (
     <>
-      <div id="pg-banner-month"></div>
+      <div id="pg-banner-month"  style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : 'none' }}></div>
       <div id="top-bar-gold-month"></div>
       <div className="botm-title-text-month">
         <strong>MIARAHABA AMINAY FAHAMAKIANA ISAM-BOLANA!!</strong>

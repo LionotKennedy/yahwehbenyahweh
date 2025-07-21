@@ -6,53 +6,96 @@ import bottomMedia from "./image/bottom-media.png";
 import imagesData from "../../../data/img/about-images.json";
 import { yahwehBenApi } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
+import { SectionAPI, getImageUrl } from "../../../admin/api/homeImage2"; 
 
 export function AboutYahwehBenYahweh() {
 
-      // const [yahwehTitle1, setYahwehTitle1] = useState("");
-      const [yahwehTitle2, setYahwehTitle2] = useState("");
-      const [yahwehDescription1, setYahwehDescription1] = useState("");
-      const [yahwehDescription2, setYahwehDescription2] = useState("");
-      const [yahwehDescription3, setYahwehDescription3] = useState("");
-      const [yahwehDescription4, setYahwehDescription4] = useState("");
-      const [yahwehDescription5, setYahwehDescription5] = useState("");
-      const [yahwehDescription6, setYahwehDescription6] = useState("");
-      const [yahwehDescription7, setYahwehDescription7] = useState("");
-      const [yahwehDescription8, setYahwehDescription8] = useState("");
-      const [yahwehDescription9, setYahwehDescription9] = useState("");
-      
-      useEffect(() => {
-        const loadYahwehData = async () => {
-          try {
-            const yahwehData = await yahwehBenApi.get();
-            if (yahwehData.success && yahwehData.data?.length > 0) {
-              const data = yahwehData.data[0];
-              // setYahwehTitle1(data.title1);
-              setYahwehTitle2(data.title2);
-              setYahwehDescription1(data.description1);
-              setYahwehDescription2(data.description2);
-              setYahwehDescription3(data.description3);
-              setYahwehDescription4(data.description4);
-              setYahwehDescription5(data.description5);
-              setYahwehDescription6(data.description6);
-              setYahwehDescription7(data.description7);
-              setYahwehDescription8(data.description8);
-              setYahwehDescription9(data.description9);
-              // console.log(data.title)
-              // console.log(data)
-            }
-          } catch (error) {
-            console.error("Error loading contact data:", error);
-          }
-        };
-    
-        loadYahwehData();
-      }, []);
+  // const [yahwehTitle1, setYahwehTitle1] = useState("");
+  const [yahwehTitle2, setYahwehTitle2] = useState("");
+  const [yahwehDescription1, setYahwehDescription1] = useState("");
+  const [yahwehDescription2, setYahwehDescription2] = useState("");
+  const [yahwehDescription3, setYahwehDescription3] = useState("");
+  const [yahwehDescription4, setYahwehDescription4] = useState("");
+  const [yahwehDescription5, setYahwehDescription5] = useState("");
+  const [yahwehDescription6, setYahwehDescription6] = useState("");
+  const [yahwehDescription7, setYahwehDescription7] = useState("");
+  const [yahwehDescription8, setYahwehDescription8] = useState("");
+  const [yahwehDescription9, setYahwehDescription9] = useState("");
+  const [aboutYahwehBenBg, setAboutYahwehBenBg] = useState("");
 
+  useEffect(() => {
+    const loadYahwehData = async () => {
+      try {
+        const yahwehData = await yahwehBenApi.get();
+        if (yahwehData.success && yahwehData.data?.length > 0) {
+          const data = yahwehData.data[0];
+          // setYahwehTitle1(data.title1);
+          setYahwehTitle2(data.title2);
+          setYahwehDescription1(data.description1);
+          setYahwehDescription2(data.description2);
+          setYahwehDescription3(data.description3);
+          setYahwehDescription4(data.description4);
+          setYahwehDescription5(data.description5);
+          setYahwehDescription6(data.description6);
+          setYahwehDescription7(data.description7);
+          setYahwehDescription8(data.description8);
+          setYahwehDescription9(data.description9);
+          // console.log(data.title)
+          // console.log(data)
+        }
+      } catch (error) {
+        console.error("Error loading contact data:", error);
+      }
+    };
+
+    loadYahwehData();
+  }, []);
+
+  useEffect(() => {
+    const loadYahwehData = async () => {
+      try {
+        // Chargez les données textuelles
+        const yahwehData = await yahwehBenApi.get();
+        if (yahwehData.success && yahwehData.data?.length > 0) {
+          const data = yahwehData.data[0];
+          setYahwehTitle2(data.title2);
+          // ... autres setters ...
+        }
+
+        // Chargez l'image de fond de la section
+        const sectionResponse = await SectionAPI.fetchAll();
+        if (sectionResponse.success) {
+          console.log("Toutes les sections:", sectionResponse.data);
+
+          // Recherche de la section about_yahweh_ben
+          const aboutYahwehBenSection = sectionResponse.data.find(section =>
+            section.section_name === "about_yahweh_ben"
+          );
+
+          if (aboutYahwehBenSection) {
+            console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
+            const imageUrl = getImageUrl(aboutYahwehBenSection.path);
+            console.log("URL complète de l'image:", imageUrl);
+            setAboutYahwehBenBg(imageUrl);
+          } else {
+            console.log("Aucune section about_yahweh_ben trouvée - noms disponibles:",
+              sectionResponse.data.map(s => s.section_name));
+          }
+        } else {
+          console.error("Erreur API sections:", sectionResponse.message);
+        }
+      } catch (error) {
+        console.error("Error loading data:", error);
+      }
+    };
+
+    loadYahwehData();
+  }, [])
 
   return (
     <div className="about-yahweh-ben-yahweh-page">
-      <div id="pg-banner-about-y" className="page-banner" style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh})` }}></div>
+      {/* <div id="pg-banner-about-y" className="page-banner" style={{ backgroundImage: `url(${imagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh})` }}></div> */}
+      <div id="pg-banner-about-y" className="page-banner" style={{ backgroundImage: `url(${aboutYahwehBenBg || imagesData.backgroundImages.pageBannerAbout_Yahweh_Ben_Yahweh})` }}></div>
       <div id="top-bar-gold-about-y" className=""></div>
       <div id="Yahweh_Ben_Yahweh-y" className="pg-btm-pd-mod-y">
         <img
@@ -82,7 +125,7 @@ export function AboutYahwehBenYahweh() {
           Masina sy Irery. Izy eto mba hamahatra ny voafonja sy hampitsangana
           mahitsy eo amin’ny kianja ny marina izay voafehy. Fa, indro! Misy
           lehibe noho i Solomona eto! */}
-            {yahwehDescription2}
+          {yahwehDescription2}
         </p>
       </div>
       <div className="pg-title-break-y">
@@ -95,7 +138,7 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="sec-text-y pg-text-fmt-y">
         <p className="">
-            {yahwehDescription3}
+          {yahwehDescription3}
           {/* Tamin’ny 1979, <span className="David-y">יהוה בן יהוה</span> dia tonga
           tany Miami ka lasa Mpitarika Ara-Panahy sy Mpanorina ny Firenen’i{" "}
           <span className="David-y">יהוה</span>. Na dia nanao voady fahantrana
@@ -114,14 +157,14 @@ export function AboutYahwehBenYahweh() {
           <span className="David-y">יהוה</span> amin’ny alalan’ny
           fanatanterahana ny lalàna, ny fitsipika, ny fitsarana, ary ny didin’i{" "}
           <span className="David-y">יהוה</span>. */}
-            {yahwehDescription4}
+          {yahwehDescription4}
         </p>
         <p>
           {/* <span className="David-y">יהוה בּן יהוה</span> dia manova ny fiainan’ny
           olona tsirairay, ary manome ny tany ireo lakile hahombiazana amin’ny
           fiaina: Ara-Politika Ara-Toekarena Ara-Panabeazana Ara-Piarahamonina
           Ary Ara-Panahy. */}
-            {yahwehDescription5}
+          {yahwehDescription5}
         </p>
       </div>
       <div className="pg-title-break-y">
@@ -135,7 +178,7 @@ export function AboutYahwehBenYahweh() {
       </div>
       <div className="sec-text-y pg-text-fmt-y">
         <p>
-            {yahwehDescription6}
+          {yahwehDescription6}
           {/* <span className="David-y">יהוה בּן יהוה</span> mampianatra ny mpianany
           sy ny mpanaraka azy hanao fiantrana sy hatsaram-panahy, hiaro ny
           fahadiovam-pitondrantena, hanaja ny fifamatorana ara-pianakaviana sy
@@ -164,7 +207,7 @@ export function AboutYahwehBenYahweh() {
         <p>
           <i>
             <strong>
-                {yahwehDescription7}
+              {yahwehDescription7}
               {/* Ny alatsinainy, 7 Mey 2007 tamin’ny 7:55 hariva, ny Mpanorina sy
               Mpanavotra antsika, <span className="David-y">יהוה בּן יהוה</span>,
               dia nahavitra ny dia voalohany nataony teto an-tany ary niakatra
@@ -174,7 +217,7 @@ export function AboutYahwehBenYahweh() {
           </i>
         </p>
         <p className="pg-text-ltr-sp-8">
-            {yahwehDescription8}
+          {yahwehDescription8}
           {/* Izany no anton’ny Fitiavan’ny Raiko,{" "}
           <span className="David-y">יהוה</span> tamiko (
           <span className="David-y">יהוה בּן יהוה</span>), satria natolotro ny
@@ -187,7 +230,7 @@ export function AboutYahwehBenYahweh() {
           vavolombelona momba Ahy (Jaona 10:25). */}
         </p>
         <p className="pg-text-ltr-sp-9">
-            {yahwehDescription9}
+          {yahwehDescription9}
           {/* Ary nalefa tamiko ny fahefana, ny voninahitra, ary ny Fanjakan’ny
           Andriamanitra, mba hanompoan’ny firenena sy ny vahoaka rehetra, na
           inona na inona ny fiteniny: Ny fahefaniko dia fahefana mandrakizay,
@@ -201,7 +244,7 @@ export function AboutYahwehBenYahweh() {
         </p>
       </div>
       <div id="pg-btm-media-y" className="">
-      {/* <div id="pg-btm-media-about" className=""> */}
+        {/* <div id="pg-btm-media-about" className=""> */}
         <img
           // className="bottom-media-img mx-auto"
           className="bottom-media-img-y"

@@ -16,10 +16,63 @@ import NovDec2015Img from "./image/Nov_Dec_2015_Issue.png";
 import SepOct2015Img from "./image/Sep_Oct_2015_Issue.png";
 import NovDec2014Img from "./image/Nov_Dec_2014_Issue.png";
 
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+import { useEffect, useState } from "react";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
+
 export function The_Good_News_of_Yahweh() {
+    const [goodNewsImage, setGoodNewsImage] = useState("");
+    const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+
+      const fetchSectionBackground = async () => {
+        try {
+          // setLoading(true);
+          // setError(null);
+          const { success, data, message } = await MenuAPI.fetchAll();
+    
+          if (success && data) {
+            setSectionMenuBg(data);
+            const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+    
+            // Mise à jour des images pour chaque section
+            const sections = [
+              { id: 5, name: "The_Good_News_of_Yahweh", setter: setGoodNewsImage }
+            ];
+    
+            sections.forEach(section => {
+              const banner = sortedSectionbg.find(b =>
+                b.id === section.id || b.section_name === section.name
+              );
+              if (banner) {
+                section.setter(getImageUrl(banner.path));
+              }
+            });
+          } else {
+            // if (message) toast.error(message);
+          }
+        } catch (err) {
+          console.error("Erreur lors de la récupération des sections:", err);
+          // setError(err instanceof Error ? err.message : "Erreur inconnue");
+          // toast.error("Erreur lors du chargement des sections");
+        } finally {
+          // setLoading(false);
+        }
+      };
+    
+      useEffect(() => {
+        fetchSectionBackground();
+      }, []);
+      
   return (
     <div id="backdrop-news" className="good-news-page">
-      <div id="pg-banner-news" className=""></div>
+      <div id="pg-banner-news" className=""  style={{ backgroundImage: `url(${goodNewsImage})` }}></div>
       <div id="top-bar-gold-news"></div>
       <div className="pg-title-text-news">
         <p className="p-title-text-news">GAZETY</p>

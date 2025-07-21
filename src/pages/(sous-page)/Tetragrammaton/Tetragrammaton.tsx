@@ -8,12 +8,62 @@ import YHWH from "./image/YHWH.png";
 import bottomMedia from "./image/bottom-media.png";
 import { fetchData_2 } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
 
 export function Tetragrammaton() {
   // ------------ États ------------
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [description2, setDescription2] = useState("")
+  const [tetragrammatonImage, setTetragrammatonImage] = useState("");
+  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+
+  const fetchSectionBackground = async () => {
+    try {
+      // setLoading(true);
+      // setError(null);
+      const { success, data, message } = await MenuAPI.fetchAll();
+
+      if (success && data) {
+        setSectionMenuBg(data);
+        const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+
+        // Mise à jour des images pour chaque section
+        const sections = [
+          { id: 1, name: "Tetragrammaton", setter: setTetragrammatonImage }
+        ];
+
+        sections.forEach(section => {
+          const banner = sortedSectionbg.find(b =>
+            b.id === section.id || b.section_name === section.name
+          );
+          if (banner) {
+            section.setter(getImageUrl(banner.path));
+          }
+        });
+      } else {
+        // if (message) toast.error(message);
+      }
+    } catch (err) {
+      console.error("Erreur lors de la récupération des sections:", err);
+      // setError(err instanceof Error ? err.message : "Erreur inconnue");
+      // toast.error("Erreur lors du chargement des sections");
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionBackground();
+  }, []);
 
   useEffect(() => {
     fetchData_2("tetragrama").then((d) => {
@@ -26,7 +76,7 @@ export function Tetragrammaton() {
 
   return (
     <div className="tetragrammaton-page">
-      <div id="pg-banner-tetra" className=""></div>
+      <div id="pg-banner-tetra" className="" style={{ backgroundImage: `url(${tetragrammatonImage})` }}></div>
       <div id="top-bar-gold-tetra" className=""></div>
       <div className="div-width-tetra">
         <div id="Tetragrammaton" className="title-section-fol">

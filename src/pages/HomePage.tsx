@@ -13,6 +13,8 @@ import content from "../data/home.json"
 import imagesData from "../data/images-home.json"
 import { homeApi } from "../admin/api/api";
 import { useEffect, useState } from "react"
+// import { BannerAPI } from "../admin/api/homeImage2";
+import { BannerAPI, getImageUrl } from "../admin/api/homeImage2";
 
 // Interfaces TypeScript
 interface VideoData {
@@ -63,44 +65,109 @@ interface SlideData {
 }
 
 const HomePage: React.FC = () => {
-
+  const [banners, setBanners] = useState<BannerData[]>([]);
   // Récupération des données depuis les JSON avec typage
   const { videoSection, videos }: HomePageContent["homePage"] = content.homePage
   const images: ImagesData = imagesData
- const [title, setTitle] = useState(null);
+  const [title, setTitle] = useState(null);
   const [description1, setDescription1] = useState(null);
   const [src1, setSRC1] = useState(null);
   const [src2, setSRC2] = useState(null);
   const [src3, setSRC3] = useState(null);
 
-  // Création des slides à partir du JSON d'images
-  const slides: SlideData[] = images.banners.map((banner: BannerData) => ({
-    id: banner.id,
-    image: banner.path,
-    alt: banner.alt,
-  }))
 
-    useEffect(() => {
-      const loadContactData = async () => {
-        try {
-          const homeData = await homeApi.get();
-          if (homeData.success && homeData.data?.length > 0) {
-            const data = homeData.data[0];
-            setTitle(data.title);
-            setDescription1(data.description1);
-            setSRC1(data.src1);
-            setSRC2(data.src2);
-            setSRC3(data.src3);
-            // console.log(description1)
-            // console.log(data.src1)
-          }
-        } catch (error) {
-          console.error("Error loading contact data:", error);
+
+  // Création des slides à partir du JSON d'images
+  // const slides: SlideData[] = images.banners.map((banner: BannerData) => ({
+  //   id: banner.id,
+  //   image: banner.path,
+  //   alt: banner.alt,
+  // }))
+
+  // useEffect(() => {
+  //   const loadContactData = async () => {
+  //     try {
+  //       const homeData = await homeApi.get();
+  //       if (homeData.success && homeData.data?.length > 0) {
+  //         const data = homeData.data[0];
+  //         setTitle(data.title);
+  //         setDescription1(data.description1);
+  //         setSRC1(data.src1);
+  //         setSRC2(data.src2);
+  //         setSRC3(data.src3);
+  //         // console.log(description1)
+  //         // console.log(data.src1)
+  //       }
+  //     } catch (error) {
+  //       console.error("Error loading contact data:", error);
+  //     }
+  //   };
+
+  //   loadContactData();
+  // }, []);
+
+  // const slides: SlideData[] = (banners.length > 0 ? banners : images.banners).map((banner: BannerData) => ({
+  //   id: banner.id,
+  //   image: banner.path,
+  //   alt: banner.alt,
+  // }));
+
+  //   const slides: SlideData[] = (banners.length > 0 ? banners : images.banners).map((banner: BannerData) => ({
+  //   id: banner.id,
+  //   image: getImageUrl(banner.path), // Utilisez getImageUrl ici
+  //   alt: banner.alt,
+  // }));
+  let displayedBanners = banners.length > 0 ? banners : images.banners;
+
+  // Filtrez pour ne garder que les IDs 1, 2, 3 (ou les 3 premiers si fallback)
+  displayedBanners = banners.length > 0
+    ? banners.filter(banner => banner.id === 1 || banner.id === 2 || banner.id === 3)
+    : images.banners.slice(0, 3);
+
+  const slides: SlideData[] = displayedBanners.map((banner: BannerData) => ({
+    id: banner.id,
+    image: getImageUrl(banner.path),
+    alt: banner.alt,
+  }));
+  // Ajoutez cette fonction utilitaire pour trouver une bannière par son ID
+  const getBannerById = (id: number) => {
+    return banners.find(banner => banner.id === id);
+  };
+
+  // Récupérez les images spécifiques
+  const bookOfTheMonthImage = getBannerById(4) || images.bookOfTheMonth;
+  const breakingNewsImage = getBannerById(5) || images.breakingNews;
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        // Chargez les données de homeApi comme avant
+        const homeData = await homeApi.get();
+        if (homeData.success && homeData.data?.length > 0) {
+          const data = homeData.data[0];
+          setTitle(data.title);
+          setDescription1(data.description1);
+          setSRC1(data.src1);
+          setSRC2(data.src2);
+          setSRC3(data.src3);
         }
-      };
-  
-      loadContactData();
-    }, []);
+
+        // Chargez les bannières depuis l'API
+        const bannersResponse = await BannerAPI.fetchAll();
+        if (bannersResponse.success) {
+          // console.log("Bannières récupérées:", bannersResponse.data);
+          setBanners(bannersResponse.data);
+        } else {
+          console.error("Erreur lors de la récupération des bannières:", bannersResponse.message);
+        }
+      } catch (error) {
+        console.error("Error loading data:", error);
+      }
+    };
+
+    loadData();
+  }, []);
+
 
   return (
     <div className="home-page">
@@ -120,13 +187,25 @@ const HomePage: React.FC = () => {
 
       {/* Book of the Month */}
       <div className="botm-image-contain-home">
-        <Link to="/Book_of_the_Month">
+        {/* <Link to="/Book_of_the_Month">
           <img
             className="botm-image-home"
-            src={images.bookOfTheMonth.path}
-            alt={images.bookOfTheMonth.alt}
+            // src={images.bookOfTheMonth.path}
+            // alt={images.bookOfTheMonth.alt}
+            src={getImageUrl(bookOfTheMonthImage.path)}
+            alt={bookOfTheMonthImage.alt}
           />
-        </Link>
+        </Link> */}
+        <Link 
+  to="/Book_of_the_Month" 
+  state={{ banners: banners }} // Passez explicitement les banners
+>
+  <img
+    className="botm-image-home"
+    src={getImageUrl(bookOfTheMonthImage.path)}
+    alt={bookOfTheMonthImage.alt}
+  />
+</Link>
       </div>
       <div className="style-home">
         <Link to="/Book_of_the_Month">
@@ -145,13 +224,21 @@ const HomePage: React.FC = () => {
         {/* Première vidéo */}
         <div className="vidPos-home">
           {/* <VideoPlayer src={videos[0]?.src || ""} poster={images.videoPoster.pageBanner.path} /> */}
-          <VideoPlayer src={src1 || videos[0]?.src } poster={images.videoPoster.pageBanner.path} />
+          {/* <VideoPlayer src={src1 } poster={images.videoPoster.pageBanner.path} /> */}
+          <VideoPlayer
+            src={src1 || videos[0]?.src || ""}
+            poster={images.videoPoster.pageBanner.path}
+          />
         </div>
 
         {/* Deuxième vidéo */}
         <div className="vidPos-home">
-          <VideoPlayer src={src2 || videos[1]?.src } poster={images.videoPoster.goodNews.path} />
+          {/* <VideoPlayer src={src2 } poster={images.videoPoster.goodNews.path} /> */}
           {/* <VideoPlayer src={videos[1]?.src || ""} poster={images.videoPoster.goodNews.path} /> */}
+          <VideoPlayer
+            src={src2 || videos[1]?.src || ""}
+            poster={images.videoPoster.goodNews.path}
+          />
         </div>
 
         <div className="rmb-p-fmt">
@@ -163,8 +250,12 @@ const HomePage: React.FC = () => {
 
         {/* Troisième vidéo */}
         <div className="vidPos-home">
-          <VideoPlayer src={src3 || videos[2]?.src } poster={images.videoPoster.eternalLife.path} />
+          {/* <VideoPlayer src={src3 } poster={images.videoPoster.eternalLife.path} /> */}
           {/* <VideoPlayer src={videos[2]?.src || ""} poster={images.videoPoster.eternalLife.path} /> */}
+          <VideoPlayer
+            src={src3 || videos[2]?.src || ""}
+            poster={images.videoPoster.eternalLife.path}
+          />
         </div>
 
         {/* Section texte dynamique */}
@@ -198,8 +289,10 @@ const HomePage: React.FC = () => {
         <div className="bn-div-fmt-home">
           <img
             className="breakingnews-img-home"
-            src={images.breakingNews.path}
-            alt={images.breakingNews.alt}
+            src={getImageUrl(breakingNewsImage.path)}
+            alt={breakingNewsImage.alt}
+          // src={images.breakingNews.path}
+          // alt={images.breakingNews.alt}
           />
           <p className="bn-div-fmt-p-sz-home">
             Ny bokotra mirehitra dia manondro fa misy...

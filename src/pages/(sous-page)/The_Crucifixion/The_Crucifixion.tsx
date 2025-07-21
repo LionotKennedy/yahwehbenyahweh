@@ -6,21 +6,76 @@ import NoImg from "./image/No.png";
 import BirdImg from "./image/Bird.png";
 import { useEffect, useState } from "react";
 import { fetchData_2 } from "../../../admin/api/api";
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
+
 
 export function The_Crucifixion() {
   //  const [titleCrucifixion, setTitleCrucifixion] = useState("")
-    const [descriptionCrucifixion1, setDescriptionCrucifixion1] = useState("")
-    const [descriptionCrucifixion2, setDescriptionCrucifixion2] = useState("")
-    const [descriptionCrucifixion3, setDescriptionCrucifixion3] = useState("")
-    const [descriptionCrucifixion4, setDescriptionCrucifixion4] = useState("")
-    const [descriptionCrucifixion5, setDescriptionCrucifixion5] = useState("")
-    const [descriptionCrucifixion6, setDescriptionCrucifixion6] = useState("")
-    const [descriptionCrucifixion7, setDescriptionCrucifixion7] = useState("")
-    const [descriptionCrucifixion8, setDescriptionCrucifixion8] = useState("")
-    const [descriptionCrucifixion9, setDescriptionCrucifixion9] = useState("")
-    const [descriptionCrucifixion10, setDescriptionCrucifixion10] = useState("")
-    const [descriptionCrucifixion11, setDescriptionCrucifixion11] = useState("")
-      useEffect(() => {
+  const [descriptionCrucifixion1, setDescriptionCrucifixion1] = useState("")
+  const [descriptionCrucifixion2, setDescriptionCrucifixion2] = useState("")
+  const [descriptionCrucifixion3, setDescriptionCrucifixion3] = useState("")
+  const [descriptionCrucifixion4, setDescriptionCrucifixion4] = useState("")
+  const [descriptionCrucifixion5, setDescriptionCrucifixion5] = useState("")
+  const [descriptionCrucifixion6, setDescriptionCrucifixion6] = useState("")
+  const [descriptionCrucifixion7, setDescriptionCrucifixion7] = useState("")
+  const [descriptionCrucifixion8, setDescriptionCrucifixion8] = useState("")
+  const [descriptionCrucifixion9, setDescriptionCrucifixion9] = useState("")
+  const [descriptionCrucifixion10, setDescriptionCrucifixion10] = useState("")
+  const [descriptionCrucifixion11, setDescriptionCrucifixion11] = useState("")
+  const [crucifixionImage, setCrucifixionImage] = useState("");
+  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+
+
+
+  const fetchSectionBackground = async () => {
+    try {
+      // setLoading(true);
+      // setError(null);
+      const { success, data, message } = await MenuAPI.fetchAll();
+
+      if (success && data) {
+        setSectionMenuBg(data);
+        const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+
+        // Mise à jour des images pour chaque section
+        const sections = [
+          { id: 6, name: "The_Crucifixion", setter: setCrucifixionImage }
+        ];
+
+        sections.forEach(section => {
+          const banner = sortedSectionbg.find(b =>
+            b.id === section.id || b.section_name === section.name
+          );
+          if (banner) {
+            section.setter(getImageUrl(banner.path));
+          }
+        });
+      } else {
+        // if (message) toast.error(message);
+      }
+    } catch (err) {
+      console.error("Erreur lors de la récupération des sections:", err);
+      // setError(err instanceof Error ? err.message : "Erreur inconnue");
+      // toast.error("Erreur lors du chargement des sections");
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionBackground();
+  }, []);
+
+
+  useEffect(() => {
     fetchData_2("crucifixion").then((d) => {
       // setTitleCrucifixion(d?.titlecrucifixion || "")
       setDescriptionCrucifixion1(d?.descriptioncrucifixion1 || "")
@@ -35,10 +90,10 @@ export function The_Crucifixion() {
       setDescriptionCrucifixion10(d?.descriptioncrucifixion10 || "")
       setDescriptionCrucifixion11(d?.descriptioncrucifixion11 || "")
     })
-      }, []);
+  }, []);
   return (
     <div id="backdrop" className="crucifixion-page">
-      <div id="pg-banner-cru"></div>
+      <div id="pg-banner-cru"  style={{ backgroundImage: `url(${crucifixionImage})` }}></div>
       <div id="top-bar-gold-cru"></div>
       <div id="No-cru">
         <img
@@ -64,7 +119,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p1">
         <p>
-             {descriptionCrucifixion2}
+          {descriptionCrucifixion2}
           {/* Tany amin'ny 7 faritra samihafa, ny mpikambana ao amin'ny Firenen'i{" "}
           <span className="David-cru">יהוה</span> dia nosamborina, nofatorana
           tanana, nosokafana akanjo, ary natory tany an-dalambe mangatsiaka sy
@@ -74,7 +129,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p2">
         <p>
-             {descriptionCrucifixion3}
+          {descriptionCrucifixion3}
           {/* Tsy misy porofo marina hanenjehana, ny GOVERNEMANTA FEDERALY dia
           nanendry ny Firenen'i <span className="David-cru">יהוה</span> amin'ny
           R.I.C.O. (Racketeering Influenced Corrupt Organizations), nametraka
@@ -86,7 +141,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p3">
         <p>
-           {descriptionCrucifixion4}
+          {descriptionCrucifixion4}
           {/* Ho vavolombelony lehibe, ny GOVERNEMANTA FEDERALY dia niankina tamin'i
           ROBERT "LYING BOB" ROZIER, mpamono olona maro niaiky heloka sy
           mpandany rongony. ("LYING BOB" dia tsy nahazo vavolombelona ny
@@ -98,7 +153,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p4">
         <p>
-           {descriptionCrucifixion5}
+          {descriptionCrucifixion5}
           {/* Nianiana, ny manampahefana ambony tao amin'ny DEPARTEMAN'NY
           JUSTISIA dia niaiky fa malemy ny raharaha ary ny fanendrena R.I.C.O.
           dia nanome azy "NY TOMBONTsoa HAHATRATRA". */}
@@ -107,7 +162,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p5">
         <p>
-           {descriptionCrucifixion6}
+          {descriptionCrucifixion6}
           {/* Rehefa nihaino ny porofo ny mpitsara ao amin'ny fitsarana
           eo an-toerana, tsy misy ny korontana ny fanendrena R.I.C.O.
           federaly, ny mpitsara dia namoaka didim-pitsarana haingana sy
@@ -118,7 +173,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p6">
         <p>
-           {descriptionCrucifixion7}
+          {descriptionCrucifixion7}
           {/* Rehefa 5 andro sy sasany nieritreritra, ny mpitsara federaly dia
           nitaraina in-efatra ny tsy fahafahany miray hevitra. Very
           hevitra izy ireo. Farany, dia nanameloka an'i{" "}
@@ -130,7 +185,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p7">
         <p>
-            {descriptionCrucifixion8}
+          {descriptionCrucifixion8}
           {/* Na dia eo aza ny fahitantsika ankehitriny fa ny lainga sy ny
           fanodikodinana ny rafitra mpitsara, ny governemanta dia naniraka an'i{" "}
           <span className="David-cru">יהוה&nbsp;בּן&nbsp;יהוה</span> ho any
@@ -155,7 +210,7 @@ export function The_Crucifixion() {
       <div className="sec-bar-cru"></div>
       <div className="sec-text-cru pg-text-fmt-cru pg-text-fmt-p9">
         <p>
-           {descriptionCrucifixion10}
+          {descriptionCrucifixion10}
           {/* <span className="David-cru">יהוה&nbsp;בּן&nbsp;יהוה</span> dia
           nandany ny ampahatelon'ny sazy 18 taony tany am-ponja tamin'ny
           fanerena "MAFy" any Miami, Florida. */}

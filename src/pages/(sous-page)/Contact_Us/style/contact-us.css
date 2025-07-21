@@ -11,7 +11,7 @@
 }
 
 .contact-banner {
-  background-image: url("../image/page-banner.jpg");
+  /* background-image: url("../image/page-banner.jpg"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

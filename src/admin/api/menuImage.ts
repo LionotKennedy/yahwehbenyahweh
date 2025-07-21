@@ -35,7 +35,7 @@ const base64ToFile = (base64String: string, filename: string): File => {
 };
 
 export const MenuAPI = {
-  fetchAll: async (): Promise<ApiResponse> => {
+  fetchAll: async (): Promise<ApiResponse> => { 
     try {
       const response = await fetch("http://localhost:5000/api/menu", {
         method: "GET",

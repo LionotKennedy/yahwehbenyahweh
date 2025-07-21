@@ -1,0 +1,137 @@
+Pour gérer l'affichage de l'image de fond de la section "About Yahweh" en utilisant votre API, voici comment modifier votre code :
+
+1. D'abord, importez `SectionAPI` et `getImageUrl` dans votre composant AboutYahweh :
+
+```typescript
+import { SectionAPI, getImageUrl } from "../../../admin/api/api";
+```
+
+2. Ajoutez un state pour stocker l'URL de l'image de fond :
+
+```typescript
+const [aboutYahwehBg, setAboutYahwehBg] = useState("");
+```
+
+3. Modifiez votre `useEffect` pour récupérer l'image de la section :
+
+```typescript
+useEffect(() => {
+  const loadYahwehData = async () => {
+    try {
+      // Chargez les données textuelles comme avant
+      const yahwehData = await yahwehApi.get();
+      if (yahwehData.success && yahwehData.data?.length > 0) {
+        const data = yahwehData.data[0];
+        setYahwehTitle2(data.title2);
+        setYahwehDescription1(data.description1);
+        // ... autres setters ...
+      }
+
+      // Chargez l'image de fond de la section
+      const sectionResponse = await SectionAPI.fetchAll();
+      if (sectionResponse.success) {
+        const aboutSection = sectionResponse.data.find(section => 
+          section.section_name === "About_Yahweh"
+        );
+        if (aboutSection) {
+          setAboutYahwehBg(getImageUrl(aboutSection.path));
+        }
+      }
+    } catch (error) {
+      console.error("Error loading data:", error);
+    }
+  };
+
+  loadYahwehData();
+}, []);
+```
+
+4. Modifiez votre div de bannière pour utiliser l'image de l'API ou le fallback du JSON :
+
+```typescript
+<div 
+  id="pg-banner-abouty" 
+  className="page-banner" 
+  style={{ 
+    backgroundImage: `url(${aboutYahwehBg || imagesData.backgroundImages.pageBanner_About_Yahweh})` 
+  }}
+></div>
+```
+
+Solution complète avec gestion des erreurs :
+
+```typescript
+const [aboutYahwehBg, setAboutYahwehBg] = useState("");
+
+useEffect(() => {
+  const loadData = async () => {
+    try {
+      // Données textuelles
+      const yahwehData = await yahwehApi.get();
+      if (yahwehData.success && yahwehData.data?.length > 0) {
+        const data = yahwehData.data[0];
+        // ... setters ...
+      }
+
+      // Image de fond
+      try {
+        const sectionResponse = await SectionAPI.fetchAll();
+        if (sectionResponse.success) {
+          const aboutSection = sectionResponse.data.find(section => 
+            section.section_name.toLowerCase().includes("about_yahweh")
+          );
+          if (aboutSection?.path) {
+            setAboutYahwehBg(getImageUrl(aboutSection.path));
+          }
+        }
+      } catch (error) {
+        console.error("Error loading section image:", error);
+      }
+    } catch (error) {
+      console.error("Error loading data:", error);
+    }
+  };
+
+  loadData();
+}, []);
+```
+
+Alternative si vous voulez une requête spécifique pour cette section :
+
+```typescript
+// Dans votre api.ts, ajoutez cette méthode à SectionAPI
+getByName: async (name: string): Promise<ApiResponse> => {
+  try {
+    const response = await fetch(`http://localhost:5000/api/sections/name/${name}`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+    const data = await response.json();
+    return { success: true, data };
+  } catch (error) {
+    console.error(`Error loading section ${name}:`, error);
+    return { 
+      success: false, 
+      message: error instanceof Error ? error.message : "Unknown error" 
+    };
+  }
+}
+
+// Puis dans votre composant
+const loadBgImage = async () => {
+  const response = await SectionAPI.getByName("About_Yahweh");
+  if (response.success && response.data?.path) {
+    setAboutYahwehBg(getImageUrl(response.data.path));
+  }
+};
+
+// Appelez cette fonction dans votre useEffect
+```
+
+Cette solution garantit que :
+1. L'image de fond vient de l'API si disponible
+2. Le fallback du JSON est utilisé si l'API ne répond pas ou si la section n'existe pas
+3. L'URL est correctement formatée avec `getImageUrl`
+4. Les erreurs sont gérées silencieusement sans casser l'application

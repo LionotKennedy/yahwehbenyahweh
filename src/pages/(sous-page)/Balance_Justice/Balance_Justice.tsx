@@ -6,6 +6,16 @@ import "./style/responsive.css";
 import BottomMediaImage from "./image/bottom-media.jpg";
 import { fetchData_2 } from "../../../admin/api/api";
 import { useEffect, useState } from "react";
+import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
+
+interface SectionMenuData {
+  id: number;
+  section_name: string | null;
+  path: string;
+  created_at: string;
+  updated_at: string;
+}
+
 
 export function Balance_Justice() {
   const [titleBalance, setTitleBalance] = useState("")
@@ -13,6 +23,48 @@ export function Balance_Justice() {
   const [descriptionBalance2, setDescriptionBalance2] = useState("")
   const [descriptionBalance3, setDescriptionBalance3] = useState("")
   const [descriptionBalance4, setDescriptionBalance4] = useState("")
+  const [balanceImage, setBalanceImage] = useState("");
+  const [sectionMenubg, setSectionMenuBg] = useState<SectionMenuData[]>([]);
+
+
+  const fetchSectionBackground = async () => {
+    try {
+      // setLoading(true);
+      // setError(null);
+      const { success, data, message } = await MenuAPI.fetchAll();
+
+      if (success && data) {
+        setSectionMenuBg(data);
+        const sortedSectionbg = data.sort((a: SectionMenuData, b: SectionMenuData) => a.id - b.id);
+
+        // Mise à jour des images pour chaque section
+        const sections = [
+          { id: 12, name: "Balance_Justice", setter: setBalanceImage }
+        ];
+
+        sections.forEach(section => {
+          const banner = sortedSectionbg.find(b =>
+            b.id === section.id || b.section_name === section.name
+          );
+          if (banner) {
+            section.setter(getImageUrl(banner.path));
+          }
+        });
+      } else {
+        // if (message) toast.error(message);
+      }
+    } catch (err) {
+      console.error("Erreur lors de la récupération des sections:", err);
+      // setError(err instanceof Error ? err.message : "Erreur inconnue");
+      // toast.error("Erreur lors du chargement des sections");
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchSectionBackground();
+  }, []);
 
   useEffect(() => {
     fetchData_2("balance").then((d) => {
@@ -26,7 +78,7 @@ export function Balance_Justice() {
 
   return (
     <>
-      <div id="pg-banner-bal"></div>
+      <div id="pg-banner-bal" style={{ backgroundImage: `url(${balanceImage})` }}></div>
       <div id="top-bar-gold-bal"></div>
 
       <div id="The_Abraham_Foundation" className="title-section-fol">
