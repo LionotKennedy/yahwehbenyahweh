@@ -121,7 +121,7 @@ export function Book_of_the_Month() {
       <p className="botm-bottom-page-month"></p>
       <div>
         <img
-          className="bottom-media-img"
+          className="bottom-media-img-B"
           src={BottomMediaImage}
           alt="Media bottom"
         />
