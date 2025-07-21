@@ -23,6 +23,10 @@ import {
   GalleryAPI
 } from "../../../api/homeImage2";
 import "./style/HomeTab.css";
+// Another
+import "../../Content/tabs/style/HomeTab.css";
+import "../../Content/tabs/style/HomeTab3.css";
+import "../../Content/tabs/style/HomeTab5.css";
 
 interface ImageData {
   id?: number;
