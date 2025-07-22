@@ -73,7 +73,7 @@ export function The_Followers_of_Yahweh_Ben_Yahweh() {
           );
 
           if (aboutYahwehBenSection) {
-            console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
+            // console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
             const imageUrl = getImageUrl(aboutYahwehBenSection.path);
             // console.log("URL complète de l'image:", imageUrl);
             setAboutYahwehBenBg(imageUrl);

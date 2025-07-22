@@ -1,5 +1,5 @@
 // api/menuApi.ts
-import { toast } from "react-hot-toast";
+// import { toast } from "react-hot-toast";
 
 const RACI_URL = "http://localhost:5000";
 
@@ -44,7 +44,7 @@ export const MenuAPI = {
       return { success: true, data };
     } catch (error) {
       console.error("Erreur lors de la récupération des sections:", error);
-      toast.error("Erreur lors du chargement des sections");
+      // toast.error("Erreur lors du chargement des sections");
       return {
         success: false,
         message: error instanceof Error ? error.message : "Erreur inconnue",
@@ -57,7 +57,7 @@ export const MenuAPI = {
     imageData: string,
     section_name?: string
   ): Promise<ApiResponse> => {
-    const toastId = toast.loading(`Mise à jour de la section ${id}...`);
+    // const toastId = toast.loading(`Mise à jour de la section ${id}...`);
     try {
       let body: FormData | string;
       const headers: Record<string, string> = {};
@@ -87,16 +87,16 @@ export const MenuAPI = {
       }
 
       const data = await response.json();
-      toast.success(`Section ${section_name || id} mise à jour avec succès!`, {
-        id: toastId,
-      });
+      // toast.success(`Section ${section_name || id} mise à jour avec succès!`, {
+      //   id: toastId,
+      // });
       return { success: true, data };
     } catch (error) {
       console.error(
         `Erreur lors de la mise à jour de la section ${id}:`,
         error
       );
-      toast.error(`Échec de la mise à jour de la section`, { id: toastId });
+      // toast.error(`Échec de la mise à jour de la section`, { id: toastId });
       return {
         success: false,
         message: error instanceof Error ? error.message : "Erreur inconnue",

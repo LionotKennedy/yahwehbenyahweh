@@ -79,7 +79,7 @@ export function AboutYahweh() {
             section.section_name === "about_yahweh"
           );
 
-          console.log("Section About_Yahweh trouvée:", aboutSection); // Affiche spécifiquement la section
+          // console.log("Section About_Yahweh trouvée:", aboutSection); // Affiche spécifiquement la section
 
           if (aboutSection) {
             const imageUrl = getImageUrl(aboutSection.path);

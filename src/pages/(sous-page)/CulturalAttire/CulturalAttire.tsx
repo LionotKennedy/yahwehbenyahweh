@@ -54,7 +54,7 @@ const CulturalAttire = () => {
         // Chargez l'image de fond de la section
         const sectionResponse = await SectionAPI.fetchAll();
         if (sectionResponse.success) {
-          console.log("Toutes les sections:", sectionResponse.data);
+          // console.log("Toutes les sections:", sectionResponse.data);
 
           // Recherche de la section about_yahweh_ben
           interface Section {
@@ -69,15 +69,15 @@ const CulturalAttire = () => {
           );
 
           if (aboutYahwehBenSection) {
-            console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
+            // console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
             const imageUrl = getImageUrl(aboutYahwehBenSection.path);
-            console.log("URL complète de l'image:", imageUrl);
+            // console.log("URL complète de l'image:", imageUrl);
             setAboutYahwehBenBg(imageUrl);
           } else {
-            console.log(
-              "Aucune section about_yahweh_ben trouvée - noms disponibles:",
-              (sectionResponse.data as { section_name: string }[]).map((s: { section_name: string }) => s.section_name)
-            );
+            // console.log(
+            //   "Aucune section about_yahweh_ben trouvée - noms disponibles:",
+            //   (sectionResponse.data as { section_name: string }[]).map((s: { section_name: string }) => s.section_name)
+            // );
           }
         } else {
           console.error("Erreur API sections:", sectionResponse.message);

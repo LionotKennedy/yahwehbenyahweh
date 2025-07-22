@@ -21,6 +21,7 @@ import {
   followersApi,
   culturalAttireApi,
 } from "../../../api/api"; // Importez les fonctions API
+import toast from "react-hot-toast"
 
 const HomeTab: React.FC = () => {
   // États pour la section Home
@@ -163,8 +164,10 @@ const HomeTab: React.FC = () => {
         description1: description,
       };
       await homeApi.update(1, data);
+       toast.success("Section home mise à jour !")
     } catch (error) {
-      console.error("Error saving home:", error);
+      // console.error("Error saving home:", error);
+      toast.error("Erreur lors de la sauvegarde.")
     }
   };
 
@@ -181,8 +184,10 @@ const HomeTab: React.FC = () => {
         description6: yahwehDescription6,
       };
       await yahwehApi.update(1, data);
+       toast.success("Section yahweh mise à jour !")
     } catch (error) {
-      console.error("Error saving yahweh:", error);
+      // console.error("Error saving yahweh:", error);
+      toast.error("Erreur lors de la sauvegarde.")
     }
   };
 
@@ -202,8 +207,10 @@ const HomeTab: React.FC = () => {
         description9: yahwehBenDescription9,
       };
       await yahwehBenApi.update(1, data);
+       toast.success("Section yahweh ben mise à jour !")
     } catch (error) {
-      console.error("Error saving yahweh ben:", error);
+      // console.error("Error saving yahweh ben:", error);
+      toast.error("Erreur lors de la sauvegarde.")
     }
   };
 
@@ -218,8 +225,10 @@ const HomeTab: React.FC = () => {
         description5: followersDescription5,
       };
       await followersApi.update(1, data);
+       toast.success("Section followers mise à jour !")
     } catch (error) {
-      console.error("Error saving followers:", error);
+      // console.error("Error saving followers:", error);
+      toast.error("Erreur lors de la sauvegarde.")
     }
   };
 
@@ -234,8 +243,10 @@ const HomeTab: React.FC = () => {
         description5: attireDescription5,
       };
       await culturalAttireApi.update(1, data);
+       toast.success("Section cultural attire mise à jour !")
     } catch (error) {
-      console.error("Error saving cultural attire:", error);
+      // console.error("Error saving cultural attire:", error);
+      toast.error("Erreur lors de la sauvegarde.")
     }
   };
 

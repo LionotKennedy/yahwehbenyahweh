@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Save, Phone, Mail, FileText, Type } from "lucide-react";
 import "./style/ContactTab.css";
 import { contactApi } from "../../../api/api";
+import toast from "react-hot-toast"
 
 const ContactTab: React.FC = () => {
   // États pour les champs
@@ -44,8 +45,10 @@ const ContactTab: React.FC = () => {
         email: email
       };
       await contactApi.update(1, data);
+      toast.success("Section contacts mise à jour !")
     } catch (error) {
-      console.error("Error saving contacts:", error);
+      // console.error("Error saving contacts:", error);
+      toast.error("Erreur lors de la sauvegarde.")
     }
   };
 
