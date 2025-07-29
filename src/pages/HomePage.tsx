@@ -95,6 +95,8 @@ const HomePage: React.FC = () => {
   // Récupérez les images spécifiques
   const bookOfTheMonthImage = getBannerById(4) || images.bookOfTheMonth;
   const breakingNewsImage = getBannerById(5) || images.breakingNews;
+  // const bookOfTheMonthImage = getBannerById(4) || "";
+  // const breakingNewsImage = getBannerById(5) || "";
 
   useEffect(() => {
     const loadData = async () => {
@@ -121,10 +123,13 @@ const HomePage: React.FC = () => {
       } catch (error) {
         console.error("Error loading data:", error);
       }
+      // console.log(breakingNewsImage)
     };
+
 
     loadData();
   }, []);
+
 
 
   return (

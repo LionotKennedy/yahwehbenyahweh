@@ -325,7 +325,7 @@
 //                   </div>
 
 //                   <button type="submit" className="submit-btn">Se Connecter</button>
-                  
+
 //                   <a href="#" className="forgot-password">Mot de passe oublié?</a>
 //                 </form>
 //               </div>
@@ -718,7 +718,7 @@
 //                   </div>
 
 //                   <button type="submit" className="submit-btn">Se Connecter</button>
-                  
+
 //                   <button 
 //                     type="button" 
 //                     className="forgot-password"
@@ -900,7 +900,7 @@
 //             >
 //                 {/* Overlay sombre pour améliorer la lisibilité */}
 //                 <div className="background-overlay"></div>
-                
+
 //                 {/* Contenu principal */}
 //                 <div className="content-container">
 //                     {/* Section gauche avec le cercle doré */}
@@ -973,58 +973,139 @@
 
 
 
-import cosmicBackground from "../../../assets/images/index-banner-1.jpg";
-import "./style/ShopStyles.css";
+// import cosmicBackground from "../../../assets/images/index-banner-1.jpg";
+// import "./style/ShopStyles.css";
+
+// export function Shop() {
+//     return (
+//         <div className="shop-container">
+//             {/* Image de fond ajustée */}
+//             <div 
+//                 className="cosmic-background"
+//                 style={{ backgroundImage: `url(${cosmicBackground})` }}
+//             >
+//                 {/* Overlay sombre */}
+//                 <div className="background-overlay"></div>
+
+//                 {/* Contenu principal */}
+//                 <div className="content-container">
+//                     {/* Section gauche - maintenant vide car l'image est en fond */}
+//                     <div className="image-section"></div>
+
+//                     {/* Section droite avec fond blanc */}
+//                     <div className="white-content-section">
+//                         <div className="content-wrapper">
+//                             <div className="title-section">
+//                                 <h1 className="main-title">BIENVENUE À</h1>
+//                                 <h2 className="secondary-title">LA FONDATION P.E.E.S.S.</h2>
+//                             </div>
+
+//                             <div className="quote-section">
+//                                 <blockquote className="bible-quote">
+//                                     "La sagesse est la chose principale ; acquiers donc la sagesse, 
+//                                     et avec tout ce que tu possèdes acquiers l'intelligence."
+//                                 </blockquote>
+//                                 <cite className="quote-citation">Proverbes 4:7</cite>
+//                             </div>
+
+//                             <div className="text-section">
+//                                 <p className="description-text">
+//                                     Notre mission est de promouvoir la sagesse, l'éducation et 
+//                                     la compréhension spirituelle à travers l'étude et la méditation.
+//                                 </p>
+//                                 <div className="button-container">
+//                                     <button className="discover-button">
+//                                         Découvrir Plus
+//                                     </button>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default Shop;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import cosmicBackground from "../../../../public/Shop/index-banner-2.jpg";
+import "./style/ShopStyles2.css";
 
 export function Shop() {
     return (
         <div className="shop-container">
-            {/* Image de fond ajustée */}
-            <div 
-                className="cosmic-background"
-                style={{ backgroundImage: `url(${cosmicBackground})` }}
-            >
-                {/* Overlay sombre */}
-                <div className="background-overlay"></div>
-                
-                {/* Contenu principal */}
-                <div className="content-container">
-                    {/* Section gauche - maintenant vide car l'image est en fond */}
-                    <div className="image-section"></div>
-
-                    {/* Section droite avec fond blanc */}
-                    <div className="white-content-section">
-                        <div className="content-wrapper">
-                            <div className="title-section">
-                                <h1 className="main-title">BIENVENUE À</h1>
-                                <h2 className="secondary-title">LA FONDATION P.E.E.S.S.</h2>
-                            </div>
-
-                            <div className="quote-section">
-                                <blockquote className="bible-quote">
-                                    "La sagesse est la chose principale ; acquiers donc la sagesse, 
-                                    et avec tout ce que tu possèdes acquiers l'intelligence."
-                                </blockquote>
-                                <cite className="quote-citation">Proverbes 4:7</cite>
-                            </div>
-
-                            <div className="text-section">
-                                <p className="description-text">
-                                    Notre mission est de promouvoir la sagesse, l'éducation et 
-                                    la compréhension spirituelle à travers l'étude et la méditation.
-                                </p>
-                                <div className="button-container">
-                                    <button className="discover-button">
-                                        Découvrir Plus
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div className="shop-img">
+                <img className="" src={cosmicBackground} alt="" />
+            </div>
+            <div className="shop-content">
+                <div className="main-title">BIENVENUE À</div>
+                <h3 className="secondary-title">LA FONDATION P.E.E.S.S.</h3>
+                <div className="shop-section">
+                    "La sagesse est la chose principale ; acquiers donc la sagesse,
+                    et avec tout ce que tu possèdes acquiers l'intelligence."
                 </div>
+                <br />
+                <cite className="shop-citation">Proverbes 4:7</cite>
             </div>
         </div>
     );
 }
 
 export default Shop;
+
+
+{/* <span>
+    BIENVENUE À
+</span>
+<span>
+    LA FONDATION P.E.E.S.S.
+</span>
+<span>
+    "La sagesse est la chose principale ; acquiers donc la sagesse,
+    et avec tout ce que tu possèdes acquiers l'intelligence."
+</span>
+<span>
+    Proverbes 4:7
+</span> */}

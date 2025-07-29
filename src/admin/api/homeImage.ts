@@ -1,4 +1,5 @@
-const RACI_URL = "http://localhost:5000";
+// const RACI_URL = "http://localhost:5000";
+const RACI_URL = "http://145.223.33.2:5000";
 
 const API_BASE = `${RACI_URL}/api`;
 
