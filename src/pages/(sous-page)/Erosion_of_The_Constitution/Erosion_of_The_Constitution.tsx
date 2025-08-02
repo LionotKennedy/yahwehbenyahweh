@@ -11,8 +11,10 @@ import { MenuAPI, getImageUrl } from "../../../admin/api/menuImage";
 
 interface SectionMenuData {
   id: number;
-  section_name: string | null;
-  path: string;
+  // section_name: string | null;
+  // path: string;
+  section: string | null;
+  src: string;
   created_at: string;
   updated_at: string;
 }
@@ -43,10 +45,12 @@ export function Erosion_of_The_Constitution() {
 
           const banner: SectionMenuData | undefined = sortedSectionbg.find(
             (b: SectionMenuData) =>
-              b.id === section.id || b.section_name === section.name
+              // b.id === section.id || b.section_name === section.name
+              b.id === section.id || b.section === section.name
           );
           if (banner) {
-            section.setter(getImageUrl(banner.path));
+            section.setter(getImageUrl(banner.src));
+            // section.setter(getImageUrl(banner.path));
           }
         });
       } else {

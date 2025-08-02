@@ -17,14 +17,16 @@ export function Book_of_the_Month() {
     if (banners.length > 0) {
       interface Banner {
         id: number;
-        path: string;
+        src: string;
+        // path: string;
         // Add other properties if needed
       }
       const banners: Banner[] = location.state?.banners || [];
       const imageWithId4: Banner | undefined = banners.find((banner: Banner) => banner.id === 4);
       if (imageWithId4) {
         // console.log("Image avec ID 4:", imageWithId4);
-        const imageUrl = getImageUrl(imageWithId4.path);
+        // const imageUrl = getImageUrl(imageWithId4.path);
+        const imageUrl = getImageUrl(imageWithId4.src);
         // console.log("URL de l'image:", imageUrl);
         setBackgroundImage(imageUrl); // Stocke l'URL de l'image dans l'état
       } else {

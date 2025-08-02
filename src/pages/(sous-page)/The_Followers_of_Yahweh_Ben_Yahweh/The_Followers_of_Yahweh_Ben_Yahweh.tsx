@@ -59,8 +59,10 @@ export function The_Followers_of_Yahweh_Ben_Yahweh() {
 
           // Recherche de la section about_yahweh_ben
           interface Section {
-            section_name: string;
-            path: string;
+            section: string;
+            src: string;
+            // section_name: string;
+            // path: string;
             [key: string]: any;
           }
 
@@ -69,12 +71,14 @@ export function The_Followers_of_Yahweh_Ben_Yahweh() {
 
           const sectionResponse = await SectionAPI.fetchAll();
           const aboutYahwehBenSection: Section | undefined = sectionResponse.data?.find(
-            (section: Section) => section.section_name === "followers"
+            (section: Section) => section.section === "followers"
+            // (section: Section) => section.section_name === "followers"
           );
 
           if (aboutYahwehBenSection) {
             // console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
-            const imageUrl = getImageUrl(aboutYahwehBenSection.path);
+            const imageUrl = getImageUrl(aboutYahwehBenSection.src);
+            // const imageUrl = getImageUrl(aboutYahwehBenSection.path);
             // console.log("URL complète de l'image:", imageUrl);
             setAboutYahwehBenBg(imageUrl);
           } else {

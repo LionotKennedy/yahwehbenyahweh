@@ -58,19 +58,23 @@ const CulturalAttire = () => {
 
           // Recherche de la section about_yahweh_ben
           interface Section {
-            section_name: string;
-            path: string;
+            section: string;
+            src: string;
+            // section_name: string;
+            // path: string;
             [key: string]: any;
           }
 
 
           const aboutYahwehBenSection: Section | undefined = (sectionResponse.data as Section[]).find(
-            (section: Section) => section.section_name === "cultural"
+            (section: Section) => section.section === "cultural"
+            // (section: Section) => section.section_name === "cultural"
           );
 
           if (aboutYahwehBenSection) {
             // console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
-            const imageUrl = getImageUrl(aboutYahwehBenSection.path);
+            const imageUrl = getImageUrl(aboutYahwehBenSection.src);
+            // const imageUrl = getImageUrl(aboutYahwehBenSection.path);
             // console.log("URL complète de l'image:", imageUrl);
             setAboutYahwehBenBg(imageUrl);
           } else {

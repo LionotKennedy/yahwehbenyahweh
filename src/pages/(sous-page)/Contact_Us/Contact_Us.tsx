@@ -10,17 +10,24 @@ import { URL } from "../../../admin/api/url";
 
 interface ContactData {
   id: number
-  path: string
+  // path: string
+  src: string
   alt: string | null
   created_at: string
   updated_at: string
 }
-const getImageUrl = (path: string): string => {
-  if (!path) return "/placeholder.svg"
-  if (path.startsWith("http")) return path
+const getImageUrl = (src: string): string => {
+  if (!src) return "/placeholder.svg"
+  if (src.startsWith("http")) return src
   // return `http://localhost:5000${path}`
-  return `${URL}${path}`
+  return `${URL}${src}`
 }
+// const getImageUrl = (path: string): string => {
+//   if (!path) return "/placeholder.svg"
+//   if (path.startsWith("http")) return path
+//   // return `http://localhost:5000${path}`
+//   return `${URL}${path}`
+// }
 
 export function ContactUs() {
 
@@ -62,7 +69,8 @@ export function ContactUs() {
       const sortedContact = data.sort((a: any, b: any) => a.id - b.id)
       const about_contact = sortedContact.find((contact: any) => contact.id === 1)
       if (about_contact) {
-        setContactsImages(getImageUrl(about_contact.path))
+        // setContactsImages(getImageUrl(about_contact.path))
+        setContactsImages(getImageUrl(about_contact.src))
       }
     } catch (err) {
       // setError(err instanceof Error ? err.message : "Erreur inconnue")

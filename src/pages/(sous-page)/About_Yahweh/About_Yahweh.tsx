@@ -63,8 +63,10 @@ export function AboutYahweh() {
           // console.log("Toutes les sections:", sectionResponse.data); // Affiche toutes les sections
 
           interface Section {
-            section_name: string;
-            path: string;
+            section: string;
+            src: string;
+            // section_name: string;
+            // path: string;
             // Add other properties if needed
           }
 
@@ -76,13 +78,13 @@ export function AboutYahweh() {
 
           const sectionResponse: SectionResponse = await SectionAPI.fetchAll();
           const aboutSection: Section | undefined = sectionResponse.data?.find((section: Section) =>
-            section.section_name === "about_yahweh"
+            section.section === "about_yahweh"
           );
 
           // console.log("Section About_Yahweh trouvée:", aboutSection); // Affiche spécifiquement la section
 
           if (aboutSection) {
-            const imageUrl = getImageUrl(aboutSection.path);
+            const imageUrl = getImageUrl(aboutSection.src);
             // console.log("URL complète de l'image:", imageUrl); // Affiche l'URL complète
             setAboutYahwehBg(imageUrl);
           } else {

@@ -35,7 +35,8 @@ interface HomePageContent {
 }
 
 interface ImageData {
-  path: string
+  // path: string
+  src: string
   alt: string
 }
 
@@ -84,7 +85,8 @@ const HomePage: React.FC = () => {
 
   const slides: SlideData[] = displayedBanners.map((banner: BannerData) => ({
     id: banner.id,
-    image: getImageUrl(banner.path),
+    // image: getImageUrl(banner.path),
+    image: getImageUrl(banner.src),
     alt: banner.alt,
   }));
   // Ajoutez cette fonction utilitaire pour trouver une bannière par son ID
@@ -165,7 +167,8 @@ const HomePage: React.FC = () => {
         >
           <img
             className="botm-image-home"
-            src={getImageUrl(bookOfTheMonthImage.path)}
+            // src={getImageUrl(bookOfTheMonthImage.path)}
+            src={getImageUrl(bookOfTheMonthImage.src)}
             alt={bookOfTheMonthImage.alt}
           />
         </Link>
@@ -174,7 +177,8 @@ const HomePage: React.FC = () => {
         <Link to="/Book_of_the_Month">
           <img
             className="sp-button-img-home"
-            src={images.buttons.readMore.path}
+            // src={images.buttons.readMore.path}
+            src={images.buttons.readMore.src}
             alt={images.buttons.readMore.alt}
           />
         </Link>
@@ -190,7 +194,8 @@ const HomePage: React.FC = () => {
           {/* <VideoPlayer src={src1 } poster={images.videoPoster.pageBanner.path} /> */}
           <VideoPlayer
             src={src1 || videos[0]?.src || ""}
-            poster={images.videoPoster.pageBanner.path}
+            // poster={images.videoPoster.pageBanner.path}
+            poster={images.videoPoster.pageBanner.src}
           />
         </div>
 
@@ -200,7 +205,8 @@ const HomePage: React.FC = () => {
           {/* <VideoPlayer src={videos[1]?.src || ""} poster={images.videoPoster.goodNews.path} /> */}
           <VideoPlayer
             src={src2 || videos[1]?.src || ""}
-            poster={images.videoPoster.goodNews.path}
+            // poster={images.videoPoster.goodNews.path}
+            poster={images.videoPoster.goodNews.src}
           />
         </div>
 
@@ -217,7 +223,8 @@ const HomePage: React.FC = () => {
           {/* <VideoPlayer src={videos[2]?.src || ""} poster={images.videoPoster.eternalLife.path} /> */}
           <VideoPlayer
             src={src3 || videos[2]?.src || ""}
-            poster={images.videoPoster.eternalLife.path}
+            poster={images.videoPoster.eternalLife.src}
+            // poster={images.videoPoster.eternalLife.path}
           />
         </div>
 
@@ -236,7 +243,8 @@ const HomePage: React.FC = () => {
           >
             <img
               className="sp-button-img mx_auto"
-              src={images.buttons.orderNow.path}
+              // src={images.buttons.orderNow.path}
+              src={images.buttons.orderNow.src}
               alt={images.buttons.orderNow.alt}
             />
           </a>
@@ -252,7 +260,8 @@ const HomePage: React.FC = () => {
         <div className="bn-div-fmt-home">
           <img
             className="breakingnews-img-home"
-            src={getImageUrl(breakingNewsImage.path)}
+            // src={getImageUrl(breakingNewsImage.path)}
+            src={getImageUrl(breakingNewsImage.src)}
             alt={breakingNewsImage.alt}
           // src={images.breakingNews.path}
           // alt={images.breakingNews.alt}

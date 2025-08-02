@@ -30,30 +30,36 @@ import "../../Content/tabs/style/HomeTab5.css";
 
 interface ImageData {
   id?: number;
-  path: string;
+  // path: string;
+  src: string;
   alt: string;
 }
 
 interface BannerData {
   id: number;
-  path: string;
+  // path: string;
+  src: string;
   alt: string | null;
-  position: number;
+  sort: number;
+  // position: number;
   created_at: string;
   updated_at: string;
 }
 
 interface SectionData {
   id: number;
-  section_name: string | null;
-  path: string;
+  section: string | null;
+  src: string;
+  // section_name: string | null;
+  // path: string;
   created_at: string;
   updated_at: string;
 }
 
 interface GalleryImage {
   id: number;
-  path: string;
+  src: string;
+  // path: string;
   alt: string;
   created_at: string;
   updated_at: string;
@@ -76,8 +82,9 @@ interface HomeImagesData {
 
 interface ButtonData {
   id: number;
-  path: string;
+  src: string;
   alt: string;
+  // path: string;
 }
 
 const HomeTab: React.FC = () => {
@@ -89,7 +96,8 @@ const HomeTab: React.FC = () => {
   const [defaultImages] = useState<HomeImagesData>(homeImagesData);
   const [homeImages1, setHomeImages1] = useState<string[]>([]);
   const [homeImages2, setHomeImages2] = useState<string[]>(() =>
-    buttonsData.boutons.map((bouton: ButtonData) => bouton.path)
+    buttonsData.boutons.map((bouton: ButtonData) => bouton.src)
+    // buttonsData.boutons.map((bouton: ButtonData) => bouton.path)
   );
   const [homeImage3, setHomeImage3] = useState("");
   const [homeImage4, setHomeImage4] = useState("");
@@ -113,7 +121,8 @@ const HomeTab: React.FC = () => {
       if (success && data) {
         const sortedGallery = data.sort((a: GalleryImage, b: GalleryImage) => a.id - b.id);
         setGalleryImages(sortedGallery);
-        const galleryPaths: string[] = sortedGallery.map((img: GalleryImage) => getImageUrl(img.path));
+        const galleryPaths: string[] = sortedGallery.map((img: GalleryImage) => getImageUrl(img.src));
+        // const galleryPaths: string[] = sortedGallery.map((img: GalleryImage) => getImageUrl(img.path));
         
         while (galleryPaths.length < 12) {
           galleryPaths.push("");
@@ -121,7 +130,8 @@ const HomeTab: React.FC = () => {
         
         setHomeImages2(galleryPaths.slice(0, 12));
       } else {
-        setHomeImages2(buttonsData.boutons.map((bouton: ButtonData) => bouton.path));
+        setHomeImages2(buttonsData.boutons.map((bouton: ButtonData) => bouton.src));
+        // setHomeImages2(buttonsData.boutons.map((bouton: ButtonData) => bouton.path));
         if (message) toast.error(message);
       }
     } catch (err) {
@@ -146,23 +156,30 @@ const HomeTab: React.FC = () => {
         const mainBanners: string[] = sortedBanners
           .filter((banner: MainBanner) => [1, 2, 3].includes(banner.id))
           .sort((a: MainBanner, b: MainBanner) => a.id - b.id)
-          .map((banner: MainBanner) => getImageUrl(banner.path));
+          .map((banner: MainBanner) => getImageUrl(banner.src));
+          // .map((banner: MainBanner) => getImageUrl(banner.path));
 
         while (mainBanners.length < 3) {
-          mainBanners.push(defaultImages.banners[mainBanners.length]?.path || "");
+          mainBanners.push(defaultImages.banners[mainBanners.length]?.src || "");
+          // mainBanners.push(defaultImages.banners[mainBanners.length]?.path || "");
         }
 
         setHomeImages1(mainBanners);
 
         const bookBanner: BannerData | undefined = sortedBanners.find((banner: BannerData) => banner.id === 4);
-        setHomeImage3(bookBanner ? getImageUrl(bookBanner.path) : defaultImages.bookOfTheMonth.path);
+        setHomeImage3(bookBanner ? getImageUrl(bookBanner.src) : defaultImages.bookOfTheMonth.src);
+        // setHomeImage3(bookBanner ? getImageUrl(bookBanner.path) : defaultImages.bookOfTheMonth.path);
 
         const newsBanner: BannerData | undefined = sortedBanners.find((banner: BannerData) => banner.id === 5);
-        setHomeImage4(newsBanner ? getImageUrl(newsBanner.path) : defaultImages.breakingNews.path);
+        setHomeImage4(newsBanner ? getImageUrl(newsBanner.src) : defaultImages.breakingNews.src);
+        // setHomeImage4(newsBanner ? getImageUrl(newsBanner.path) : defaultImages.breakingNews.path);
       } else {
-        setHomeImages1(defaultImages.banners.slice(0, 3).map((banner) => banner.path));
-        setHomeImage3(defaultImages.bookOfTheMonth.path);
-        setHomeImage4(defaultImages.breakingNews.path);
+        setHomeImages1(defaultImages.banners.slice(0, 3).map((banner) => banner.src));
+        // setHomeImages1(defaultImages.banners.slice(0, 3).map((banner) => banner.path));
+        setHomeImage3(defaultImages.bookOfTheMonth.src);
+        // setHomeImage3(defaultImages.bookOfTheMonth.path);
+        setHomeImage4(defaultImages.breakingNews.src);
+        // setHomeImage4(defaultImages.breakingNews.path);
         if (message) toast(message);
       }
     } catch (err) {
@@ -183,31 +200,41 @@ const HomeTab: React.FC = () => {
         const sortedSectionbg = data.sort((a: SectionData, b: SectionData) => a.id - b.id); 
         
         const about_yahweh: SectionData | undefined = sortedSectionbg.find(
-          (banner: SectionData) => banner.id === 1 || banner.section_name === "about_yahweh"
+          (banner: SectionData) => banner.id === 1 || banner.section === "about_yahweh"
+          // (banner: SectionData) => banner.id === 1 || banner.section_name === "about_yahweh"
         );
-        if (about_yahweh) setAboutYahwehImage(getImageUrl(about_yahweh.path));
+        if (about_yahweh) setAboutYahwehImage(getImageUrl(about_yahweh.src));
+        // if (about_yahweh) setAboutYahwehImage(getImageUrl(about_yahweh.path));
         
         const about_yahweh_ben: SectionData | undefined = sortedSectionbg.find(
-          (banner: SectionData) => banner.id === 2 || banner.section_name === "about_yahweh_ben"
+          (banner: SectionData) => banner.id === 2 || banner.section === "about_yahweh_ben"
+          // (banner: SectionData) => banner.id === 2 || banner.section_name === "about_yahweh_ben"
         );
-        if (about_yahweh_ben) setAboutYahwehBenImage(getImageUrl(about_yahweh_ben.path));
+        if (about_yahweh_ben) setAboutYahwehBenImage(getImageUrl(about_yahweh_ben.src));
+        // if (about_yahweh_ben) setAboutYahwehBenImage(getImageUrl(about_yahweh_ben.path));
         
         interface FollowersSection extends SectionData {}
 
         const followers: FollowersSection | undefined = sortedSectionbg.find(
-          (banner: SectionData) => banner.id === 3 || banner.section_name === "followers"
+          // (banner: SectionData) => banner.id === 3 || banner.section_name === "followers"
+          (banner: SectionData) => banner.id === 3 || banner.section === "followers"
         );
-        if (followers) setFollowersImage(getImageUrl(followers.path));
+        // if (followers) setFollowersImage(getImageUrl(followers.path));
+        if (followers) setFollowersImage(getImageUrl(followers.src));
         
         const cultural: SectionData | undefined = sortedSectionbg.find(
-          (banner: SectionData) => banner.id === 4 || banner.section_name === "cultural"
+          (banner: SectionData) => banner.id === 4 || banner.section === "cultural"
+          // (banner: SectionData) => banner.id === 4 || banner.section_name === "cultural"
         );
-        if (cultural) setCulturalImage(getImageUrl(cultural.path));
+        if (cultural) setCulturalImage(getImageUrl(cultural.src));
+        // if (cultural) setCulturalImage(getImageUrl(cultural.path));
 
         const books: SectionData | undefined = sortedSectionbg.find(
-          (banner: SectionData) => banner.id === 5 || banner.section_name === "books"
+          // (banner: SectionData) => banner.id === 5 || banner.section_name === "books"
+          (banner: SectionData) => banner.id === 5 || banner.section === "books"
         );
-        if (books) setBooksImage(getImageUrl(books.path));
+        // if (books) setBooksImage(getImageUrl(books.path));
+        if (books) setBooksImage(getImageUrl(books.src));
       } else {
         if (message) toast(message);
       }
@@ -646,7 +673,8 @@ const HomeTab: React.FC = () => {
                 <img
                   src={booksImage || "/placeholder.svg"}
                   alt={
-                    sectionbg.find((b) => b.id === 5)?.section_name || "books"
+                    sectionbg.find((b) => b.id === 5)?.section || "books"
+                    // sectionbg.find((b) => b.id === 5)?.section_name || "books"
                   }
                   className="preview-image"
                 />
@@ -715,7 +743,8 @@ const HomeTab: React.FC = () => {
                 <img
                   src={aboutYahwehImage || "/placeholder.svg"}
                   alt={
-                    sectionbg.find((b) => b.id === 1)?.section_name ||
+                    // sectionbg.find((b) => b.id === 1)?.section_name ||
+                    sectionbg.find((b) => b.id === 1)?.section ||
                     "about_yahweh"
                   }
                   className="preview-image"
@@ -787,7 +816,8 @@ const HomeTab: React.FC = () => {
                 <img
                   src={aboutYahwehBenImage || "/placeholder.svg"}
                   alt={
-                    sectionbg.find((b) => b.id === 2)?.section_name ||
+                    // sectionbg.find((b) => b.id === 2)?.section_name ||
+                    sectionbg.find((b) => b.id === 2)?.section ||
                     "about_yahweh_ben"
                   }
                   className="preview-image"
@@ -865,7 +895,8 @@ const HomeTab: React.FC = () => {
                 <img
                   src={followersImage || "/placeholder.svg"}
                   alt={
-                    sectionbg.find((b) => b.id === 3)?.section_name ||
+                    sectionbg.find((b) => b.id === 3)?.section ||
+                    // sectionbg.find((b) => b.id === 3)?.section_name ||
                     "followers"
                   }
                   className="preview-image"
@@ -935,7 +966,8 @@ const HomeTab: React.FC = () => {
                 <img
                   src={culturalImage || "/placeholder.svg"}
                   alt={
-                    sectionbg.find((b) => b.id === 4)?.section_name ||
+                    sectionbg.find((b) => b.id === 4)?.section ||
+                    // sectionbg.find((b) => b.id === 4)?.section_name ||
                     "cultural"
                   }
                   className="preview-image"

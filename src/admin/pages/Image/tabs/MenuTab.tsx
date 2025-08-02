@@ -10,8 +10,10 @@ import "./style/HomeTab.css";
 
 interface SectionMenuData {
   id: number;
-  section_name: string | null;
-  path: string;
+  section: string | null;
+  src: string;
+  // section_name: string | null;
+  // path: string;
   created_at: string;
   updated_at: string;
 }
@@ -80,10 +82,12 @@ const MenuTab: React.FC = () => {
 
         sections.forEach(section => {
           const banner = sortedSectionbg.find((b: SectionMenuData) =>
-            b.id === section.id || b.section_name === section.name
+            // b.id === section.id || b.section_name === section.name
+            b.id === section.id || b.section === section.name
           );
           if (banner) {
-            section.setter(getImageUrl(banner.path));
+            section.setter(getImageUrl(banner.src));
+            // section.setter(getImageUrl(banner.path));
           }
         });
       } else {
@@ -169,7 +173,8 @@ const MenuTab: React.FC = () => {
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
   ) => {
     const sectionData = sectionMenubg.find(b =>
-      b.id === bannerId || b.section_name === sectionName
+      b.id === bannerId || b.section === sectionName
+      // b.id === bannerId || b.section_name === sectionName
     );
 
     return (
@@ -186,7 +191,8 @@ const MenuTab: React.FC = () => {
               <div className="image-preview large">
                 <img
                   src={image || "/placeholder.svg"}
-                  alt={sectionData?.section_name || title}
+                  // alt={sectionData?.section_name || title}
+                  alt={sectionData?.section || title}
                   className="preview-image"
                 />
                 {sectionData && (
@@ -394,8 +400,10 @@ const MenuTab: React.FC = () => {
                     <img
                       src={operationImage1 || "/placeholder.svg"}
                       alt={
-                        sectionMenubg.find((b) => b.id === 10)?.section_name ||
+                        sectionMenubg.find((b) => b.id === 10)?.section ||
                         "Operation_Word_War"
+                        // sectionMenubg.find((b) => b.id === 10)?.section_name ||
+                        // "Operation_Word_War"
                       }
                       className="preview-image"
                     />
@@ -455,8 +463,10 @@ const MenuTab: React.FC = () => {
                     <img
                       src={operationImage2 || "/placeholder.svg"}
                       alt={
-                        sectionMenubg.find((b) => b.id === 11)?.section_name ||
+                        sectionMenubg.find((b) => b.id === 11)?.section ||
                         "Operation_Word_War_2"
+                        // sectionMenubg.find((b) => b.id === 11)?.section_name ||
+                        // "Operation_Word_War_2"
                       }
                       className="preview-image"
                     />

@@ -2,50 +2,50 @@
   "banners": [
     {
       "id": 1,
-      "path": "/Home/assets/images/index-banner-3.jpg",
+      "src": "/Home/assets/images/index-banner-3.jpg",
       "alt": "Banner 3"
     },
     {
       "id": 2,
-      "path": "/Home/assets/images/index-banner-2.jpg",
+      "src": "/Home/assets/images/index-banner-2.jpg",
       "alt": "Banner 2"
     },
     {
       "id": 3,
-      "path": "/Home/assets/images/index-banner-1.jpg",
+      "src": "/Home/assets/images/index-banner-1.jpg",
       "alt": "Banner 1"
     }
   ],
   "bookOfTheMonth": {
-    "path": "/Home/image/botm-img-0.jpg",
+    "src": "/Home/image/botm-img-0.jpg",
     "alt": "Book of the month"
   },
   "buttons": {
     "readMore": {
-      "path": "/Home/image/read-more-button.png",
+      "src": "/Home/image/read-more-button.png",
       "alt": "Read More . . ."
     },
     "orderNow": {
-      "path": "/Home/image/ord-now-button.png",
+      "src": "/Home/image/ord-now-button.png",
       "alt": "Order Now"
     }
   },
   "videoPoster": {
     "pageBanner": {
-      "path": "/Home/image/page-banner_.jpg",
+      "src": "/Home/image/page-banner_.jpg",
       "alt": "Page Banner"
     },
     "goodNews": {
-      "path": "/Home/image/Good_News_of_Yahweh.jpg",
+      "src": "/Home/image/Good_News_of_Yahweh.jpg",
       "alt": "Good News of Yahweh"
     },
     "eternalLife": {
-      "path": "/Home/image/Eternal_Life.jpg",
+      "src": "/Home/image/Eternal_Life.jpg",
       "alt": "Eternal Life"
     }
   },
   "breakingNews": {
-    "path": "/Home/image/Breaking_News.png",
+    "src": "/Home/image/Breaking_News.png",
     "alt": "Breaking News"
   }
 }

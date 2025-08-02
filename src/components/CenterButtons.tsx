@@ -7,8 +7,9 @@ import { URL } from "../admin/api/url";
 
 
 interface GalleryImage {
+  // path: string;
   id: number;
-  path: string;
+  src: string;
   alt: string;
 }
 
@@ -53,7 +54,8 @@ export function CenterButtons() {
                 aria-label={img.alt}
               >
                 <img
-                  src={`${URL}${img.path}`}   // API URL
+                  // src={`${URL}${img.path}`}   // API URL
+                  src={`${URL}${img.src}`}   // API URL
                   alt={img.alt}
                   className="center-button-img-home"
                   loading="lazy"
@@ -62,7 +64,8 @@ export function CenterButtons() {
             ) : (
               <Link to={href} aria-label={img.alt}>
                 <img
-                  src={`${URL}${img.path}`}   // API URL
+                  // src={`${URL}${img.path}`}   // API URL
+                  src={`${URL}${img.src}`}   // API URL
                   alt={img.alt}
                   className="center-button-img-home"
                   loading="lazy"

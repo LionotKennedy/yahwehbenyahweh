@@ -34,20 +34,24 @@ export function Books_for_the_Year() {
 
           // Recherche de la section about_yahweh_ben
           interface Section {
-            section_name: string;
-            path: string;
+            section: string;
+            src: string;
+            // section_name: string;
+            // path: string;
             // Add other properties if needed
           }
 
 
           const sectionResponse = await SectionAPI.fetchAll();
           const aboutYahwehBenSection: Section | undefined = sectionResponse.data?.find(
-            (section: Section) => section.section_name === "books"
+            (section: Section) => section.section === "books"
+            // (section: Section) => section.section_name === "books"
           );
 
           if (aboutYahwehBenSection) {
             // console.log("Section about_yahweh_ben trouvée:", aboutYahwehBenSection);
-            const imageUrl = getImageUrl(aboutYahwehBenSection.path);
+            const imageUrl = getImageUrl(aboutYahwehBenSection.src);
+            // const imageUrl = getImageUrl(aboutYahwehBenSection.path);
             // console.log("URL complète de l'image:", imageUrl);
             setAboutYahwehBenBg(imageUrl);
           } else {
