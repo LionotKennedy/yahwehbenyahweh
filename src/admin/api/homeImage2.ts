@@ -1,8 +1,8 @@
 // api.ts
 import { toast } from "react-hot-toast";
 
-// const RACI_URL = "http://localhost:5000";
-const RACI_URL = "http://145.223.33.2:5000";
+const RACI_URL = "http://localhost:5000";
+// const RACI_URL = "http://145.223.33.2:5000";
 
 // Fonction pour construire l'URL complète des images
 export const getImageUrl = (path: string): string => {

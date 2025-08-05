@@ -16,6 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^8.34.0",
     "@typescript-eslint/parser": "^8.34.0",
     "autoprefixer": "^10.4.21",
+    "axios": "^1.11.0",
     "lucide-react": "^0.514.0",
     "postcss": "^8.5.5",
     "react": "^19.1.0",

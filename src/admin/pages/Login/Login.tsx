@@ -1,28 +1,39 @@
-"use client";
 
+"use client";
 import type React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LogIn, User, Lock } from "lucide-react";
+import { login } from "../../api/apiAuth"; // Import the login function
 import "./login.css";
 
+
+
 const AdminLogin: React.FC = () => {
+ 
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-  const [error] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    navigate("/admin");
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    const { token, user } = await login(credentials.email, credentials.password);
+    if (user.role === 1) {
+      localStorage.setItem("adminToken", token);
+      localStorage.setItem("adminUser", JSON.stringify(user)); // ✅ Ajout
+      navigate("/admin");
+    } else {
+      setError("Accès refusé : Vous n'avez pas les droits d'administrateur.");
+    }
+  } catch (err) {
+    setError(err instanceof Error ? err.message : "Une erreur est survenue.");
+  }
+};
 
-    // Logique de connexion simple (à remplacer par votre API)
-    // if (credentials.email === "admin" && credentials.password === "password") {
-    //   localStorage.setItem("adminToken", "your-token-here");
-    //   navigate("/admin");
-    // } else {
-    //   setError("Identifiants incorrects");
-    // }
-  };
+  const handleForgotPassword = () => {
+    navigate("/admin/forgot-password")
+  }
 
   return (
     <div className="login-container">
@@ -36,7 +47,6 @@ const AdminLogin: React.FC = () => {
             Connectez-vous à votre panneau d'administration
           </p>
         </div>
-
         <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group-login">
             <label className="form-label-login">Email</label>
@@ -54,7 +64,6 @@ const AdminLogin: React.FC = () => {
               />
             </div>
           </div>
-
           <div className="form-group-login">
             <label className="form-label-login">Mot de passe</label>
             <div className="input-group">
@@ -78,13 +87,19 @@ const AdminLogin: React.FC = () => {
             <LogIn size={20} />
             <span>Se connecter</span>
           </button>
-        </form>
 
+          <div className="forgot-password-link">
+          <button type="button" onClick={handleForgotPassword} className="forgot-password-button">
+            Mot de passe oublié ?
+          </button>
+        </div>
+        </form>
         <div className="login-note">
           <p>
-            Utilisez n'importe quel email et mot de passe pour vous connecter
+            Utilisez votre email et mot de passe administrateur pour vous connecter
           </p>
         </div>
+        {/* Oublier mot de passe ?{" "} */}
       </div>
     </div>
   );
